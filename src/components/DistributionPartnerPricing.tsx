@@ -3,9 +3,10 @@ import { Check } from "lucide-react";
 interface DistributionPartnerPricingProps {
   publicOnly?: boolean;
   title?: string;
+  hideNote?: boolean;
 }
 
-const DistributionPartnerPricing = ({ publicOnly = false, title = "Two Ways to Buy & Price" }: DistributionPartnerPricingProps) => (
+const DistributionPartnerPricing = ({ publicOnly = false, title = "Two Ways to Buy & Price", hideNote = false }: DistributionPartnerPricingProps) => (
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-8 text-center text-3xl font-light text-foreground tracking-tight md:text-4xl">{title}</h2>
           <div className={`grid gap-5 ${publicOnly ? "mx-auto max-w-xl" : "md:grid-cols-2"}`} aria-label={publicOnly ? "Public price" : "Public price and wholesale buying options"}>
@@ -48,7 +49,7 @@ const DistributionPartnerPricing = ({ publicOnly = false, title = "Two Ways to B
               </div>
             </article>}
           </div>
-          {!publicOnly && <p className="mt-10 text-center text-lg font-light leading-relaxed text-foreground max-w-3xl mx-auto">Choose per operator, and run both at once if it suits you.</p>}
+          {!publicOnly && !hideNote && <p className="mt-10 text-center text-lg font-light leading-relaxed text-foreground max-w-3xl mx-auto">Choose per operator, and run both at once if it suits you.</p>}
         </div>
 );
 

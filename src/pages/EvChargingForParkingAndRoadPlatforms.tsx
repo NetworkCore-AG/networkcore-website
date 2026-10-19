@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Smartphone, Globe, Gauge, Settings, MapPin, Zap, Receipt, EyeOff, ShieldCheck, Building2, ParkingCircle, Map, Route, Wallet, Landmark, CreditCard, Warehouse } from "lucide-react";
+import { ArrowRight, Smartphone, Globe, Gauge, Settings, MapPin, Zap, Receipt, EyeOff, ShieldCheck, Building2, ParkingCircle, Map, Route, Wallet, Landmark, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -33,7 +33,6 @@ const whoFor = [
   { icon: Wallet, title: "Mobility payment platforms and wallets", description: "the missing category in the one-wallet promise" },
   { icon: Landmark, title: "MaaS aggregators", description: "charging slotted into the multimodal journey" },
   { icon: CreditCard, title: "Fuel and fleet mobility cards", description: "public EV charging added to the card drivers already carry" },
-  { icon: Warehouse, title: "Parking operators with their own app and lots", description: "your bays can also earn as charging sites" },
 ];
 const faqs = [
   { question: "What does it cost?", answer: "Nothing to connect. Setup, integration, API access and the front-end module are included, with no subscription and no launch cost. On public price, access to the whole network is free. Where you buy wholesale, you buy at the operator's rate and keep whatever margin you choose to set. We charge a small commission on wholesale." },
@@ -66,10 +65,10 @@ const EvChargingForParkingAndRoadPlatforms = () => (
         <source src="/videos/distribution-partners-hero.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-foreground/70" />
-      <div className="relative mx-auto w-full max-w-5xl px-4 py-28 text-center sm:px-6 lg:px-8">
+      <div className="relative mx-auto w-full max-w-6xl px-4 py-28 text-left sm:px-6 lg:px-8">
         <h1 className="mb-6 text-3xl font-light leading-tight text-background md:text-4xl lg:text-5xl">Park &amp; Charge</h1>
-        <p className="mx-auto mb-8 max-w-3xl text-lg font-light leading-relaxed text-background/70 md:text-xl">{description}</p>
-        <div className="flex flex-wrap justify-center gap-4">
+        <p className="mb-8 max-w-3xl text-lg font-light leading-relaxed text-background/70 md:text-xl">{description}</p>
+        <div className="flex flex-wrap justify-start gap-4">
           <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90"><a href="#apply">Become a Distribution Partner <ArrowRight /></a></Button>
           <Button asChild size="lg" variant="ghost" className="border border-background/60 text-background hover:bg-background/10 hover:text-background"><Link to="/pricing">See pricing</Link></Button>
         </div>
@@ -78,7 +77,7 @@ const EvChargingForParkingAndRoadPlatforms = () => (
 
     <section className="py-20">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-        <h2 className="mb-8 text-3xl font-light text-foreground md:text-4xl">The Bay and the Charger Are Becoming the Same Thing</h2>
+        <h2 className="mb-8 text-3xl font-light text-foreground md:text-4xl">The Bay and the Charger Are Becoming the Same</h2>
         <div className="space-y-5 text-lg font-light leading-relaxed text-foreground">
           <p>EV charging is the fastest-growing, highest-frequency category of mobility spend. Are you missing out on it? Every EV driver in your base who charges elsewhere is transaction volume, engagement and data you could be managing.</p>
           <p>The mobility wallet is consolidating, and parking and charging are physically merging. As more bays become charging bays, an app that can route a driver to a space but cannot power the car in it misses an opportunity to shine.</p>
@@ -100,7 +99,7 @@ const EvChargingForParkingAndRoadPlatforms = () => (
     </section>
 
     <section className="py-20">
-      <DistributionPartnerPricing />
+      <DistributionPartnerPricing hideNote />
       <div className="mt-8 text-center"><Button asChild size="lg"><a href="#apply">Become a Distribution Partner <ArrowRight /></a></Button></div>
     </section>
 
