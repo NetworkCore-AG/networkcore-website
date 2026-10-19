@@ -100,11 +100,11 @@ const Footer = () => {
     { href: '/#contact', label: t('navigation.contactUs', 'Contact Us') },
   ];
 
-  const productItems: { href: string | null; label: string; theme: 'cp' | 'dp' | 'pack' | 'direct'; badge?: string }[] = [
+  const productItems: { href: string | null; label: string; theme: 'cp' | 'dp' | 'pack' | 'direct' | 'both'; badge?: string }[] = [
     { href: '/products/network-access', label: 'Network Access', theme: 'cp' },
     { href: '/products/just-charge', label: 'Just Charge', theme: 'dp' },
-    { href: '/products/charge-pack', label: 'Charge Pack', theme: 'dp' },
     { ...chargingLinksProduct, theme: 'dp' },
+    { href: '/products/charge-pack', label: 'Charge Pack', theme: 'both' },
   ];
 
   const aboutItems: { href: string; label: string; external?: boolean }[] = [

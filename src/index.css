@@ -850,3 +850,11 @@ a.identity-card:hover { border-color: hsl(var(--identity) / 0.4); }
   border-left: 2px solid hsl(var(--identity) / 0.55);
 }
 .identity-highlight:has(a):hover { background: hsl(var(--identity) / 0.16); }
+.identity-both { --identity: var(--identity-network); }
+.identity-both.identity-highlight {
+  background: linear-gradient(90deg, hsl(var(--identity-network) / 0.14), hsl(var(--identity-charge) / 0.14));
+  border-left: 2px solid hsl(var(--identity-network) / 0.55);
+}
+.identity-both.identity-highlight:has(a):hover {
+  background: linear-gradient(90deg, hsl(var(--identity-network) / 0.22), hsl(var(--identity-charge) / 0.22));
+}

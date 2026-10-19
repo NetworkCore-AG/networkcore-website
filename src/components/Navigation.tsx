@@ -126,8 +126,8 @@ const Navigation = ({ transparent = false }: { transparent?: boolean }) => {
   const productSubItems = [
     { href: "/products/network-access", label: "Network Access", description: "For charging networks, venues, and depots. You run the chargers. We bring the drivers and settle the money.", image: "/images/nav/nav-product-saleschannel.png", theme: "cp" },
     { href: "/products/just-charge", label: "Just Charge", description: "For platforms that already own the driver. Charging lives inside your product, under your brand, at the price you choose.", image: "/images/nav/nav-product-embedded-v2.png", theme: "dp" },
-    { href: "/products/charge-pack", label: "Charge Pack", description: "Funded charging by you, by a charging operator, or by both together. Redeemable across the network, under your brand.", image: "/images/nav/nav-product-charge-pack.png", theme: "pack" },
     chargingLinksProduct,
+    { href: "/products/charge-pack", label: "Charge Pack", description: "Funded charging by you, by a charging operator, or by both together. Redeemable across the network, under your brand.", image: "/images/nav/nav-product-charge-pack.png", theme: "pack" },
   ];
 
   const navItems = [
