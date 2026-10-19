@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Kontaktformular",
+    "schedule": "Meeting Vereinbaren"
+  },
+  "schedule": {
+    "title": "Vereinbaren Sie einen Anruf zu Ihrer Wunschzeit mit unserem Team!",
+    "cta": "Meeting Buchen"
+  },
+  "form": {
+    "title": "Lassen Sie uns sprechen!",
+    "name": "Name",
+    "nameRequired": "Name ist erforderlich",
+    "company": "Firma",
+    "companyPlaceholder": "Ihre Firma (optional)",
+    "email": "E-Mail",
+    "emailPlaceholder": "ihre.email@beispiel.de",
+    "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "audienceType": "Ich bin ein",
+    "audienceTypePlaceholder": "Wählen Sie Ihre Rolle",
+    "audienceTypeRequired": "Bitte wählen Sie einen Publikumstyp",
+    "message": "Nachricht",
+    "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt oder Ihrer Anfrage...",
+    "messageRequired": "Nachricht ist erforderlich",
+    "consent": "Ich stimme der {{privacyPolicy}} zu und willige ein, bezüglich meiner Anfrage kontaktiert zu werden.",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "submit": "Nachricht Senden",
+    "submitting": "Wird gesendet...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 Zeichen"
+  },
+  "audienceTypes": {
+    "cpo": "Ladenetzbetreiber",
+    "other": "Andere",
+    "distributionPartner": "Distributionspartner"
+  },
+  "messages": {
+    "success": "Nachricht erfolgreich gesendet!",
+    "successDesc": "Vielen Dank für Ihr Interesse. Wir werden uns bald bei Ihnen melden.",
+    "error": "Nachricht konnte nicht gesendet werden",
+    "errorDesc": "Bitte versuchen Sie es später erneut.",
+    "validationError": "Validierungsfehler",
+    "rateLimit": "Bitte warten Sie",
+    "rateLimitDesc": "Sie können in {{seconds}} Sekunden eine weitere Nachricht senden."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Privacybeleid",
+  "lastUpdated": "Laatst bijgewerkt:",
+  "sections": {
+    "introduction": {
+      "title": "1. Over dit beleid",
+      "content": "NetworkCore AG (\"NetworkCore\", \"wij\", \"ons\") zet zich in voor de bescherming van uw privacy. Deze website is uitsluitend informatief en verzamelt niet automatisch persoonsgegevens. Dit Privacybeleid legt uit hoe wij omgaan met uw informatie wanneer u ervoor kiest om contact met ons op te nemen via onze website. Wij zijn volledig AVG-conform."
+    },
+    "dataController": {
+      "title": "2. Verwerkingsverantwoordelijke",
+      "content": "NetworkCore AG, een in Zwitserland geregistreerd bedrijf, is de verwerkingsverantwoordelijke voor alle persoonsgegevens die u verstrekt. Voor vragen over dit Privacybeleid kunt u contact met ons opnemen via compliance [at] networkcore [dot] org."
+    },
+    "contactForm": {
+      "title": "3. Contactformulier",
+      "content": "Wanneer u ons contactformulier gebruikt, verstrekt u ons vrijwillig persoonlijke informatie, waaronder uw naam, e-mailadres, bedrijfsnaam en bericht. Door het contactformulier in te dienen, stemt u ermee in dat NetworkCore deze informatie ontvangt en verwerkt om op uw verzoek te reageren en met u te communiceren over mogelijke zakelijke kansen."
+    },
+    "dataUse": {
+      "title": "4. Gebruik van uw informatie",
+      "content": "Wij gebruiken de informatie die u via ons contactformulier verstrekt uitsluitend om: op uw vragen te reageren; informatie te verstrekken over onze EV-laadplatformdiensten; met u te communiceren over mogelijke zakelijke partnerschappen. Wij gebruiken uw informatie niet voor marketingdoeleinden zonder uw uitdrukkelijke toestemming."
+    },
+    "dataSharing": {
+      "title": "5. Gegevensdeling",
+      "content": "Wij verkopen, verhandelen of verhuren uw persoonlijke informatie niet aan derden. Uw informatie mag alleen worden gedeeld wanneer dit wettelijk vereist is of om onze wettelijke rechten te beschermen."
+    },
+    "thirdPartyLinks": {
+      "title": "6. Links naar derden",
+      "content": "Onze website kan links bevatten naar websites van derden en externe bronnen. Wij zijn niet verantwoordelijk voor de privacypraktijken of inhoud van deze externe sites. Wij moedigen u aan om het privacybeleid te lezen van websites van derden die u bezoekt."
+    },
+    "dataSecurity": {
+      "title": "7. Gegevensbeveiliging",
+      "content": "Wij implementeren passende technische en organisatorische maatregelen om alle door u verstrekte persoonsgegevens te beschermen tegen ongeautoriseerde toegang, wijziging of openbaarmaking."
+    },
+    "yourRights": {
+      "title": "8. Uw rechten (AVG)",
+      "content": "Onder de AVG heeft u het recht om: toegang te krijgen tot de persoonsgegevens die wij over u bewaren; correctie van onjuiste gegevens te verzoeken; verwijdering van uw gegevens te verzoeken; uw toestemming op elk moment in te trekken. Om een van deze rechten uit te oefenen, kunt u contact met ons opnemen via compliance [at] networkcore [dot] org."
+    },
+    "cookies": {
+      "title": "9. Cookies",
+      "content": "Onze website gebruikt alleen essentiële cookies die noodzakelijk zijn voor het correct functioneren van de website. Wij gebruiken geen tracking- of advertentiecookies."
+    },
+    "changes": {
+      "title": "10. Wijzigingen in dit beleid",
+      "content": "Wij kunnen dit Privacybeleid van tijd tot tijd bijwerken. Eventuele wijzigingen worden op deze pagina gepubliceerd met een bijgewerkte revisiedatum."
+    },
+    "contact": {
+      "title": "11. Contact opnemen",
+      "content": "Als u vragen heeft over dit Privacybeleid, neem dan contact met ons op via:",
+      "email": "E-mail: compliance [at] networkcore [dot] org",
+      "address": "NetworkCore AG, Zwitserland"
+    }
+  }
+}

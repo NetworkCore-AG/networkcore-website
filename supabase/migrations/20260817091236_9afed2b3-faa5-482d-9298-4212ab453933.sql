@@ -1,0 +1,2 @@
+DROP POLICY IF EXISTS "Authenticated read on calculator_signups" ON public.calculator_signups;
+CREATE POLICY "Admins can read calculator_signups" ON public.calculator_signups FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'::app_role));

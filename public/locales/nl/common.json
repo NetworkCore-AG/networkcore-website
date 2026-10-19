@@ -1,0 +1,17 @@
+{
+  "navigation": {
+    "howItWorks": "Hoe Het Werkt",
+    "cpos": "Laadnetbeheerders",
+    "about": "Over Ons",
+    "blog": "Blog",
+    "partnerWithUs": "Word Partner",
+    "distributionPartners": "Distributiepartners"
+  },
+  "footer": {
+    "copyright": "© {{year}} NetworkCore AG. Alle rechten voorbehouden.",
+    "privacyPolicy": "Privacybeleid"
+  },
+  "language": {
+    "select": "Selecteer Taal"
+  }
+}

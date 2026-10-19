@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "howItWorks": "Jak To Funguje",
+    "cpos": "Operátoři Nabíjení",
+    "about": "O Nás",
+    "partnerWithUs": "Staňte se Partnerem",
+    "distributionPartners": "Distribuční Partneři"
+  },
+  "footer": {
+    "copyright": "© {{year}} NetworkCore AG. Všechna práva vyhrazena.",
+    "privacyPolicy": "Zásady Ochrany Osobních Údajů"
+  },
+  "language": {
+    "select": "Vybrat Jazyk"
+  }
+}

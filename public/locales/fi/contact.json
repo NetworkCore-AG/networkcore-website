@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Yhteydenottolomake",
+    "schedule": "Varaa Tapaaminen"
+  },
+  "schedule": {
+    "title": "Varaa ilmainen puhelu sinulle sopivaan aikaan alla olevan linkin kautta!",
+    "cta": "Varaa Tapaaminen"
+  },
+  "form": {
+    "title": "Keskustellaan!",
+    "name": "Nimi",
+    "nameRequired": "Nimi vaaditaan",
+    "company": "Yritys",
+    "companyPlaceholder": "Yrityksesi (valinnainen)",
+    "email": "Sähköposti",
+    "emailPlaceholder": "sinun.sahkoposti@esimerkki.fi",
+    "emailInvalid": "Anna kelvollinen sähköpostiosoite",
+    "audienceType": "Olen",
+    "audienceTypePlaceholder": "Valitse roolisi",
+    "audienceTypeRequired": "Valitse yleisötyyppi",
+    "message": "Viesti",
+    "messagePlaceholder": "Kerro meille projektistasi tai kyselystäsi...",
+    "messageRequired": "Viesti vaaditaan",
+    "consent": "Hyväksyn {{privacyPolicy}} ja suostun siihen, että minuun otetaan yhteyttä kyselyni osalta.",
+    "privacyPolicy": "tietosuojakäytännön",
+    "submit": "Lähetä Viesti",
+    "submitting": "Lähetetään...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 merkkiä"
+  },
+  "audienceTypes": {
+    "cpo": "Latausoperaattori",
+    "other": "Muu",
+    "distributionPartner": "Jakelukumppani"
+  },
+  "messages": {
+    "success": "Viesti lähetetty!",
+    "successDesc": "Kiitos kiinnostuksestasi. Palaamme asiaan pian.",
+    "error": "Viestin lähettäminen epäonnistui",
+    "errorDesc": "Yritä myöhemmin uudelleen.",
+    "validationError": "Vahvistusvirhe",
+    "rateLimit": "Odota hetki",
+    "rateLimitDesc": "Voit lähettää uuden viestin {{seconds}} sekunnin kuluttua."
+  }
+}

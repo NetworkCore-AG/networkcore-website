@@ -1,0 +1,52 @@
+{
+  "title": "Integritetspolicy",
+  "lastUpdated": "Senast uppdaterad:",
+  "sections": {
+    "introduction": {
+      "title": "1. Om denna policy",
+      "content": "NetworkCore AG (\"NetworkCore\", \"vi\", \"vår\") är engagerade i att skydda din integritet. Denna webbplats är endast informativ och samlar inte automatiskt in personuppgifter. Denna Integritetspolicy förklarar hur vi hanterar din information när du väljer att kontakta oss via vår webbplats. Vi är fullt GDPR-kompatibla."
+    },
+    "dataController": {
+      "title": "2. Personuppgiftsansvarig",
+      "content": "NetworkCore AG, ett företag registrerat i Schweiz, är personuppgiftsansvarig för alla personuppgifter du tillhandahåller. För frågor angående denna Integritetspolicy, vänligen kontakta oss på compliance [at] networkcore [dot] org."
+    },
+    "contactForm": {
+      "title": "3. Kontaktformulär",
+      "content": "När du använder vårt kontaktformulär ger du oss frivilligt personlig information, inklusive ditt namn, e-postadress, företagsnamn och meddelande. Genom att skicka kontaktformuläret samtycker du till att NetworkCore tar emot och behandlar denna information för att svara på din förfrågan och kommunicera med dig om potentiella affärsmöjligheter."
+    },
+    "dataUse": {
+      "title": "4. Användning av din information",
+      "content": "Vi använder informationen du tillhandahåller via vårt kontaktformulär uteslutande för att: svara på dina förfrågningar; tillhandahålla information om våra EV-laddningsplattformstjänster; kommunicera med dig om potentiella affärspartnerskap. Vi använder inte din information för marknadsföringsändamål utan ditt uttryckliga samtycke."
+    },
+    "dataSharing": {
+      "title": "5. Datadelning",
+      "content": "Vi säljer, byter eller hyr inte ut din personliga information till tredje part. Din information kan endast delas när det krävs enligt lag eller för att skydda våra lagliga rättigheter."
+    },
+    "thirdPartyLinks": {
+      "title": "6. Tredjepartslänkar",
+      "content": "Vår webbplats kan innehålla länkar till tredjepartswebbplatser och externa resurser. Vi är inte ansvariga för integritetspraxis eller innehåll på dessa externa webbplatser. Vi uppmuntrar dig att granska integritetspolicyer för tredjepartswebbplatser du besöker."
+    },
+    "dataSecurity": {
+      "title": "7. Datasäkerhet",
+      "content": "Vi implementerar lämpliga tekniska och organisatoriska åtgärder för att skydda alla personuppgifter du tillhandahåller mot obehörig åtkomst, ändring eller avslöjande."
+    },
+    "yourRights": {
+      "title": "8. Dina rättigheter (GDPR)",
+      "content": "Enligt GDPR har du rätt att: få tillgång till de personuppgifter vi har om dig; begära rättelse av felaktiga uppgifter; begära radering av dina uppgifter; återkalla ditt samtycke när som helst. För att utöva någon av dessa rättigheter, vänligen kontakta oss på compliance [at] networkcore [dot] org."
+    },
+    "cookies": {
+      "title": "9. Cookies",
+      "content": "Vår webbplats använder endast nödvändiga cookies som krävs för att webbplatsen ska fungera korrekt. Vi använder inte spårnings- eller reklamcookies."
+    },
+    "changes": {
+      "title": "10. Ändringar av denna policy",
+      "content": "Vi kan uppdatera denna Integritetspolicy då och då. Eventuella ändringar kommer att publiceras på denna sida med ett uppdaterat revisionsdatum."
+    },
+    "contact": {
+      "title": "11. Kontakta oss",
+      "content": "Om du har frågor om denna Integritetspolicy, vänligen kontakta oss på:",
+      "email": "E-post: compliance [at] networkcore [dot] org",
+      "address": "NetworkCore AG, Schweiz"
+    }
+  }
+}

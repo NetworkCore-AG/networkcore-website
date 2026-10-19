@@ -1,0 +1,15 @@
+{
+  "pageTitle": "Blog",
+  "pageDescription": "Información, noticias y guías sobre infraestructura de carga de VE y redes de roaming.",
+  "heroTitle": "Información y Recursos",
+  "heroSubtitle": "Mantente actualizado con las últimas tendencias, guías y noticias del mundo de la infraestructura de carga de VE.",
+  "allCategories": "Todos",
+  "noPosts": "No se encontraron publicaciones.",
+  "readMore": "Leer más",
+  "minRead": "min de lectura",
+  "backToBlog": "Volver al Blog",
+  "relatedPosts": "Artículos Relacionados",
+  "recentPosts": "Últimas Publicaciones",
+  "recentPostsDescription": "Información y actualizaciones del mundo de la carga de VE.",
+  "viewAllPosts": "Ver Todas las Publicaciones"
+}

@@ -1,0 +1,19 @@
+{
+  "navigation": {
+    "howItWorks": "How It Works",
+    "cpos": "CPOs",
+    "benefits": "Benefits",
+    "about": "About Us",
+    "blog": "Blog",
+    "theNetwork": "The Network",
+    "partnerWithUs": "Partner With Us",
+    "distributionPartners": "Distribution Partners"
+  },
+  "footer": {
+    "copyright": "© {{year}} NetworkCore AG. All rights reserved.",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "language": {
+    "select": "Select Language"
+  }
+}

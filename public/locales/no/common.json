@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "howItWorks": "Slik Fungerer Det",
+    "cpos": "Ladeoperatører",
+    "about": "Om Oss",
+    "partnerWithUs": "Bli Partner",
+    "distributionPartners": "Distribusjonspartnere"
+  },
+  "footer": {
+    "copyright": "© {{year}} NetworkCore AG. Alle rettigheter reservert.",
+    "privacyPolicy": "Personvernerklæring"
+  },
+  "language": {
+    "select": "Velg Språk"
+  }
+}

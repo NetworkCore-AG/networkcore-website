@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "howItWorks": "Πώς Λειτουργεί",
+    "cpos": "Φορείς Φόρτισης",
+    "about": "Σχετικά με Εμάς",
+    "partnerWithUs": "Γίνετε Συνεργάτης",
+    "distributionPartners": "Εταίροι Διανομής"
+  },
+  "footer": {
+    "copyright": "© {{year}} NetworkCore AG. Με επιφύλαξη παντός δικαιώματος.",
+    "privacyPolicy": "Πολιτική Απορρήτου"
+  },
+  "language": {
+    "select": "Επιλέξτε Γλώσσα"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Kontaktformulär",
+    "schedule": "Boka ett Möte"
+  },
+  "schedule": {
+    "title": "Boka ett gratis samtal när det passar dig med hjälp av länken nedan!",
+    "cta": "Boka ett Möte"
+  },
+  "form": {
+    "title": "Låt Oss Prata!",
+    "name": "Namn",
+    "nameRequired": "Namn krävs",
+    "company": "Företag",
+    "companyPlaceholder": "Ditt företag (valfritt)",
+    "email": "E-post",
+    "emailPlaceholder": "din.epost@exempel.se",
+    "emailInvalid": "Vänligen ange en giltig e-postadress",
+    "audienceType": "Jag är en",
+    "audienceTypePlaceholder": "Välj din roll",
+    "audienceTypeRequired": "Vänligen välj en målgruppstyp",
+    "message": "Meddelande",
+    "messagePlaceholder": "Berätta om ditt projekt eller förfrågan...",
+    "messageRequired": "Meddelande krävs",
+    "consent": "Jag godkänner {{privacyPolicy}} och samtycker till att bli kontaktad om min förfrågan.",
+    "privacyPolicy": "integritetspolicyn",
+    "submit": "Skicka Meddelande",
+    "submitting": "Skickar...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 tecken"
+  },
+  "audienceTypes": {
+    "cpo": "Laddoperatör",
+    "other": "Annat",
+    "distributionPartner": "Distributionspartner"
+  },
+  "messages": {
+    "success": "Meddelande skickat framgångsrikt!",
+    "successDesc": "Tack för ditt intresse. Vi återkommer snart.",
+    "error": "Misslyckades skicka meddelande",
+    "errorDesc": "Vänligen försök igen senare.",
+    "validationError": "Valideringsfel",
+    "rateLimit": "Vänligen vänta",
+    "rateLimitDesc": "Du kan skicka ett nytt meddelande om {{seconds}} sekunder."
+  }
+}

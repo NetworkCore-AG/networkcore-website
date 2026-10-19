@@ -1,0 +1,52 @@
+{
+  "title": "Politique de Confidentialité",
+  "lastUpdated": "Dernière mise à jour :",
+  "sections": {
+    "introduction": {
+      "title": "1. À propos de cette politique",
+      "content": "NetworkCore AG (« NetworkCore », « nous », « notre ») s'engage à protéger votre vie privée. Ce site web est uniquement informatif et ne collecte pas automatiquement de données personnelles. Cette Politique de Confidentialité explique comment nous traitons vos informations lorsque vous choisissez de nous contacter via notre site. Nous sommes entièrement conformes au Règlement Général sur la Protection des Données (RGPD)."
+    },
+    "dataController": {
+      "title": "2. Responsable du traitement",
+      "content": "NetworkCore AG, société enregistrée en Suisse, est le responsable du traitement de toutes les données personnelles que vous fournissez. Pour toute question concernant cette Politique de Confidentialité, veuillez nous contacter à compliance [at] networkcore [dot] org."
+    },
+    "contactForm": {
+      "title": "3. Formulaire de contact",
+      "content": "Lorsque vous utilisez notre formulaire de contact, vous nous fournissez volontairement des informations personnelles, notamment votre nom, adresse e-mail, nom de société et message. En soumettant le formulaire de contact, vous consentez à ce que NetworkCore reçoive et traite ces informations pour répondre à votre demande et communiquer avec vous concernant d'éventuelles opportunités commerciales."
+    },
+    "dataUse": {
+      "title": "4. Utilisation de vos informations",
+      "content": "Nous utilisons les informations que vous fournissez via notre formulaire de contact exclusivement pour : répondre à vos demandes ; fournir des informations sur nos services de plateforme de recharge VE ; communiquer avec vous concernant d'éventuels partenariats commerciaux. Nous n'utilisons pas vos informations à des fins marketing sans votre consentement explicite."
+    },
+    "dataSharing": {
+      "title": "5. Partage des données",
+      "content": "Nous ne vendons, n'échangeons ni ne louons vos informations personnelles à des tiers. Vos informations ne peuvent être partagées que si la loi l'exige ou pour protéger nos droits légaux."
+    },
+    "thirdPartyLinks": {
+      "title": "6. Liens vers des tiers",
+      "content": "Notre site web peut contenir des liens vers des sites web tiers et des ressources externes. Nous ne sommes pas responsables des pratiques de confidentialité ou du contenu de ces sites externes. Nous vous encourageons à consulter les politiques de confidentialité de tout site tiers que vous visitez."
+    },
+    "dataSecurity": {
+      "title": "7. Sécurité des données",
+      "content": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger toutes les données personnelles que vous fournissez contre tout accès, modification ou divulgation non autorisés."
+    },
+    "yourRights": {
+      "title": "8. Vos droits (RGPD)",
+      "content": "En vertu du RGPD, vous avez le droit de : accéder aux données personnelles que nous détenons à votre sujet ; demander la correction de données inexactes ; demander la suppression de vos données ; retirer votre consentement à tout moment. Pour exercer l'un de ces droits, veuillez nous contacter à compliance [at] networkcore [dot] org."
+    },
+    "cookies": {
+      "title": "9. Cookies",
+      "content": "Notre site web n'utilise que des cookies essentiels nécessaires au bon fonctionnement du site. Nous n'utilisons pas de cookies de suivi ou publicitaires."
+    },
+    "changes": {
+      "title": "10. Modifications de cette politique",
+      "content": "Nous pouvons mettre à jour cette Politique de Confidentialité de temps en temps. Toute modification sera publiée sur cette page avec une date de révision mise à jour."
+    },
+    "contact": {
+      "title": "11. Nous contacter",
+      "content": "Si vous avez des questions concernant cette Politique de Confidentialité, veuillez nous contacter à :",
+      "email": "E-mail : compliance [at] networkcore [dot] org",
+      "address": "NetworkCore AG, Suisse"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Formulaire de Contact",
+    "schedule": "Planifier une Réunion"
+  },
+  "schedule": {
+    "title": "Planifiez un appel à votre convenance avec notre équipe !",
+    "cta": "Réserver une Réunion"
+  },
+  "form": {
+    "title": "Discutons !",
+    "name": "Nom",
+    "nameRequired": "Le nom est requis",
+    "company": "Entreprise",
+    "companyPlaceholder": "Votre entreprise (optionnel)",
+    "email": "E-mail",
+    "emailPlaceholder": "votre.email@exemple.com",
+    "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+    "audienceType": "Je suis un",
+    "audienceTypePlaceholder": "Sélectionnez votre rôle",
+    "audienceTypeRequired": "Veuillez sélectionner un type d'audience",
+    "message": "Message",
+    "messagePlaceholder": "Parlez-nous de votre projet ou demande...",
+    "messageRequired": "Le message est requis",
+    "consent": "J'accepte la {{privacyPolicy}} et consens à être contacté concernant ma demande.",
+    "privacyPolicy": "politique de confidentialité",
+    "submit": "Envoyer le Message",
+    "submitting": "Envoi en cours...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 caractères"
+  },
+  "audienceTypes": {
+    "cpo": "Opérateur de Recharge",
+    "other": "Autre",
+    "distributionPartner": "Partenaire de Distribution"
+  },
+  "messages": {
+    "success": "Message envoyé avec succès !",
+    "successDesc": "Merci pour votre intérêt. Nous vous répondrons bientôt.",
+    "error": "Échec de l'envoi du message",
+    "errorDesc": "Veuillez réessayer plus tard.",
+    "validationError": "Erreur de Validation",
+    "rateLimit": "Veuillez patienter",
+    "rateLimitDesc": "Vous pouvez soumettre un autre message dans {{seconds}} secondes."
+  }
+}

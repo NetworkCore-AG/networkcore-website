@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "howItWorks": "Näin Se Toimii",
+    "cpos": "Latausoperaattorit",
+    "about": "Tietoa Meistä",
+    "partnerWithUs": "Tule Kumppaniksi",
+    "distributionPartners": "Jakelukumppanit"
+  },
+  "footer": {
+    "copyright": "© {{year}} NetworkCore AG. Kaikki oikeudet pidätetään.",
+    "privacyPolicy": "Tietosuojakäytäntö"
+  },
+  "language": {
+    "select": "Valitse Kieli"
+  }
+}

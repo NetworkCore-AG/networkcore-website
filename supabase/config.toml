@@ -1,0 +1,16 @@
+project_id = "butkrxxamuwzdgyguqxj"
+
+[functions.send-whitepaper-request]
+verify_jwt = false
+
+[functions.send-contact-form]
+verify_jwt = false
+
+[functions.og-proxy]
+verify_jwt = false
+
+[functions.render]
+verify_jwt = false
+
+[functions.submit-application]
+verify_jwt = false

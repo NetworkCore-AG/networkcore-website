@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Formular de Contact",
+    "schedule": "Agendar uma Reunião"
+  },
+  "schedule": {
+    "title": "Agende uma chamada à sua conveniência com a nossa equipa!",
+    "cta": "Reservar uma Reunião"
+  },
+  "form": {
+    "title": "Vamos Conversar!",
+    "name": "Nome",
+    "nameRequired": "O nome é obrigatório",
+    "company": "Empresa",
+    "companyPlaceholder": "A sua empresa (opcional)",
+    "email": "E-mail",
+    "emailPlaceholder": "seu.email@exemplo.com",
+    "emailInvalid": "Por favor insira um endereço de e-mail válido",
+    "audienceType": "Eu sou um",
+    "audienceTypePlaceholder": "Selecione o seu papel",
+    "audienceTypeRequired": "Por favor selecione um tipo de público",
+    "message": "Mensagem",
+    "messagePlaceholder": "Fale-nos sobre o seu projeto ou consulta...",
+    "messageRequired": "A mensagem é obrigatória",
+    "consent": "Aceito a {{privacyPolicy}} e consinto ser contactado sobre a minha consulta.",
+    "privacyPolicy": "política de privacidade",
+    "submit": "Enviar Mensagem",
+    "submitting": "A enviar...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 caracteres"
+  },
+  "audienceTypes": {
+    "cpo": "Operador de Carregamento",
+    "other": "Outro",
+    "distributionPartner": "Parceiro de Distribuição"
+  },
+  "messages": {
+    "success": "Mensagem enviada com sucesso!",
+    "successDesc": "Obrigado pelo seu interesse. Responderemos em breve.",
+    "error": "Falha ao enviar mensagem",
+    "errorDesc": "Por favor tente novamente mais tarde.",
+    "validationError": "Erro de Validação",
+    "rateLimit": "Por favor aguarde",
+    "rateLimitDesc": "Pode enviar outra mensagem em {{seconds}} segundos."
+  }
+}

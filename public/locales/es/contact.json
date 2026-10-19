@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Formulario de Contacto",
+    "schedule": "Programar una Reunión"
+  },
+  "schedule": {
+    "title": "¡Programa una llamada a tu conveniencia con nuestro equipo!",
+    "cta": "Reservar una Reunión"
+  },
+  "form": {
+    "title": "¡Hablemos!",
+    "name": "Nombre",
+    "nameRequired": "El nombre es obligatorio",
+    "company": "Empresa",
+    "companyPlaceholder": "Tu empresa (opcional)",
+    "email": "Correo Electrónico",
+    "emailPlaceholder": "tu.email@ejemplo.com",
+    "emailInvalid": "Por favor ingresa una dirección de correo electrónico válida",
+    "audienceType": "Soy un",
+    "audienceTypePlaceholder": "Selecciona tu rol",
+    "audienceTypeRequired": "Por favor selecciona un tipo de audiencia",
+    "message": "Mensaje",
+    "messagePlaceholder": "Cuéntanos sobre tu proyecto o consulta...",
+    "messageRequired": "El mensaje es obligatorio",
+    "consent": "Acepto la {{privacyPolicy}} y consiento ser contactado sobre mi consulta.",
+    "privacyPolicy": "política de privacidad",
+    "submit": "Enviar Mensaje",
+    "submitting": "Enviando...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 caracteres"
+  },
+  "audienceTypes": {
+    "cpo": "Operador de Carga",
+    "other": "Otro",
+    "distributionPartner": "Socio de Distribución"
+  },
+  "messages": {
+    "success": "¡Mensaje enviado con éxito!",
+    "successDesc": "Gracias por tu interés. Te responderemos pronto.",
+    "error": "Error al enviar el mensaje",
+    "errorDesc": "Por favor inténtalo de nuevo más tarde.",
+    "validationError": "Error de Validación",
+    "rateLimit": "Por favor espera",
+    "rateLimitDesc": "Puedes enviar otro mensaje en {{seconds}} segundos."
+  }
+}

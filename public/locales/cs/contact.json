@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Kontaktní Formulář",
+    "schedule": "Naplánovat Schůzku"
+  },
+  "schedule": {
+    "title": "Naplánujte si bezplatný hovor v čase, který vám vyhovuje, pomocí odkazu níže!",
+    "cta": "Rezervovat Schůzku"
+  },
+  "form": {
+    "title": "Pojďme si Povídat!",
+    "name": "Jméno",
+    "nameRequired": "Jméno je povinné",
+    "company": "Společnost",
+    "companyPlaceholder": "Vaše společnost (volitelné)",
+    "email": "E-mail",
+    "emailPlaceholder": "vas.email@priklad.cz",
+    "emailInvalid": "Zadejte prosím platnou e-mailovou adresu",
+    "audienceType": "Jsem",
+    "audienceTypePlaceholder": "Vyberte svou roli",
+    "audienceTypeRequired": "Vyberte prosím typ publika",
+    "message": "Zpráva",
+    "messagePlaceholder": "Řekněte nám o svém projektu nebo dotazu...",
+    "messageRequired": "Zpráva je povinná",
+    "consent": "Souhlasím se {{privacyPolicy}} a souhlasím s tím, abych byl kontaktován ohledně svého dotazu.",
+    "privacyPolicy": "zásadami ochrany osobních údajů",
+    "submit": "Odeslat Zprávu",
+    "submitting": "Odesílání...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 znaků"
+  },
+  "audienceTypes": {
+    "cpo": "Operátor Nabíjení",
+    "other": "Jiné",
+    "distributionPartner": "Distribuční Partner"
+  },
+  "messages": {
+    "success": "Zpráva úspěšně odeslána!",
+    "successDesc": "Děkujeme za váš zájem. Brzy se vám ozveme.",
+    "error": "Nepodařilo se odeslat zprávu",
+    "errorDesc": "Zkuste to prosím později.",
+    "validationError": "Chyba Validace",
+    "rateLimit": "Počkejte prosím",
+    "rateLimitDesc": "Další zprávu můžete odeslat za {{seconds}} sekund."
+  }
+}

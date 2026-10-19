@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Contactformulier",
+    "schedule": "Afspraak Plannen"
+  },
+  "schedule": {
+    "title": "Plan een gesprek op een moment dat u uitkomt met ons team!",
+    "cta": "Afspraak Maken"
+  },
+  "form": {
+    "title": "Laten We Praten!",
+    "name": "Naam",
+    "nameRequired": "Naam is verplicht",
+    "company": "Bedrijf",
+    "companyPlaceholder": "Uw bedrijf (optioneel)",
+    "email": "E-mail",
+    "emailPlaceholder": "uw.email@voorbeeld.nl",
+    "emailInvalid": "Voer een geldig e-mailadres in",
+    "audienceType": "Ik ben een",
+    "audienceTypePlaceholder": "Selecteer uw rol",
+    "audienceTypeRequired": "Selecteer een doelgroeptype",
+    "message": "Bericht",
+    "messagePlaceholder": "Vertel ons over uw project of vraag...",
+    "messageRequired": "Bericht is verplicht",
+    "consent": "Ik ga akkoord met het {{privacyPolicy}} en stem ermee in te worden gecontacteerd over mijn vraag.",
+    "privacyPolicy": "privacybeleid",
+    "submit": "Bericht Verzenden",
+    "submitting": "Verzenden...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 tekens"
+  },
+  "audienceTypes": {
+    "cpo": "Laadnetbeheerder",
+    "other": "Andere",
+    "distributionPartner": "Distributiepartner"
+  },
+  "messages": {
+    "success": "Bericht succesvol verzonden!",
+    "successDesc": "Bedankt voor uw interesse. We nemen binnenkort contact met u op.",
+    "error": "Verzenden van bericht mislukt",
+    "errorDesc": "Probeer het later opnieuw.",
+    "validationError": "Validatiefout",
+    "rateLimit": "Even geduld",
+    "rateLimitDesc": "U kunt over {{seconds}} seconden nog een bericht verzenden."
+  }
+}

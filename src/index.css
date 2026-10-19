@@ -1,0 +1,852 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Myriad Pro Font Family */
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('/fonts/MyriadPro-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('/fonts/MyriadPro-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('/fonts/MyriadPro-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('/fonts/MyriadPro-It.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* NetworkCore Design System - Inspired by clean fintech aesthetics
+All colors MUST be HSL. Electric blue and orange accents with neutral base.
+*/
+
+@layer base {
+  :root {
+    /* Light theme as default */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 3%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 3%;
+
+    --radius: 0.75rem;
+
+    /* NetworkCore Brand Colors */
+    --electric-green: 125 85% 40%;
+    --electric-green-foreground: 0 0% 98%;
+    --electric-blue: 207 90% 45%;
+    --electric-blue-foreground: 0 0% 98%;
+    
+    /* Menu and footer product identities */
+    --identity-network: 161 72% 48%;
+    --identity-charge: 173 80% 40%;
+    --identity-direct: 199 89% 60%;
+    --identity-pack: 186 70% 42%;
+
+    /* Section backgrounds - complementary to brand green/blue */
+    --section-neutral: 0 0% 98%;
+    --section-cool: 210 20% 97%;
+    --section-cool-light: 210 16% 98%;
+    --section-dark: 0 0% 96%;
+    --section-green: 125 48% 93%;
+    --section-network: linear-gradient(110deg, hsl(var(--electric-green) / 0.13), hsl(var(--section-green)) 36%, hsl(var(--electric-blue) / 0.14));
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--electric-green)));
+    --gradient-text: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--electric-green)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--section-neutral)));
+    
+    /* Shadows - lighter for white theme */
+    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
+    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    --shadow-large: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
+    
+    /* Typography scales */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 3.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Myriad Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+    letter-spacing: 0;
+  }
+
+  /* Typography hierarchy */
+  .text-display {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+  
+  .text-headline {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+  
+  .text-subhead {
+    @apply text-lg md:text-xl font-medium;
+  }
+  
+  .text-body-large {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  /* Container utilities for full-width layouts */
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .container-full {
+    @apply max-w-screen-2xl mx-auto;
+  }
+
+  /* Gradient text utilities - now dark */
+  .gradient-text {
+    @apply text-foreground;
+  }
+
+  /* Smooth scrolling for section navigation */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-electric-green;
+  }
+}
+
+/* ============================================================
+   Motion system: scroll reveals, animated rules, micro-interactions
+   ============================================================ */
+@layer utilities {
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal-up {
+    transform: translateY(24px);
+  }
+  .reveal-left {
+    transform: translateX(-24px);
+  }
+  .reveal-right {
+    transform: translateX(24px);
+  }
+  .reveal-fade {
+    transform: none;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Animated hairline rules */
+  .animated-divider {
+    transform: scaleX(0);
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .animated-divider.is-visible {
+    transform: scaleX(1);
+  }
+
+  /* Magnetic buttons */
+  .magnetic {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .magnetic:hover {
+    transition: transform 0.08s linear;
+  }
+
+  /* Arrow icons slide on hover */
+  .group\/cta svg,
+  .cta-arrow svg {
+    transition: transform 0.25s ease-out;
+  }
+  .cta-arrow:hover svg {
+    transform: translateX(4px);
+  }
+
+  /* Hero entrance */
+  .hero-zoom {
+    animation: hero-zoom 18s ease-out forwards;
+  }
+  .hero-word {
+    display: inline-block;
+    opacity: 0;
+    animation: hero-word-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .hero-fade-late {
+    opacity: 0;
+    animation: hero-word-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .hero-lead-grid {
+    @apply relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-4 pb-12 pt-28 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.78fr)] lg:gap-16 lg:px-8 lg:py-28;
+    font-family: inherit;
+  }
+  @media (min-width: 900px) and (max-width: 1023px) {
+    .hero-lead-grid {
+      grid-template-columns: minmax(0, 0.9fr) minmax(380px, 1.1fr);
+      gap: 2rem;
+      padding-top: 7rem;
+      padding-bottom: 3rem;
+    }
+    .hero-lead-copy > h1 {
+      font-size: 2.25rem;
+      line-height: 1.12;
+    }
+    .hero-lead-copy > p {
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+    .hero-lead-form-title {
+      font-size: 1.35rem;
+    }
+  }
+  .hero-lead-copy {
+    @apply text-left animate-in fade-in slide-in-from-left-8 duration-700;
+  }
+  .hero-lead-copy > h1,
+  .hero-lead-copy > h2,
+  .hero-lead-copy > p {
+    font-family: inherit;
+  }
+  .hero-lead-form {
+    @apply w-full animate-in fade-in slide-in-from-right-8 duration-1000;
+    font-family: inherit;
+    letter-spacing: 0;
+  }
+  .hero-lead-form * {
+    font-family: inherit;
+    letter-spacing: 0;
+  }
+  .hero-lead-form-title {
+    @apply mb-5 text-left text-2xl font-light text-background;
+    font-family: inherit;
+  }
+
+  /* Transparent process diagrams used on the How It Works page */
+  .process-diagram {
+    width: 100%;
+    font-family: inherit;
+  }
+  .process-diagram__flow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 5rem minmax(0, 1fr) 5rem minmax(0, 1fr);
+    align-items: center;
+    width: 100%;
+  }
+  .process-diagram--driver .process-diagram__flow {
+    grid-template-columns: minmax(0, 1fr) 2rem minmax(0, 1fr) 2rem minmax(0, 1fr) 2rem minmax(0, 1fr) 2rem minmax(0, 1fr);
+  }
+  .process-diagram__node {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    min-width: 0;
+    min-height: 10rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    border: 1px solid hsl(var(--border) / 0.75);
+    border-radius: 0.5rem;
+    background: hsl(var(--background) / 0.94);
+    padding: 1.5rem 1rem;
+    box-shadow: var(--shadow-soft);
+    color: hsl(var(--foreground));
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .process-diagram--driver .process-diagram__node {
+    min-height: 8.5rem;
+    padding: 1.25rem 0.65rem;
+  }
+  .process-diagram__node span {
+    max-width: 10rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+  }
+  .process-diagram--driver .process-diagram__node span {
+    font-size: 0.875rem;
+  }
+  .process-diagram__icon {
+    display: flex;
+    width: 3.75rem;
+    height: 3.75rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid hsl(var(--border) / 0.7);
+    border-radius: 9999px;
+    background: hsl(var(--background));
+  }
+  .process-diagram__connector {
+    position: relative;
+    height: 1px;
+    background: hsl(var(--foreground) / 0.16);
+  }
+  .process-diagram__pulse {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 9999px;
+    background: hsl(var(--foreground));
+    box-shadow: 0 0 0 0.3rem hsl(var(--foreground) / 0.08);
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    animation: process-flow 3.6s ease-in-out infinite;
+  }
+
+  .process-diagram--charging-partner .process-diagram__pulse {
+    animation-duration: 4.4s;
+  }
+  .process-diagram--charging-partner .process-diagram__connector--step-1 .process-diagram__pulse {
+    animation-name: process-flow-first-half;
+  }
+  .process-diagram--charging-partner .process-diagram__connector--step-2 .process-diagram__pulse {
+    animation-name: process-flow-second-half;
+  }
+
+  .process-diagram--driver .process-diagram__pulse {
+    animation-duration: 6.8s;
+    animation-timing-function: linear;
+  }
+  .process-diagram--driver .process-diagram__connector--step-1 .process-diagram__pulse {
+    animation-name: process-driver-step-1;
+  }
+  .process-diagram--driver .process-diagram__connector--step-2 .process-diagram__pulse {
+    animation-name: process-driver-step-2;
+  }
+  .process-diagram--driver .process-diagram__connector--step-3 .process-diagram__pulse {
+    animation-name: process-driver-session;
+  }
+  .process-diagram--driver .process-diagram__connector--step-4 .process-diagram__pulse {
+    animation-name: process-driver-step-4;
+  }
+  .process-diagram__pulse--return {
+    animation-name: process-flow-return;
+    animation-delay: 1.45s !important;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .process-diagram__node:hover {
+      transform: translateY(-4px);
+      border-color: hsl(var(--foreground) / 0.2);
+      box-shadow: var(--shadow-medium);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .process-diagram__flow,
+    .process-diagram--driver .process-diagram__flow {
+      grid-template-columns: minmax(0, 1fr);
+      justify-items: center;
+    }
+    .process-diagram__node,
+    .process-diagram--driver .process-diagram__node {
+      width: min(100%, 18rem);
+      min-height: 0;
+      padding: 1rem;
+    }
+    .process-diagram__connector {
+      width: 1px;
+      height: 2.25rem;
+    }
+    .process-diagram__pulse {
+      top: 0;
+      left: 50%;
+      animation-name: process-flow-mobile;
+    }
+    .process-diagram--charging-partner .process-diagram__connector--step-1 .process-diagram__pulse {
+      animation-name: process-flow-mobile-first-half;
+    }
+    .process-diagram--charging-partner .process-diagram__connector--step-2 .process-diagram__pulse {
+      animation-name: process-flow-mobile-second-half;
+    }
+    .process-diagram--driver .process-diagram__connector--step-1 .process-diagram__pulse {
+      animation-name: process-driver-mobile-step-1;
+    }
+    .process-diagram--driver .process-diagram__connector--step-2 .process-diagram__pulse {
+      animation-name: process-driver-mobile-step-2;
+    }
+    .process-diagram--driver .process-diagram__connector--step-3 .process-diagram__pulse {
+      animation-name: process-driver-mobile-session;
+    }
+    .process-diagram--driver .process-diagram__connector--step-4 .process-diagram__pulse {
+      animation-name: process-driver-mobile-step-4;
+    }
+    .process-diagram__pulse--return {
+      animation-name: process-flow-mobile-return;
+    }
+  }
+
+  /* Ambient background orbs */
+  .orb {
+    animation: orb-drift 26s ease-in-out infinite alternate;
+  }
+  .orb-b {
+    animation-duration: 34s;
+    animation-delay: -8s;
+  }
+  .orb-c {
+    animation-duration: 42s;
+    animation-delay: -16s;
+  }
+
+  /* Row hover on data tables */
+  .data-row {
+    position: relative;
+    transition:
+      background-color 0.25s ease,
+      transform 0.25s ease;
+  }
+  .data-row::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: hsl(var(--electric-green));
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+  }
+  .data-row:hover {
+    background-color: hsl(var(--muted) / 0.5);
+  }
+  .data-row:hover::before {
+    transform: scaleY(1);
+  }
+
+  /* Shared content-page rhythm */
+  .site-content-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+  }
+  .site-section-network {
+    background: var(--section-network) !important;
+  }
+  .site-section-neutral {
+    background: hsl(var(--section-cool)) !important;
+  }
+  .site-section-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .site-section-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .site-content-section h2,
+  .site-content-section h3 {
+    transition: color 0.3s ease;
+  }
+  .site-content-section h2:hover,
+  .site-content-section h3:hover {
+    color: hsl(var(--foreground) / 0.7);
+  }
+  .site-interactive-card {
+    transition:
+      transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.32s ease,
+      box-shadow 0.32s ease,
+      background-color 0.32s ease !important;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .site-interactive-card:hover {
+      transform: translateY(-4px);
+      border-color: hsl(var(--foreground) / 0.22);
+      box-shadow: var(--shadow-medium);
+      background-color: hsl(var(--card));
+    }
+    .site-interactive-card:hover svg {
+      transform: scale(1.06);
+    }
+    .site-interactive-card svg {
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.12);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-word-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes orb-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(4rem, -3rem, 0) scale(1.15);
+  }
+}
+
+@keyframes process-flow {
+  0%, 10% { left: 0; opacity: 0; }
+  20%, 80% { opacity: 1; }
+  90%, 100% { left: 100%; opacity: 0; }
+}
+
+@keyframes process-flow-return {
+  0%, 10% { left: 100%; opacity: 0; }
+  20%, 80% { opacity: 1; }
+  90%, 100% { left: 0; opacity: 0; }
+}
+
+@keyframes process-flow-first-half {
+  0%, 4% { left: 0; opacity: 0; }
+  8% { opacity: 1; }
+  42% { left: 100%; opacity: 1; }
+  46%, 100% { left: 100%; opacity: 0; }
+}
+
+@keyframes process-flow-second-half {
+  0%, 52% { left: 0; opacity: 0; }
+  56% { opacity: 1; }
+  90% { left: 100%; opacity: 1; }
+  94%, 100% { left: 100%; opacity: 0; }
+}
+
+@keyframes process-driver-step-1 {
+  0%, 2% { left: 0; opacity: 0; }
+  4% { opacity: 1; }
+  14% { left: 100%; opacity: 1; }
+  16%, 100% { left: 100%; opacity: 0; }
+}
+
+@keyframes process-driver-step-2 {
+  0%, 18% { left: 0; opacity: 0; }
+  20% { opacity: 1; }
+  30% { left: 100%; opacity: 1; }
+  32%, 100% { left: 100%; opacity: 0; }
+}
+
+@keyframes process-driver-session {
+  0%, 34% { left: 0; opacity: 0; }
+  36% { opacity: 1; }
+  76% { left: 100%; opacity: 1; }
+  78%, 100% { left: 100%; opacity: 0; }
+}
+
+@keyframes process-driver-step-4 {
+  0%, 80% { left: 0; opacity: 0; }
+  82% { opacity: 1; }
+  92% { left: 100%; opacity: 1; }
+  94%, 100% { left: 100%; opacity: 0; }
+}
+
+@keyframes process-flow-mobile {
+  0%, 10% { top: 0; opacity: 0; }
+  20%, 80% { opacity: 1; }
+  90%, 100% { top: 100%; opacity: 0; }
+}
+
+@keyframes process-flow-mobile-return {
+  0%, 10% { top: 100%; opacity: 0; }
+  20%, 80% { opacity: 1; }
+  90%, 100% { top: 0; opacity: 0; }
+}
+
+@keyframes process-flow-mobile-first-half {
+  0%, 4% { top: 0; opacity: 0; }
+  8% { opacity: 1; }
+  42% { top: 100%; opacity: 1; }
+  46%, 100% { top: 100%; opacity: 0; }
+}
+
+@keyframes process-flow-mobile-second-half {
+  0%, 52% { top: 0; opacity: 0; }
+  56% { opacity: 1; }
+  90% { top: 100%; opacity: 1; }
+  94%, 100% { top: 100%; opacity: 0; }
+}
+
+@keyframes process-driver-mobile-step-1 {
+  0%, 2% { top: 0; opacity: 0; }
+  4% { opacity: 1; }
+  14% { top: 100%; opacity: 1; }
+  16%, 100% { top: 100%; opacity: 0; }
+}
+
+@keyframes process-driver-mobile-step-2 {
+  0%, 18% { top: 0; opacity: 0; }
+  20% { opacity: 1; }
+  30% { top: 100%; opacity: 1; }
+  32%, 100% { top: 100%; opacity: 0; }
+}
+
+@keyframes process-driver-mobile-session {
+  0%, 34% { top: 0; opacity: 0; }
+  36% { opacity: 1; }
+  76% { top: 100%; opacity: 1; }
+  78%, 100% { top: 100%; opacity: 0; }
+}
+
+@keyframes process-driver-mobile-step-4 {
+  0%, 80% { top: 0; opacity: 0; }
+  82% { opacity: 1; }
+  92% { top: 100%; opacity: 1; }
+  94%, 100% { top: 100%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .animated-divider,
+  .hero-word,
+  .hero-fade-late {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .hero-zoom,
+  .orb,
+  .site-section-reveal {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .site-interactive-card,
+  .site-interactive-card svg,
+  .process-diagram__pulse {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+  .process-diagram__pulse {
+    display: none;
+  }
+}
+
+/* HubSpot form overrides */
+.hs-form-frame iframe {
+  min-height: 0 !important;
+  margin-left: -38px !important;
+  margin-top: -28px !important;
+  width: calc(100% + 38px) !important;
+}
+
+.hs-form-frame .hs-form {
+  font-family: 'Myriad Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+.hs-form-frame .hs-form fieldset {
+  max-width: 100% !important;
+}
+
+.hs-form-frame .hs-form .hs-input {
+  font-family: inherit !important;
+  font-size: 0.875rem !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: 0.375rem !important;
+  padding: 0.5rem 0.75rem !important;
+  background: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  width: 100% !important;
+}
+
+.hs-form-frame .hs-form .hs-input:focus {
+  outline: none !important;
+  border-color: hsl(var(--foreground)) !important;
+  box-shadow: 0 0 0 1px hsl(var(--foreground)) !important;
+}
+
+.hs-form-frame .hs-form .hs-button {
+  font-family: inherit !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  background: hsl(var(--foreground)) !important;
+  color: hsl(var(--background)) !important;
+  border: none !important;
+  border-radius: 0.375rem !important;
+  padding: 0.5rem 1.25rem !important;
+  cursor: pointer !important;
+  letter-spacing: 0.025em !important;
+  transition: opacity 0.2s !important;
+}
+
+.hs-form-frame .hs-form .hs-button:hover {
+  opacity: 0.9 !important;
+}
+
+.hs-form-frame .hs-form label {
+  display: none !important;
+}
+
+.hs-form-frame .hs-form .hs-error-msgs {
+  font-size: 0.75rem !important;
+  color: hsl(var(--destructive)) !important;
+  margin-top: 0.25rem !important;
+}
+
+.hs-form-frame .hs-form .legal-consent-container {
+  font-size: 0.75rem !important;
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+.hs-form-frame .hs-form .submitted-message {
+  font-family: inherit !important;
+  font-size: 0.875rem !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+@keyframes footer-globe-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.footer-join-globe {
+  transform-origin: center;
+}
+
+
+/* Meridians narrow and widen in turn: the wireframe reads as one slow spin
+   without any aspect-ratio distortion of the dots. */
+.footer-globe-meridian {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: footer-globe-meridian 32s ease-in-out infinite;
+}
+
+@keyframes footer-globe-meridian {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.02);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-join-globe,
+  .footer-globe-meridian {
+    animation: none;
+  }
+}
+
+/* Shared product identities keep navigation and footer treatments aligned. */
+.identity-cp { --identity: var(--identity-network); }
+.identity-dp { --identity: var(--identity-charge); }
+.identity-direct { --identity: var(--identity-direct); }
+.identity-pack { --identity: var(--identity-pack); }
+.identity-card {
+  background: hsl(var(--card) / 0.7);
+  border: 1px solid hsl(var(--border) / 0.65);
+}
+a.identity-card:hover { border-color: hsl(var(--identity) / 0.4); }
+.identity-band {
+  background: hsl(var(--identity) / 0.08);
+  border-top: 1px solid hsl(var(--identity) / 0.18);
+  color: hsl(var(--foreground) / 0.7);
+}
+.identity-marker { background: hsl(var(--identity)); }
+.identity-highlight {
+  background: hsl(var(--identity) / 0.09);
+  border-left: 2px solid hsl(var(--identity) / 0.55);
+}
+.identity-highlight:has(a):hover { background: hsl(var(--identity) / 0.16); }

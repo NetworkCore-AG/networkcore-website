@@ -1,0 +1,52 @@
+{
+  "title": "Personvernerklæring",
+  "lastUpdated": "Sist oppdatert:",
+  "sections": {
+    "introduction": {
+      "title": "1. Om denne policyen",
+      "content": "NetworkCore AG (\"NetworkCore\", \"vi\", \"vår\") er forpliktet til å beskytte ditt personvern. Denne nettsiden er kun informativ og samler ikke automatisk inn personopplysninger. Denne Personvernerklæringen forklarer hvordan vi håndterer din informasjon når du velger å kontakte oss via vår nettside. Vi er fullt GDPR-kompatible."
+    },
+    "dataController": {
+      "title": "2. Behandlingsansvarlig",
+      "content": "NetworkCore AG, et selskap registrert i Sveits, er behandlingsansvarlig for alle personopplysninger du oppgir. For spørsmål angående denne Personvernerklæringen, vennligst kontakt oss på compliance [at] networkcore [dot] org."
+    },
+    "contactForm": {
+      "title": "3. Kontaktskjema",
+      "content": "Når du bruker vårt kontaktskjema, gir du oss frivillig personlig informasjon, inkludert ditt navn, e-postadresse, firmanavn og melding. Ved å sende inn kontaktskjemaet samtykker du til at NetworkCore mottar og behandler denne informasjonen for å svare på din forespørsel og kommunisere med deg om potensielle forretningsmuligheter."
+    },
+    "dataUse": {
+      "title": "4. Bruk av din informasjon",
+      "content": "Vi bruker informasjonen du oppgir via vårt kontaktskjema utelukkende for å: svare på dine henvendelser; gi informasjon om våre EV-ladeplattformtjenester; kommunisere med deg om potensielle forretningspartnerskap. Vi bruker ikke din informasjon til markedsføringsformål uten ditt uttrykkelige samtykke."
+    },
+    "dataSharing": {
+      "title": "5. Datadeling",
+      "content": "Vi selger, bytter eller leier ikke ut din personlige informasjon til tredjeparter. Din informasjon kan kun deles når det kreves av loven eller for å beskytte våre juridiske rettigheter."
+    },
+    "thirdPartyLinks": {
+      "title": "6. Tredjepartslenker",
+      "content": "Vår nettside kan inneholde lenker til tredjepartsnettsteder og eksterne ressurser. Vi er ikke ansvarlige for personvernpraksisen eller innholdet på disse eksterne nettstedene. Vi oppfordrer deg til å gjennomgå personvernreglene til tredjepartsnettsteder du besøker."
+    },
+    "dataSecurity": {
+      "title": "7. Datasikkerhet",
+      "content": "Vi implementerer passende tekniske og organisatoriske tiltak for å beskytte alle personopplysninger du oppgir mot uautorisert tilgang, endring eller avsløring."
+    },
+    "yourRights": {
+      "title": "8. Dine rettigheter (GDPR)",
+      "content": "I henhold til GDPR har du rett til å: få tilgang til personopplysningene vi har om deg; be om retting av unøyaktige data; be om sletting av dine data; trekke tilbake samtykket ditt når som helst. For å utøve noen av disse rettighetene, vennligst kontakt oss på compliance [at] networkcore [dot] org."
+    },
+    "cookies": {
+      "title": "9. Informasjonskapsler",
+      "content": "Vår nettside bruker kun nødvendige informasjonskapsler som er nødvendige for at nettstedet skal fungere ordentlig. Vi bruker ikke sporings- eller reklameinformasjonskapsler."
+    },
+    "changes": {
+      "title": "10. Endringer i denne policyen",
+      "content": "Vi kan oppdatere denne Personvernerklæringen fra tid til annen. Eventuelle endringer vil bli publisert på denne siden med en oppdatert revisjonsdato."
+    },
+    "contact": {
+      "title": "11. Kontakt oss",
+      "content": "Hvis du har spørsmål om denne Personvernerklæringen, vennligst kontakt oss på:",
+      "email": "E-post: compliance [at] networkcore [dot] org",
+      "address": "NetworkCore AG, Sveits"
+    }
+  }
+}

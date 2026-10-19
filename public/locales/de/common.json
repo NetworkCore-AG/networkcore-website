@@ -1,0 +1,17 @@
+{
+  "navigation": {
+    "howItWorks": "So Funktioniert's",
+    "cpos": "Ladenetzbetreiber",
+    "about": "Über Uns",
+    "blog": "Blog",
+    "partnerWithUs": "Partner Werden",
+    "distributionPartners": "Distributionspartner"
+  },
+  "footer": {
+    "copyright": "© {{year}} NetworkCore AG. Alle Rechte vorbehalten.",
+    "privacyPolicy": "Datenschutzrichtlinie"
+  },
+  "language": {
+    "select": "Sprache Auswählen"
+  }
+}

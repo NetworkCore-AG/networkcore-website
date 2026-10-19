@@ -1,0 +1,52 @@
+{
+  "title": "Tietosuojakäytäntö",
+  "lastUpdated": "Viimeksi päivitetty:",
+  "sections": {
+    "introduction": {
+      "title": "1. Tietoja tästä käytännöstä",
+      "content": "NetworkCore AG (\"NetworkCore\", \"me\", \"meidän\") on sitoutunut suojaamaan yksityisyyttäsi. Tämä verkkosivusto on vain tiedottava eikä kerää automaattisesti henkilötietoja. Tämä Tietosuojakäytäntö selittää, miten käsittelemme tietojasi, kun päätät ottaa meihin yhteyttä verkkosivustomme kautta. Olemme täysin GDPR-yhteensopivia."
+    },
+    "dataController": {
+      "title": "2. Rekisterinpitäjä",
+      "content": "NetworkCore AG, Sveitsissä rekisteröity yritys, on rekisterinpitäjä kaikille antamillesi henkilötiedoille. Kysymyksiä tästä Tietosuojakäytännöstä voit esittää osoitteessa compliance [at] networkcore [dot] org."
+    },
+    "contactForm": {
+      "title": "3. Yhteydenottolomake",
+      "content": "Kun käytät yhteydenottolomakettamme, annat meille vapaaehtoisesti henkilökohtaisia tietoja, mukaan lukien nimesi, sähköpostiosoitteesi, yrityksesi nimen ja viestisi. Lähettämällä yhteydenottolomakkeen suostut siihen, että NetworkCore vastaanottaa ja käsittelee näitä tietoja vastatakseen pyyntöösi ja kommunikoidakseen kanssasi mahdollisista liiketoimintamahdollisuuksista."
+    },
+    "dataUse": {
+      "title": "4. Tietojesi käyttö",
+      "content": "Käytämme yhteydenottolomakkeen kautta antamiasi tietoja ainoastaan: vastataksemme kyselyihisi; antaaksemme tietoa EV-latauspalvelualustamme palveluista; kommunikoidaksemme kanssasi mahdollisista liiketoimintakumppanuuksista. Emme käytä tietojasi markkinointitarkoituksiin ilman nimenomaista suostumustasi."
+    },
+    "dataSharing": {
+      "title": "5. Tietojen jakaminen",
+      "content": "Emme myy, vaihda tai vuokraa henkilökohtaisia tietojasi kolmansille osapuolille. Tietojasi voidaan jakaa vain lain niin vaatiessa tai oikeuksiemme suojaamiseksi."
+    },
+    "thirdPartyLinks": {
+      "title": "6. Kolmannen osapuolen linkit",
+      "content": "Verkkosivustomme voi sisältää linkkejä kolmannen osapuolen verkkosivustoille ja ulkoisiin resursseihin. Emme ole vastuussa näiden ulkoisten sivustojen tietosuojakäytännöistä tai sisällöstä. Kannustamme sinua tutustumaan vierailemiesi kolmannen osapuolen sivustojen tietosuojakäytäntöihin."
+    },
+    "dataSecurity": {
+      "title": "7. Tietoturva",
+      "content": "Toteutamme asianmukaiset tekniset ja organisatoriset toimenpiteet suojataksemme kaikkia antamiasi henkilötietoja luvattomalta pääsyltä, muutoksilta tai paljastamiselta."
+    },
+    "yourRights": {
+      "title": "8. Oikeutesi (GDPR)",
+      "content": "GDPR:n mukaan sinulla on oikeus: saada pääsy henkilötietoihin, joita meillä on sinusta; pyytää epätarkkojen tietojen korjaamista; pyytää tietojesi poistamista; peruuttaa suostumuksesi milloin tahansa. Käyttääksesi näitä oikeuksia, ota meihin yhteyttä osoitteessa compliance [at] networkcore [dot] org."
+    },
+    "cookies": {
+      "title": "9. Evästeet",
+      "content": "Verkkosivustomme käyttää vain välttämättömiä evästeitä, jotka ovat tarpeen sivuston toiminnan kannalta. Emme käytä seuranta- tai mainosevästeitä."
+    },
+    "changes": {
+      "title": "10. Muutokset tähän käytäntöön",
+      "content": "Voimme päivittää tätä Tietosuojakäytäntöä aika ajoin. Mahdolliset muutokset julkaistaan tällä sivulla päivitetyllä päivämäärällä."
+    },
+    "contact": {
+      "title": "11. Ota yhteyttä",
+      "content": "Jos sinulla on kysyttävää tästä Tietosuojakäytännöstä, ota meihin yhteyttä:",
+      "email": "Sähköposti: compliance [at] networkcore [dot] org",
+      "address": "NetworkCore AG, Sveitsi"
+    }
+  }
+}

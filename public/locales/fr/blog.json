@@ -1,0 +1,15 @@
+{
+  "pageTitle": "Blog",
+  "pageDescription": "Informations, actualités et guides sur l'infrastructure de recharge VE et les réseaux d'itinérance.",
+  "heroTitle": "Informations & Ressources",
+  "heroSubtitle": "Restez informé des dernières tendances, guides et actualités du monde de l'infrastructure de recharge VE.",
+  "allCategories": "Tous",
+  "noPosts": "Aucun article trouvé.",
+  "readMore": "Lire la suite",
+  "minRead": "min de lecture",
+  "backToBlog": "Retour au Blog",
+  "relatedPosts": "Articles Connexes",
+  "recentPosts": "Derniers Articles",
+  "recentPostsDescription": "Informations et mises à jour du monde de la recharge VE.",
+  "viewAllPosts": "Voir Tous les Articles"
+}

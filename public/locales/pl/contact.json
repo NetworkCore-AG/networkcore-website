@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Formularz Kontaktowy",
+    "schedule": "Umów Spotkanie"
+  },
+  "schedule": {
+    "title": "Umów bezpłatną rozmowę w dogodnym dla Ciebie terminie za pomocą poniższego linku!",
+    "cta": "Zarezerwuj Spotkanie"
+  },
+  "form": {
+    "title": "Porozmawiajmy!",
+    "name": "Imię",
+    "nameRequired": "Imię jest wymagane",
+    "company": "Firma",
+    "companyPlaceholder": "Twoja firma (opcjonalnie)",
+    "email": "E-mail",
+    "emailPlaceholder": "twoj.email@przyklad.pl",
+    "emailInvalid": "Podaj prawidłowy adres e-mail",
+    "audienceType": "Jestem",
+    "audienceTypePlaceholder": "Wybierz swoją rolę",
+    "audienceTypeRequired": "Wybierz typ odbiorcy",
+    "message": "Wiadomość",
+    "messagePlaceholder": "Opowiedz nam o swoim projekcie lub zapytaniu...",
+    "messageRequired": "Wiadomość jest wymagana",
+    "consent": "Akceptuję {{privacyPolicy}} i wyrażam zgodę na kontakt w sprawie mojego zapytania.",
+    "privacyPolicy": "politykę prywatności",
+    "submit": "Wyślij Wiadomość",
+    "submitting": "Wysyłanie...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 znaków"
+  },
+  "audienceTypes": {
+    "cpo": "Operator Ładowania",
+    "other": "Inne",
+    "distributionPartner": "Partner Dystrybucyjny"
+  },
+  "messages": {
+    "success": "Wiadomość wysłana pomyślnie!",
+    "successDesc": "Dziękujemy za zainteresowanie. Wkrótce się odezwiemy.",
+    "error": "Nie udało się wysłać wiadomości",
+    "errorDesc": "Spróbuj ponownie później.",
+    "validationError": "Błąd Walidacji",
+    "rateLimit": "Proszę czekać",
+    "rateLimitDesc": "Możesz wysłać kolejną wiadomość za {{seconds}} sekund."
+  }
+}

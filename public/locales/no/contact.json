@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Kontaktskjema",
+    "schedule": "Planlegg et Møte"
+  },
+  "schedule": {
+    "title": "Planlegg en gratis samtale når det passer deg ved å bruke lenken nedenfor!",
+    "cta": "Book et Møte"
+  },
+  "form": {
+    "title": "La Oss Snakke!",
+    "name": "Navn",
+    "nameRequired": "Navn er påkrevd",
+    "company": "Selskap",
+    "companyPlaceholder": "Ditt selskap (valgfritt)",
+    "email": "E-post",
+    "emailPlaceholder": "din.epost@eksempel.no",
+    "emailInvalid": "Vennligst skriv inn en gyldig e-postadresse",
+    "audienceType": "Jeg er en",
+    "audienceTypePlaceholder": "Velg din rolle",
+    "audienceTypeRequired": "Vennligst velg en publikumstype",
+    "message": "Melding",
+    "messagePlaceholder": "Fortell oss om prosjektet eller henvendelsen din...",
+    "messageRequired": "Melding er påkrevd",
+    "consent": "Jeg godtar {{privacyPolicy}} og samtykker til å bli kontaktet om min henvendelse.",
+    "privacyPolicy": "personvernreglene",
+    "submit": "Send Melding",
+    "submitting": "Sender...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 tegn"
+  },
+  "audienceTypes": {
+    "cpo": "Ladeoperatør",
+    "other": "Annet",
+    "distributionPartner": "Distribusjonspartner"
+  },
+  "messages": {
+    "success": "Melding sendt!",
+    "successDesc": "Takk for din interesse. Vi kommer tilbake til deg snart.",
+    "error": "Kunne ikke sende melding",
+    "errorDesc": "Vennligst prøv igjen senere.",
+    "validationError": "Valideringsfeil",
+    "rateLimit": "Vennligst vent",
+    "rateLimitDesc": "Du kan sende en ny melding om {{seconds}} sekunder."
+  }
+}

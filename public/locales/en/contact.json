@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Contact Form",
+    "schedule": "Schedule a Meeting"
+  },
+  "schedule": {
+    "title": "Schedule a call at your convenience with our team!",
+    "cta": "Book a Meeting"
+  },
+  "form": {
+    "title": "Let's Talk!",
+    "name": "Name",
+    "nameRequired": "Name is required",
+    "company": "Company",
+    "companyPlaceholder": "Your company (optional)",
+    "email": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "emailInvalid": "Please enter a valid email address",
+    "audienceType": "I am a",
+    "audienceTypePlaceholder": "Select your role",
+    "audienceTypeRequired": "Please select an audience type",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your project or inquiry...",
+    "messageRequired": "Message is required",
+    "consent": "I agree to the {{privacyPolicy}} and consent to being contacted about my inquiry.",
+    "privacyPolicy": "privacy policy",
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 characters"
+  },
+  "audienceTypes": {
+    "cpo": "CPO",
+    "other": "Other",
+    "distributionPartner": "Distribution Partner"
+  },
+  "messages": {
+    "success": "Message sent successfully!",
+    "successDesc": "Thank you for your interest. We'll get back to you soon.",
+    "error": "Failed to send message",
+    "errorDesc": "Please try again later.",
+    "validationError": "Validation Error",
+    "rateLimit": "Please wait",
+    "rateLimitDesc": "You can submit another message in {{seconds}} seconds."
+  }
+}

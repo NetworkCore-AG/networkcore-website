@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "La Plateforme Mondiale de Recharge pour VE",
+    "subtitle": "Offrant une couche neutre de routage, de compensation et de règlement — nous connectons et monétisons les partenaires de distribution avec les réseaux de recharge via une seule API.",
+    "cta": "Devenez Partenaire",
+    "highlight": "La Plateforme Mondiale de Recharge pour VE"
+  },
+  "distributionPartners": {
+    "title": "Partenaires de Distribution : Vous Amenez les Conducteurs. Nous Apportons l'Argent.",
+    "subtitle": "Monétisez la demande de recharge VE de vos utilisateurs sans construire l'infrastructure. Depuis vos applications, portefeuilles, flottes et systèmes télématiques, vous pouvez gagner jusqu'à 9% sur chaque session de recharge. Vous apportez la demande et êtes payé pour cela.",
+    "highlight": "Vous Amenez les Conducteurs. Nous Apportons l'Argent."
+  },
+  "cpo": {
+    "title": "Opérateurs : Prêt à Faire Évoluer Votre Réseau de Recharge ?",
+    "subtitle": "Connectez-vous et accédez instantanément à un bassin mondial de conducteurs de VE. NetworkCore gère le routage, la facturation, la conformité, le change et les paiements quotidiens. DC et AC sont pris en charge. La tarification est simple : une petite commission par kWh. Pas de frais, pas de complications.",
+    "highlight": "Prêt à Faire Évoluer Votre Réseau de Recharge ?"
+  },
+  "about": {
+    "title": "À Propos : Performance. Précision. Fiabilité.",
+    "subtitle": "NetworkCore redéfinit l'intersection entre l'énergie et la finance. Nous avons pour mission de rendre la recharge des VE sans effort, en la transformant en une couche de service universelle qui permet aux partenaires de distribution de contrôler, d'optimiser et de monétiser l'expérience de recharge mondiale. Basés à Zoug, en Suisse, notre équipe combine des décennies d'expertise en infrastructure VE, fintech et écosystèmes numériques. Nous construisons une technologie durable avec clarté, conviction et une vision partagée pour l'avenir de l'énergie et des paiements.",
+    "highlight": "Performance. Précision. Fiabilité."
+  },
+  "contact": {
+    "title": "Contactez-Nous"
+  }
+}

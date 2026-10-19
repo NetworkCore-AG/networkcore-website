@@ -1,0 +1,52 @@
+{
+  "title": "Política de Privacidad",
+  "lastUpdated": "Última actualización:",
+  "sections": {
+    "introduction": {
+      "title": "1. Acerca de esta política",
+      "content": "NetworkCore AG (\"NetworkCore\", \"nosotros\", \"nuestro\") se compromete a proteger su privacidad. Este sitio web es únicamente informativo y no recopila datos personales automáticamente. Esta Política de Privacidad explica cómo manejamos su información cuando decide contactarnos a través de nuestro sitio web. Cumplimos plenamente con el Reglamento General de Protección de Datos (RGPD)."
+    },
+    "dataController": {
+      "title": "2. Responsable del tratamiento",
+      "content": "NetworkCore AG, empresa registrada en Suiza, es el responsable del tratamiento de cualquier dato personal que proporcione. Para cualquier pregunta sobre esta Política de Privacidad, contáctenos en compliance [at] networkcore [dot] org."
+    },
+    "contactForm": {
+      "title": "3. Formulario de contacto",
+      "content": "Cuando utiliza nuestro formulario de contacto, nos proporciona voluntariamente información personal, incluyendo su nombre, dirección de correo electrónico, nombre de empresa y mensaje. Al enviar el formulario de contacto, consiente que NetworkCore reciba y procese esta información para responder a su consulta y comunicarse con usted sobre posibles oportunidades de negocio."
+    },
+    "dataUse": {
+      "title": "4. Uso de su información",
+      "content": "Utilizamos la información que proporciona a través de nuestro formulario de contacto exclusivamente para: responder a sus consultas; proporcionar información sobre nuestros servicios de plataforma de carga de VE; comunicarnos con usted sobre posibles asociaciones comerciales. No utilizamos su información para fines de marketing sin su consentimiento explícito."
+    },
+    "dataSharing": {
+      "title": "5. Compartir datos",
+      "content": "No vendemos, intercambiamos ni alquilamos su información personal a terceros. Su información solo puede compartirse cuando lo exija la ley o para proteger nuestros derechos legales."
+    },
+    "thirdPartyLinks": {
+      "title": "6. Enlaces a terceros",
+      "content": "Nuestro sitio web puede contener enlaces a sitios web de terceros y recursos externos. No somos responsables de las prácticas de privacidad o el contenido de estos sitios externos. Le animamos a revisar las políticas de privacidad de cualquier sitio de terceros que visite."
+    },
+    "dataSecurity": {
+      "title": "7. Seguridad de datos",
+      "content": "Implementamos medidas técnicas y organizativas apropiadas para proteger cualquier dato personal que proporcione contra el acceso, alteración o divulgación no autorizados."
+    },
+    "yourRights": {
+      "title": "8. Sus derechos (RGPD)",
+      "content": "Bajo el RGPD, tiene derecho a: acceder a los datos personales que tenemos sobre usted; solicitar la corrección de datos inexactos; solicitar la eliminación de sus datos; retirar su consentimiento en cualquier momento. Para ejercer cualquiera de estos derechos, contáctenos en compliance [at] networkcore [dot] org."
+    },
+    "cookies": {
+      "title": "9. Cookies",
+      "content": "Nuestro sitio web utiliza solo cookies esenciales necesarias para que el sitio funcione correctamente. No utilizamos cookies de seguimiento ni publicitarias."
+    },
+    "changes": {
+      "title": "10. Cambios en esta política",
+      "content": "Podemos actualizar esta Política de Privacidad de vez en cuando. Cualquier cambio se publicará en esta página con una fecha de revisión actualizada."
+    },
+    "contact": {
+      "title": "11. Contáctenos",
+      "content": "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos en:",
+      "email": "Correo electrónico: compliance [at] networkcore [dot] org",
+      "address": "NetworkCore AG, Suiza"
+    }
+  }
+}

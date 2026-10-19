@@ -1,0 +1,52 @@
+{
+  "title": "Datenschutzrichtlinie",
+  "lastUpdated": "Zuletzt aktualisiert:",
+  "sections": {
+    "introduction": {
+      "title": "1. Über diese Richtlinie",
+      "content": "NetworkCore AG („NetworkCore", „wir", „uns" oder „unser") verpflichtet sich, Ihre Privatsphäre zu schützen. Diese Website dient ausschließlich Informationszwecken und erfasst keine personenbezogenen Daten automatisch. Diese Datenschutzrichtlinie erklärt, wie wir mit Ihren Informationen umgehen, wenn Sie uns über unsere Website kontaktieren. Wir sind vollständig DSGVO-konform."
+    },
+    "dataController": {
+      "title": "2. Verantwortlicher",
+      "content": "NetworkCore AG, ein in der Schweiz eingetragenes Unternehmen, ist der Verantwortliche für alle personenbezogenen Daten, die Sie uns zur Verfügung stellen. Bei Fragen zu dieser Datenschutzrichtlinie kontaktieren Sie uns bitte unter compliance [at] networkcore [dot] org."
+    },
+    "contactForm": {
+      "title": "3. Kontaktformular",
+      "content": "Wenn Sie unser Kontaktformular nutzen, stellen Sie uns freiwillig personenbezogene Daten zur Verfügung, einschließlich Ihres Namens, Ihrer E-Mail-Adresse, Ihres Firmennamens und Ihrer Nachricht. Mit dem Absenden des Kontaktformulars stimmen Sie zu, dass NetworkCore diese Informationen erhält und verarbeitet, um auf Ihre Anfrage zu antworten und mit Ihnen über mögliche Geschäftsmöglichkeiten zu kommunizieren."
+    },
+    "dataUse": {
+      "title": "4. Verwendung Ihrer Daten",
+      "content": "Wir verwenden die von Ihnen über unser Kontaktformular bereitgestellten Informationen ausschließlich, um: auf Ihre Anfragen zu antworten; Informationen über unsere EV-Ladeplattform-Dienste bereitzustellen; mit Ihnen über potenzielle Geschäftspartnerschaften zu kommunizieren. Ohne Ihre ausdrückliche Zustimmung verwenden wir Ihre Daten nicht für Marketingzwecke."
+    },
+    "dataSharing": {
+      "title": "5. Datenweitergabe",
+      "content": "Wir verkaufen, handeln oder vermieten Ihre personenbezogenen Daten nicht an Dritte. Ihre Informationen werden nur weitergegeben, wenn dies gesetzlich vorgeschrieben ist oder zum Schutz unserer Rechte erforderlich ist."
+    },
+    "thirdPartyLinks": {
+      "title": "6. Links zu Drittanbietern",
+      "content": "Unsere Website kann Links zu Websites Dritter und externen Ressourcen enthalten. Wir sind nicht verantwortlich für die Datenschutzpraktiken oder Inhalte dieser externen Websites. Wir empfehlen Ihnen, die Datenschutzrichtlinien aller von Ihnen besuchten Websites Dritter zu lesen."
+    },
+    "dataSecurity": {
+      "title": "7. Datensicherheit",
+      "content": "Wir setzen angemessene technische und organisatorische Maßnahmen ein, um alle von Ihnen bereitgestellten personenbezogenen Daten vor unbefugtem Zugriff, Änderung oder Offenlegung zu schützen."
+    },
+    "yourRights": {
+      "title": "8. Ihre Rechte (DSGVO)",
+      "content": "Gemäß DSGVO haben Sie das Recht: auf Zugang zu den personenbezogenen Daten, die wir über Sie speichern; auf Berichtigung unrichtiger Daten; auf Löschung Ihrer Daten; Ihre Einwilligung jederzeit zu widerrufen. Um eines dieser Rechte auszuüben, kontaktieren Sie uns bitte unter compliance [at] networkcore [dot] org."
+    },
+    "cookies": {
+      "title": "9. Cookies",
+      "content": "Unsere Website verwendet nur essentielle Cookies, die für die ordnungsgemäße Funktion der Website erforderlich sind. Wir verwenden keine Tracking- oder Werbe-Cookies."
+    },
+    "changes": {
+      "title": "10. Änderungen dieser Richtlinie",
+      "content": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite mit einem aktualisierten Datum veröffentlicht."
+    },
+    "contact": {
+      "title": "11. Kontakt",
+      "content": "Bei Fragen zu dieser Datenschutzrichtlinie kontaktieren Sie uns bitte unter:",
+      "email": "E-Mail: compliance [at] networkcore [dot] org",
+      "address": "NetworkCore AG, Schweiz"
+    }
+  }
+}

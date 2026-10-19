@@ -1,0 +1,52 @@
+{
+  "title": "Informativa sulla Privacy",
+  "lastUpdated": "Ultimo aggiornamento:",
+  "sections": {
+    "introduction": {
+      "title": "1. Informazioni su questa politica",
+      "content": "NetworkCore AG (\"NetworkCore\", \"noi\", \"nostro\") si impegna a proteggere la tua privacy. Questo sito web è esclusivamente informativo e non raccoglie automaticamente dati personali. Questa Informativa sulla Privacy spiega come gestiamo le tue informazioni quando scegli di contattarci attraverso il nostro sito web. Siamo pienamente conformi al Regolamento Generale sulla Protezione dei Dati (GDPR)."
+    },
+    "dataController": {
+      "title": "2. Titolare del trattamento",
+      "content": "NetworkCore AG, società registrata in Svizzera, è il titolare del trattamento di qualsiasi dato personale fornito. Per qualsiasi domanda riguardante questa Informativa sulla Privacy, contattaci all'indirizzo compliance [at] networkcore [dot] org."
+    },
+    "contactForm": {
+      "title": "3. Modulo di contatto",
+      "content": "Quando utilizzi il nostro modulo di contatto, ci fornisci volontariamente informazioni personali, inclusi nome, indirizzo email, nome dell'azienda e messaggio. Inviando il modulo di contatto, acconsenti a che NetworkCore riceva ed elabori queste informazioni per rispondere alla tua richiesta e comunicare con te riguardo a potenziali opportunità di business."
+    },
+    "dataUse": {
+      "title": "4. Utilizzo delle tue informazioni",
+      "content": "Utilizziamo le informazioni che fornisci attraverso il nostro modulo di contatto esclusivamente per: rispondere alle tue richieste; fornire informazioni sui nostri servizi di piattaforma di ricarica VE; comunicare con te riguardo a potenziali partnership commerciali. Non utilizziamo le tue informazioni per scopi di marketing senza il tuo consenso esplicito."
+    },
+    "dataSharing": {
+      "title": "5. Condivisione dei dati",
+      "content": "Non vendiamo, scambiamo o affittiamo le tue informazioni personali a terzi. Le tue informazioni possono essere condivise solo quando richiesto dalla legge o per proteggere i nostri diritti legali."
+    },
+    "thirdPartyLinks": {
+      "title": "6. Link a terze parti",
+      "content": "Il nostro sito web può contenere link a siti web di terze parti e risorse esterne. Non siamo responsabili delle pratiche sulla privacy o dei contenuti di questi siti esterni. Ti invitiamo a consultare le politiche sulla privacy di qualsiasi sito di terze parti che visiti."
+    },
+    "dataSecurity": {
+      "title": "7. Sicurezza dei dati",
+      "content": "Implementiamo misure tecniche e organizzative appropriate per proteggere qualsiasi dato personale fornito da accessi, alterazioni o divulgazioni non autorizzati."
+    },
+    "yourRights": {
+      "title": "8. I tuoi diritti (GDPR)",
+      "content": "Ai sensi del GDPR, hai il diritto di: accedere ai dati personali che deteniamo su di te; richiedere la correzione di dati inesatti; richiedere la cancellazione dei tuoi dati; revocare il tuo consenso in qualsiasi momento. Per esercitare uno di questi diritti, contattaci all'indirizzo compliance [at] networkcore [dot] org."
+    },
+    "cookies": {
+      "title": "9. Cookie",
+      "content": "Il nostro sito web utilizza solo cookie essenziali necessari per il corretto funzionamento del sito. Non utilizziamo cookie di tracciamento o pubblicitari."
+    },
+    "changes": {
+      "title": "10. Modifiche a questa politica",
+      "content": "Potremmo aggiornare questa Informativa sulla Privacy di tanto in tanto. Eventuali modifiche saranno pubblicate su questa pagina con una data di revisione aggiornata."
+    },
+    "contact": {
+      "title": "11. Contattaci",
+      "content": "Per qualsiasi domanda su questa Informativa sulla Privacy, contattaci all'indirizzo:",
+      "email": "Email: compliance [at] networkcore [dot] org",
+      "address": "NetworkCore AG, Svizzera"
+    }
+  }
+}

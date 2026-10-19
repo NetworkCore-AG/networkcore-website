@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Modulo di Contatto",
+    "schedule": "Programma un Incontro"
+  },
+  "schedule": {
+    "title": "Programma una chiamata a tua convenienza con il nostro team!",
+    "cta": "Prenota un Incontro"
+  },
+  "form": {
+    "title": "Parliamone!",
+    "name": "Nome",
+    "nameRequired": "Il nome è obbligatorio",
+    "company": "Azienda",
+    "companyPlaceholder": "La tua azienda (opzionale)",
+    "email": "Email",
+    "emailPlaceholder": "tua.email@esempio.it",
+    "emailInvalid": "Inserisci un indirizzo email valido",
+    "audienceType": "Sono un",
+    "audienceTypePlaceholder": "Seleziona il tuo ruolo",
+    "audienceTypeRequired": "Seleziona un tipo di pubblico",
+    "message": "Messaggio",
+    "messagePlaceholder": "Parlaci del tuo progetto o richiesta...",
+    "messageRequired": "Il messaggio è obbligatorio",
+    "consent": "Accetto l'{{privacyPolicy}} e acconsento a essere contattato riguardo alla mia richiesta.",
+    "privacyPolicy": "informativa sulla privacy",
+    "submit": "Invia Messaggio",
+    "submitting": "Invio in corso...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 caratteri"
+  },
+  "audienceTypes": {
+    "cpo": "Operatore di Ricarica",
+    "other": "Altro",
+    "distributionPartner": "Partner di Distribuzione"
+  },
+  "messages": {
+    "success": "Messaggio inviato con successo!",
+    "successDesc": "Grazie per il tuo interesse. Ti risponderemo presto.",
+    "error": "Invio del messaggio fallito",
+    "errorDesc": "Riprova più tardi.",
+    "validationError": "Errore di Validazione",
+    "rateLimit": "Attendere prego",
+    "rateLimitDesc": "Puoi inviare un altro messaggio tra {{seconds}} secondi."
+  }
+}

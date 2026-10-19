@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "howItWorks": "Jak To Działa",
+    "cpos": "Operatorzy Ładowania",
+    "about": "O Nas",
+    "partnerWithUs": "Zostań Partnerem",
+    "distributionPartners": "Partnerzy Dystrybucyjni"
+  },
+  "footer": {
+    "copyright": "© {{year}} NetworkCore AG. Wszelkie prawa zastrzeżone.",
+    "privacyPolicy": "Polityka Prywatności"
+  },
+  "language": {
+    "select": "Wybierz Język"
+  }
+}

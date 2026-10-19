@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: /sitemap.xml
+
+# Block common bot paths
+Disallow: /admin/
+Disallow: /.env
+Disallow: /api/
+Disallow: /private/

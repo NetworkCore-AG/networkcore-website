@@ -1,0 +1,46 @@
+{
+  "tabs": {
+    "form": "Kontaktformular",
+    "schedule": "Book et Møde"
+  },
+  "schedule": {
+    "title": "Book et gratis opkald på et tidspunkt, der passer dig, ved hjælp af linket nedenfor!",
+    "cta": "Book et Møde"
+  },
+  "form": {
+    "title": "Lad Os Tale!",
+    "name": "Navn",
+    "nameRequired": "Navn er påkrævet",
+    "company": "Virksomhed",
+    "companyPlaceholder": "Din virksomhed (valgfrit)",
+    "email": "E-mail",
+    "emailPlaceholder": "din.email@eksempel.dk",
+    "emailInvalid": "Indtast venligst en gyldig e-mailadresse",
+    "audienceType": "Jeg er en",
+    "audienceTypePlaceholder": "Vælg din rolle",
+    "audienceTypeRequired": "Vælg venligst en målgruppetype",
+    "message": "Besked",
+    "messagePlaceholder": "Fortæl os om dit projekt eller forespørgsel...",
+    "messageRequired": "Besked er påkrævet",
+    "consent": "Jeg accepterer {{privacyPolicy}} og giver samtykke til at blive kontaktet om min forespørgsel.",
+    "privacyPolicy": "fortrolighedspolitikken",
+    "submit": "Send Besked",
+    "submitting": "Sender...",
+    "required": "*",
+    "charactersCount": "{{count}}/1000 tegn"
+  },
+  "audienceTypes": {
+    "cpo": "Ladeoperatør",
+    "other": "Andet",
+    "distributionPartner": "Distributionspartner"
+  },
+  "messages": {
+    "success": "Besked sendt!",
+    "successDesc": "Tak for din interesse. Vi vender tilbage snart.",
+    "error": "Kunne ikke sende besked",
+    "errorDesc": "Prøv venligst igen senere.",
+    "validationError": "Valideringsfejl",
+    "rateLimit": "Vent venligst",
+    "rateLimitDesc": "Du kan sende en ny besked om {{seconds}} sekunder."
+  }
+}

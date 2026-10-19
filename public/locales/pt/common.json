@@ -1,0 +1,17 @@
+{
+  "navigation": {
+    "howItWorks": "Como Funciona",
+    "cpos": "Operadores de Carregamento",
+    "about": "Sobre Nós",
+    "blog": "Blog",
+    "partnerWithUs": "Seja Nosso Parceiro",
+    "distributionPartners": "Parceiros de Distribuição"
+  },
+  "footer": {
+    "copyright": "© {{year}} NetworkCore AG. Todos os direitos reservados.",
+    "privacyPolicy": "Política de Privacidade"
+  },
+  "language": {
+    "select": "Selecionar Idioma"
+  }
+}

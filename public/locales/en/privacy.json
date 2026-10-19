@@ -1,0 +1,52 @@
+{
+  "title": "Privacy Policy",
+  "lastUpdated": "Last Updated:",
+  "sections": {
+    "introduction": {
+      "title": "1. About This Policy",
+      "content": "NetworkCore AG (\"NetworkCore\", \"we\", \"us\", or \"our\") is committed to protecting your privacy. This website is informational only and does not collect personal data automatically. This Privacy Policy explains how we handle your information when you choose to contact us through our website. We are fully compliant with the General Data Protection Regulation (GDPR)."
+    },
+    "dataController": {
+      "title": "2. Data Controller",
+      "content": "NetworkCore AG, a company registered in Switzerland, is the data controller responsible for any personal data you provide. For any questions regarding this Privacy Policy or our data practices, please contact us at compliance [at] networkcore [dot] org."
+    },
+    "contactForm": {
+      "title": "3. Contact Form",
+      "content": "When you use our contact form, you voluntarily provide us with personal information including your name, email address, company name, and message content. By submitting the contact form, you consent to NetworkCore receiving and processing this information to respond to your inquiry and communicate with you about potential business opportunities. We will use your contact details solely for the purpose of responding to your request."
+    },
+    "dataUse": {
+      "title": "4. How We Use Your Information",
+      "content": "We use the information you provide through our contact form exclusively to: respond to your inquiries; provide information about our EV charging platform services; communicate with you about potential business partnerships. We do not use your information for marketing purposes without your explicit consent."
+    },
+    "dataSharing": {
+      "title": "5. Data Sharing",
+      "content": "We do not sell, trade, or rent your personal information to third parties. Your information may only be shared when required by law or to protect our legal rights."
+    },
+    "thirdPartyLinks": {
+      "title": "6. Third-Party Links",
+      "content": "Our website may contain links to third-party websites and external resources. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party websites you visit. Clicking on external links is at your own discretion and risk."
+    },
+    "dataSecurity": {
+      "title": "7. Data Security",
+      "content": "We implement appropriate technical and organizational measures to protect any personal data you provide against unauthorized access, alteration, or disclosure."
+    },
+    "yourRights": {
+      "title": "8. Your Rights (GDPR)",
+      "content": "Under GDPR, you have the right to: access the personal data we hold about you; request correction of inaccurate data; request deletion of your data; withdraw your consent at any time. To exercise any of these rights, please contact us at compliance [at] networkcore [dot] org."
+    },
+    "cookies": {
+      "title": "9. Cookies",
+      "content": "Our website uses only essential cookies necessary for the website to function properly. We do not use tracking or advertising cookies."
+    },
+    "changes": {
+      "title": "10. Changes to This Policy",
+      "content": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date."
+    },
+    "contact": {
+      "title": "11. Contact Us",
+      "content": "If you have any questions about this Privacy Policy, please contact us at:",
+      "email": "Email: compliance [at] networkcore [dot] org",
+      "address": "NetworkCore AG, Switzerland"
+    }
+  }
+}

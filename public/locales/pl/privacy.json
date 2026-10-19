@@ -1,0 +1,52 @@
+{
+  "title": "Polityka Prywatności",
+  "lastUpdated": "Ostatnia aktualizacja:",
+  "sections": {
+    "introduction": {
+      "title": "1. O tej polityce",
+      "content": "NetworkCore AG („NetworkCore", „my", „nas") zobowiązuje się do ochrony Twojej prywatności. Ta strona internetowa ma charakter wyłącznie informacyjny i nie gromadzi automatycznie danych osobowych. Niniejsza Polityka Prywatności wyjaśnia, jak postępujemy z Twoimi informacjami, gdy zdecydujesz się skontaktować z nami za pośrednictwem naszej strony internetowej. Jesteśmy w pełni zgodni z RODO."
+    },
+    "dataController": {
+      "title": "2. Administrator danych",
+      "content": "NetworkCore AG, firma zarejestrowana w Szwajcarii, jest administratorem wszelkich danych osobowych, które przekazujesz. W przypadku pytań dotyczących niniejszej Polityki Prywatności prosimy o kontakt pod adresem compliance [at] networkcore [dot] org."
+    },
+    "contactForm": {
+      "title": "3. Formularz kontaktowy",
+      "content": "Korzystając z naszego formularza kontaktowego, dobrowolnie przekazujesz nam dane osobowe, w tym imię i nazwisko, adres e-mail, nazwę firmy i treść wiadomości. Przesyłając formularz kontaktowy, wyrażasz zgodę na otrzymywanie i przetwarzanie tych informacji przez NetworkCore w celu odpowiedzi na Twoje zapytanie i komunikacji z Tobą w sprawie potencjalnych możliwości biznesowych."
+    },
+    "dataUse": {
+      "title": "4. Wykorzystanie Twoich informacji",
+      "content": "Wykorzystujemy informacje przekazane za pośrednictwem formularza kontaktowego wyłącznie w celu: odpowiedzi na Twoje zapytania; dostarczenia informacji o naszych usługach platformy ładowania pojazdów elektrycznych; komunikacji z Tobą w sprawie potencjalnych partnerstw biznesowych. Nie wykorzystujemy Twoich informacji do celów marketingowych bez Twojej wyraźnej zgody."
+    },
+    "dataSharing": {
+      "title": "5. Udostępnianie danych",
+      "content": "Nie sprzedajemy, nie wymieniamy ani nie wynajmujemy Twoich danych osobowych stronom trzecim. Twoje informacje mogą być udostępniane wyłącznie, gdy wymaga tego prawo lub w celu ochrony naszych praw."
+    },
+    "thirdPartyLinks": {
+      "title": "6. Linki do stron trzecich",
+      "content": "Nasza strona internetowa może zawierać linki do stron internetowych osób trzecich i zasobów zewnętrznych. Nie ponosimy odpowiedzialności za praktyki prywatności ani treści tych zewnętrznych stron. Zachęcamy do zapoznania się z politykami prywatności odwiedzanych stron trzecich."
+    },
+    "dataSecurity": {
+      "title": "7. Bezpieczeństwo danych",
+      "content": "Wdrażamy odpowiednie środki techniczne i organizacyjne w celu ochrony wszelkich przekazanych danych osobowych przed nieuprawnionym dostępem, zmianą lub ujawnieniem."
+    },
+    "yourRights": {
+      "title": "8. Twoje prawa (RODO)",
+      "content": "Zgodnie z RODO masz prawo do: dostępu do danych osobowych, które przechowujemy na Twój temat; żądania poprawienia niedokładnych danych; żądania usunięcia Twoich danych; wycofania zgody w dowolnym momencie. Aby skorzystać z któregokolwiek z tych praw, skontaktuj się z nami pod adresem compliance [at] networkcore [dot] org."
+    },
+    "cookies": {
+      "title": "9. Pliki cookie",
+      "content": "Nasza strona internetowa wykorzystuje wyłącznie niezbędne pliki cookie konieczne do prawidłowego funkcjonowania strony. Nie używamy plików cookie śledzących ani reklamowych."
+    },
+    "changes": {
+      "title": "10. Zmiany w tej polityce",
+      "content": "Możemy od czasu do czasu aktualizować niniejszą Politykę Prywatności. Wszelkie zmiany zostaną opublikowane na tej stronie z zaktualizowaną datą rewizji."
+    },
+    "contact": {
+      "title": "11. Kontakt",
+      "content": "Jeśli masz pytania dotyczące niniejszej Polityki Prywatności, skontaktuj się z nami:",
+      "email": "E-mail: compliance [at] networkcore [dot] org",
+      "address": "NetworkCore AG, Szwajcaria"
+    }
+  }
+}
