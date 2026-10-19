@@ -24,7 +24,7 @@ const userMoments = [
 const infrastructure = [
   { icon: EyeOff, title: "Invisible partner", description: "The experience is one hundred per cent yours; we never appear." },
   { icon: ShieldCheck, title: "No cannibalisation", description: "We touch only the charging sessions we enable." },
-  { icon: Building2, title: "No infrastructure", description: "No hardware, no network, no operator-settlement stack to build." },
+  { icon: Building2, title: "Already running", description: "The chargers, the network and operator settlement are live today. You connect once." },
 ];
 const whoFor = [
   { icon: ParkingCircle, title: "Parking apps", description: "park-and-charge in a single flow, in the bay they already booked" },
