@@ -156,7 +156,7 @@ const Navigation = ({ transparent = false }: { transparent?: boolean }) => {
       isPage: true,
       subItems: productSubItems,
       overline: "Products",
-      blurb: "Three ways into the network with one set of rails. Which products you use depends on what you own.",
+      blurb: "Same rails underneath with different ways in",
       columns: 4,
     },
     { href: "/pricing", label: "Pricing", isPage: true },

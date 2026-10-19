@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Link2, Network, FileText, Smartphone, Mail, CalendarCheck, MapPin, Headphones, FlaskConical, Zap, Code2, UserRoundCheck, ChartNoAxesCombined, Layers, CircleDollarSign, Infinity } from "lucide-react";
+import { Network, Smartphone, Mail, CalendarCheck, MapPin, Headphones, FlaskConical, Zap, Code2, UserRoundCheck, ChartNoAxesCombined, Layers, CircleDollarSign, Infinity } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,6 @@ const steps = [
   ["01", "Receive", "Every connector on the network has its own permanent link. We share the set with you, scoped to the operators, regions and sites you want."],
   ["02", "Place", "Put them anywhere you already reach drivers: your app, a map listing, an email, a message, a booking confirmation, a support reply."],
   ["03", "Charge", "The driver taps, finds a charger, pays by card, and charges. No app to download, no account to create."],
-  ["04", "Settle", "Operators are paid. Sessions are reconciled. You see all of it on one statement."],
 ];
 const placements = [
   { icon: Smartphone, title: "Inside your app", text: "Charging live in your product before a single line of integration work." },
@@ -73,12 +72,11 @@ export default function ChargingLinks() {
       </section>
 
       <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-8 text-3xl font-light text-foreground md:text-4xl">The Fastest Way In</h2>
           <div className="space-y-6 text-lg font-light leading-relaxed text-muted-foreground">
             <p>Every other way into the network needs (at least a little) engineering time. An API to integrate, screens to design, a release to ship, a roadmap slot to win.</p>
-            <p>Most platforms agree charging belongs in their product long before they can find the quarter to build it. So nothing happens, and their drivers keep charging somewhere else.</p>
-            <p className="text-foreground">A link needs none of that.</p>
+            <p>Most platforms agree charging belongs in their product long before they can find the quarter to build it. A link gets you live in a moment's time. Share it, and let your drivers charge.</p>
           </div>
         </div>
       </section>
@@ -86,11 +84,8 @@ export default function ChargingLinks() {
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center text-3xl font-light text-foreground md:text-4xl">How It Works</h2>
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-10 md:grid-cols-3">
             {steps.map(([number, heading, text]) => <div key={number} className="border-t border-border pt-6"><p className="mb-4 text-sm text-muted-foreground">{number}</p><h3 className="mb-3 text-xl font-light text-foreground">{heading}</h3><p className="font-light leading-relaxed text-muted-foreground">{text}</p></div>)}
-          </div>
-          <div className="mt-14 flex flex-col items-center justify-center gap-4 border-y border-border py-8 text-center sm:flex-row" aria-label="Your link → Every charger on the network → One statement">
-            {[{ icon: Link2, text: "Your link" }, { icon: Network, text: "Every charger on the network" }, { icon: FileText, text: "One statement" }].map(({ icon: Icon, text }, index) => <div className="contents" key={text}>{index > 0 && <ArrowRight className="h-5 w-5 rotate-90 text-electric-green sm:rotate-0" aria-hidden="true" />}<div className="flex items-center gap-3 text-foreground"><Icon className="h-6 w-6 shrink-0 text-electric-blue" strokeWidth={1.5} aria-hidden="true" /><span className="font-light">{text}</span></div></div>)}
           </div>
         </div>
       </section>
@@ -106,7 +101,7 @@ export default function ChargingLinks() {
 
       <section id="contact" className="scroll-mt-24 py-20 md:py-28">
         <div className="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-center text-3xl font-light text-foreground md:text-4xl">Get the Payment Links brochure in your inbox</h2>
+          <h2 className="mb-8 text-center text-3xl font-light text-foreground md:text-4xl">Get the Payment Links brochure</h2>
           <ChargingLinksBrochureForm />
         </div>
       </section>

@@ -112,7 +112,7 @@ const Index = () => {
               { icon: Plug, label: "Sessions start, run, and stop through a single connection" },
               { icon: BarChart3, label: "Selling & buying at public or wholesale" },
               { icon: CreditCard, label: "Payment & compliance are handled automatically" },
-              { icon: Zap, label: "We move money fast, usually in 48 hours" },
+              { icon: Zap, label: "We move money fast" },
               { icon: ShieldCheck, label: "OCPI-native, hardware-neutral, and live in 1 hour" },
             ].map((item, i) => (
               <Reveal key={i} delay={i * 80} className={cardClass}>

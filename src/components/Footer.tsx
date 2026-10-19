@@ -103,8 +103,8 @@ const Footer = () => {
   const productItems: { href: string | null; label: string; theme: 'cp' | 'dp' | 'pack' | 'direct'; badge?: string }[] = [
     { href: '/products/network-access', label: 'Network Access', theme: 'cp' },
     { href: '/products/just-charge', label: 'Just Charge', theme: 'dp' },
-    { href: '/products/charge-pack', label: 'Charge Pack', theme: 'pack' },
-    chargingLinksProduct,
+    { href: '/products/charge-pack', label: 'Charge Pack', theme: 'dp' },
+    { ...chargingLinksProduct, theme: 'dp' },
   ];
 
   const aboutItems: { href: string; label: string; external?: boolean }[] = [
@@ -138,7 +138,7 @@ const Footer = () => {
             <p className="text-sm font-bold text-foreground mb-3">Ecosystem Access</p>
             <ul className="space-y-2">
               {navItems.map((item) => {
-                 const hoverBg = item.highlight ? 'identity-cp identity-highlight' : 'hover:bg-muted/30';
+                 const hoverBg = item.highlight ? `identity-${item.theme ?? 'cp'} identity-highlight` : 'hover:bg-muted/30';
 
                 return (
                   <li
