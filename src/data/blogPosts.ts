@@ -59,6 +59,157 @@ export const calculateReadingTime = (content: string): number => {
 // Add your blog posts here - newest first
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ev-charging-service-level-agreements",
+    title: "EV Charging Service Level Agreements: What a Fair One Actually Looks Like",
+    excerpt: "Most EV charging SLAs refund part of a fee when things break. A fair one measures what drivers actually get, is achievable by the party promising it, and sits on a model where the provider only earns when you do.",
+    content: `
+<p>The conclusion first: <strong class="text-primary">EV charging service level agreements</strong> are usually treated as a procurement formality, a schedule at the back of the contract that nobody reads until something breaks. That is a mistake, because the SLA is the single clearest statement of how a commercial relationship is actually structured. It tells you what the provider promises, how performance is measured, what happens when they fail, and above all whether they carry any real downside alongside you. Our view is simple: a business to business relationship should never be “pay me and you receive a product”. It should be “pay me and I will make you more money”. If that is not what the arrangement does, something is wrong with it. Applied to EV charging service level agreements, that principle has sharp consequences, and it separates providers who share your risk from providers who have merely promised to refund part of your fee.</p>
+
+
+<h2>What EV charging SLAs actually cover</h2>
+
+<p>First the practical ground, because EV charging service level agreements run in two directions and the distinction matters.</p>
+
+<p><strong>SLAs you give.</strong> As a <a href="/charge-point-operators" class="text-primary underline hover:no-underline">charge point operator</a>, you commit to availability for the parties who depend on your infrastructure: site hosts, fleet customers, <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partners</a> and, where public money is involved, the funding authority. Public grant programmes increasingly write this in directly, requiring charging ports to be operational for a defined percentage of standard operating hours, with a specified uptime formula and a minimum operating period, commonly four years for Level 2 and six for DC fast charging.</p>
+
+<p><strong>SLAs you receive.</strong> From your hardware vendor, your maintenance partner, your <a href="/blog/charging-management-software" class="text-primary underline hover:no-underline">management platform</a>, and from any intermediary that sits between you and your revenue.</p>
+
+<p>Across both directions, a reasonably complete SLA addresses:</p>
+
+<ul>
+<li><strong>Uptime or availability</strong>, with a defined measurement method and exclusions</li>
+<li><strong>Response time</strong>, how quickly a fault is acknowledged</li>
+<li><strong>Resolution time</strong>, often expressed as mean time to repair</li>
+<li><strong>Monitoring and proactive maintenance</strong>, including firmware and inspection obligations</li>
+<li><strong>Support coverage</strong>, business hours against genuine 24/7, which matters enormously for <a href="/blog/ev-charging-for-fleets" class="text-primary underline hover:no-underline">fleets</a> running overnight or emergency services</li>
+<li><strong>Platform and API availability</strong>, for the software layers you depend on</li>
+<li><strong>Data delivery</strong>, the timeliness and completeness of <a href="/blog/ev-charging-session-reconciliation" class="text-primary underline hover:no-underline">session records</a></li>
+<li><strong>Settlement timing</strong>, when money actually reaches you</li>
+<li><strong>Dispute and chargeback handling</strong>, including who evidences what</li>
+<li><strong>Remedies</strong>, what you get when any of the above is missed</li>
+<li><strong>Reporting and audit rights</strong>, how you verify performance rather than taking it on trust</li>
+</ul>
+
+<p>That last item is quietly one of the most important. An SLA you cannot independently verify is a statement of intent, not an agreement. The operational picture of what these commitments cost is set out in <a href="/blog/ev-charger-downtime-cost" class="text-primary underline hover:no-underline">EV Charger Downtime Cost</a>.</p>
+
+
+<h2>Fair starts with measuring what the customer experiences</h2>
+
+<p>The first fairness test in any SLA is the metric, and this is where charging has a systemic problem.</p>
+
+<p>Most EV charging service level agreements are written around uptime, meaning the proportion of time a charger reports itself as available to its management system. It is convenient, it is machine-readable, and networks legitimately report high figures against it.</p>
+
+<p>The difficulty is that it measures what the equipment says about itself rather than what the driver gets. A charger can report itself perfectly available while the payment terminal is unreachable, the authorisation never completes, the connector is damaged in a way the unit does not self-report, or the session starts and drops. The dashboard shows a healthy asset. The driver leaves without charging. Industry data consistently shows a meaningful gap between reported uptime and successful charging attempts, which is precisely why reliability partnerships now market themselves on charging success rather than status alone. What that failed attempt does to the driver is covered in <a href="/blog/ev-charging-customer-experience" class="text-primary underline hover:no-underline">EV Charging Customer Experience</a>.</p>
+
+<p>A fair SLA closes that gap by measuring outcomes as well as status. In practice that means pairing uptime with a success metric: the proportion of charging attempts that actually deliver energy. A provider willing to be measured on that is a provider confident in what it delivers. A provider that insists on status-only reporting is choosing the metric that flatters it.</p>
+
+<p><strong>The fairness principle:</strong> measure what the customer receives, not what is convenient to report.</p>
+
+
+<h2>Fair also means achievable</h2>
+
+<p>The second test runs the other way, and it protects the provider, because an SLA that cannot be met is not fair either. It is theatre that one side will eventually have to litigate.</p>
+
+<p>Uptime tiers are not linear in cost or difficulty. The industry is candid about this: getting into the 90% <a href="https://www.automotiveworld.com/news/chargelab-and-chargerhelp-target-99-ev-charger-uptime/" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">uptime</a> range is hard, and moving from 97% toward 99% is an entirely different challenge requiring tight orchestration across people, systems and data. A 99% service level caps downtime at roughly 87.6 hours per asset per year, and delivering that reliably demands real-time protocol data integration, hardware-level diagnostic access and dependable spare parts availability.</p>
+
+<p>So a buyer demanding 99.9% from a provider with no field service capability has not negotiated a good deal. They have negotiated a credit they will collect repeatedly while their chargers stay broken. Fair EV charging service level agreements are calibrated to what the provider can genuinely deliver, with the price reflecting the tier, because the point of the agreement is working infrastructure rather than compensation for broken infrastructure.</p>
+
+
+<h2>Two kinds of SLA, and the difference is everything</h2>
+
+<p>Here is the structural observation at the heart of this, and it applies well beyond charging.</p>
+
+<p><strong>The compensating SLA.</strong> The provider charges a fee regardless of performance. If they miss the agreed level, you receive a service credit, usually a percentage of the fee, frequently capped, often requiring you to claim it within a window. Look closely at what that actually is: a partial refund of money that, in hindsight, should not have been charged. Your business lost revenue, your drivers lost trust, and your remedy is to get back a slice of what you already paid. The provider’s worst case is earning slightly less than planned. Yours is considerably worse. The downside is not shared, it is merely slightly reduced on one side.</p>
+
+<p><strong>The aligned model.</strong> The provider earns only when it delivers. There is no fee to refund, because there was no fee. If performance fails, the provider earns nothing, automatically, immediately, with no claim to file and no cap on the consequence. The penalty is not negotiated in a schedule. It is built into how the money works, which is the logic behind a <a href="/blog/ev-charging-commission-model" class="text-primary underline hover:no-underline">commission model</a>.</p>
+
+<p>The second structure does not make SLAs unnecessary, and you should still have clear commitments on response, resolution, data and settlement. But it changes what the SLA is for. It stops being the only thing standing between you and a provider indifferent to your results, and becomes a set of operational commitments on top of a commercial structure that already points both parties the same way.</p>
+
+<p><strong>The fairness principle:</strong> prefer a structure where non-performance costs the provider automatically over one where it costs them only if you claim.</p>
+
+
+<h2>The tell: can you negotiate?</h2>
+
+<p>A further test, and one that reveals more about a provider than their uptime figure.</p>
+
+<p>In a business to business relationship, terms should reflect the relationship. A partner bringing substantial volume is bringing something genuinely valuable, and the commercial arrangement should recognise that. That is what negotiation is for, and it is the normal texture of B2B commerce in every mature industry.</p>
+
+<p>Which is why fixed, non-negotiable, identical-for-everyone terms are a signal worth reading. That pattern belongs to consumer business: a published price, a standard contract, take it or leave it, no conversation available regardless of what you bring. Applied to businesses, it produces an arrangement where you pay to access a service, the service delivers whatever it delivers, and your scale buys you nothing because the model was never designed to respond to you.</p>
+
+<p>Charging has a good deal of this. Intermediaries that charge access and membership fees whether or not meaningful value flows, that mark up your tariff before the driver sees it, that settle on cycles measured in months, and that offer the same terms to a hundred-charger network and a ten-thousand-charger network alike. That is a consumer model with a business price attached. The structural comparison is in <a href="/blog/ev-charger-platform-vs-roaming-hub" class="text-primary underline hover:no-underline">EV Charger Platform vs Roaming Hub</a>, and what a marked-up tariff does to trust is in <a href="/blog/ev-charging-pricing-transparency" class="text-primary underline hover:no-underline">EV Charging Pricing Transparency</a>.</p>
+
+<p><strong>The fairness principle:</strong> if your scale cannot change your terms, you are not in a B2B relationship.</p>
+
+
+<h2>Win-win is a structure, not a sentiment</h2>
+
+<p>Everyone says partnership. The question is whether the commercial mechanics actually produce it, and mechanics are easy to inspect.</p>
+
+<p>Ask one question of any charging arrangement: does the provider make more money when you make more money?</p>
+
+<p>If the answer is yes, incentives are aligned by construction. The provider is motivated to drive your <a href="/blog/ev-charger-utilisation-rate" class="text-primary underline hover:no-underline">utilisation</a>, because that is where its own revenue comes from. Its SLA commitments are things it wants to hit regardless of the contract, because missing them costs it directly.</p>
+
+<p>If the answer is no, because the provider is paid a fee irrespective of outcome, then the SLA is carrying the entire weight of the relationship. It is the only mechanism making the provider care, and a schedule of capped credits is a thin substitute for genuine alignment.</p>
+
+<p>This is the heart of it. Business to business should not be “give me money and here is a product”. It should be “give me money and I will make you more money”. Everything else, including how EV charging service level agreements are written, follows from which of those two you are actually in.</p>
+
+
+<h2>How NetworkCore structures this</h2>
+
+<p>Being concrete about our own position, since the argument above would be hollow otherwise.</p>
+
+<p><strong>We earn only when we deliver.</strong> NetworkCore takes a commission on sessions actually delivered to your chargers through <a href="/products/network-access" class="text-primary underline hover:no-underline">Network Access</a>. There is no subscription, no membership fee and no access charge. If we bring you no demand, we earn nothing. That is not a promise in a schedule, it is how the model works, and it means our non-performance is penalised automatically and completely rather than through a capped credit you have to claim.</p>
+
+<p><strong>You are paid fast, at your own price.</strong> Settlement runs in days rather than the thirty to ninety day cycles common elsewhere, at your transparent public tariff transmitted intact rather than marked up. Both of these are commitments we are happy to see written into an agreement, because they are outcomes we produce anyway.</p>
+
+<p><strong>Terms flex with scale.</strong> We are open to negotiating and adjusting commercial terms with partners bringing significant volume, because that is what a real business relationship looks like. Scale should change the conversation. If it cannot, the relationship was never commercial in the first place.</p>
+
+<p><strong>We carry the operational load that sits behind the SLA.</strong> Settlement, invoicing, tax treatment per jurisdiction, <a href="/blog/ev-charging-dispute-resolution" class="text-primary underline hover:no-underline">dispute</a> and <a href="/blog/ev-charging-chargeback-management" class="text-primary underline hover:no-underline">chargeback handling</a> are absorbed beneath the integration, which means fewer obligations you have to meet and fewer places your own commitments can fail. The settlement dimension is covered in <a href="/blog/cpo-settlement-timing" class="text-primary underline hover:no-underline">CPO Settlement Timing</a>.</p>
+
+<p>What we do not do is pretend to cover things outside our control. We do not operate your hardware, so your charger uptime is yours and your maintenance partner’s. A provider promising SLAs over things it cannot influence is selling comfort, not accountability.</p>
+
+
+<h2>What to ask before you sign</h2>
+
+<p>A practical checklist for either side of an EV charging agreement.</p>
+
+<ol>
+<li>What exactly is measured, status-based uptime, charging success, or both?</li>
+<li>How is it measured and by whom, and can you verify it independently?</li>
+<li>What are the exclusions, and do they swallow the commitment?</li>
+<li>What is the remedy, and is it proportionate to your actual loss or a token credit?</li>
+<li>Is the remedy automatic, or must you notice, claim and chase it?</li>
+<li>Is the credit capped, and at what fraction of the harm?</li>
+<li>Does the provider earn regardless of performance? This is the question the others orbit.</li>
+<li>Are settlement timing and data delivery in the SLA, or only technical availability?</li>
+<li>Can terms be renegotiated as your volume grows?</li>
+<li>Is the agreed level realistically achievable by this provider with these capabilities?</li>
+</ol>
+
+<p>Question seven is the one to lead with. If the provider earns the same whether or not you succeed, every other answer is damage limitation.</p>
+
+
+<h2>The position</h2>
+
+<p>EV charging service level agreements deserve more attention than they get, not because the clauses are thrilling but because they are where a commercial relationship shows its real shape. The metric chosen reveals whether the provider wants to be measured on what you experience. The remedy reveals whether they carry risk or merely refund a fee. The willingness to negotiate reveals whether they see you as a business partner or a consumer account.</p>
+
+<p>Write SLAs that measure outcomes, that are achievable by the party promising them, that carry remedies proportionate to real harm, and that cover the commercial commitments like settlement timing rather than only technical availability.</p>
+
+<p>And prefer, wherever you can get it, the structure that makes most of this self-enforcing: a provider that earns only when you earn. In that arrangement the SLA stops being the thing holding the relationship together, and becomes what it should be, a written record of commitments both parties already want to meet.</p>
+
+<p>Reach the team at <a href="/#contact" class="text-primary underline hover:no-underline">networkcore.org</a> to discuss commercial terms, including how they flex with volume.</p>
+
+    `,
+    featuredImage: "/images/blog/ev-charging-service-level-agreements.jpg",
+    category: "Charge Point Operators",
+    author: "NetworkCore Team",
+    publishedAt: "2026-10-20",
+    published: true,
+    metaTitle: "EV Charging Service Level Agreements: What Fair Looks Like",
+    metaDescription: "What fair EV charging service level agreements measure, how remedies should work, and why the best SLA sits on a model where the provider only earns when you earn.",
+    tags: ["EV charging service level agreements", "SLA", "uptime", "charge point operators", "settlement"],
+  },
+  {
     slug: "ocpi-and-ocpp-compliant-ev-software",
     title: "OCPI and OCPP Compliant EV Software: Why Your CPMS Sits Between Two Protocols",
     excerpt: "OCPP points down to your chargers and OCPI points out to the market. Your CPMS translates between them, and that abstraction is what lets other platforms sell your charging.",
