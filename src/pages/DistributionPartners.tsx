@@ -176,7 +176,7 @@ const DistributionPartners = () => (
     </section>
 
     <section className="py-20">
-      <DistributionPartnerPricing />
+      <DistributionPartnerPricing hideNote />
       <div className="mt-8 text-center"><Button asChild size="lg" className="bg-foreground text-background hover:bg-foreground/90"><a href="#apply">Get connected <ArrowRight /></a></Button></div>
     </section>
 

@@ -97,7 +97,7 @@ const EvChargingForOems = () => (
       </div>
     </section>
     <section className="py-20">
-      <DistributionPartnerPricing />
+      <DistributionPartnerPricing hideNote />
       <div className="mt-8 text-center"><Button asChild size="lg"><a href="#apply">Become an OEM Partner <ArrowRight /></a></Button></div>
     </section>
     <section className="py-20">
