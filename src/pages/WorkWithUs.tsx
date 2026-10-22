@@ -204,7 +204,7 @@ const WorkWithUs = () => {
         </script>
       </Helmet>
 
-      <Navigation />
+      <Navigation lightHero />
 
       <main className="min-h-screen bg-background">
         <section className="pt-32 pb-16 bg-section-dark">

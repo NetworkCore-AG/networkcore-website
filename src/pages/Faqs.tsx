@@ -254,7 +254,7 @@ const Faqs = () => {
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
 
-      <Navigation />
+      <Navigation lightHero />
 
       <main className="min-h-screen bg-background">
         {/* Hero */}

@@ -60,7 +60,7 @@ const EsgPolicy = () => {
         <link rel="canonical" href="https://networkcore.org/esg-policy" />
       </Helmet>
 
-      <Navigation />
+      <Navigation lightHero />
 
       <main className="min-h-screen bg-background">
         <section className="pt-32 pb-16 bg-section-dark">

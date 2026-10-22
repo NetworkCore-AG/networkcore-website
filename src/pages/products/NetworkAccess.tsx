@@ -133,7 +133,7 @@ const NetworkAccess = () => {
 
       <Navigation />
 
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative flex min-h-[70svh] items-center overflow-hidden bg-foreground pt-24 pb-16">
         <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
           <source src="/videos/cpo-hero.mp4" type="video/mp4" />
         </video>

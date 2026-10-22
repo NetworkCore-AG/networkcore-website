@@ -23,7 +23,7 @@ const AboutUs = () => {
         <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://networkcore.org/"},{"@type":"ListItem","position":2,"name":"About","item":"https://networkcore.org/about-us"}]})}</script>
       </Helmet>
 
-      <Navigation />
+      <Navigation lightHero />
 
       <main className="min-h-screen bg-background">
         {/* Hero */}

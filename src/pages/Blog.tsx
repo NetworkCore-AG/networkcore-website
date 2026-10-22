@@ -46,7 +46,7 @@ const Blog = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <Navigation />
+        <Navigation lightHero />
 
         {/* Hero Section */}
         <section className="pt-32 pb-16 bg-gradient-to-b from-primary/5 to-background">
