@@ -23,7 +23,7 @@ const distributionPartnerRows = [
   { label: "Setup, integration, API", value: "Included" },
   { label: "Front-end module", value: "Included" },
   { label: "Driver support", value: "Included, or keep your own" },
-  { label: "Commercial model", value: "Public price or wholesale, per operator" },
+  { label: "Commercial model", value: "Public price or Wholesale price" },
   { label: "Public price", value: "Free, you offer EV charging to your users at the transparent public price." },
   { label: "Wholesale price", value: "One per-session commission, agreed with you before launch." },
   { label: "Settlement", value: "Automatic, in your chosen currency" },

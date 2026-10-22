@@ -66,10 +66,13 @@ function LangSwitcher({
   );
 }
 
-const Navigation = ({ transparent = false }: { transparent?: boolean }) => {
+// The bar is transparent over every hero. lightHero pages start on a light section, so they get dark text and logo.
+const Navigation = ({ lightHero = false }: { transparent?: boolean; lightHero?: boolean }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openSub, setOpenSub] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const solid = isScrolled || isMenuOpen;
+  const darkText = solid || lightHero;
   const location = useLocation();
   const isHomePage = location.pathname === '/' || location.pathname.match(/^\/[a-z]{2}$/);
   const isLatamPage = location.pathname.includes('/charge-point-operators/latam-first-wave');
@@ -189,11 +192,9 @@ const Navigation = ({ transparent = false }: { transparent?: boolean }) => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      transparent && !isScrolled
-        ? 'bg-transparent border-b border-transparent'
-        : isScrolled
-          ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-soft'
-          : 'bg-foreground border-b border-transparent'
+      solid
+        ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-soft'
+        : 'bg-transparent border-b border-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -206,9 +207,9 @@ const Navigation = ({ transparent = false }: { transparent?: boolean }) => {
               aria-label="NetworkCore AG home"
             >
               <img
-                src={isScrolled ? networkCoreLogoBlack : networkCoreLogoWhite}
+                src={darkText ? networkCoreLogoBlack : networkCoreLogoWhite}
                 alt="NetworkCore AG"
-                className={`h-5 w-auto transition-all duration-300 ${!isScrolled ? 'brightness-0 invert' : ''}`}
+                className={`h-5 w-auto transition-all duration-300 ${!darkText ? 'brightness-0 invert' : ''}`}
               />
             </Link>
           </div>
@@ -223,11 +224,9 @@ const Navigation = ({ transparent = false }: { transparent?: boolean }) => {
                     variant="ghost"
                     size="sm"
                     className={`font-medium transition-colors ${
-                      transparent && !isScrolled
-                        ? 'text-background hover:text-background/80 hover:bg-background/10'
-                        : isScrolled
-                          ? 'text-foreground hover:text-foreground/80 hover:bg-accent'
-                          : 'text-background hover:text-background/80 hover:bg-background/10'
+                      darkText
+                    ? 'text-foreground hover:text-foreground/80 hover:bg-accent'
+                    : 'text-background hover:text-background/80 hover:bg-background/10'
                     }`}
                   >
                     <Link to={item.href}>{item.label}</Link>
@@ -313,11 +312,9 @@ const Navigation = ({ transparent = false }: { transparent?: boolean }) => {
                   variant="ghost"
                   size="sm"
                   className={`font-medium transition-colors ${
-                    transparent && !isScrolled
-                      ? 'text-background hover:text-background/80 hover:bg-background/10'
-                      : isScrolled
-                        ? 'text-foreground hover:text-foreground/80 hover:bg-accent'
-                        : 'text-background hover:text-background/80 hover:bg-background/10'
+                    darkText
+                    ? 'text-foreground hover:text-foreground/80 hover:bg-accent'
+                    : 'text-background hover:text-background/80 hover:bg-background/10'
                   }`}
                 >
                   <Link to={item.href}>{item.label}</Link>
@@ -329,10 +326,8 @@ const Navigation = ({ transparent = false }: { transparent?: boolean }) => {
               variant="ghost"
               size="compact"
               className={`border font-medium transition-colors ${
-                transparent && !isScrolled
-                  ? 'border-background text-background hover:bg-background hover:text-foreground'
-                  : isScrolled 
-                    ? 'border-foreground text-foreground hover:bg-foreground hover:text-background' 
+                darkText
+                    ? 'border-foreground text-foreground hover:bg-foreground hover:text-background'
                     : 'border-background text-background hover:bg-background hover:text-foreground'
               }`}
             >
@@ -343,17 +338,15 @@ const Navigation = ({ transparent = false }: { transparent?: boolean }) => {
               variant="ghost"
               size="sm"
               className={`font-medium transition-colors ${
-                transparent && !isScrolled
-                  ? 'text-background hover:text-background/80 hover:bg-background/10'
-                  : isScrolled 
-                    ? 'text-foreground hover:text-foreground/80 hover:bg-accent' 
+                darkText
+                    ? 'text-foreground hover:text-foreground/80 hover:bg-accent'
                     : 'text-background hover:text-background/80 hover:bg-background/10'
               }`}
             >
               <Link to="/#contact">Contact Us</Link>
             </Button>
             {isLatamPage && (
-              <LangSwitcher transparent={transparent} isScrolled={isScrolled} />
+              <LangSwitcher transparent={!darkText} isScrolled={darkText} />
             )}
           </div>
 
@@ -366,7 +359,7 @@ const Navigation = ({ transparent = false }: { transparent?: boolean }) => {
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-navigation"
-              className={isScrolled ? '' : 'text-background hover:bg-background/10'}
+              className={darkText ? '' : 'text-background hover:bg-background/10'}
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -480,7 +473,7 @@ const Navigation = ({ transparent = false }: { transparent?: boolean }) => {
                           aria-label={l.label}
                           aria-current={active ? "page" : undefined}
                           className={`text-sm font-medium uppercase tracking-wider px-4 py-2 rounded-full transition-colors ${
-                            isScrolled
+                            darkText
                               ? active
                                 ? "bg-foreground text-background"
                                 : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"

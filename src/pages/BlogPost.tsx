@@ -109,7 +109,7 @@ const BlogPost = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <Navigation />
+        <Navigation lightHero />
 
         {/* Article Header */}
         <article>
