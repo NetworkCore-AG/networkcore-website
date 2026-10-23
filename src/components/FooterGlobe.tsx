@@ -54,7 +54,7 @@ const FooterGlobe = ({ className = "" }: { className?: string }) => {
         onRender: (state) => {
           if (reduceMotion) return;
           const t = now();
-          phi += 0.0022;
+          phi += 0.0015;
           state.phi = phi;
           state.markers = CITIES.map((location, i) => {
             if (t >= nextBeep[i]) {
