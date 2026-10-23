@@ -3,88 +3,13 @@ import { useParams, Link } from 'react-router-dom';
 import { Linkedin, ArrowRight } from 'lucide-react';
 import { getPublishedPosts } from '@/data/blogPosts';
 import { chargingLinksProduct } from '@/data/chargingLinks';
+import FooterGlobe from '@/components/FooterGlobe';
 
 const XIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
   </svg>
 );
-
-const GLOBE_SHAPES = {
-  wide: {
-    viewBox: "0 0 1000 420",
-    cx: 500,
-    cy: 210,
-    rx: 480,
-    ry: 190,
-    lats: [55, 125],
-    equator: "M20 210h960",
-    arcs: "M110 108c190 40 590 40 780 0M110 312c190-40 590-40 780 0",
-    orbit: "M150 350c220-190 480-260 720-250",
-  },
-  compact: {
-    viewBox: "0 0 480 480",
-    cx: 240,
-    cy: 240,
-    rx: 210,
-    ry: 210,
-    lats: [55, 120],
-    equator: "M30 240h420",
-    arcs: "M70 115c90 25 260 25 340 0M70 365c90-25 260-25 340 0",
-    orbit: "M75 370c100-100 210-150 320-140",
-  },
-};
-
-const FooterGlobe = ({
-  variant = "wide",
-  className = "",
-}: {
-  variant?: "wide" | "compact";
-  className?: string;
-}) => {
-  const s = GLOBE_SHAPES[variant];
-  const clipId = `footer-globe-clip-${variant}`;
-
-  return (
-    <svg viewBox={s.viewBox} className={`footer-join-globe block h-auto ${className}`} aria-hidden="true">
-      <defs>
-        <clipPath id={clipId}>
-          <ellipse cx={s.cx} cy={s.cy} rx={s.rx} ry={s.ry} />
-        </clipPath>
-      </defs>
-      <g clipPath={`url(#${clipId})`} fill="none" stroke="currentColor" strokeLinecap="round">
-        <ellipse cx={s.cx} cy={s.cy} rx={s.rx} ry={s.ry} strokeWidth="2" strokeDasharray="1 9" />
-        {s.lats.map((ry) => (
-          <ellipse
-            key={`lat-${ry}`}
-            cx={s.cx}
-            cy={s.cy}
-            rx={s.rx}
-            ry={ry}
-            strokeWidth="2"
-            strokeDasharray="1 9"
-          />
-        ))}
-        <path d={s.equator} strokeWidth="2" strokeDasharray="1 9" />
-        <path d={s.arcs} strokeWidth="2" strokeDasharray="1 9" />
-        {[0, -3.2, -6.4, -9.6, -12.8].map((delay) => (
-          <ellipse
-            key={delay}
-            className="footer-globe-meridian"
-            style={{ animationDelay: `${delay}s` }}
-            cx={s.cx}
-            cy={s.cy}
-            rx={s.rx}
-            ry={s.ry}
-            strokeWidth="2"
-            strokeDasharray="1 9"
-          />
-        ))}
-        <path d={s.orbit} strokeWidth="1.5" strokeDasharray="1 10" />
-      </g>
-    </svg>
-  );
-};
 
 const Footer = () => {
   const { t } = useTranslation('common');
@@ -128,10 +53,10 @@ const Footer = () => {
   const makePath = (path: string) => lang ? `/${lang}${path}` : path;
 
   return (
-    <footer id="footer" className="bg-section-dark text-foreground">
+    <footer id="footer" className="relative overflow-hidden bg-section-dark text-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Four-column link layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-8 mb-8 border-b border-border">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-8 mb-8 border-b border-border">
 
           {/* Col 1: Ecosystem Access */}
           <div>
@@ -267,8 +192,8 @@ const Footer = () => {
         {/* Join + Social row */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-5 mb-6 border-b border-border">
           <div className="relative isolate min-h-[152px] border-border py-4 sm:min-h-[184px] sm:px-2 lg:min-h-[208px] lg:col-span-3 lg:border-r lg:py-2 lg:pr-10">
-            <div className="pointer-events-none absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 text-electric-green/60" aria-hidden="true">
-              <FooterGlobe variant="compact" className="mx-auto w-36 sm:w-44 lg:w-[200px]" />
+            <div className="footer-globe-fade pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">
+              <FooterGlobe className="w-[380px] sm:w-[520px] lg:w-[680px]" />
             </div>
             <div className="relative grid h-full items-center gap-4 sm:grid-cols-2">
               <div>

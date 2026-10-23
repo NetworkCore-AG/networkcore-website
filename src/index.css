@@ -792,41 +792,11 @@ All colors MUST be HSL. Electric blue and orange accents with neutral base.
   color: hsl(var(--foreground)) !important;
 }
 
-@keyframes footer-globe-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.footer-join-globe {
-  transform-origin: center;
-}
-
-
-/* Meridians narrow and widen in turn: the wireframe reads as one slow spin
-   without any aspect-ratio distortion of the dots. */
-.footer-globe-meridian {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: footer-globe-meridian 32s ease-in-out infinite;
-}
-
-@keyframes footer-globe-meridian {
-  0% {
-    transform: scaleX(1);
-  }
-  50% {
-    transform: scaleX(0.02);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .footer-join-globe,
-  .footer-globe-meridian {
-    animation: none;
-  }
+/* Footer globe: large, faded, behind the join row and the link columns above it. */
+.footer-globe-fade {
+  opacity: 0.4;
+  -webkit-mask-image: radial-gradient(circle closest-side, #000 45%, transparent 100%);
+  mask-image: radial-gradient(circle closest-side, #000 45%, transparent 100%);
 }
 
 /* Shared product identities keep navigation and footer treatments aligned. */
