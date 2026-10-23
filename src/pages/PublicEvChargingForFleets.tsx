@@ -18,7 +18,7 @@ const layers = [
 ];
 const driverMoments = [
   { icon: MapPin, title: "Find", description: "The driver sees a working public charger nearby in your app." },
-  { icon: Zap, title: "Charge", description: "They start the session on the fleet account already set up. No personal card, no separate app." },
+  { icon: Zap, title: "Charge", description: "They start the session in your platform. No personal card, no separate app." },
   { icon: Receipt, title: "Done", description: "The session settles automatically and rolls into the fleet's bill." },
 ];
 const guarantees = [
