@@ -118,6 +118,7 @@ const Navigation = ({ lightHero = false }: { transparent?: boolean; lightHero?: 
   const dpSubItems = [
     { href: "/distribution-partners/ev-charging-for-oems", label: "Automotive Platforms / OEMs", description: "In-car charging and payment for OEM apps.", image: "/images/nav/nav-dp-oem.png" },
     { href: "/distribution-partners/public-ev-charging-for-fleets", label: "Mobility & Fleet Platforms", description: "Public charging for fleet and mobility platforms.", image: "/images/nav/nav-dp-fleet.png" },
+    { href: "/distribution-partners/ev-charging-for-car-rental", label: "Car Rental & Subscription", description: "Charging handed over with the keys.", image: "/images/nav/nav-dp-oem.png" },
     { href: "/distribution-partners/ev-charging-for-financial-platforms", label: "Financial Platforms", description: "Add EV charging to banks, wallets, and fintech.", image: "/images/nav/nav-dp-finance.png" },
     { href: "/distribution-partners/ev-charging-for-parking-and-road-platforms", label: "Parking & Road Platforms", description: "Charging for parking, road, and curb platforms.", image: "/images/nav/nav-dp-parking.png" },
     { href: "/distribution-partners/ev-charging-for-insurance-and-driver-services", label: "Insurance & Driver Services", description: "Bundle charging into insurance and driver services.", image: "/images/nav/nav-dp-insurance.png" },
@@ -151,7 +152,7 @@ const Navigation = ({ lightHero = false }: { transparent?: boolean; lightHero?: 
       subItems: dpSubItems,
       overline: "Distribution Partners",
       blurb: "With one integration you access every charger in the network",
-      columns: 4,
+      columns: 3,
     },
     {
       href: "/products/network-access",

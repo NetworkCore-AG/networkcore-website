@@ -4580,7 +4580,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>NetworkCore operates at that infrastructure layer.</p>
 
-      <p>We are not a charger manufacturer and we do not operate public charging stations. Instead, we help connect the participants who make the EV charging ecosystem work. Our focus is on enabling access between <a href="/charge-point-operators" class="text-primary underline hover:no-underline">Charge Point Operators</a> and <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partners</a> such as fleets, <a href="/distribution-partners/ev-charging-for-oems" class="text-primary underline hover:no-underline">OEMs</a>, mobility platforms, rental companies, fintech applications and other organisations serving EV drivers.</p>
+      <p>We are not a charger manufacturer and we do not operate public charging stations. Instead, we help connect the participants who make the EV charging ecosystem work. Our focus is on enabling access between <a href="/charge-point-operators" class="text-primary underline hover:no-underline">Charge Point Operators</a> and <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partners</a> such as fleets, <a href="/distribution-partners/ev-charging-for-oems" class="text-primary underline hover:no-underline">OEMs</a>, mobility platforms, <a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">rental companies</a>, fintech applications and other organisations serving EV drivers.</p>
 
       <p>The principle is simple.</p>
 
@@ -5748,7 +5748,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>What this means for Distribution Partners</h2>
 
-      <p>For any digital platform with EV-driving users — fleets, OEMs, fintechs, wallets, super-apps, mobility platforms, insurers, corporate benefits programmes, BNPL providers, fuel card operators, car rental platforms, and every other category of business in the same structural position — the <strong class="text-primary">EV charging business model explained</strong> through NetworkCore translates into a specific commercial picture.</p>
+      <p>For any digital platform with EV-driving users — fleets, OEMs, fintechs, wallets, super-apps, mobility platforms, insurers, corporate benefits programmes, BNPL providers, fuel card operators, <a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">car rental platforms</a>, and every other category of business in the same structural position — the <strong class="text-primary">EV charging business model explained</strong> through NetworkCore translates into a specific commercial picture.</p>
 
       <p>Every charging session that the Distribution Partner's users complete through the integration generates a defined revenue share for the Distribution Partner, settled automatically on a short cycle, against activity that was going to happen regardless. The platform monetises the EV-driving segment of its user base by offering them convenience — consolidated access to every public charging network, in their existing app, at the transparent public price, without forcing the user to manage a separate charging app or account. The user gets a materially better experience. The platform earns on each session. Both outcomes are produced by the same integration.</p>
 
@@ -5850,7 +5850,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>The breadth of apps that can use an <strong class="text-primary">EV charging API for apps</strong> to add native charging is wider than most strategic discussions acknowledge. The structural requirements are simple: the app has EV-driving users, the app is something its users open regularly, and the app's business has a commercial interest in either retention or transactional revenue. The list of categories that meet these conditions is long.</p>
 
-      <p><a href="/blog/ev-charging-for-fleets" class="text-primary underline hover:no-underline">Fleet management apps</a> giving their drivers consolidated public charging access across markets. <a href="/blog/ev-charging-for-oems" class="text-primary underline hover:no-underline">OEM connected services apps</a> and in-car HMI experiences that should be where the OEM's drivers charge. Mobility super-apps that already host transport, payments, and lifestyle services and have a clean adjacency to add. Fintech wallets and neobank apps with motor or mobility-related spend in their user base. Car rental apps offering EV rentals where the rental experience should include charging access. <a href="/blog/ev-charging-for-insurance-companies" class="text-primary underline hover:no-underline">Insurance apps</a> with motor policyholders. Ride-hailing driver apps that want to make charging a native part of the driver's working day. Parking apps where charging is a natural extension of the bay-finding experience. Roadside assistance apps that want to offer charging access as a service to members. Corporate benefits and salary sacrifice apps managing the mobility costs of business users. BNPL apps with mobility-related transactions. Loyalty programme apps wanting to add a mobility benefit. Real estate and property management apps offering charging at residential and commercial buildings.</p>
+      <p><a href="/blog/ev-charging-for-fleets" class="text-primary underline hover:no-underline">Fleet management apps</a> giving their drivers consolidated public charging access across markets. <a href="/blog/ev-charging-for-oems" class="text-primary underline hover:no-underline">OEM connected services apps</a> and in-car HMI experiences that should be where the OEM's drivers charge. Mobility super-apps that already host transport, payments, and lifestyle services and have a clean adjacency to add. Fintech wallets and neobank apps with motor or mobility-related spend in their user base. <a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">Car rental apps</a> offering EV rentals where the rental experience should include charging access. <a href="/blog/ev-charging-for-insurance-companies" class="text-primary underline hover:no-underline">Insurance apps</a> with motor policyholders. Ride-hailing driver apps that want to make charging a native part of the driver's working day. Parking apps where charging is a natural extension of the bay-finding experience. Roadside assistance apps that want to offer charging access as a service to members. Corporate benefits and salary sacrifice apps managing the mobility costs of business users. BNPL apps with mobility-related transactions. Loyalty programme apps wanting to add a mobility benefit. Real estate and property management apps offering charging at residential and commercial buildings.</p>
 
       <p>In every case, the app holds the relationship with the user. The app does not hold the infrastructure. The integration through the <strong class="text-primary">EV charging API for apps</strong> is what lets the app participate in charging revenue and offer a better user experience without becoming a charging operator. The broader category framing for participants outside the energy industry is in <a href="/blog/ev-charging-for-non-utilities" class="text-primary underline hover:no-underline">EV Charging for Non-Utilities</a>.</p>
 
@@ -7086,7 +7086,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>The second assumption is that public charging is too expensive, too inconsistent, or too operationally awkward for fleet use. This assumption has been outdated for some time. Public charging networks have become denser, faster, and more reliable in every major EV market. Public tariffs are increasingly transparent and regulated. The operational awkwardness — multiple apps, multiple cards, fragmented invoicing — is exactly the problem a proper transaction platform exists to solve, as we cover in <a href="/blog/ev-charging-transaction-platform" class="text-primary underline hover:no-underline">EV Charging Transaction Platform</a>. The public charging network is no longer a fallback. For most fleet types, it is the primary infrastructure. The depot is the supplement.</p>
 
-      <p>This is what makes a real <strong class="text-primary">EV charging for fleets</strong> solution different from a depot-only approach. The fleet's drivers are given access to the entire public charging network — every CPO, every station, every market — through a single integration that handles the financial, invoicing, and compliance layer beneath it. The fleet team manages a fleet, not a charging operation. This is the same access model we describe for rental operators in <a href="/blog/ev-charging-for-car-rentals" class="text-primary underline hover:no-underline">EV Charging for Car Rentals</a>.</p>
+      <p>This is what makes a real <strong class="text-primary">EV charging for fleets</strong> solution different from a depot-only approach. The fleet's drivers are given access to the entire public charging network — every CPO, every station, every market — through a single integration that handles the financial, invoicing, and compliance layer beneath it. The fleet team manages a fleet, not a charging operation. This is the same access model we describe for <a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">rental operators</a> in <a href="/blog/ev-charging-for-car-rentals" class="text-primary underline hover:no-underline">EV Charging for Car Rentals</a>.</p>
 
       <h2>The public price advantage no one talks about enough</h2>
 
@@ -7320,7 +7320,7 @@ export const blogPosts: BlogPost[] = [
 
       <p><strong>API integration.</strong> For platforms that want full control over the user experience — the charging interface, the visual design, the placement within the app's flow, the tone of every interaction — the NetworkCore API exposes every function the integration needs. Network discovery, station listings, real-time pricing and availability, session initiation, payment authorisation, session management, and the full reporting layer. Your team builds the in-app charging experience exactly as you want it. NetworkCore handles everything that happens beneath that interface — the routing, the payment flow, the settlement, the compliance — and surfaces the data your product needs through clean, well-documented endpoints. This is the right path for OEMs building in-car HMI integrations, for super-apps that have strong UX standards, for fintechs that want charging to feel as native as their other product layers, and for any team with the engineering capacity to build their own front-end and the design conviction to make it match the rest of their app.</p>
 
-      <p><strong>Iframe integration.</strong> For platforms that want to ship in days rather than weeks, NetworkCore provides a complete drop-in front-end — a fully functional, brand-customisable charging interface delivered as an iframe component that sits inside your app and handles every part of the user experience out of the box. Station discovery, session initiation, payment, completion, history, support — all of it lives inside the iframe and inherits your brand presentation. Your team integrates the component, configures the styling to match your app, and ships. This is the right path for fleet platforms that want to deploy charging fast, for fintechs and wallets that want to add a mobility layer without an engineering project, for car rental platforms looking to enable EV options at the point of booking, and for any team that prefers to focus on demand growth rather than on building a charging UI.</p>
+      <p><strong>Iframe integration.</strong> For platforms that want to ship in days rather than weeks, NetworkCore provides a complete drop-in front-end — a fully functional, brand-customisable charging interface delivered as an iframe component that sits inside your app and handles every part of the user experience out of the box. Station discovery, session initiation, payment, completion, history, support — all of it lives inside the iframe and inherits your brand presentation. Your team integrates the component, configures the styling to match your app, and ships. This is the right path for fleet platforms that want to deploy charging fast, for fintechs and wallets that want to add a mobility layer without an engineering project, for <a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">car rental platforms</a> looking to enable EV options at the point of booking, and for any team that prefers to focus on demand growth rather than on building a charging UI.</p>
 
       <p>Both paths produce the same operational outcome: charging works inside your app, your users charge, the revenue arrives, the compliance is handled. The only difference is how much front-end work you choose to do. <strong class="text-primary">How to offer EV charging in an app</strong> is, in this respect, fully a question of your team's preference — not a constraint imposed by the platform.</p>
 
@@ -8495,7 +8495,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>That logic is breaking down. Not because physical infrastructure stopped mattering — it still does, deeply — but because the relationship between the driver and the charging session is increasingly mediated by software, not by proximity. A driver using a fleet platform, a wallet app, or an OEM in-car interface does not necessarily know or care which CPO's hardware they are plugging into. They initiate the session through the platform they trust, and the session happens. The CPO is the infrastructure. The platform is the relationship.</p>
 
-      <p><strong class="text-primary">Embedded mobility services</strong> are the set of integrations, financial arrangements, and service layers that make this possible. They are what allow a mobility app, a fintech wallet, a car rental platform, or a corporate benefits programme to offer EV charging as a native part of its product — without owning a single charger, without operating a single piece of charging infrastructure, and without routing drivers away from the interface they are already in. As explored in <a href="/blog/ev-charging-as-a-service">EV Charging as a Service</a>, the model is structurally identical to embedded finance: the service becomes part of the platform, not a detour from it.</p>
+      <p><strong class="text-primary">Embedded mobility services</strong> are the set of integrations, financial arrangements, and service layers that make this possible. They are what allow a mobility app, a fintech wallet, a <a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">car rental platform</a>, or a corporate benefits programme to offer EV charging as a native part of its product — without owning a single charger, without operating a single piece of charging infrastructure, and without routing drivers away from the interface they are already in. As explored in <a href="/blog/ev-charging-as-a-service">EV Charging as a Service</a>, the model is structurally identical to embedded finance: the service becomes part of the platform, not a detour from it.</p>
 
       <p>The transition from infrastructure play to embedded mobility service does not diminish the value of the physical layer. It reframes it. Chargers become wholesale supply. The <strong class="text-primary">embedded</strong> service layer becomes the distribution and the margin.</p>
 
@@ -10887,7 +10887,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>True <strong class="text-primary">charging-as-a-service</strong> is a transaction infrastructure model.</p>
 
-      <p>It allows Distribution Partners — OEMs, rental car companies, fleets, fintech wallets, mobility apps, super apps, and insurance platforms — to <a href="/blog/embed-ev-charging-into-app">embed EV charging</a> directly into their ecosystem and earn from every charging session, without owning infrastructure or any operations.</p>
+      <p>It allows Distribution Partners — OEMs, <a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">rental car companies</a>, fleets, fintech wallets, mobility apps, super apps, and insurance platforms — to <a href="/blog/embed-ev-charging-into-app">embed EV charging</a> directly into their ecosystem and earn from every charging session, without owning infrastructure or any operations.</p>
 
       <p><strong class="text-primary">Charging-as-a-service</strong> transforms EV charging from a capital expenditure into a scalable revenue layer. Because Distribution Partners have access to EV drivers, <strong class="text-primary">charging-as-a-service</strong> is a must-have solution.</p>
 
@@ -11388,7 +11388,7 @@ export const blogPosts: BlogPost[] = [
 
       <ul>
         <li>OEMs operating connected vehicle ecosystems</li>
-        <li>Rental car companies electrifying fleets</li>
+        <li><a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">Rental car companies</a> electrifying fleets</li>
         <li>Fintech wallets expanding mobility services</li>
         <li>Navigation and mobility apps guiding daily journeys</li>
         <li>Fleet platforms managing corporate vehicles</li>
@@ -11882,7 +11882,7 @@ export const blogPosts: BlogPost[] = [
 
       <p><strong class="text-primary">EV charging monetisation</strong> is no longer about owning chargers. It is about owning demand — and embedding charging into the platforms that already control user relationships.</p>
 
-      <p>For <a href="/#distribution-partners">Distribution Partners</a> — rental car companies, OEMs, fintech wallets, mobility apps, fleets, insurance ecosystems — EV charging represents one of the most underleveraged revenue and retention opportunities in electrified mobility.</p>
+      <p>For <a href="/#distribution-partners">Distribution Partners</a> — <a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">rental car companies</a>, OEMs, fintech wallets, mobility apps, fleets, insurance ecosystems — EV charging represents one of the most underleveraged revenue and retention opportunities in electrified mobility.</p>
 
       <h2>The Monetisation Opportunity Is Structural</h2>
 
@@ -12097,7 +12097,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>It is users.</p>
 
-      <p>Rental car companies operate fleets used by millions of drivers each year. Vehicle manufacturers maintain direct digital relationships with drivers through connected car platforms. Mobility apps guide drivers through journeys that include navigation, parking, and route planning. Fintech platforms and digital wallets process payments for everyday activities.</p>
+      <p><a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">Rental car companies</a> operate fleets used by millions of drivers each year. Vehicle manufacturers maintain direct digital relationships with drivers through connected car platforms. Mobility apps guide drivers through journeys that include navigation, parking, and route planning. Fintech platforms and digital wallets process payments for everyday activities.</p>
 
       <p>Each of these platforms interacts with drivers at moments when charging demand naturally occurs.</p>
 
@@ -12375,7 +12375,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>The EV Transition in Rental Fleets</h2>
 
-      <p>Rental car companies are among the most exposed mobility players in the EV transition. Their fleets turn over quickly, their vehicles operate across geographies, and their customers are often experiencing EVs for the first time.</p>
+      <p><a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">Rental car companies</a> are among the most exposed mobility players in the EV transition. Their fleets turn over quickly, their vehicles operate across geographies, and their customers are often experiencing EVs for the first time.</p>
 
       <p>This combination makes charging a central part of the rental experience. A customer renting an EV may charge multiple times during a trip, often in unfamiliar locations. If the charging experience is confusing or unreliable, the perception of the vehicle — and the rental brand — suffers.</p>
 
@@ -15123,7 +15123,7 @@ export const blogPosts: BlogPost[] = [
 
       <p><em>Can we offer <strong class="text-primary">EV charging without owning infrastructure</strong>?</em></p>
 
-      <p>For Distribution Partners — OEMs, fintechs, wallets, charging apps, parking platforms, fleets, car rentals, insurers, and digital ecosystems — the answer is not only yes, but increasingly necessary.</p>
+      <p>For Distribution Partners — OEMs, fintechs, wallets, charging apps, parking platforms, fleets, <a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">car rentals</a>, insurers, and digital ecosystems — the answer is not only yes, but increasingly necessary.</p>
 
       <p><strong class="text-primary">EV charging</strong> is no longer just an infrastructure story. It is a service, a transaction, and a customer experience. And for most platforms, owning chargers is neither practical nor strategic.</p>
 
@@ -15428,7 +15428,7 @@ export const blogPosts: BlogPost[] = [
         <li>OEMs offering fleet and in-car services</li>
         <li>Fleet management software providers</li>
         <li>Fintechs and wallets handling fleet payments</li>
-        <li>Car rental and leasing companies</li>
+        <li><a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">Car rental and leasing companies</a></li>
         <li>Insurance companies bundling EV services</li>
         <li>Mobility and logistics platforms</li>
       </ul>
@@ -16425,7 +16425,7 @@ export const blogPosts: BlogPost[] = [
       <ul>
         <li>OEMs offering fleet and in-car services</li>
         <li>Fintechs and wallets managing fleet payments</li>
-        <li>Car rental companies electrifying their vehicles</li>
+        <li><a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">Car rental companies</a> electrifying their vehicles</li>
         <li>Insurance companies bundling EV services</li>
         <li>Mobility and charging apps serving fleet drivers</li>
         <li>Platforms coordinating logistics or delivery</li>
@@ -17857,7 +17857,7 @@ export const blogPosts: BlogPost[] = [
     title: "Best Scalable EV Charging Infrastructure for Fleets: What Actually Works at Global Scale",
     excerpt: "Fleet electrification is no longer a pilot program—it's an operational reality. Discover what truly makes an EV charging setup scalable for fleets and why the market is shifting toward platform-based infrastructure models.",
     content: `
-      <p>Fleet electrification is no longer a pilot program—it's an operational reality. Logistics companies, ride-hailing platforms, car rental groups, and corporate fleets are now deploying thousands of electric vehicles across multiple cities and countries. Yet one question keeps resurfacing: what is the <strong class="text-primary">best scalable EV charging infrastructure for fleets</strong>?</p>
+      <p>Fleet electrification is no longer a pilot program—it's an operational reality. Logistics companies, ride-hailing platforms, <a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">car rental groups</a>, and corporate fleets are now deploying thousands of electric vehicles across multiple cities and countries. Yet one question keeps resurfacing: what is the <strong class="text-primary">best scalable EV charging infrastructure for fleets</strong>?</p>
 
       <p>The answer is not just about hardware density or charger speed. The <strong class="text-primary">best scalable EV charging infrastructure for fleets</strong> is defined by <strong>interoperability</strong>, financial scalability, operational simplicity, and the ability to expand across borders without friction. Infrastructure that cannot scale financially and operationally will ultimately limit fleet growth, no matter how advanced the chargers themselves are.</p>
 

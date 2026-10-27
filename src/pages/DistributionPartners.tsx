@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Car, Wallet, Truck, ParkingCircle, Plane, Building2, Shield, Landmark, Network, Palette, Plug, Route, Headphones } from "lucide-react";
+import { ArrowRight, Car, Wallet, Truck, KeyRound, ParkingCircle, Plane, Building2, Shield, Landmark, Network, Palette, Plug, Route, Headphones } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -27,6 +27,12 @@ const categories = [
     "description": "Public charging on the road, on one bill, for the fleets you already serve.",
     "linkLabel": "Public EV charging for fleets",
     "href": "/distribution-partners/public-ev-charging-for-fleets"
+  },
+  {
+    "title": "Car rental",
+    "description": "Rental, subscription and car-share fleets. Charging handed over with the keys.",
+    "linkLabel": "EV charging for car rental",
+    "href": "/distribution-partners/ev-charging-for-car-rental"
   },
   {
     "title": "Parking and road platforms",
@@ -59,7 +65,7 @@ const categories = [
     "href": "/distribution-partners/ev-charging-for-public-sector-mobility"
   }
 ];
-const categoryIcons = [Car, Wallet, Truck, ParkingCircle, Plane, Building2, Shield, Landmark];
+const categoryIcons = [Car, Wallet, Truck, KeyRound, ParkingCircle, Plane, Building2, Shield, Landmark];
 const benefitIcons = [Network, Palette, Plug, Route, Landmark, Headphones];
 const benefits = [
   {
@@ -139,7 +145,7 @@ const DistributionPartners = () => (
         <div className="mx-auto grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-2">
           {categories.map((category, index) => {
             const Icon = categoryIcons[index];
-            return <Link key={category.href} to={category.href} className="flex min-w-0 items-center gap-4 rounded-lg border border-background/25 bg-background/5 p-4 text-left text-background backdrop-blur-sm transition-colors hover:border-background/60 hover:bg-background/10">
+            return <Link key={category.href} to={category.href} className="flex min-w-0 items-center gap-4 rounded-lg border border-background/25 sm:odd:last:col-span-2 bg-background/5 p-4 text-left text-background backdrop-blur-sm transition-colors hover:border-background/60 hover:bg-background/10">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-background/30 text-background/80">{Icon && <Icon className="h-5 w-5" />}</span>
               <span className="min-w-0 flex-1 text-base font-light">{category.title}</span>
               <ArrowRight className="h-4 w-4 shrink-0 text-background/50" />
@@ -210,7 +216,7 @@ const DistributionPartners = () => (
         <div className="grid gap-5 md:grid-cols-2">
           {categories.map((category, index) => {
             const Icon = categoryIcons[index];
-            return <Link key={category.href} to={category.href} className="flex min-w-0 items-start gap-4 rounded-lg border border-border/50 bg-card/30 p-6 transition-colors hover:border-foreground/30">
+            return <Link key={category.href} to={category.href} className="flex min-w-0 items-start gap-4 rounded-lg border border-border/50 bg-card/30 p-6 transition-colors hover:border-foreground/30 md:odd:last:col-span-2">
               {Icon && <Icon className="mt-1 h-5 w-5 shrink-0 text-electric-green" />}
               <div className="min-w-0">
                 <h3 className="mb-2 text-xl font-light text-foreground">{category.title}</h3>
