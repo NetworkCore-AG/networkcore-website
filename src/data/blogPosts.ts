@@ -59,6 +59,119 @@ export const calculateReadingTime = (content: string): number => {
 // Add your blog posts here - newest first
 export const blogPosts: BlogPost[] = [
   {
+    slug: "roaming-hub-colombia",
+    title: "Roaming Hub Colombia: Making Every Charger Count in a Market Moving This Fast",
+    excerpt: "Colombia registered 39,784 EVs through September 2026 against around 520 public charging points. When supply is this constrained, making every existing charger reachable by every driver is the fastest way to expand coverage without building anything.",
+    content: `
+      <p>Colombia is having the year every electric mobility market hopes for. Drivers have decided. The vehicles are selling faster than almost anywhere in the region. What has not kept pace is the charging infrastructure underneath that demand, and <a href="/how-it-works" class="text-primary underline hover:no-underline">the commercial layer</a> that connects the two is still being written.</p>
+
+      <p>That is the opportunity. A <strong class="text-primary">roaming hub Colombia</strong> can build on is not a nice-to-have for some future stage of market maturity. It is the most efficient response available right now to a market with surging demand, scarce supply and a short window in which to get the foundations right. <a href="/" class="text-primary underline hover:no-underline">NetworkCore</a> is building <a href="/the-network" class="text-primary underline hover:no-underline">that hub</a> for Colombia, and this post sets out why the timing matters.</p>
+
+      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a></p>
+
+      <h2>The market: demand has already arrived</h2>
+
+      <p>The scale of what has happened in Colombia this year is easy to understate.</p>
+
+      <p>Through September 2026, Colombia registered 39,784 new electric vehicles, growth of 217.8% against the same period a year earlier. In April alone, 5,192 battery electric vehicles were registered, a 304% increase year on year, taking battery electric market share to nearly 20% from 7.4% twelve months previously. Roughly one in every five new vehicles sold that month was fully electric, and electrified vehicles combined accounted for close to half of all new vehicle sales.</p>
+
+      <p>The signal is just as clear in which vehicles are selling. The Tesla Model Y was the best-selling vehicle of any kind in Colombia in April 2026, with 2,264 units and 8.5% of the entire automotive market, making Tesla the country's third largest automotive brand that month behind only Kia and Renault. BYD has been driving the electric segment's expansion alongside it. These are <a href="/distribution-partners/ev-charging-for-oems" class="text-primary underline hover:no-underline">global manufacturers</a> treating Colombia as a serious market, not a pilot.</p>
+
+      <p>The financial system has noticed too. Loans for electric vehicles now represent between 30% and 40% of total vehicle lending at <a href="/distribution-partners/ev-charging-for-financial-platforms" class="text-primary underline hover:no-underline">some Colombian banks</a>, which is the kind of number that reflects settled confidence rather than early enthusiasm.</p>
+
+      <h2>The gap: supply has not</h2>
+
+      <p>Now the other half of the picture, and it is the part that makes a <strong class="text-primary">roaming hub Colombia</strong> so relevant.</p>
+
+      <p>Against that fleet growth, Colombia has around 520 public charging points nationally. That works out at roughly one public charging point for every 337 electric vehicles. Industry analysis puts the infrastructure backlog at as much as eight months behind the pace of vehicle sales.</p>
+
+      <p>The distribution is as significant as the total. Enel has built by far the largest network in the country, with 412 chargers, concentrated mainly in Bogotá. Bogotá and its metropolitan area account for close to half of Colombia's entire electric fleet. The practical consequence is that public charging remains, in the words of regional analysis, a privilege of a few cities, with large parts of the country effectively without access.</p>
+
+      <p>Residential charging does not fill the gap either. Colombia is a heavily urbanised country, and a substantial share of <a href="https://demographer.org/countries/colombia-demographics/" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">Colombian drivers live in apartments and residential complexes</a> where installing private charging remains genuinely difficult. That puts more of the load on public infrastructure and on <a href="/private-hosts" class="text-primary underline hover:no-underline">the buildings, retailers and venues</a> that already have chargers in the ground.</p>
+
+      <p>And building more is expensive. Installation costs for a single charging point in Colombia have been put at roughly $100,000 to $130,000, varying by project. That is real capital, and it is why supply cannot simply be willed into existence at the speed demand is growing.</p>
+
+      <h2>Why roaming matters most when chargers are scarce</h2>
+
+      <p>Here is the argument at the centre of this, and it is why a <strong class="text-primary">roaming hub Colombia</strong> deserves attention now rather than later.</p>
+
+      <p>A roaming hub does not build chargers. What it does is make the chargers that already exist reachable by every driver, regardless of which app, vehicle or platform that driver uses. In a market with abundant infrastructure, that is a convenience. In a market with roughly one public point for every 337 electric vehicles, it is something closer to essential.</p>
+
+      <p>Think about what fragmentation costs in a supply-constrained market. A driver who cannot access a charger because it belongs to a network they have no account with has not merely been inconvenienced. In Colombia today, that charger might be one of very few within reach. Every charging point that is invisible or unusable to a given driver effectively reduces an already thin network. Conversely, every charger made reachable by every driver increases the usable network without a single additional installation.</p>
+
+      <p>That is the highest-leverage intervention available in a market like this. Infrastructure takes capital and time, measured in months per site. Interoperability takes a connection. When supply is the binding constraint, making the existing supply fully accessible is the fastest possible improvement to the driver experience, and it is the one that does not require waiting for construction.</p>
+
+      <p>It matters for operators just as much. With demand this far ahead of supply, a <a href="/charge-point-operators" class="text-primary underline hover:no-underline">Colombian charge point operator's</a> problem is not finding drivers. It is being findable by them, and <a href="/pricing" class="text-primary underline hover:no-underline">being paid properly and promptly</a> for the sessions it delivers. The utilisation logic behind that is set out in <a href="/blog/ev-charger-utilisation-rate" class="text-primary underline hover:no-underline">EV Charger Utilisation Rate</a>.</p>
+
+      <h2>The window is now, and it is closing</h2>
+
+      <p>There is a second reason the timing is favourable, and it is structural.</p>
+
+      <p>Colombia currently has a few hundred public charging points. Within a few years it will have many thousands, built by a wider set of operators as the market attracts capital. The commercial conventions established during that build-out, how operators connect to demand, how prices reach drivers, how quickly money moves, will become the conventions the market lives with for a long time afterwards.</p>
+
+      <p>Mature charging markets demonstrate how hard those conventions are to change once set. Many of them built roaming around wholesale pricing that obscures the operator's real tariff, settlement cycles measured in months, and <a href="/pricing" class="text-primary underline hover:no-underline">access fees charged whether or not</a> the connection delivers anything. Those markets are now working to move past that model, and finding it slow, because a decade of arrangements is difficult to unwind.</p>
+
+      <p>Colombia is not carrying that history. It is laying its commercial foundations at the same time as its physical ones, which means it can adopt a better model directly rather than inheriting one and repairing it later. Establishing how a <strong class="text-primary">roaming hub Colombia</strong> should work while the network is small is straightforward. Doing it once the network is large is a far harder exercise. The same reasoning applied regionally is in <a href="/blog/roaming-hub-latam" class="text-primary underline hover:no-underline">Roaming Hub LATAM</a>, and the neighbouring case in <a href="/blog/roaming-hub-mexico" class="text-primary underline hover:no-underline">Roaming Hub Mexico</a>.</p>
+
+      <h2>How NetworkCore approaches it</h2>
+
+      <p>NetworkCore is building a roaming hub for Colombia on a <a href="/pricing" class="text-primary underline hover:no-underline">different commercial basis</a> from the traditional model, and the difference is the point.</p>
+
+      <p><strong class="text-primary">A sales channel, not a fixed cost.</strong> There are no access fees and no membership charges. NetworkCore earns a commission only on sessions actually delivered to an operator's chargers. Connecting costs nothing to establish and nothing to hold, and only ever costs anything when it is producing revenue. That means the hub makes money only by making your chargers busier, which keeps our interests and yours pointed the same way.</p>
+
+      <p><strong class="text-primary">Transparent pricing.</strong> The operator's own public tariff is transmitted to the driver intact, without an intermediary mark-up inserted along the way. The price the driver sees is the price they pay, which builds the trust a young market needs. Operators <a href="/charge-point-operators" class="text-primary underline hover:no-underline">keep control of their own pricing</a>.</p>
+
+      <p><strong class="text-primary">Fast settlement.</strong> Parties are settled quickly rather than on the thirty, sixty or ninety day cycles common in traditional roaming. For Colombian operators deploying capital into a market growing this fast, the difference between being paid in days and being paid in months is the difference between recycling capital into the next site and waiting on a receivable.</p>
+
+      <p><strong class="text-primary"><a href="/products/network-access" class="text-primary underline hover:no-underline">You keep control of what is published</a>.</strong> You decide which stations are open to the network and which stay direct-only. Connecting does not hand your network over.</p>
+
+      <h2>Four products, both sides of the market</h2>
+
+      <p>A hub only works if it serves supply and demand together, and all four NetworkCore products are relevant to Colombia.</p>
+
+      <p><a href="/products/network-access" class="text-primary underline hover:no-underline">Network Access</a>, for <a href="/charging-partners" class="text-primary underline hover:no-underline">Charging Partners</a>. For the operators, <a href="/private-hosts" class="text-primary underline hover:no-underline">venues and retailers</a>, fuel networks and <a href="/fleet-hosts" class="text-primary underline hover:no-underline">depots</a> that run chargers. You run the chargers, NetworkCore brings the drivers and settles the money, at your own transparent public price. In a market where demand far outstrips supply, this is about being reachable by every driver on the network and being paid fast for the sessions you deliver.</p>
+
+      <p><a href="/products/just-charge" class="text-primary underline hover:no-underline">Just Charge</a>, for <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partners</a>. For the platforms that have the drivers: <a href="/distribution-partners/ev-charging-for-oems" class="text-primary underline hover:no-underline">automakers</a>, <a href="/distribution-partners/public-ev-charging-for-fleets" class="text-primary underline hover:no-underline">fleet and mobility platforms</a>, <a href="/distribution-partners/ev-charging-for-financial-platforms" class="text-primary underline hover:no-underline">banks and wallets</a>, <a href="/distribution-partners/ev-charging-for-parking-and-road-platforms" class="text-primary underline hover:no-underline">parking and retail</a>. Just Charge puts public charging inside your own product, under your brand, at public prices, without you building a charging business behind it.</p>
+
+      <p><a href="/products/charging-links" class="text-primary underline hover:no-underline">Charging Links</a>, the fastest way in. Every connector on the network has its own permanent link, and we share the set with you. No app to build, no integration, no account for the driver. For a Colombian platform that wants charging live this month rather than next quarter, this is the route that needs no engineering at all.</p>
+
+      <p><a href="/products/charge-pack" class="text-primary underline hover:no-underline">Charge Pack</a>, for funded charging. A charging allowance you issue to your drivers, funded by you, by a charging operator, or by both together. In a market where most drivers are charging publicly for the first time, covering those first sessions is the difference between a driver who forms the habit inside your product and one who forms it somewhere else.</p>
+
+      <p>Together they are the two sides of the hub. Network Access brings the supply, the other three bring the demand, and the roaming layer connects them. How that demand routing works is covered in <a href="/blog/ev-charging-demand-platform" class="text-primary underline hover:no-underline">EV Charging Demand Platform</a>.</p>
+
+      <h2>Frequently asked questions</h2>
+
+      <p><strong class="text-primary">What is a roaming hub for Colombia?</strong><br />It is the layer that connects Colombia's charging networks and driver-facing platforms, so a driver reaching charging through one product can charge across the whole network rather than only at their own provider's stations. <a href="/how-it-works" class="text-primary underline hover:no-underline">How it works</a>.</p>
+
+      <p><strong class="text-primary">Why does roaming matter so much in Colombia specifically?</strong><br />Because public charging is scarce and heavily concentrated, with roughly one public point for every 337 electric vehicles and most infrastructure clustered in a few cities. When supply is constrained, making every existing charger reachable by every driver is the fastest way to improve coverage without building anything.</p>
+
+      <p><strong class="text-primary">How is NetworkCore different from traditional roaming?</strong><br />Traditional roaming typically charges access fees, marks up the operator's price before the driver sees it, and settles over months. NetworkCore works as a sales channel: no access or membership fees, commission only on delivered sessions, the operator's transparent public price transmitted intact, and fast settlement. The full structure is on the <a href="/pricing" class="text-primary underline hover:no-underline">pricing page</a>.</p>
+
+      <p><strong class="text-primary">Who can join?</strong><br />Both sides. <a href="/charging-partners" class="text-primary underline hover:no-underline">Charging Partners</a> through <a href="/products/network-access" class="text-primary underline hover:no-underline">Network Access</a>, <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partners</a> through <a href="/products/just-charge" class="text-primary underline hover:no-underline">Just Charge</a> or <a href="/products/charging-links" class="text-primary underline hover:no-underline">Charging Links</a>.</p>
+
+      <p><strong class="text-primary">Why now rather than later?</strong><br />Because the commercial conventions a market establishes while it is small are the ones it keeps once it is large. Colombia is building its charging network now, which makes this the easiest moment to build the commercial layer properly.</p>
+
+      <p>More questions are answered in the <a href="/faqs" class="text-primary underline hover:no-underline">FAQs</a>.</p>
+
+      <h2>Build it with us</h2>
+
+      <p>Colombia's drivers have already made their decision. The infrastructure is racing to catch up, and the operators building it deserve a commercial model that pays them quickly, at their own price, for every session they deliver. The platforms with the drivers deserve a way to offer charging without becoming charging companies.</p>
+
+      <p>A <strong class="text-primary">roaming hub Colombia</strong> can rely on should make every existing charger count, bring operators demand they did not have to market for, and settle fast enough to fund the next site. That is what NetworkCore is building, and it is open to Colombian <a href="/charging-partners" class="text-primary underline hover:no-underline">Charging Partners</a> and <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partners</a> now.</p>
+
+      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/the-network" class="text-primary underline hover:no-underline">Explore the network →</a></p>
+    `,
+    featuredImage: "/images/blog/roaming-hub-colombia.jpg",
+    category: "Charging Partners",
+    author: "NetworkCore Team",
+    publishedAt: "2026-10-27",
+    published: true,
+    metaTitle: "Roaming Hub Colombia | Making Every Charger Count | NetworkCore",
+    metaDescription: "Colombia registered 39,784 EVs through September 2026 against around 520 public charging points. Why a roaming hub is the fastest way to expand usable coverage.",
+    tags: ["Roaming Hub", "Colombia", "EV Roaming", "LATAM", "Charging Partners", "Distribution Partners"]
+  },
+
+  {
     slug: "ev-charging-service-level-agreements",
     title: "EV Charging Service Level Agreements: What a Fair One Actually Looks Like",
     excerpt: "Most EV charging SLAs refund part of a fee when things break. A fair one measures what drivers actually get, is achievable by the party promising it, and sits on a model where the provider only earns when you do.",
