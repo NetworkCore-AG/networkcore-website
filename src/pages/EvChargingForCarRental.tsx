@@ -62,7 +62,6 @@ const EvChargingForCarRental = () => (
       </video>
       <div className="absolute inset-0 bg-foreground/70" />
       <div className="relative mx-auto w-full max-w-6xl px-4 py-28 text-left sm:px-6 lg:px-8">
-        <p className="mb-4 text-[11px] uppercase tracking-[0.2em] text-background/70">EV Charging for Car Rental</p>
         <h1 className="mb-6 text-3xl font-light leading-tight text-background md:text-4xl lg:text-5xl">Hand Over the Keys and the Charging</h1>
         <p className="mb-8 max-w-3xl text-lg font-light leading-relaxed text-background/70 md:text-xl">{description}</p>
         <div className="flex flex-wrap justify-start gap-4">
@@ -76,10 +75,9 @@ const EvChargingForCarRental = () => (
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="mb-8 text-3xl font-light text-foreground md:text-4xl">The Fuel Policy Is Solved. The Charging Policy Isn't.</h2>
         <div className="space-y-5 text-lg font-light leading-relaxed text-foreground">
-          <p>Full-to-full has worked for a century. Everyone understands it, nobody argues about it, and it closes at the counter in one second.</p>
-          <p>There is no EV equivalent. The customer drives off with no idea where they will charge, which app they need or what it will cost. Some work it out. Some come back at eighteen per cent having never charged at all, and tell everyone the car was the problem. Multiply that by a fleet and the EVs become the cars your staff stop recommending.</p>
-          <p>The customer is the real problem, and it is not their fault. They have an unfamiliar car, in an unfamiliar city, often for the first time in their life, with a plug they have never seen and a dozen operator apps between them and a charge. Meanwhile the ICE in the next bay has a petrol station on every corner.</p>
-          <p className="font-normal">You bought the EVs. The charging experience is what decides whether anyone takes them.</p>
+          <p>Full-to-full has worked for a century. Everyone understands it, nobody argues about it, and it closes at the counter in one second. There is no EV equivalent.</p>
+          <p>The customer is the problem, and it is not their fault. They have an unfamiliar car, in an unfamiliar city, often for the first time in their life, with a plug they have never seen and a dozen operators between them and a charge. Meanwhile the ICE in the next bay has a petrol station on every corner.</p>
+          <p className="font-normal">You bought the EVs, but the charging experience is what decides whether anyone takes them.</p>
         </div>
       </div>
     </section>

@@ -191,7 +191,7 @@ const Footer = () => {
 
         {/* Join + Social row */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-5 mb-6 border-b border-border">
-          <div className="relative isolate min-h-[152px] border-border py-4 sm:min-h-[184px] sm:px-2 lg:min-h-[208px] lg:col-span-3 lg:border-r lg:py-2 lg:pr-10">
+          <div className="relative isolate min-h-[96px] border-border py-4 sm:min-h-[104px] sm:px-2 lg:min-h-[112px] lg:col-span-3 lg:border-r lg:py-2 lg:pr-10">
             <div className="footer-globe-fade pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">
               <FooterGlobe className="w-[380px] sm:w-[520px] lg:w-[680px]" />
             </div>
