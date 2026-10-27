@@ -19,6 +19,7 @@ export const CORE_ROUTES: Array<{ path: string; changefreq: string; priority: st
   { path: "/distribution-partners", changefreq: "monthly", priority: "0.9" },
   { path: "/distribution-partners/ev-charging-for-oems", changefreq: "monthly", priority: "0.8" },
   { path: "/distribution-partners/ev-charging-for-parking-and-road-platforms", changefreq: "monthly", priority: "0.8" },
+  { path: "/distribution-partners/ev-charging-for-car-rental", changefreq: "monthly", priority: "0.8" },
   { path: "/distribution-partners/public-ev-charging-for-fleets", changefreq: "monthly", priority: "0.8" },
   { path: "/distribution-partners/ev-charging-for-financial-platforms", changefreq: "monthly", priority: "0.8" },
   { path: "/distribution-partners/ev-charging-for-insurance-and-driver-services", changefreq: "monthly", priority: "0.8" },

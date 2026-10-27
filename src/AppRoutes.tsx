@@ -17,6 +17,7 @@ import Platform from "./pages/Platform";
 import AboutUs from "./pages/AboutUs";
 import EvChargingForOems from "./pages/EvChargingForOems";
 import EvChargingForParkingAndRoadPlatforms from "./pages/EvChargingForParkingAndRoadPlatforms";
+import EvChargingForCarRental from "./pages/EvChargingForCarRental";
 import PublicEvChargingForFleets from "./pages/PublicEvChargingForFleets";
 import EvChargingForFinancialPlatforms from "./pages/EvChargingForFinancialPlatforms";
 import EvChargingForInsuranceAndDriverServices from "./pages/EvChargingForInsuranceAndDriverServices";
@@ -56,6 +57,8 @@ export default function AppRoutes() {
         <Route path="/:lang/distribution-partners/ev-charging-for-oems" element={<EvChargingForOems />} />
         <Route path="/distribution-partners/ev-charging-for-parking-and-road-platforms" element={<EvChargingForParkingAndRoadPlatforms />} />
         <Route path="/:lang/distribution-partners/ev-charging-for-parking-and-road-platforms" element={<EvChargingForParkingAndRoadPlatforms />} />
+        <Route path="/distribution-partners/ev-charging-for-car-rental" element={<EvChargingForCarRental />} />
+        <Route path="/:lang/distribution-partners/ev-charging-for-car-rental" element={<EvChargingForCarRental />} />
         <Route path="/distribution-partners/public-ev-charging-for-fleets" element={<PublicEvChargingForFleets />} />
         <Route path="/:lang/distribution-partners/public-ev-charging-for-fleets" element={<PublicEvChargingForFleets />} />
         <Route path="/distribution-partners/ev-charging-for-financial-platforms" element={<EvChargingForFinancialPlatforms />} />
