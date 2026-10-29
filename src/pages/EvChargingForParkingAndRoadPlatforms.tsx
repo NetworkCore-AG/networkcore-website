@@ -135,20 +135,17 @@ const EvChargingForParkingAndRoadPlatforms = () => (
         <PartnerSignupForm
           formLabel="Parking & Road Platform Partner Signup"
           submitLabel="Become a Distribution Partner"
-          collapseRequiredAfter={3}
-          collapsedRequiredLabel="Complete partner details"
           helperText="We'll reach out within 48 hours. No spam, no automated sequences."
           requiredFields={[
             { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
             { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
-            { name: "company", label: "Company", type: "text", required: true, placeholder: "Platform / company name" },
-            { name: "platformType", label: "Platform type", type: "select", required: true, placeholder: "Select platform type", options: ["Parking", "Tolling", "Mobility payments", "Other"] },
-            { name: "markets", label: "Markets you operate in", type: "text", required: true, placeholder: "e.g. Germany, UK, Spain" },
-            { name: "monthlyActiveUsers", label: "Monthly active users", type: "select", required: true, placeholder: "Select range", options: ["Under 50,000", "50,000 to 500,000", "500,000 to 2M", "2M to 10M", "10M+"] },
+            { name: "company", label: "Company", type: "text", required: true, placeholder: "Company name" },
           ]}
           optionalFields={[
-            { name: "tellUsMore", label: "Tell us more", type: "textarea", placeholder: "Anything else we should know?" },
+            { name: "tellUsMore", label: "Message (optional)", type: "textarea", placeholder: "Anything you would like us to know?" },
           ]}
+          collapseRequiredAfter={3}
+          collapseOptional={false}
         />
       </div>
     </section>

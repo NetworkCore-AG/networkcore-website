@@ -136,20 +136,17 @@ const PublicEvChargingForFleets = () => (
         <PartnerSignupForm
           formLabel="Fleet Partner Signup"
           submitLabel="Become a Fleet Partner"
-          collapseRequiredAfter={3}
-          collapsedRequiredLabel="Complete partner details"
           helperText="We'll reach out within 48 hours. No spam, no automated sequences."
           requiredFields={[
             { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
             { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
             { name: "company", label: "Company", type: "text", required: true, placeholder: "Company name" },
-            { name: "fleetPlatformType", label: "Fleet platform type", type: "select", required: true, placeholder: "Select platform type", options: ["Fleet management platform", "Fuel / fleet card provider", "Logistics or delivery fleet", "Taxi, ride-hail, or car-share", "Corporate or mobility fleet", "Rental or leasing", "Other"] },
-            { name: "markets", label: "Markets you operate in", type: "text", required: true, placeholder: "e.g. Germany, UK, Spain" },
-            { name: "vehiclesUnderManagement", label: "Vehicles under management", type: "select", required: true, placeholder: "Select range", options: ["Under 1,000", "1,000 to 10,000", "10,000 to 50,000", "50,000 to 250,000", "250,000+"] },
           ]}
           optionalFields={[
-            { name: "tellUsMore", label: "Tell us more", type: "textarea", placeholder: "Anything else we should know?" },
+            { name: "tellUsMore", label: "Message (optional)", type: "textarea", placeholder: "Anything you would like us to know?" },
           ]}
+          collapseRequiredAfter={3}
+          collapseOptional={false}
         />
       </div>
     </section>

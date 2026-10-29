@@ -97,43 +97,15 @@ const EvChargingForEmployeeBenefits = () => {
             submitLabel="Become a Partner"
             helperText="We'll reach out within 48 hours. No spam, no automated sequences."
             requiredFields={[
-              { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
-              { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
-              { name: "company", label: "Company", type: "text", required: true, placeholder: "Company name" },
-              {
-                name: "platformType",
-                label: "Platform type",
-                type: "select",
-                required: true,
-                placeholder: "Select type",
-                options: [
-                  "Salary sacrifice / EV leasing benefit",
-                  "Mobility benefits platform",
-                  "Mobility budget platform",
-                  "Commuter benefits program",
-                  "Business travel platform",
-                  "Employee perks & rewards platform",
-                  "Other",
-                ],
-              },
-              {
-                name: "membersServed",
-                label: "Members or employees served",
-                type: "select",
-                required: true,
-                placeholder: "Select range",
-                options: [
-                  "Under 10,000",
-                  "10,000 to 100,000",
-                  "100,000 to 500,000",
-                  "500,000 to 2M",
-                  "2M+",
-                ],
-              },
-            ]}
-            optionalFields={[
-              { name: "tellUsMore", label: "Tell us more", type: "textarea", placeholder: "Anything else we should know?" },
-            ]}
+            { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
+            { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
+            { name: "company", label: "Company", type: "text", required: true, placeholder: "Company name" },
+          ]}
+          optionalFields={[
+            { name: "tellUsMore", label: "Message (optional)", type: "textarea", placeholder: "Anything you would like us to know?" },
+          ]}
+          collapseRequiredAfter={3}
+          collapseOptional={false}
           />
           </div>
         </div>

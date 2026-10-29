@@ -121,19 +121,17 @@ const EvChargingForFinancialPlatforms = () => (
         <PartnerSignupForm
           formLabel="Financial Platform Partner Signup"
           submitLabel="Become a Partner"
-          collapseRequiredAfter={3}
-          collapsedRequiredLabel="Complete partner details"
           helperText="We'll reach out within 48 hours. No spam, no automated sequences."
           requiredFields={[
             { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
             { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
-            { name: "company", label: "Company", type: "text", required: true, placeholder: "Platform / company name" },
-            { name: "platformType", label: "Platform type", type: "select", required: true, placeholder: "Select type", options: ["Digital wallet / payment app", "Neobank / digital bank", "Card issuer", "Cashback / loyalty app", "Expense platform", "Fuel card app", "Other"] },
-            { name: "monthlyActiveUsers", label: "Monthly active users", type: "select", required: true, placeholder: "Select range", options: ["Under 100,000", "100,000 to 1M", "1M to 10M", "10M to 50M", "50M+"] },
+            { name: "company", label: "Company", type: "text", required: true, placeholder: "Company name" },
           ]}
           optionalFields={[
-            { name: "tellUsMore", label: "Tell us more", type: "textarea", placeholder: "Anything else we should know?" },
+            { name: "tellUsMore", label: "Message (optional)", type: "textarea", placeholder: "Anything you would like us to know?" },
           ]}
+          collapseRequiredAfter={3}
+          collapseOptional={false}
         />
       </div>
     </section>

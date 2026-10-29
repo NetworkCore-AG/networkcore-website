@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, CalendarClock, Eye, Landmark, Settings, MapPin, Zap, Receipt, Shield, Users, Radar } from "lucide-react";
+import { ArrowRight, ShieldCheck, CalendarClock, Eye, Landmark, Settings, MapPin, Zap, Receipt, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -25,7 +25,6 @@ const driverMoments = [
 const whoFor = [
   { icon: Shield, title: "Motor and EV insurers", description: "turning a yearly policy into a weekly service" },
   { icon: Users, title: "Driver membership and motoring clubs", description: "adding the highest-frequency benefit a member can use" },
-  { icon: Radar, title: "Telematics and usage-based insurers", description: "giving EV drivers a service they touch all the time" },
 ];
 const faqs = [
   { question: "What does it cost?", answer: "On public price, access to the whole network is free. Where you buy wholesale, you buy at the operator's rate and keep whatever margin you choose to set. In both cases, there are no setup or subscription fees." },
@@ -118,19 +117,17 @@ const EvChargingForInsuranceAndDriverServices = () => (
         <PartnerSignupForm
           formLabel="Insurance & Driver Services Partner Signup"
           submitLabel="Become a Partner"
-          collapseRequiredAfter={3}
-          collapsedRequiredLabel="Complete partner details"
           helperText="We'll reach out within 48 hours. No spam, no automated sequences."
           requiredFields={[
             { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
             { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
             { name: "company", label: "Company", type: "text", required: true, placeholder: "Company name" },
-            { name: "platformType", label: "Platform type", type: "select", required: true, placeholder: "Select type", options: ["Motor / EV insurer", "Roadside assistance", "Warranty / breakdown cover", "Driver membership / motoring club", "Telematics / usage-based insurer", "Other"] },
-            { name: "monthlyActiveUsers", label: "Members or policyholders", type: "select", required: true, placeholder: "Select range", options: ["Under 100,000", "100,000 to 1M", "1M to 5M", "5M to 20M", "20M+"] },
           ]}
           optionalFields={[
-            { name: "tellUsMore", label: "Tell us more", type: "textarea", placeholder: "Anything else we should know?" },
+            { name: "tellUsMore", label: "Message (optional)", type: "textarea", placeholder: "Anything you would like us to know?" },
           ]}
+          collapseRequiredAfter={3}
+          collapseOptional={false}
         />
       </div>
     </section>

@@ -93,29 +93,15 @@ const EvChargingForPublicSectorMobility = () => {
             submitLabel="Become a Partner"
             helperText="We'll reach out within 48 hours. No spam, no automated sequences."
             requiredFields={[
-              { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
-              { name: "email", label: "Work email", type: "email", required: true, placeholder: "you@organization.gov" },
-              { name: "organization", label: "Organization", type: "text", required: true, placeholder: "City, authority, or platform name" },
-              { name: "role", label: "Role", type: "text", required: true, placeholder: "Your role" },
-              { name: "region", label: "Region or city served", type: "text", required: true, placeholder: "City, region, or jurisdiction" },
-              {
-                name: "residentsServed",
-                label: "Residents or users served",
-                type: "select",
-                required: true,
-                placeholder: "Select range",
-                options: [
-                  "Under 50,000",
-                  "50,000 to 250,000",
-                  "250,000 to 1M",
-                  "1M to 5M",
-                  "5M+",
-                ],
-              },
-            ]}
-            optionalFields={[
-              { name: "tellUsMore", label: "Tell us more", type: "textarea", placeholder: "Anything else we should know?" },
-            ]}
+            { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
+            { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
+            { name: "company", label: "Company", type: "text", required: true, placeholder: "Company name" },
+          ]}
+          optionalFields={[
+            { name: "tellUsMore", label: "Message (optional)", type: "textarea", placeholder: "Anything you would like us to know?" },
+          ]}
+          collapseRequiredAfter={3}
+          collapseOptional={false}
           />
           </div>
         </div>

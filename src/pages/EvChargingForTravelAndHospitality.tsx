@@ -94,44 +94,15 @@ const EvChargingForTravelAndHospitality = () => {
             submitLabel="Become a Partner"
             helperText="We'll reach out within 48 hours. No spam, no automated sequences."
             requiredFields={[
-              { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
-              { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
-              { name: "company", label: "Company", type: "text", required: true, placeholder: "Company name" },
-              {
-                name: "platformType",
-                label: "Platform type",
-                type: "select",
-                required: true,
-                placeholder: "Select type",
-                options: [
-                  "Hotel or resort group",
-                  "Retail & leisure destination",
-                  "Airport or travel hub",
-                  "Holiday or caravan park",
-                  "Travel app or booking platform",
-                  "Hospitality loyalty program",
-                  "Other",
-                ],
-              },
-              {
-                name: "propertiesOrUsers",
-                label: "Properties or monthly users",
-                type: "select",
-                required: true,
-                placeholder: "Select range",
-                options: [
-                  "Under 10 properties",
-                  "10 to 100 properties",
-                  "100+ properties",
-                  "Under 100,000 monthly users",
-                  "100,000 to 1M monthly users",
-                  "1M+ monthly users",
-                ],
-              },
-            ]}
-            optionalFields={[
-              { name: "tellUsMore", label: "Tell us more", type: "textarea", placeholder: "Anything else we should know?" },
-            ]}
+            { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
+            { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
+            { name: "company", label: "Company", type: "text", required: true, placeholder: "Company name" },
+          ]}
+          optionalFields={[
+            { name: "tellUsMore", label: "Message (optional)", type: "textarea", placeholder: "Anything you would like us to know?" },
+          ]}
+          collapseRequiredAfter={3}
+          collapseOptional={false}
           />
           </div>
         </div>

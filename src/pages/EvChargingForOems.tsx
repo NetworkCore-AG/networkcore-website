@@ -130,33 +130,17 @@ const EvChargingForOems = () => (
         <PartnerSignupForm
           formLabel="OEM Partner Signup"
           submitLabel="Become an OEM Partner"
-          collapseRequiredAfter={3}
-          collapsedRequiredLabel="Complete partner details"
           helperText="We'll reach out within 48 hours. No spam, no automated sequences."
             requiredFields={[
-              { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
-              { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
-              { name: "company", label: "Company", type: "text", required: true, placeholder: "OEM / automaker name" },
-              { name: "role", label: "Role", type: "text", required: true, placeholder: "Your role" },
-              { name: "markets", label: "Markets where you sell EVs", type: "text", required: true, placeholder: "e.g. Germany, UK, Mexico" },
-              {
-                name: "annualEvVolume",
-                label: "Annual EV volume",
-                type: "select",
-                required: true,
-                placeholder: "Select range",
-                options: [
-                  "Under 10,000",
-                  "10,000 to 50,000",
-                  "50,000 to 250,000",
-                  "250,000 to 1M",
-                  "1M+",
-                ],
-              },
-            ]}
-            optionalFields={[
-              { name: "tellUsMore", label: "Tell us more", type: "textarea", placeholder: "Anything else we should know?" },
-            ]}
+            { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
+            { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
+            { name: "company", label: "Company", type: "text", required: true, placeholder: "Company name" },
+          ]}
+          optionalFields={[
+            { name: "tellUsMore", label: "Message (optional)", type: "textarea", placeholder: "Anything you would like us to know?" },
+          ]}
+          collapseRequiredAfter={3}
+          collapseOptional={false}
 
         />
       </div>

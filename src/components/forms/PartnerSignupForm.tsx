@@ -82,7 +82,8 @@ const PartnerSignupForm = ({
   const collapseRequiredAfter = collapseRequiredAfterProp ?? (
     heroMode && thirdVisibleRequiredIndex >= 0 ? thirdVisibleRequiredIndex : undefined
   );
-  const hasCompactDetails = collapseRequiredAfter !== undefined;
+  // Only compact when there are fields left to tuck away; otherwise show everything, message included.
+  const hasCompactDetails = collapseRequiredAfter !== undefined && requiredFields.length > collapseRequiredAfter;
 
   useEffect(() => {
     if (initialValues) {
@@ -329,7 +330,7 @@ const PartnerSignupForm = ({
     <Card className={heroMode ? "w-full max-w-xl mr-auto bg-foreground/35 backdrop-blur-xl border-background/20 shadow-large text-background rounded-lg" : "max-w-xl mx-auto bg-card/50 backdrop-blur-sm border-border/50 shadow-elegant"}>
       <CardContent className={heroMode ? "p-5 sm:p-6" : "pt-6"}>
         <form onSubmit={handleSubmit} className="space-y-5">
-          {collapseRequiredAfter === undefined ? (
+          {!hasCompactDetails ? (
             renderFieldsWithSections(requiredFields, false)
           ) : (
             <>
