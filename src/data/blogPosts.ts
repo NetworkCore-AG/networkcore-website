@@ -59,6 +59,154 @@ export const calculateReadingTime = (content: string): number => {
 // Add your blog posts here - newest first
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ev-charging-fraud-detection",
+    title: "EV Charging Fraud Detection: Why the Payment Surface Decides the Threat",
+    excerpt: "Charging is card-not-present, unattended, irreversible and priced after the fact. In Latin America that squeezes operators from both sides, and the payment surface you choose decides which fraud you face.",
+    content: `
+<p>The conclusion first: <strong class="text-primary">EV charging fraud detection</strong> is harder than most payment fraud problems, for reasons specific to how charging works. The transaction is card-not-present, the site is unattended, the goods are delivered physically and irreversibly within seconds of authorisation, and the final amount is unknown when the payment is authorised. In Latin America, where card-not-present fraud rates are among the highest in the world and where banks decline a strikingly large share of perfectly legitimate transactions, that combination squeezes operators and platforms from both sides at once. The practical insight that organises the whole problem: the payment surface you choose determines the fraud you will face. An account with a stored card, an anonymous link, and a funded allowance are three completely different threat models, and treating them identically is how exposure accumulates.</p>
+
+
+<h2>Why charging is structurally exposed</h2>
+
+<p>Before the threat models, it is worth being precise about why EV charging fraud detection is not simply ecommerce fraud detection applied to kilowatt-hours.</p>
+
+<p><strong>The transaction is card-not-present.</strong> There is no card inserted and no cardholder verified in person at most public charging interactions. The payment behaves like an online transaction, which places it in the category where fraud concentrates globally. Card-not-present fraud losses are estimated to reach roughly $28.1 billion by 2026, a 40% increase on 2023 levels. How the money moves through a session is set out in <a href="/blog/ev-charging-payments-explained" class="text-primary underline hover:no-underline">EV Charging Payments Explained</a>.</p>
+
+<p><strong>The site is unattended.</strong> No staff member observes the transaction, questions unusual behaviour, or intervenes. Whatever controls exist must be automated, because nobody is watching.</p>
+
+<p><strong>Delivery is immediate and irreversible.</strong> This is the characteristic that separates charging from most ecommerce. A fraudulent online order can sometimes be cancelled before dispatch. Energy delivered into a battery cannot be recovered. By the time a fraudulent session is identified after the fact, the goods are gone and the only remaining question is who absorbs the loss.</p>
+
+<p><strong>The final amount is unknown at authorisation.</strong> Charging authorises against an estimate and captures an actual, which creates a structural gap between the hold and the charge, and that gap is both a fraud vector and a source of genuine customer confusion.</p>
+
+<p><strong>The chain has multiple parties.</strong> A roamed session involves an operator, a platform that brought the driver, and a settlement layer, which complicates both detection and the evidencing of a dispute afterwards.</p>
+
+
+<h2>Two families of fraud</h2>
+
+<p>EV charging fraud detection has to cover two quite different categories, and they call for different signals.</p>
+
+<p><strong>Card-not-present fraud.</strong> Stolen card details used to pay for charging. Card testing, where small charging transactions validate whether stolen credentials work before being used elsewhere. Synthetic and stolen identities opening accounts. Account takeover of legitimate driver accounts with stored payment methods. And friendly fraud, where a genuine cardholder disputes a session they actually used, which in charging is often driven by honest confusion rather than dishonesty, particularly when the amount billed does not match the price displayed. How a good refund path defuses much of that is covered in <a href="/blog/ev-charging-refund-process" class="text-primary underline hover:no-underline">EV Charging Refund Process</a>.</p>
+
+<p><strong>Session fraud.</strong> Abuse of the charging session itself rather than the payment instrument. Using someone else’s authorisation or credentials to charge. Manipulating a session to deliver energy without a corresponding valid transaction. Exploiting the gap between pre-authorisation and final capture by consuming far more than the hold covers. Systematic abuse of promotional or funded allowances. Reselling access obtained fraudulently.</p>
+
+<p>The crucial point is that payment-layer tools see only the first family. A payment processor observes a tokenised card, an amount, a merchant and a timestamp, and compares cards against other cards. It has no visibility of the vehicle, the charger, the consumption curve or the physical behaviour of the session, which is precisely where the second family lives, and where the first family is often most reliably detected.</p>
+
+
+<h2>The Latin American squeeze</h2>
+
+<p>This matters acutely in the markets NetworkCore serves first, and the data is unambiguous in both directions.</p>
+
+<p><strong>Fraud rates are the highest in the world.</strong> <a href="https://b2b.mastercard.com/news-and-insights/blog/ecommerce-fraud-trends-and-statistics-merchants-need-to-know-in-2024/" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">Mastercard’s analysis</a> found that roughly 20% of all ecommerce revenue is lost to fraud in Latin America, with about 3.7% of all ecommerce orders in the region being fraudulent. Latin America has one of the highest rates of card-not-present fraud globally. In Mexico specifically, credit card fraud losses are projected to reach around US$119 million in 2026, up from US$110 million in 2025, while Mexican e-commerce grows roughly 18% this year. Mexico also ranks second in Latin America for payment cards exposed on the dark web, with around 1.2 million.</p>
+
+<p><strong>And legitimate transactions are declined constantly.</strong> This is the half that gets less attention and costs more than people assume. In certain Latin American countries, roughly three in a hundred card-present transactions are declined, against two in ten card-not-present transactions. Regional analysis puts the average authorised purchase rate at around 57% with a chargeback rate of 1.7%, against roughly 89% authorisation and 0.4% chargebacks in the United States.</p>
+
+<p><strong>And disputes are harder to win.</strong> Local rules in the region tend to favour cardholders in disputes, which means that a fraudulent or disputed session is more likely to end as a loss even where the merchant is in the right.</p>
+
+<p>Put those three together and the operating condition is clear. Any approach to EV charging fraud detection in Latin America that simply tightens controls will destroy enormous volumes of good business, because the market already over-declines. Any approach that loosens them will bleed, because the market already over-defrauds. The only workable answer is better discrimination: detection accurate enough to separate the two populations rather than crude enough to block both. The regional market context is covered in <a href="/blog/roaming-hub-mexico" class="text-primary underline hover:no-underline">Roaming Hub Mexico</a> and, more widely, in <a href="/blog/roaming-hub-latam" class="text-primary underline hover:no-underline">Roaming Hub LATAM</a>.</p>
+
+
+<h2>The payment surface determines the threat model</h2>
+
+<p>Here is the framework that makes this tractable, and it is the part most worth taking away.</p>
+
+<p>NetworkCore offers four ways into the network, and each presents a genuinely different fraud profile. Understanding which one you are running tells you what you are actually defending against.</p>
+
+<h3><a href="/products/just-charge" class="text-primary underline hover:no-underline">Just Charge</a>: account-based, stored payment</h3>
+
+<p>Charging lives inside the partner’s own product, under their brand, with the partner owning the driver relationship and identity.</p>
+
+<p><strong>Threat profile.</strong> Lowest anonymous exposure, because there is an account, a history and an established relationship behind each session. The real risks shift to account takeover, where a compromised legitimate account carries more trust than a new one, and to synthetic identity at the onboarding stage. Each compromised account is worth more to an attacker precisely because it is trusted.</p>
+
+<p><strong>What helps.</strong> The partner’s own identity and onboarding controls do a great deal of work before a session ever happens, layered with session-level behavioural signals. Under Just Charge, fraud, chargebacks and disputes sit in the band the partner can choose to run themselves or hand to NetworkCore, which means the division of responsibility is an explicit decision rather than an accident.</p>
+
+<h3><a href="/products/charging-links" class="text-primary underline hover:no-underline">Charging Links</a>: anonymous, card at the link</h3>
+
+<p>A permanent link per connector. The driver taps, pays by card, and charges. No app, no download, no account.</p>
+
+<p><strong>Threat profile.</strong> This is the highest card-not-present exposure in the product set, and it is worth being honest about that rather than glossing it. There is no account history, no prior relationship, and no onboarding step. It is exactly the shape of surface that attracts card testing, because it allows small, fast, repeatable card transactions. The product’s great strength, that a driver needs nothing at all, is the same property that removes the identity signals other surfaces rely on.</p>
+
+<p><strong>What helps.</strong> When identity signals are absent, session and behavioural signals carry the entire load: the physical charger, its location and history, the shape of consumption, device characteristics, velocity and pattern consistency across the network. Progressive pre-authorisation matters most here, because exposure should be smallest exactly where trust is lowest. It is also notable that on Charging Links the Charging Partner remains merchant of record and disputes are handled beneath the product, so the distribution partner publishing the links is not carrying the dispute workload.</p>
+
+<h3><a href="/products/charge-pack" class="text-primary underline hover:no-underline">Charge Pack</a>: funded allowance, no driver card</h3>
+
+<p>An allowance funded by the platform, by a charging operator, or by both, redeemable across selected chargers, bound to a vehicle, an account or a cohort.</p>
+
+<p><strong>Threat profile.</strong> Almost entirely different, and frequently underestimated because there is no card in the flow at all. The exposure is redemption abuse rather than card fraud: multiple accounts claiming the same campaign, allowances used outside their intended cohort, systematic farming of promotional value, and reselling of funded charging. The classic failure is a generous launch campaign quietly consumed by a small number of sophisticated abusers rather than by the drivers it was designed for.</p>
+
+<p><strong>What helps.</strong> The product’s own structure does much of this work. Allowances are scoped by value, by cohort, by operator, region, site type and hours, and can be changed at any time. Nothing is held in advance and the funder only ever pays for what was actually redeemed, which caps exposure by design. Beyond that, the controls are identity and pattern based: binding to a vehicle or account, and detecting redemption patterns that do not look like real drivers.</p>
+
+<h3><a href="/products/network-access" class="text-primary underline hover:no-underline">Network Access</a>: the Charging Partner’s view</h3>
+
+<p>For operators, the fraud question is different again, because the operator is supplying energy to drivers it did not onboard.</p>
+
+<p><strong>Threat profile.</strong> The operator’s exposure is energy delivered against a payment that later fails or is reversed, and in traditional arrangements the operator often has limited visibility into who the driver was and limited ability to evidence the session months later.</p>
+
+<p><strong>What helps.</strong> Under Network Access, drivers arrive pre-authenticated and pre-authorised, which is a meaningful shift: the authentication happens before the session rather than being reconstructed after it. On public-price sessions, payment capture and processing, and chargebacks and disputes, sit with NetworkCore while the operator remains merchant of record and keeps its own tariff. The operator keeps its pricing and its commercial model, and does not inherit a dispute operation.</p>
+
+<p><strong>The principle across all four:</strong> match the control to the surface. The same blanket ruleset applied to an anonymous link and a trusted account will be simultaneously too loose in one place and too tight in the other.</p>
+
+
+<h2>Why session-layer detection beats payment-layer alone</h2>
+
+<p>The strongest structural advantage in EV charging fraud detection is that charging produces evidence that ordinary ecommerce does not.</p>
+
+<p>A payment processor correlates card data against card data. A charging network additionally observes the physical event: which charger, in which location, with what history, drawing what power in what curve over what duration, from which device, by which account, against what pattern of behaviour across the whole network.</p>
+
+<p>Physical charging behaviour is considerably harder to fake than card credentials. Stolen card details can be bought in bulk. A consumption curve consistent with a real vehicle at a real charger in a plausible location at a plausible time, matching a coherent history, is much harder to manufacture at scale. That is why session-layer signals catch what payment-layer tools miss, and why they allow controls to be targeted rather than blunt, which is exactly what the Latin American over-decline problem demands.</p>
+
+<p>There is also a network effect that a single merchant cannot replicate. A pattern identified at one operator or one distribution partner can be blocked across the entire network immediately, which no individual business and no individual payment processor can do across unrelated merchants.</p>
+
+
+<h2>How NetworkCore approaches it</h2>
+
+<p>Describing the shape rather than the mechanism, for obvious reasons.</p>
+
+<p><strong>Layered assessment on every session.</strong> Each session is evaluated against a sequence of distinct checks before and during the transaction, combining payment-processor verification with session-level signals the payment layer never sees, covering identity, device, vehicle, behaviour, velocity and pattern consistency. Where signals align, the session proceeds untouched. Where they do not, the system can escalate: additional verification, confirmation, or declining or stopping the session before value moves. Stopping a fraudulent session while it is happening is the highest-leverage control available, because energy never delivered cannot be disputed.</p>
+
+<p><strong>Progressive pre-authorisation.</strong> A graduated hold that starts conservatively where trust is low and reduces as genuine history is established, with the ability to step up mid-session. This caps exposure where it is highest and removes friction for drivers who have earned it, while narrowing the gap between the hold and the final charge that causes so much honest confusion.</p>
+
+<p><strong>Selective verification.</strong> Additional authentication applied to the small proportion of sessions that warrant it rather than universally, which is what keeps approval rates healthy in a region that already declines too much.</p>
+
+<p><strong>Network-wide signal.</strong> Patterns blocked across every operator and partner at once.</p>
+
+<p><strong>Automatic evidence.</strong> Every session carries an immutable record assembled at the time it happened, so a dispute is answered from evidence rather than reconstructed from fragments months later. This matters more in markets where dispute rules favour the cardholder, because a weak evidence position is a lost case. How those records are matched afterwards is covered in <a href="/blog/ev-charging-session-reconciliation" class="text-primary underline hover:no-underline">EV Charging Session Reconciliation</a>, and the dispute path itself in <a href="/blog/ev-charging-dispute-resolution" class="text-primary underline hover:no-underline">EV Charging Dispute Resolution</a>.</p>
+
+<p>We do not publish thresholds, parameters or the full mechanism set, because fraud controls lose effectiveness when their boundaries are documented. Partners receive the detailed framework under NDA, and the wider controls are summarised on our <a href="/security-compliance" class="text-primary underline hover:no-underline">Security &amp; Compliance</a> page. The downstream dispute economics are covered in <a href="/blog/ev-charging-chargeback-management" class="text-primary underline hover:no-underline">EV Charging Chargeback Management</a>.</p>
+
+
+<h2>Keeping it fluid for honest drivers</h2>
+
+<p>The failure mode of fraud control is punishing the many to catch the few, and in Latin America that failure mode is already the regional default. Anyone can reduce fraud to near zero by making charging difficult enough. That is not the goal, and for operators whose economics depend on <a href="/blog/ev-charger-utilisation-rate" class="text-primary underline hover:no-underline">utilisation</a> it would be a bad trade.</p>
+
+<p>The design principle is that controls should be invisible to legitimate users. The great majority of the assessment runs in the background with no user-facing step. Progressive pre-authorisation actively improves for genuine drivers over time. Additional verification is targeted rather than universal. And several controls are experienced as improvements rather than friction: clear statement descriptors, real-time receipts, and <a href="/blog/ev-charging-pricing-transparency" class="text-primary underline hover:no-underline">a price that matches what was displayed</a>. Why that first session matters so much is covered in <a href="/blog/driver-onboarding-ev-charging" class="text-primary underline hover:no-underline">Driver Onboarding EV Charging</a>.</p>
+
+
+<h2>What this means for operators and platforms</h2>
+
+<p><strong>For <a href="/charging-partners" class="text-primary underline hover:no-underline">Charging Partners</a></strong>, fraud is energy you have already delivered against money you may not keep, on assets you have already funded. The questions worth asking any demand channel are: who authenticates the driver, who carries the chargeback, who assembles the evidence, and how fast do you get paid, because a short settlement cycle means corrections happen before disputes do. The settlement side is covered in <a href="/blog/cpo-settlement-timing" class="text-primary underline hover:no-underline">CPO Settlement Timing</a>.</p>
+
+<p><strong>For <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partners</a></strong>, the exposure is reputational as well as financial. Your users judge your brand on whether the billing was right. Choose your surface deliberately: an anonymous link is the fastest way to market and the highest card-not-present exposure, an embedded account-based product is slower to build and far better protected, and a funded allowance carries almost no card risk but real redemption risk. There is no wrong choice, only an uninformed one.</p>
+
+
+<h2>The position</h2>
+
+<p>EV charging fraud detection is not generic payment fraud detection with chargers attached. The transaction is card-not-present, the site is unattended, the goods are irreversible, and the amount is unknown at authorisation. In Latin America, the highest fraud rates in the world sit alongside the highest false-decline rates, which rules out both loose and blunt approaches and leaves only accurate ones.</p>
+
+<p>Accuracy comes from seeing more than the payment. The session layer observes physical behaviour that is much harder to fake than card data, and a network sees patterns that no single merchant can. Combine that with controls matched to the specific surface in use, and you can stop the bad sessions without strangling the good ones, which in this region is the entire game.</p>
+
+<p>Reach the team at <a href="/#contact" class="text-primary underline hover:no-underline">networkcore.org</a> to discuss fraud exposure across your charging offer.</p>
+
+    `,
+    featuredImage: "/images/blog/ev-charging-fraud-detection.jpg",
+    category: "Payments",
+    author: "NetworkCore Team",
+    publishedAt: "2026-10-30",
+    published: true,
+    metaTitle: "EV Charging Fraud Detection: The Payment Surface Decides",
+    metaDescription: "Why EV charging fraud detection is harder than ecommerce, how Latin America squeezes operators both ways, and why each payment surface needs its own controls.",
+    tags: ["EV charging fraud detection", "card-not-present fraud", "chargebacks", "Latin America", "payments"],
+  },
+  {
     slug: "roaming-hub-colombia",
     title: "Roaming Hub Colombia: Making Every Charger Count in a Market Moving This Fast",
     excerpt: "Colombia registered 39,784 EVs through September 2026 against around 520 public charging points. When supply is this constrained, making every existing charger reachable by every driver is the fastest way to expand coverage without building anything.",
