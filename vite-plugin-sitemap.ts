@@ -2,7 +2,7 @@ import { Plugin } from "vite";
 import * as fs from "fs";
 import * as path from "path";
 import { execSync } from "child_process";
-import { CORE_ROUTES, getBlogSlugs } from "./scripts/routes";
+import { CORE_ROUTES, getBlogEntries } from "./scripts/routes";
 
 /**
  * Vite plugin that auto-generates sitemap.xml from the shared routes manifest
@@ -75,9 +75,7 @@ const ROUTE_TO_FILE: Record<string, string> = {
 
 function generateSitemap() {
   const DOMAIN = "https://networkcore.org";
-  const slugs = getBlogSlugs();
-  const blogPostsFile = "src/data/blogPosts.ts";
-  const blogLastmod = gitMtime(blogPostsFile);
+  const blogEntries = getBlogEntries();
 
   const urls: string[] = [];
 
@@ -92,10 +90,10 @@ function generateSitemap() {
   </url>`);
   }
 
-  for (const slug of slugs) {
+  for (const entry of blogEntries) {
     urls.push(`  <url>
-    <loc>${DOMAIN}/blog/${slug}</loc>
-    <lastmod>${blogLastmod}</lastmod>
+    <loc>${DOMAIN}/blog/${entry.slug}</loc>
+    <lastmod>${entry.lastmod}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>`);
@@ -109,5 +107,5 @@ ${urls.join("\n")}
 
   const outputPath = path.resolve(__dirname, "public/sitemap.xml");
   fs.writeFileSync(outputPath, xml, "utf-8");
-  console.log(`[sitemap] Generated sitemap.xml with ${CORE_ROUTES.length} pages + ${slugs.length} blog posts`);
+  console.log(`[sitemap] Generated sitemap.xml with ${CORE_ROUTES.length} pages + ${blogEntries.length} blog posts`);
 }

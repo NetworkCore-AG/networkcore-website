@@ -57,9 +57,19 @@ export const CORE_ROUTES: Array<{ path: string; changefreq: string; priority: st
  * themselves), not nested arrays like `relatedSlugs`.
  */
 export function getBlogSlugs(): string[] {
+  return getBlogEntries().map((e) => e.slug);
+}
+
+/**
+ * Blog posts with the date each should report as <lastmod>: the post's
+ * updatedAt when it has been revised, otherwise its publishedAt. Using the
+ * source file's git mtime for every post would claim all 150 changed
+ * whenever one of them does.
+ */
+export function getBlogEntries(): Array<{ slug: string; lastmod: string }> {
   const file = path.resolve(__dirname, "../src/data/blogPosts.ts");
   const content = fs.readFileSync(file, "utf-8");
-  const slugs: string[] = [];
+  const entries: Array<{ slug: string; lastmod: string }> = [];
   // Match each post object block so we can skip entries that live outside /blog
   // (those declare a canonicalPath and get their own core route instead).
   const blockRe = /^ {2}\{[\s\S]*?^ {2}\},?/gm;
@@ -68,9 +78,15 @@ export function getBlogSlugs(): string[] {
     const text = block[0];
     if (text.includes("canonicalPath")) continue;
     const m = /^ {4}slug:\s*["']([^"']+)["']/m.exec(text);
-    if (m) slugs.push(m[1]);
+    if (!m) continue;
+    const updated = /^ {4}updatedAt:\s*["']([^"']+)["']/m.exec(text);
+    const published = /^ {4}publishedAt:\s*["']([^"']+)["']/m.exec(text);
+    entries.push({
+      slug: m[1],
+      lastmod: (updated?.[1] ?? published?.[1] ?? new Date().toISOString()).split("T")[0],
+    });
   }
-  return slugs;
+  return entries;
 }
 
 export function getAllRoutes(): string[] {

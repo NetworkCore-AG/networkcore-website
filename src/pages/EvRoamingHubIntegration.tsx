@@ -15,7 +15,7 @@ const EvRoamingHubIntegration = () => {
     <>
       <Helmet>
         <title>EV Roaming Hub Integration | NetworkCore</title>
-        <meta name="description" content="EV roaming hub integration with NetworkCore: connect once, reach every partner, settle in T+2 at your own transparent public price — with no integration cost, because we do the work for you." />
+        <meta name="description" content="EV roaming hub integration with NetworkCore: connect once, reach every partner, settle fast at your own transparent public price — with no integration cost, because we do the work for you." />
         <meta property="og:title" content="EV Roaming Hub Integration | NetworkCore" />
         <meta property="og:description" content="Connect once. Reach every partner. Settle in two days, at your own transparent price. And pay nothing to integrate." />
         <meta property="og:image" content="https://networkcore.org/blog/ev-roaming-hub-integration.jpg" />
@@ -155,7 +155,7 @@ const EvRoamingHubIntegration = () => {
                 },
                 {
                   title: "Faster settlement.",
-                  text: "Every party is settled in T+2, two business days, rather than the 30-to-90-day cycles of traditional roaming. Money for a session delivered today is available within days.",
+                  text: "Every party is settled in days, not weeks, rather than the 30-to-90-day cycles of traditional roaming. Money for a session delivered today is available quickly.",
                 },
                 {
                   title: "Transparent public pricing.",
@@ -221,7 +221,7 @@ const EvRoamingHubIntegration = () => {
                 {
                   step: "04",
                   title: "Get settled.",
-                  text: "Every session is reconciled per session and settled to each party in T+2 at the transparent public price, with invoicing and compliance handled beneath the integration.",
+                  text: "Every session is reconciled per session and settled to each party fast at the transparent public price, with invoicing and compliance handled beneath the integration.",
                 },
               ].map((item, i) => (
                 <Reveal key={item.step} delay={i * 100} className="border border-border/50 rounded-xl p-6 bg-card/30">
@@ -312,7 +312,7 @@ const EvRoamingHubIntegration = () => {
                   {[
                     ["Core function", "Technical interoperability (data exchange)", "Interoperability plus settlement and demand"],
                     ["Pricing to driver", "Wholesale, marked up by intermediary", "Operator's transparent public price, intact"],
-                    ["Settlement speed", "Typically 30 to 90 days", "T+2, two business days"],
+                    ["Settlement speed", "Typically 30 to 90 days", "Days, not weeks"],
                     ["Connection fees", "Access / membership fees common", "None; commission only on delivered sessions"],
                     ["Demand", "Connects networks to each other", "Routes demand from Distribution Partners to supply"],
                     ["Integration cost", "Partner scopes, builds, maintains", "None; NetworkCore does the integration for you"],
@@ -365,7 +365,7 @@ const EvRoamingHubIntegration = () => {
             },
             {
               question: "How is NetworkCore different from Hubject or Gireve?",
-              answer: "The established hubs provide technical interoperability, the data exchange between networks. A NetworkCore EV roaming hub integration adds fast T+2 settlement, transparent public pricing, access to a network of Distribution Partners, and no integration cost, on top of that interoperability. We are not a replacement. We target different demand channels — fintechs, insurers, fleets, travel platforms, and similar — that need a financial and commercial layer, not just raw roaming.",
+              answer: "The established hubs provide technical interoperability, the data exchange between networks. A NetworkCore EV roaming hub integration adds fast settlement, transparent public pricing, access to a network of Distribution Partners, and no integration cost, on top of that interoperability. We are not a replacement. We target different demand channels — fintechs, insurers, fleets, travel platforms, and similar — that need a financial and commercial layer, not just raw roaming.",
             },
             {
               question: "How much does a NetworkCore integration cost?",
@@ -373,7 +373,7 @@ const EvRoamingHubIntegration = () => {
             },
             {
               question: "How fast does NetworkCore settle?",
-              answer: "Every party is settled in T+2, two business days, rather than the 30-to-90-day cycles common in traditional roaming.",
+              answer: "Every party is settled in days, not weeks, rather than the 30-to-90-day cycles common in traditional roaming.",
             },
             {
               question: "Does NetworkCore replace my existing roaming or CSMS?",

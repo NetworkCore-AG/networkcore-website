@@ -113,7 +113,7 @@ const groups: FaqGroup[] = [
       },
       {
         "q": "How quickly do I get paid?",
-        "a": "Automatically, in your chosen currency, with itemised reporting on every payout. Sessions typically convert to cash within two business days."
+        "a": "Automatically, in your chosen currency, with itemised reporting on every payout. Sessions typically convert to cash in days, not weeks."
       },
       {
         "q": "Who carries the chargeback risk?",

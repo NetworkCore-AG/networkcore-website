@@ -14,7 +14,7 @@ const SecurityCompliance = () => {
     <>
       <Helmet>
         <title>Security & Compliance | NetworkCore</title>
-        <meta name="description" content="NetworkCore is regulated financial infrastructure for EV charging: IFPE process underway, safeguarded funds, PCI-DSS, GDPR, AML/KYC, and T+2 settlement." />
+        <meta name="description" content="NetworkCore is regulated financial infrastructure for EV charging: IFPE process underway, safeguarded funds, PCI-DSS, GDPR, AML/KYC, and fast settlement." />
         <meta property="og:title" content="Security & Compliance | NetworkCore" />
         <meta property="og:description" content="Regulated financial infrastructure by design: licensing path, safeguarded funds, security architecture, AML/KYC, and payment rails." />
         <meta property="og:url" content="https://networkcore.org/security-compliance" />
@@ -176,7 +176,7 @@ const SecurityCompliance = () => {
                 <span className="text-foreground font-medium">Settlement corridors.</span> SPEI for domestic Mexico, SEPA for euro-denominated settlement, and SWIFT for cross-border corridors. Additional rails are added as markets are onboarded.
               </p>
               <p>
-                <span className="text-foreground font-medium">T+2 settlement.</span> CPOs and Private Hosts settle in T+2 in their preferred currency. Distribution Partners settle on daily bundled or weekly cycles as configured.
+                <span className="text-foreground font-medium">Fast settlement.</span> CPOs and Private Hosts settle in days, not weeks, in their preferred currency. Distribution Partners settle on daily bundled or weekly cycles as configured.
               </p>
               <p>
                 <span className="text-foreground font-medium">Three-layer chargeback defence.</span> Prevention at the session layer using metadata invisible to the card network. Influence at the payment service provider layer through risk-scored 3D Secure and network token enforcement. Absorption through rolling reserves and a first-loss absorption envelope that protects CPOs from baseline dispute rates.

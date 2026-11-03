@@ -34,13 +34,13 @@ const TRANSLATIONS = {
   en: {
     meta: {
       title: "EV Charging Distribution Channel for LATAM | NetworkCore",
-      description: "NetworkCore brings extra drivers, T+2 (48-hour) settlement and zero monthly fees to CPOs across LATAM. Reserve your founding-CPO spot in your country.",
+      description: "NetworkCore brings extra drivers, fast settlement and zero monthly fees to CPOs across LATAM. Reserve your founding-CPO spot in your country.",
       ogAlt: "Electric vehicle charging — NetworkCore LATAM First Wave",
     },
     switcher: { en: "English", es: "Español", pt: "Português" },
     hero: {
       title: "The EV Charging Distribution Channel for LATAM",
-      sub: "We bring extra drivers, 48-hour settlement and 0 monthly fees to CPOs across LATAM. Founding CPOs in each country shape how the roaming network gets built in their market.",
+      sub: "We bring extra drivers, fast settlement and 0 monthly fees to CPOs across LATAM. Founding CPOs in each country shape how the roaming network gets built in their market.",
       cta: "Reserve your spot",
       imgAlt: "Electric Range Rover charging — LATAM First Wave",
     },
@@ -51,7 +51,7 @@ const TRANSLATIONS = {
         { title: "Stations Are Underutilised", description: "Most public DC fast chargers operate at 10–20% utilisation. Level 2 chargers often below 8%. Hardware sits idle while operating costs accrue daily." },
         { title: "Cash Flow Is Broken", description: "30–90 day settlement cycles through banks, processors, and roaming hubs. Operators fund their own growth from cash earned a quarter ago." },
         { title: "Chargebacks Drain Operations", description: "In Mexico and across LATAM, contracargos are not edge cases but a constant drag. Slow resolution, unclear liability, lost margin." },
-        { title: "Roaming Hubs Don't Move Money", description: "Traditional roaming solutions handle technical interoperability between bilateral partners. They don't bring new demand. They don't settle in 48 hours." },
+        { title: "Roaming Hubs Don't Move Money", description: "Traditional roaming solutions handle technical interoperability between bilateral partners. They don't bring new demand. They don't settle fast." },
       ],
     },
     offer: {
@@ -59,7 +59,7 @@ const TRANSLATIONS = {
       sub: "A single integration. Everything that's been missing. One OCPI connection unlocks new driver demand, fast settlement, automated compliance, and zero risk on the way in.",
       sections: [
         { title: "Incremental Utilisation — No Capex", description: "We connect your stations to aggregated driver demand from Distribution Partners across LATAM.", points: ["One integration, many channels", "No new hardware", "No customer acquisition spend"] },
-        { title: "Get Paid in 48 Hours", description: "Every charging session settled at T+2. Cash flow that funds growth instead of constraining it. No quarterly reconciliations, no manual chasing.", points: ["T+2 settlement guaranteed", "Automated reconciliation", "Transparent reporting"] },
+        { title: "Get Paid Fast", description: "Every charging session settled in days, not weeks. Cash flow that funds growth instead of constraining it. No quarterly reconciliations, no manual chasing.", points: ["Fast, automatic settlement", "Automated reconciliation", "Transparent reporting"] },
         { title: "Pricing Sovereignty", description: "The price shown at the charger is the price the driver pays. No roaming markups. No brand distortion. You retain full control to adjust tariffs dynamically.", points: ["Your public tariff is the only tariff", "Dynamic and V2G pricing supported", "No third-party markups, ever"] },
         { title: "Zero-Downside Structure", description: "You pay nothing unless we deliver new business. No setup. No monthly. No exclusivity. We earn a small commission only on the incremental sessions we generate.", points: ["No upfront integration fees", "No SaaS subscription", "Cancel at any time"] },
         { title: "Operational Shield", description: "We absorb the financial and compliance layer so you can focus on infrastructure. CFDI, NF-e, boleta electrónica, FX, fraud, chargebacks — handled.", points: ["LATAM tax automation per jurisdiction", "Multi-currency FX at session close", "Dispute resolution and liability allocation"] },
@@ -90,7 +90,7 @@ const TRANSLATIONS = {
         { hub: "Pass data between bilateral partners you negotiate yourself", nc: "Brings you new Distribution Partners" },
         { hub: "Subscription pricing regardless of revenue delivered", nc: "Commission only on incremental sessions we generate" },
         { hub: "European-anchored, thin LATAM coverage", nc: "Purpose-built for LATAM from the start" },
-        { hub: "Settlement runs through your existing bank cycles", nc: "T+2 settlement, every session, every currency" },
+        { hub: "Settlement runs through your existing bank cycles", nc: "Fast settlement, every session, every currency" },
         { hub: "Compliance and tax remain your problem", nc: "CFDI, NF-e, FX, chargebacks handled in the clearing layer" },
         { hub: "Your tariff is marked up before the driver sees it", nc: "Your public price reaches the driver intact, no exclusivity, cancel any time" },
       ],
@@ -120,7 +120,7 @@ const TRANSLATIONS = {
   es: {
     meta: {
       title: "Canal de Distribución de Carga de VE para LATAM | NetworkCore",
-      description: "NetworkCore aporta conductores adicionales, liquidación T+2 (48 horas) y cero cuotas mensuales a los CPOs de LATAM. Reserva tu lugar como CPO fundador en tu país.",
+      description: "NetworkCore aporta conductores adicionales, liquidación rápida y cero cuotas mensuales a los CPOs de LATAM. Reserva tu lugar como CPO fundador en tu país.",
       ogAlt: "Vehículo eléctrico cargando — NetworkCore LATAM Primera Ola",
     },
     switcher: { en: "English", es: "Español", pt: "Português" },
@@ -145,7 +145,7 @@ const TRANSLATIONS = {
       sub: "Una sola integración. Todo lo que faltaba. Una conexión OCPI desbloquea nueva demanda de conductores, liquidación rápida, cumplimiento automatizado y cero riesgo al entrar.",
       sections: [
         { title: "Utilización Incremental — Sin Capex", description: "Conectamos tus estaciones a la demanda agregada de conductores de los Socios de Distribución en toda LATAM.", points: ["Una integración, muchos canales", "Sin hardware nuevo", "Sin gasto en adquisición de clientes"] },
-        { title: "Cobra en 48 Horas", description: "Cada sesión de carga liquidada en T+2. Flujo de caja que financia el crecimiento en lugar de limitarlo. Sin conciliaciones trimestrales, sin reclamos manuales.", points: ["Liquidación T+2 garantizada", "Conciliación automatizada", "Reportes transparentes"] },
+        { title: "Cobra Rápido", description: "Cada sesión de carga liquidada en días, no semanas. Flujo de caja que financia el crecimiento en lugar de limitarlo. Sin conciliaciones trimestrales, sin reclamos manuales.", points: ["Liquidación rápida y automática", "Conciliación automatizada", "Reportes transparentes"] },
         { title: "Soberanía de Precios", description: "El precio que aparece en el cargador es el precio que paga el conductor. Sin recargos de roaming. Sin distorsión de marca. Mantienes el control total para ajustar tarifas dinámicamente.", points: ["Tu tarifa pública es la única tarifa", "Compatible con precios dinámicos y V2G", "Sin recargos de terceros, nunca"] },
         { title: "Estructura Sin Riesgo", description: "No pagas nada a menos que entreguemos nuevo negocio. Sin instalación. Sin mensualidad. Sin exclusividad. Ganamos una pequeña comisión solo sobre las sesiones incrementales que generamos.", points: ["Sin cuotas de integración iniciales", "Sin suscripción SaaS", "Cancela en cualquier momento"] },
         { title: "Escudo Operativo", description: "Absorbemos la capa financiera y de cumplimiento para que te enfoques en la infraestructura. CFDI, NF-e, boleta electrónica, FX, fraude, contracargos — gestionados.", points: ["Automatización fiscal LATAM por jurisdicción", "FX multidivisa al cierre de sesión", "Resolución de disputas y asignación de responsabilidad"] },
@@ -176,7 +176,7 @@ const TRANSLATIONS = {
         { hub: "Pasan datos entre socios bilaterales que tú mismo negocias", nc: "Te trae nuevos Socios de Distribución" },
         { hub: "Precios por suscripción independientemente de los ingresos generados", nc: "Comisión solo sobre las sesiones incrementales que generamos" },
         { hub: "Anclados en Europa, cobertura escasa en LATAM", nc: "Diseñado específicamente para LATAM desde el inicio" },
-        { hub: "La liquidación corre a través de tus ciclos bancarios existentes", nc: "Liquidación T+2, cada sesión, cada divisa" },
+        { hub: "La liquidación corre a través de tus ciclos bancarios existentes", nc: "Liquidación rápida, cada sesión, cada divisa" },
         { hub: "El cumplimiento y los impuestos siguen siendo tu problema", nc: "CFDI, NF-e, FX, contracargos gestionados en la capa de liquidación" },
         { hub: "Tu tarifa se marca antes de que el conductor la vea", nc: "Tu precio público llega íntegro al conductor, sin exclusividad, cancela cuando quieras" },
       ],
@@ -206,7 +206,7 @@ const TRANSLATIONS = {
   pt: {
     meta: {
       title: "Canal de Distribuição de Recarga de VE para LATAM | NetworkCore",
-      description: "A NetworkCore traz motoristas adicionais, liquidação T+2 (48 horas) e zero mensalidades para CPOs em toda a LATAM. Reserve seu lugar como CPO fundador no seu país.",
+      description: "A NetworkCore traz motoristas adicionais, liquidação rápida e zero mensalidades para CPOs em toda a LATAM. Reserve seu lugar como CPO fundador no seu país.",
       ogAlt: "Veículo elétrico carregando — NetworkCore LATAM Primeira Onda",
     },
     switcher: { en: "English", es: "Español", pt: "Português" },
@@ -231,7 +231,7 @@ const TRANSLATIONS = {
       sub: "Uma única integração. Tudo o que estava faltando. Uma conexão OCPI desbloqueia nova demanda de motoristas, liquidação rápida, conformidade automatizada e zero risco na entrada.",
       sections: [
         { title: "Utilização Incremental — Sem Capex", description: "Conectamos suas estações à demanda agregada de motoristas dos Parceiros de Distribuição em toda a LATAM.", points: ["Uma integração, muitos canais", "Sem hardware novo", "Sem gasto com aquisição de clientes"] },
-        { title: "Receba em 48 Horas", description: "Cada sessão de recarga liquidada em T+2. Fluxo de caixa que financia o crescimento em vez de limitá-lo. Sem reconciliações trimestrais, sem cobranças manuais.", points: ["Liquidação T+2 garantida", "Reconciliação automatizada", "Relatórios transparentes"] },
+        { title: "Receba Rápido", description: "Cada sessão de recarga liquidada em dias, não semanas. Fluxo de caixa que financia o crescimento em vez de limitá-lo. Sem reconciliações trimestrais, sem cobranças manuais.", points: ["Liquidação rápida e automática", "Reconciliação automatizada", "Relatórios transparentes"] },
         { title: "Soberania de Preços", description: "O preço exibido no carregador é o preço que o motorista paga. Sem markups de roaming. Sem distorção de marca. Você mantém o controle total para ajustar tarifas dinamicamente.", points: ["Sua tarifa pública é a única tarifa", "Suporte a preços dinâmicos e V2G", "Sem markups de terceiros, nunca"] },
         { title: "Estrutura Sem Risco", description: "Você não paga nada a menos que entreguemos novos negócios. Sem setup. Sem mensalidade. Sem exclusividade. Ganhamos uma pequena comissão apenas sobre as sessões incrementais que geramos.", points: ["Sem taxas iniciais de integração", "Sem assinatura SaaS", "Cancele a qualquer momento"] },
         { title: "Escudo Operacional", description: "Absorvemos a camada financeira e de conformidade para que você foque na infraestrutura. NF-e, CFDI, boleta electrónica, FX, fraude, chargebacks — tudo cuidado.", points: ["Automação fiscal LATAM por jurisdição", "FX multimoeda no fechamento da sessão", "Resolução de disputas e alocação de responsabilidade"] },
@@ -262,7 +262,7 @@ const TRANSLATIONS = {
         { hub: "Passam dados entre parceiros bilaterais que você mesmo negocia", nc: "Traz novos Parceiros de Distribuição" },
         { hub: "Preço por assinatura independentemente da receita entregue", nc: "Comissão apenas sobre as sessões incrementais que geramos" },
         { hub: "Ancorados na Europa, cobertura fina na LATAM", nc: "Construído sob medida para a LATAM desde o início" },
-        { hub: "Liquidação roda pelos seus ciclos bancários existentes", nc: "Liquidação T+2, cada sessão, cada moeda" },
+        { hub: "Liquidação roda pelos seus ciclos bancários existentes", nc: "Liquidação rápida, cada sessão, cada moeda" },
         { hub: "Conformidade e impostos continuam sendo seu problema", nc: "NF-e, CFDI, FX, chargebacks tratados na camada de liquidação" },
         { hub: "Sua tarifa é remarcada antes de o motorista vê-la", nc: "Seu preço público chega íntegro ao motorista, sem exclusividade, cancele quando quiser" },
       ],

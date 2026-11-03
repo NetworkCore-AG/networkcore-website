@@ -42,15 +42,15 @@ const ChargePointOperators = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Charge Point Operators | NetworkCore EV Roaming</title>
-        <meta name="description" content="Increase utilisation, get paid in 48 hours, and keep full pricing control. NetworkCore enables CPOs to grow revenue per charger without adding hardware." />
+        <meta name="description" content="Increase utilisation, get paid fast, and keep full pricing control. NetworkCore enables CPOs to grow revenue per charger without adding hardware." />
         <meta property="og:title" content="Charge Point Operators | NetworkCore EV Roaming" />
-        <meta property="og:description" content="Increase utilisation, get paid in 48 hours, and keep full pricing control. NetworkCore enables CPOs to grow revenue per charger without adding hardware." />
+        <meta property="og:description" content="Increase utilisation, get paid fast, and keep full pricing control. NetworkCore enables CPOs to grow revenue per charger without adding hardware." />
         <meta property="og:image" content="https://networkcore.org/og/og-cpo-hero.jpg" />
         <meta property="og:url" content="https://networkcore.org/charge-point-operators" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Charge Point Operators | NetworkCore EV Roaming" />
-        <meta name="twitter:description" content="Increase utilisation, get paid in 48 hours, and keep full pricing control." />
+        <meta name="twitter:description" content="Increase utilisation, get paid fast, and keep full pricing control." />
         <meta name="twitter:image" content="https://networkcore.org/og/og-cpo-hero.jpg" />
         <link rel="canonical" href="https://networkcore.org/charge-point-operators" />
         <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://networkcore.org/"},{"@type":"ListItem","position":2,"name":"Charge Point Operators","item":"https://networkcore.org/charge-point-operators"}]})}</script>
@@ -68,11 +68,11 @@ const ChargePointOperators = () => {
           <div className="hero-lead-copy">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-light mb-8 leading-tight text-white tracking-tight">
             Increase Utilisation.
-            <br /> Get Paid in 48 Hours.
+            <br /> Get Paid Fast.
             <br /> Keep Full Pricing Control.
           </h1>
           <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto font-light mb-6">
-            A distribution channel that sits alongside everything you already run. More sessions on the chargers you have built, at the prices you set, settled in two business days.
+            A distribution channel that sits alongside everything you already run. More sessions on the chargers you have built, at the prices you set, settled in days, not weeks.
           </p>
           </div>
           <div id="signup-form" className="hero-lead-form scroll-mt-24">
@@ -151,7 +151,7 @@ const ChargePointOperators = () => {
           <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight">The NetworkCore Demand Engine</h2>
           <div className="space-y-6 text-lg text-muted-foreground font-light leading-relaxed">
             <p>One OCPI integration connects your network to every Distribution Partner on the network: OEM in-car apps, fleet platforms, wallets, neobanks, insurers, parking apps, and mobility super-apps.</p>
-            <p>Drivers arrive pre-authenticated, pre-authorised, and pre-paid. Money lands in your account in two business days.</p>
+            <p>Drivers arrive pre-authenticated, pre-authorised, and pre-paid. Money lands in your account in days, not weeks.</p>
             <p className="border-l-2 border-primary pl-5 text-foreground">Your hardware, your CPMS, your tariffs, your roaming hubs, and your direct customers all stay exactly as they are. NetworkCore is additive by design.</p>
           </div>
         </div>

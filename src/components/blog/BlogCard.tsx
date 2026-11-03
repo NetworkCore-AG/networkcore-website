@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
 import { BlogPost, calculateReadingTime, getDisplayTitle } from "@/data/blogPosts";
 import { Badge } from "@/components/ui/badge";
 
@@ -48,11 +48,17 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
               <p className="text-muted-foreground mb-6 line-clamp-3">
                 {post.excerpt}
               </p>
-              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6 flex-wrap">
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
                   {formatDate(post.publishedAt)}
                 </span>
+                {post.updatedAt && (
+                  <span className="flex items-center gap-1">
+                    <RefreshCw className="h-4 w-4" />
+                    Updated {formatDate(post.updatedAt)}
+                  </span>
+                )}
                 <span className="flex items-center gap-1">
                   <Clock className="h-4 w-4" />
                   {readingTime} {t("minRead")}
@@ -91,7 +97,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
           <div className="flex items-center justify-between text-xs text-muted-foreground">
             <span className="flex items-center gap-1">
               <Calendar className="h-3 w-3" />
-              {formatDate(post.publishedAt)}
+              {post.updatedAt ? `Updated ${formatDate(post.updatedAt)}` : formatDate(post.publishedAt)}
             </span>
             <span className="flex items-center gap-1">
               <Clock className="h-3 w-3" />

@@ -63,7 +63,7 @@ const AboutUs = () => {
                 NetworkCore is the neutral pricing, routing, clearing, and settlement layer for public EV charging. One integration replaces a tangle of bilateral agreements, PSP setups, and manual reconciliation.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                On the supply side, CPOs and Private Hosts settle in T+2 at the public price, with no subscription fees, no exclusivity, and no loss of pricing control. In time, individual hosts will join the network on the same terms, turning any space with a connection into a settled supply point.
+                On the supply side, CPOs and Private Hosts settle fast at the public price, with no subscription fees, no exclusivity, and no loss of pricing control. In time, individual hosts will join the network on the same terms, turning any space with a connection into a settled supply point.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 On the demand side, Distribution Partners (OEM apps, fleet platforms, wallets, neobanks, insurers, mobility super-apps) get simple access to public charging, with no roaming contracts to negotiate and no operational overhead to absorb.

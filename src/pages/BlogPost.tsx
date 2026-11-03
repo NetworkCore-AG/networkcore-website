@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Calendar, Clock, User, Tag } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, User, Tag, RefreshCw } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/blog/BlogCard";
@@ -63,7 +63,7 @@ const BlogPost = () => {
     description: post.excerpt,
     image: absoluteImage,
     datePublished: post.publishedAt,
-    dateModified: (post as { updatedAt?: string }).updatedAt || post.publishedAt,
+    dateModified: post.updatedAt ?? post.publishedAt,
     author: {
       "@type": "Organization",
       name: post.author,
@@ -93,6 +93,7 @@ const BlogPost = () => {
         <meta property="og:url" content={`https://networkcore.org/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={post.publishedAt} />
+        {post.updatedAt && <meta property="article:modified_time" content={post.updatedAt} />}
         <meta property="article:author" content={post.author} />
         <meta property="article:section" content={post.category} />
         {post.tags.map((tag) => (
@@ -141,6 +142,12 @@ const BlogPost = () => {
                     <Calendar className="h-4 w-4" />
                     {formatDate(post.publishedAt)}
                   </span>
+                  {post.updatedAt && (
+                    <span className="flex items-center gap-2">
+                      <RefreshCw className="h-4 w-4" />
+                      Updated on {formatDate(post.updatedAt)}
+                    </span>
+                  )}
                   <span className="flex items-center gap-2">
                     <Clock className="h-4 w-4" />
                     {readingTime} {t("minRead")}

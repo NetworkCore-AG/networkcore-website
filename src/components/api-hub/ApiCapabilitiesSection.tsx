@@ -9,7 +9,7 @@ const capabilities = [
   {
     icon: Clock,
     title: "Automated Settlement",
-    description: "CPOs are settled within 48 hours. No manual reconciliation. No delays.",
+    description: "Charging operators are settled fast, in days not weeks. No manual reconciliation. No delays.",
   },
   {
     icon: Percent,
