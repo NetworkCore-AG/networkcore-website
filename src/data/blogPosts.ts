@@ -59,6 +59,120 @@ export const calculateReadingTime = (content: string): number => {
 // Add your blog posts here - newest first
 export const blogPosts: BlogPost[] = [
   {
+    slug: "one-tap-ev-charging",
+    title: "One Tap EV Charging: Plug In, Press Start, Done",
+    excerpt: "The best charging experience asks the driver for nothing. No app, no account, no card, no QR code. It works because the driver was identified long before they reached the charger.",
+    content: `
+<p>The conclusion first: the best charging experience is the one that asks the driver for nothing. <strong class="text-primary">One tap EV charging</strong> means a driver pulls up, plugs in, presses Start inside the product they already use, and charges. No app to download, no account to create, no card to find, no QR code to scan, no RFID to hunt for in the glovebox. It works because the hard part was solved long before the driver arrived at the charger. Their identity and payment travel with them, so the charger has nothing left to establish. For any platform with drivers, this is the difference between charging that feels like part of your product and charging that feels like a detour into somebody else’s.</p>
+
+
+<h2>What starting a charge still looks like</h2>
+
+<p>It is worth being honest about the state of the thing, because the data is uncomfortable.</p>
+
+<p><strong>Drivers are accumulating apps and cards they do not want.</strong> Shell Recharge’s European driver survey, covering tens of thousands of EV drivers across six markets, found that around 23% of drivers had installed four applications to manage their EV, with one in twenty running nine or more. The same share carried four or more charge cards, a figure that had climbed sharply over preceding years. The wider app landscape is covered in <a href="/blog/best-ev-charging-app" class="text-primary underline hover:no-underline">Best EV Charging App</a>.</p>
+
+<p><strong>Payment is worse.</strong> A <a href="https://transportandenergy.com/2024/07/15/ev-drivers-face-payment-issues" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">survey by payment specialist</a> Paythru with The EV Café found that 87% of EV drivers use multiple payment options at different charge points, that 87% had been forced to download a brand new app simply in order to pay, and that only 13% had a single payment method they used all the time. The majority juggle three or more, switching between contactless and various apps depending on where they happen to be. Paythru’s managing director put the trajectory plainly: as the market moves from early adopters to mainstream drivers, expectations rise and tolerance falls, and people have little patience for complex and cumbersome charging transactions.</p>
+
+<p><strong>And this is not confined to charging.</strong> When Autocar surveyed UK motorists about parking, 83% said they would rather pay by contactless card or cash than download and create accounts for yet another app. The signal across mobility is consistent. Drivers are done with downloading things.</p>
+
+<p>Now picture where this friction lands. Not at a desk, unhurried. It lands outside, often in bad weather, sometimes at night, frequently with range pressure, with no staff to ask. It is the single worst moment in the entire journey to ask someone to create an account and type in a card number.</p>
+
+
+<h2>Every existing fix solves the wrong problem</h2>
+
+<p>Here is the observation that reframes the whole thing.</p>
+
+<p>Look at what the industry has built to make starting a charge easier. NFC tap at the charger. QR codes to scan. RFID cards. Contactless card readers on the unit. Guest checkout flows. Each of these is a genuine improvement on what came before, and each is solving the identical problem: how do we work out who this person is, right now, while they stand here?</p>
+
+<p>That is the wrong problem. Every one of those solutions assumes the driver is a stranger who must prove themselves at the moment of charging. They are all answers to the question of how to make identification at the charger faster. Even Plug &amp; Charge, which moves identity into the vehicle, only works where car and charger both support it, as set out in <a href="/blog/plug-and-charge-business-model" class="text-primary underline hover:no-underline">Plug and Charge Business Model</a>.</p>
+
+<p>The better answer is that the driver should not be a stranger.</p>
+
+<p>If the platform the driver is already using knows exactly who they are, has their payment method, and carries that identity with them to the charger, then the question disappears. There is nothing to establish, because it was established already. The driver is not identifying themselves at the charger. They were identified before they left home. All that remains at the charger is the one thing they actually came to do: start charging.</p>
+
+<p>That is what one tap EV charging means. Not a faster way to prove yourself. No proving required.</p>
+
+
+<h2>What it actually feels like</h2>
+
+<p>The experience, from the driver’s side, in full:</p>
+
+<ol>
+<li>They open the product they already use. Their car’s own app, their bank, their fleet system, their mobility app. Something already on their phone, already signed in.</li>
+<li>They find a charger and see what it costs before they go.</li>
+<li>They arrive and plug in.</li>
+<li>They press Start.</li>
+<li>They charge.</li>
+</ol>
+
+<p>That is the whole thing. There is no step six.</p>
+
+<p>No download, because they are already in an app they use. No registration, because they already have an account. No card entry, because their payment method is already on file. No QR code, no RFID card, no hunting for a contactless reader that may or may not work. No wondering what it will cost, because they saw the price before they drove there, which is the point of <a href="/blog/ev-charging-pricing-transparency" class="text-primary underline hover:no-underline">EV Charging Pricing Transparency</a>.</p>
+
+<p>What makes this feel different is not that any single step is faster. It is that the steps are gone. Frictionless EV charging is not a smoother onboarding flow. It is the absence of onboarding at the moment it would have hurt most. Why that first session carries so much weight is covered in <a href="/blog/driver-onboarding-ev-charging" class="text-primary underline hover:no-underline">Driver Onboarding EV Charging</a>.</p>
+
+
+<h2>Why only a platform with drivers can deliver this</h2>
+
+<p>This is the part that matters commercially, and it explains why this is a <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partner</a> capability rather than something a charging network can offer on its own.</p>
+
+<p>A <a href="/charge-point-operators" class="text-primary underline hover:no-underline">charge point operator</a> meets most drivers as strangers. Someone arrives at a site, and the operator has no prior relationship with them. The best an operator can do is make identification at the charger as quick as possible, which is exactly why operators have built NFC and QR and contactless. Given their position, those are the right tools.</p>
+
+<p>A platform that already has drivers is in a fundamentally different position. <a href="/distribution-partners/ev-charging-for-oems" class="text-primary underline hover:no-underline">An automaker</a> knows who is sitting in the car. <a href="/distribution-partners/ev-charging-for-financial-platforms" class="text-primary underline hover:no-underline">A bank or wallet</a> knows the customer and holds their payment credentials. <a href="/distribution-partners/public-ev-charging-for-fleets" class="text-primary underline hover:no-underline">A fleet platform</a> knows every driver and vehicle it manages. <a href="/distribution-partners/ev-charging-for-car-rental" class="text-primary underline hover:no-underline">A rental or subscription company</a> handed over the keys. A mobility app has an account, a history and a stored card.</p>
+
+<p>For all of them, the identification problem is already solved as a by-product of their core business. They are not guessing who the driver is. They know. Which means one tap EV charging is available to them in a way it simply is not to an operator meeting a stranger at a forecourt.</p>
+
+<p>The market is already moving this way. J.D. Power’s research on EV apps found drivers increasingly reliant on automaker apps and increasingly unimpressed by them, and General Motors has set out to cut through the clutter with brand-specific apps offering one-click charging across charging networks. That is an OEM recognising that the driver relationship it already owns is the asset that makes seamless charging possible. Any platform with drivers has the same asset. The in-car version of this is covered in <a href="/blog/in-car-ev-charging" class="text-primary underline hover:no-underline">In-Car EV Charging</a>.</p>
+
+
+<h2>What it is worth to the platform</h2>
+
+<p>Beyond the obvious pleasure of a good experience, there are four concrete commercial effects.</p>
+
+<p><strong>The driver actually uses it.</strong> A charging feature that requires downloading something new has a conversion rate shaped by that requirement. One that requires nothing does not. The easiest way to lose a driver at the moment they first need charging is to ask them to do admin, and losing them once usually means losing them permanently, because they will do it somewhere else and that becomes their default.</p>
+
+<p><strong>The habit forms inside your product.</strong> A driver who charges three times through your product has a routine, a history and no reason to look elsewhere. The first few sessions decide where charging lives for that person from then on. The retention side is covered in <a href="/blog/customer-retention-ev-drivers" class="text-primary underline hover:no-underline">Customer Retention EV Drivers</a>.</p>
+
+<p><strong>The brand credit is yours.</strong> When charging works effortlessly inside your product, the driver attributes that to you, not to the operator whose charger it happened to be. You own infrastructure you did not build.</p>
+
+<p><strong>You learn something.</strong> Sessions, spend and locations inside your own product tell you something about your customers that you otherwise would not know.</p>
+
+<p>The reverse is equally true. A platform that bolts on a charging experience requiring a separate download and account has not added a feature. It has added a handoff, and handoffs are where users leave. The full journey view is in <a href="/blog/ev-charging-customer-experience" class="text-primary underline hover:no-underline">EV Charging Customer Experience</a>.</p>
+
+
+<h2>Available to every Distribution Partner</h2>
+
+<p>This capability is part of what NetworkCore makes available to Distribution Partners across the network.</p>
+
+<p>Because the driver is already identified by the partner’s own product, that identity travels through to the charger. The driver arrives pre-authenticated and pre-authorised, which is a quiet phrase for something that matters a great deal: by the time they plug in, the work is done. They press Start.</p>
+
+<p>It works across the whole network rather than one operator’s estate, so the experience is consistent wherever the driver happens to be, at the operator’s transparent public price. And it sits inside the partner’s own product under its own brand, so the driver never leaves the thing they trust. How to put it there is covered in <a href="/blog/embed-ev-charging-into-app" class="text-primary underline hover:no-underline">Embed EV Charging Into App</a>.</p>
+
+<p>For partners who want charging fully embedded in their product, the route is <a href="/products/just-charge" class="text-primary underline hover:no-underline">Just Charge</a>. For those who want to be live without building anything at all, <a href="/products/charging-links" class="text-primary underline hover:no-underline">Charging Links</a> puts charging into whatever channel already reaches their drivers. Different depths of integration, the same underlying principle: remove everything standing between the driver and the charge.</p>
+
+
+<h2>The position</h2>
+
+<p>Starting a charge should be the least interesting part of owning an electric car. For most drivers today it is the most stressful, because the industry kept building faster ways to answer a question that should never have been asked at the charger.</p>
+
+<p>Drivers have told us clearly what they want. They do not want a fifth app. They do not want a ninth charge card. They do not want to type a card number standing in the rain. They want to plug in and charge.</p>
+
+<p>One tap EV charging gives them exactly that, and it is available to any platform that already knows its drivers, which is to say any platform worth its customer relationship. The identification was solved the day they signed up. Charging should simply inherit it.</p>
+
+<p>Reach the team at <a href="/#contact" class="text-primary underline hover:no-underline">networkcore.org</a> to discuss what one tap charging would look like inside your product.</p>
+
+    `,
+    featuredImage: "/images/blog/one-tap-ev-charging.jpg",
+    category: "Distribution Partners",
+    author: "NetworkCore Team",
+    publishedAt: "2026-11-03",
+    published: true,
+    metaTitle: "One Tap EV Charging: Plug In, Press Start, Done",
+    metaDescription: "One tap EV charging: no app, account, card or QR code. Why only platforms that already know their drivers can deliver it, and what it is worth to them.",
+    tags: ["one tap EV charging", "frictionless EV charging", "EV charging app", "Distribution Partners", "driver experience"],
+  },
+  {
     slug: "ev-charging-fraud-detection",
     title: "EV Charging Fraud Detection: Why the Payment Surface Decides the Threat",
     excerpt: "Charging is card-not-present, unattended, irreversible and priced after the fact. In Latin America that squeezes operators from both sides, and the payment surface you choose decides which fraud you face.",
