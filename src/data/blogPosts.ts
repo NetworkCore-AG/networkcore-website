@@ -11138,9 +11138,9 @@ export const blogPosts: BlogPost[] = [
 
       <p>Through a single integration, a Distribution Partner can embed <strong class="text-primary">charging-as-a-service</strong> into its app, vehicle interface, wallet, or fleet system.</p>
 
-      <p>When users charge, the Distribution Partner earns a share of the transaction — typically within a 1% to 9% range depending on configuration.</p>
+      <p>How the Distribution Partner participates depends on the route it takes. On public price, network access is free and the driver pays the operator's exact tariff. On wholesale, the partner buys at an agreed rate per kWh and sets its own price to the driver.</p>
 
-      <p>That share can be:</p>
+      <p>On wholesale, that margin can be:</p>
 
       <ul>
         <li>Retained as margin</li>
@@ -11421,7 +11421,7 @@ export const blogPosts: BlogPost[] = [
         <li>You receive predictable settlement with compliance handled.</li>
       </ul>
 
-      <p>With NetworkCore, CPOs can retain up to 90% of the gross margin on energy while accessing expanded demand through our roaming hub — because we do not distort the underlying tariff structure.</p>
+      <p>With NetworkCore, CPOs keep their own tariff and the margin that comes with it, while accessing expanded demand through our roaming hub, because we do not distort the underlying tariff structure.</p>
 
       <p>Market forces push prices dynamically. Infrastructure simply ensures transactions clear correctly.</p>
 
@@ -11429,7 +11429,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>For Distribution Partners — OEMs, <a href="https://upgradedpoints.com/travel/car-rentals/best-car-rental-companies/" target="_blank" rel="noopener noreferrer">car rental companies</a>, fintech wallets, fleets, mobility apps, insurers — <strong class="text-primary">EV charging margins</strong> represent a new revenue opportunity.</p>
 
-      <p>When you connect to NetworkCore, you participate in charging session economics through a flexible revenue share typically ranging between 1% and 9%, depending on configuration and agreement.</p>
+      <p>When you connect to NetworkCore, how you participate depends on the route. On public price, access to the network is free and the driver pays the operator's exact tariff. On wholesale, you buy at an agreed rate per kWh and set your own price to the driver.</p>
 
       <p>That margin can be:</p>
 
@@ -11946,7 +11946,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>The model is straightforward. NetworkCore acts as disclosed agent and payment collector on behalf of CPOs, who remain the merchant of record. When a driver initiates a charging session through a distribution partner — an OEM app, a fleet management platform, a superapp, a mobility wallet — the transaction flows through NetworkCore's infrastructure. Funds are collected into safeguarded EMI accounts. The clearing ledger allocates revenue in real time. Settlement is executed at T+2 for CPOs, with daily or weekly payouts to distribution partners. <a href="/blog/ev-charging-fx">FX conversion</a> is handled at settlement. VAT invoicing is automated per jurisdiction.</p>
 
-      <p>The commission model is 90% to the CPO, 5% to the distribution partner, 5% to NetworkCore. There are no subscriptions. There are no bilateral negotiation fees. There are no variable roaming charges layered on top of public price. The price the driver sees at the charger is the price the driver pays. That is not a minor feature. That is the architecture.</p>
+      <p>The commercial model is simple. The charging operator sets its public price and that is exactly what the driver pays. NetworkCore earns an agreed commission only on the sessions it delivers. There are no subscriptions. There are no bilateral negotiation fees. There are no variable roaming charges layered on top of public price. The price the driver sees at the charger is the price the driver pays. That is not a minor feature. That is the architecture.</p>
 
       <h2>Why This Is the Right Model for OEMs Specifically</h2>
 
@@ -11954,7 +11954,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>What an OEM does have is distribution. Millions of connected vehicles. Millions of active app users. A trusted brand relationship with drivers who want a seamless <strong class="text-primary">in-car EV charging</strong> experience. The ability to surface charging options, route drivers intelligently, and provide a premium experience from the dashboard.</p>
 
-      <p>In the NetworkCore model, that is precisely what a <a href="/#distribution-partners">distribution partner</a> does. An OEM integrates once through NetworkCore's single API. Their drivers gain access to the full network of connected CPOs at public prices. Every session generates a 5% commission back to the OEM, automatically, without billing negotiation or operational overhead. The OEM's role is to drive charging demand through their platform. NetworkCore handles everything that happens from payment to payout.</p>
+      <p>In the NetworkCore model, that is precisely what a <a href="/#distribution-partners">distribution partner</a> does. An OEM integrates once through NetworkCore's single API. Their drivers gain access to the full network of connected CPOs at public prices. Access on public price is free, and an OEM that would rather price charging itself can buy at a wholesale rate and set its own. Either way there is no billing negotiation and no operational overhead. The OEM's role is to drive charging demand through their platform. NetworkCore handles everything that happens from payment to payout.</p>
 
       <p>This is not a diminished role for the OEM. It is a clarified one. The OEM focuses on the <strong class="text-primary">in-car EV charging</strong> experience that drivers actually see: the mapping interface, the routing intelligence, the UI at the point of plug-in. NetworkCore handles the financial infrastructure that drivers never see but that determines whether the experience is trustworthy, consistent, and correctly priced.</p>
 
@@ -12008,7 +12008,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>The right model is one where OEMs focus on what they do exceptionally well — the in-car experience, the routing intelligence, the brand relationship with the driver — while the financial infrastructure is handled by a purpose-built clearing and settlement layer.</p>
 
-      <p>NetworkCore is that layer. Single API integration. Public price enforcement. T+2 settlement for CPOs. 5% commission to distribution partners on every session. Automated VAT, FX, and compliance across jurisdictions. No subscriptions. No bilateral negotiations. No opacity.</p>
+      <p>NetworkCore is that layer. Single API integration. Public price integrity. Fast settlement for charging operators. Free network access on public price, or wholesale rates for partners who want to set their own. Automated VAT, FX, and compliance across jurisdictions. No subscriptions. No bilateral negotiations. No opacity.</p>
 
       <p><strong class="text-primary">In-car EV charging</strong> at the scale the market is heading toward requires infrastructure built for that scale. NetworkCore was built for exactly this moment.</p>
     `,
