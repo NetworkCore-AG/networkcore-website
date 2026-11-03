@@ -64,7 +64,7 @@ const DPPartnerTypesSection = () => {
             Distribution Partners are platforms closest to the driver.
           </p>
           <p className="text-lg text-foreground leading-relaxed font-light">
-            You already own the user journey — NetworkCore extends it into EV charging, turning it into a native service and a new revenue stream.
+            You already own the user journey. NetworkCore extends it into EV charging, as a native service you offer free at public price, or price yourself at wholesale.
           </p>
         </div>
 

@@ -7,7 +7,7 @@ const ApiValuePropSection = () => {
             Complete Financial Control
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed font-light">
-            Connect once and offer EV charging as a native part of your platform. NetworkCore handles everything beneath the surface — network access, session management, payment capture, settlement to CPOs, revenue allocation, VAT, and reconciliation. Your users charge. You earn. The money moves automatically.
+            Connect once and offer EV charging as a native part of your platform. NetworkCore handles everything beneath the surface: network access, session management, payment capture, settlement to charging operators, VAT, and reconciliation. Your users charge. The money moves automatically.
           </p>
         </div>
       </div>

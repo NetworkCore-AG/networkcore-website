@@ -13,7 +13,7 @@ const DPHeroSection = () => {
             One integration. Every charger. Zero cost. Zero ops.
           </h1>
           <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl font-light mb-4">
-            Embed charging directly into your product, give users access to thousands of chargers, and earn on every session — all without building or operating infrastructure.
+            Embed charging directly into your product and give users access to thousands of chargers. Free on public price, or buy wholesale and set your own. No infrastructure to build or operate.
           </p>
           <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl font-light">
             Your users are already charging. This brings that activity inside your platform.

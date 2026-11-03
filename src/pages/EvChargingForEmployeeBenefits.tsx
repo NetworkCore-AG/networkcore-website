@@ -13,7 +13,7 @@ const layers = [
   { icon: <Eye className="w-5 h-5" />, title: "Fair Public Pricing", description: "Employees pay the charger's exact public price. No markup, no hidden fee. A benefit your employer clients can trust, with nothing buried in the rate." },
   { icon: <CreditCard className="w-5 h-5" />, title: "Settled on Compliant Rails", description: "Every session is cleared and settled, with taxes, currencies, reconciliation, and invoices handled, on rails built within licensed, safeguarded structures. Charging documented to the standard employers and auditors expect." },
   { icon: <Settings className="w-5 h-5" />, title: "Charging-as-a-Service", description: "We run support, monitoring, and any problems with the networks. You run the program, we run the charging behind it. No charging team." },
-  { icon: <TrendingUp className="w-5 h-5" />, title: "A More Competitive Platform", description: "Charging makes your program the complete one in every employer pitch, and you earn a transparent share on every session your members run. A stickier product, and a new revenue line on members you already have." },
+  { icon: <TrendingUp className="w-5 h-5" />, title: "A More Competitive Platform", description: "Charging makes your program the complete one in every employer pitch. Free to offer at public price, or buy wholesale and price it into the benefit yourself. A stickier product on members you already have." },
 ];
 
 const guarantees = [
@@ -45,7 +45,7 @@ const ebFaqs = [
   { question: "How does this handle tax treatment, like benefit-in-kind?", answer: "Tax treatment stays with your platform and your clients' advisors, as it does for every benefit you run. What we provide is what that treatment depends on: every session documented, with compliant receipts and clean settlement, so your program has the records it needs." },
   { question: "Will a markup hurt the benefit?", answer: "No. Employees pay the charger's exact public price. No markup, no spread. NetworkCore is invisible to them." },
   { question: "Can charging work for business travel and expensing?", answer: "Yes. Sessions on the road run through the platform and land with a compliant receipt automatically, so charging behaves like any other travel expense your platform already handles, without the employee fronting the cost and claiming it back." },
-  { question: "How do we earn?", answer: "Charging access becomes a new revenue stream. Commissions with the CPO are programmable and negotiable per relationship, and allocated automatically on every session, on top of the competitive edge and retention the feature drives. The line grows as more of your members drive electric." },
+  { question: "What does it cost?", answer: "On public price, access to the whole network is free and members pay the operator's exact tariff. Where you buy wholesale, you buy at the operator's rate and keep whatever margin you choose to set. In both cases there are no setup or subscription fees, and the value grows as more of your members drive electric." },
   { question: "What does integration involve?", answer: "A single API for discovery, availability, session control, and reporting, with a ready-made front end if you would rather not build the charging screens. Most launches are operational within weeks." },
 ];
 
@@ -136,7 +136,7 @@ const EvChargingForEmployeeBenefits = () => {
               What You Own
             </h2>
             <p className="text-lg text-muted-foreground font-light">
-              The whole offer starts with the benefit you complete and ends with what you earn.
+              The whole offer starts with the benefit you complete and ends with a programme your members actually use.
             </p>
           </div>
 

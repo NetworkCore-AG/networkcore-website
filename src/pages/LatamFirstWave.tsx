@@ -92,7 +92,7 @@ const TRANSLATIONS = {
         { hub: "European-anchored, thin LATAM coverage", nc: "Purpose-built for LATAM from the start" },
         { hub: "Settlement runs through your existing bank cycles", nc: "T+2 settlement, every session, every currency" },
         { hub: "Compliance and tax remain your problem", nc: "CFDI, NF-e, FX, chargebacks handled in the clearing layer" },
-        { hub: "No share of demand-side margin", nc: "Revenue share with no exclusivity, cancel any time" },
+        { hub: "Your tariff is marked up before the driver sees it", nc: "Your public price reaches the driver intact, no exclusivity, cancel any time" },
       ],
     },
     form: {
@@ -178,7 +178,7 @@ const TRANSLATIONS = {
         { hub: "Anclados en Europa, cobertura escasa en LATAM", nc: "Diseñado específicamente para LATAM desde el inicio" },
         { hub: "La liquidación corre a través de tus ciclos bancarios existentes", nc: "Liquidación T+2, cada sesión, cada divisa" },
         { hub: "El cumplimiento y los impuestos siguen siendo tu problema", nc: "CFDI, NF-e, FX, contracargos gestionados en la capa de liquidación" },
-        { hub: "Sin participación en el margen del lado de la demanda", nc: "Reparto de ingresos sin exclusividad, cancela cuando quieras" },
+        { hub: "Tu tarifa se marca antes de que el conductor la vea", nc: "Tu precio público llega íntegro al conductor, sin exclusividad, cancela cuando quieras" },
       ],
     },
     form: {
@@ -264,7 +264,7 @@ const TRANSLATIONS = {
         { hub: "Ancorados na Europa, cobertura fina na LATAM", nc: "Construído sob medida para a LATAM desde o início" },
         { hub: "Liquidação roda pelos seus ciclos bancários existentes", nc: "Liquidação T+2, cada sessão, cada moeda" },
         { hub: "Conformidade e impostos continuam sendo seu problema", nc: "NF-e, CFDI, FX, chargebacks tratados na camada de liquidação" },
-        { hub: "Sem participação na margem do lado da demanda", nc: "Divisão de receita sem exclusividade, cancele quando quiser" },
+        { hub: "Sua tarifa é remarcada antes de o motorista vê-la", nc: "Seu preço público chega íntegro ao motorista, sem exclusividade, cancele quando quiser" },
       ],
     },
     form: {

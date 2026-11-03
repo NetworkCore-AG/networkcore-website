@@ -13,8 +13,8 @@ const capabilities = [
   },
   {
     icon: Percent,
-    title: "Programmable Commissions",
-    description: "A single low single-digit all-in commission per session, programmable and negotiable between CPOs and Distribution Partners. Allocated automatically on every session — CPOs keep the majority.",
+    title: "Commission Only on Delivered Sessions",
+    description: "One agreed per-session commission, with no subscription, setup or access fee. Nothing is charged unless a session settles.",
   },
   {
     icon: Eye,

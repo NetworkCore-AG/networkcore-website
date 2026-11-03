@@ -59,7 +59,7 @@ const groups: FaqGroup[] = [
       },
       {
         "q": "Who handles VAT and invoicing?",
-        "a": "On public price, we do: end-customer invoices in the Charging Partner's name with the correct local VAT, plus the commission and revenue-share invoices. On wholesale, the Distribution Partner is the merchant of record and invoices the driver directly. Invoices can also be emitted by your connected CSMS or CPMS."
+        "a": "On public price, we do: end-customer invoices in the Charging Partner's name with the correct local VAT, plus the commission invoice. On wholesale, the Distribution Partner is the merchant of record and invoices the driver directly. Invoices can also be emitted by your connected CSMS or CPMS."
       }
     ]
   },
@@ -77,7 +77,7 @@ const groups: FaqGroup[] = [
       },
       {
         "q": "What is the difference between public price and wholesale?",
-        "a": "On public price you stay the merchant of record, the driver pays your tariff exactly as set, and you keep the majority of the session. On wholesale you set a rate per kWh and receive 100% of it, and the partner prices the session and becomes the merchant of record."
+        "a": "On public price you stay the merchant of record and the driver pays your tariff exactly as set. On wholesale you set a rate per kWh and receive 100% of it, and the partner prices the session and becomes the merchant of record."
       },
       {
         "q": "When would I use wholesale?",

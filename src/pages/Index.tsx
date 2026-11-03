@@ -179,7 +179,7 @@ const Index = () => {
             </Reveal>
             <AnimatedDivider className="w-16" />
             <Reveal delay={120} as="p" className="text-base md:text-lg text-foreground font-light leading-relaxed max-w-3xl mx-auto">
-              Platforms that already own the driver: OEM apps/telematics, wallets, fleets, parking. Charging becomes a native part of your product, and a revenue line.
+              Platforms that already own the driver: OEM apps/telematics, wallets, fleets, parking. Charging becomes a native part of your product, free at public price or wholesale if you price it yourself.
             </Reveal>
           </div>
 

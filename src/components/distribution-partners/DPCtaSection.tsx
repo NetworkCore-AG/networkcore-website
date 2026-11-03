@@ -11,7 +11,7 @@ const DPCtaSection = () => {
           If you already have drivers, the charging transaction is already happening — the only question is whether it happens inside your platform.
         </p>
         <p className="text-lg text-muted-foreground mb-12 font-light">
-          NetworkCore turns that activity into a recurring revenue stream for your platform.
+          NetworkCore brings that activity inside your platform, free on public price, or at a wholesale rate you price yourself.
         </p>
 
         <Button

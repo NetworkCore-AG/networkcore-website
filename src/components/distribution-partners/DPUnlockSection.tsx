@@ -13,8 +13,8 @@ const features = [
   },
   {
     icon: <TrendingUp className="w-5 h-5" />,
-    title: "Turn Charging Into Revenue",
-    description: "Capture value from every charging session happening across your user base — turning real-world energy consumption into a recurring revenue stream.",
+    title: "Charging on Your Terms",
+    description: "Offer the whole network free at public price, or buy wholesale, set your own price and keep the difference. You choose, operator by operator.",
   },
   {
     icon: <Shield className="w-5 h-5" />,

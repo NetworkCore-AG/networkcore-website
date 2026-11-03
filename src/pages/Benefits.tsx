@@ -131,7 +131,7 @@ const Benefits = () => {
               Distribution Partners
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed font-light max-w-3xl mx-auto mb-12">
-              NetworkCore turns EV charging into a monetisable service layer. Connect once and earn revenue every time your users charge. Build brand equity with transparent public price and full availability.
+              NetworkCore puts public charging inside your product. Connect once, free on public price with the operator's tariff passed through intact, or buy wholesale and set your own price. Brand equity through transparency and full availability.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4">
