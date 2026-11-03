@@ -139,7 +139,7 @@ const Benefits = () => {
               <p className="text-foreground text-lg font-light">Single API</p>
             </div>
             <div className="bg-background rounded-2xl p-6 md:p-8 text-center">
-              <p className="text-foreground text-lg font-light">Passive income</p>
+              <p className="text-foreground text-lg font-light">Free or wholesale</p>
             </div>
             <div className="bg-background rounded-2xl p-6 md:p-8 text-center">
               <p className="text-foreground text-lg font-light">Trust & transparency</p>
