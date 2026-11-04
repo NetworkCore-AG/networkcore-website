@@ -63,6 +63,136 @@ export const calculateReadingTime = (content: string): number => {
 // Add your blog posts here - newest first
 export const blogPosts: BlogPost[] = [
   {
+    slug: "post-paid-ev-charging",
+    title: "Post-Paid EV Charging: Someone Has to Trust the Driver, and the Operator Has to Be Paid Regardless",
+    excerpt: "Plug in, charge, pay afterwards for what you used. No hold, no reserved funds. It works on an open network only when someone trusts the driver and the operator is paid regardless.",
+    content: `
+<p>The conclusion first: <strong class="text-primary">post-paid EV charging</strong> means a driver plugs in, charges, and pays afterwards for exactly what they used. No hold on their card, no reserved funds, no waiting days for money to return. Tesla has worked this way for years, and it is a large part of why Tesla charging feels different. Making it work anywhere else requires two things to be true at the same time. Someone has to place trust in the driver, and the charge point operator has to be paid regardless of whether that trust turns out to be well placed. Most of the industry can satisfy one of those conditions or the other. Satisfying both at once requires sitting in the middle of the transaction, with a relationship to the driver on one side and a settlement obligation to the operator on the other. That is the position NetworkCore occupies, and it is why post-paid EV charging is possible across the network rather than inside a single manufacturer’s estate.</p>
+
+
+<h2>What the hold actually costs a driver</h2>
+
+<p>Pre-authorisation gets discussed as a technical formality. For drivers it is nothing of the sort. How the hold fits into the wider payment flow is set out in <a href="/blog/ev-charging-payments-explained" class="text-primary underline hover:no-underline">EV Charging Payments Explained</a>.</p>
+
+<p><strong>The amounts are substantial.</strong> EVgo places a temporary hold of up to $60 when a driver uses a card reader. EVCS runs a tiered structure, with guest drivers facing a $50 default hold and pay-as-you-go users $30, waived only for subscribers with allowance remaining. In Malaysia, ChargEV announced a RM150 hold on in-app payments and deferred it indefinitely after the reaction. Industry analysis has described a driver making a short stop costing around £15 and finding a £75 reserve on their statement.</p>
+
+<p><strong>Then there is the wait.</strong> The hold is released by the driver’s bank, not by anyone in the charging chain, so nobody involved in the session controls when the money comes back. Operators routinely ask drivers to allow seven to ten business days before querying, and some payment terms permit up to thirty days before an authorisation is released automatically. Drivers who chase that money end up in the process covered in <a href="/blog/ev-charging-refund-process" class="text-primary underline hover:no-underline">EV Charging Refund Process</a>.</p>
+
+<p>Set that against what the driver believes they are doing. They want to buy twenty pounds of electricity. Instead a multiple of that leaves their available balance, for an unknown period, before anything is delivered. In markets where drivers manage tight balances, that is not a formality. It is the difference between the card working and the card declining, and a decline at a charger is a failed journey.</p>
+
+
+<h2>Why the hold exists, stated honestly</h2>
+
+<p>The industry is candid about the reason, and understanding it is the key to the whole problem.</p>
+
+<p>ChargePoint explains it directly in its own driver support material: fraud has become a major issue, and even when the company cannot collect money from a driver, it still takes responsibility for paying the station owner. The hold is described explicitly as a fraud-prevention measure to deter bad actors.</p>
+
+<p>That single explanation contains both halves of the problem. The party running the payment is obliged to pay the operator whether or not the driver’s money arrives. It is therefore exposed to every driver it cannot vouch for. Having no idea who most drivers are, it protects itself the only way available: by taking money up front, from everybody.</p>
+
+<p>So the hold is not really a payment mechanism. It is collateral demanded from strangers, applied universally because the system cannot distinguish the honest majority from the few who will not pay. Every driver subsidises that uncertainty out of their own balance.</p>
+
+<p>The underlying risk is real, not theoretical. The <a href="https://thedriven.io/2024/09/06/drivers-committing-fraud-why-ev-fast-charging-network-had-to-change-payment-system" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">Australian network Evie</a> changed its payment protocols after drivers committing fraud, including a temporary requirement for pre-authorisations on every credit card transaction. The broader picture is in <a href="/blog/ev-charging-fraud-detection" class="text-primary underline hover:no-underline">EV Charging Fraud Detection</a>.</p>
+
+
+<h2>Tesla never needed it, and the industry noticed</h2>
+
+<p>Tesla charging feels different not because Tesla solved payments more cleverly, but because Tesla never had the problem.</p>
+
+<p>A driver arriving at a Supercharger is not a stranger. Tesla knows the vehicle, holds the account and the payment method, and has the history. There is nothing to establish and no uncertainty to collateralise. The driver plugs in, charges, and is billed for what they used.</p>
+
+<p>The industry has drawn the same conclusion. When Evie rebuilt its payment system in response to fraud, the model it moved to linked payment directly to customer accounts, explicitly along the lines of the protocol Tesla had rolled out years earlier. The answer to fraud was not a bigger hold. It was knowing the driver.</p>
+
+<p>Which raises the question the rest of the market has largely left unanswered: how do you reproduce that outside a closed, single-brand ecosystem, where the chargers belong to dozens of independent operators who have never met the driver?</p>
+
+
+<h2>The two conditions</h2>
+
+<p>Post-paid EV charging works anywhere, on any charger, when two conditions hold simultaneously.</p>
+
+<p><strong>First, someone has to place trust in the driver.</strong> Energy is delivered before payment is confirmed, so somebody must be willing to stand behind that driver for the value of a session.</p>
+
+<p><strong>Second, the charge point operator has to be paid regardless.</strong> No operator should ever carry the consequence of a credit decision it did not make, about a driver it has never met, at a price it already published. If the operator bears that risk, the model is unfair and will not be adopted, correctly.</p>
+
+<p>Almost everything in the market satisfies one of these and not the other. A payment processor can guarantee the operator but knows nothing about the driver, so it falls back on holding everybody’s money. A single operator may know its own account holders but cannot extend anything beyond its own estate. A <a href="/blog/ev-roaming-hub-explained" class="text-primary underline hover:no-underline">traditional roaming arrangement</a> moves session data between parties and settles slowly, and guarantees nobody.</p>
+
+<p>Satisfying both at once requires being positioned between the driver relationship and the operator settlement, with the authority to act on each.</p>
+
+
+<h2>Who places the trust: it is deliberately open</h2>
+
+<p>There is no single right answer to who stands behind a given driver, and treating it as fixed would be a design error. In practice the trust is placed jointly by the parties involved, NetworkCore and the <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partner</a>, and how it is structured varies with the partner and the driver base.</p>
+
+<ul>
+<li><strong>The Distribution Partner can underwrite its own drivers.</strong> An <a href="/distribution-partners/ev-charging-for-oems" class="text-primary underline hover:no-underline">automaker</a>, <a href="/distribution-partners/ev-charging-for-financial-platforms" class="text-primary underline hover:no-underline">bank</a>, <a href="/distribution-partners/public-ev-charging-for-fleets" class="text-primary underline hover:no-underline">fleet</a> or mobility platform often has verified identity, payment history and an existing credit relationship with exactly these people. It already makes decisions of this kind as part of its core business.</li>
+<li><strong>NetworkCore can underwrite the driver.</strong> Where the network’s own view of a driver supports it, the trust can sit with us rather than with the partner.</li>
+<li><strong>A prepaid wallet can carry it.</strong> Funds held in advance remove the credit question entirely while still removing the per-session hold, which suits some driver bases better than any credit arrangement would.</li>
+<li><strong>Or a combination.</strong> Different cohorts within the same partner can be treated differently, because not every driver needs the same arrangement.</li>
+</ul>
+
+<p>What matters is not which party carries it but that the decision is made by someone with the information to make it well, and that it is made deliberately rather than substituted with a blanket hold applied to everyone. The flexibility is the point. A driver base of corporate fleet users, a base of retail banking customers and a base of anonymous app users are three different credit propositions, and forcing them into one structure would be the same mistake the pre-authorisation hold makes.</p>
+
+
+<h2>The operator is guaranteed, and it is contractual</h2>
+
+<p>This is the keystone, and it is worth stating without qualification.</p>
+
+<p>If a session completes and produces a successful Charge Detail Record, the <a href="/charging-partners" class="text-primary underline hover:no-underline">Charging Partner</a> gets paid. That guarantee is written into our service level agreement. It does not depend on whether the driver’s payment subsequently clears, on who underwrote that driver, or on how the credit arrangement behind the session was structured. The operator delivered energy at its own published price and is settled for it, quickly, as always. How that settlement runs is covered in <a href="/blog/cpo-settlement-timing" class="text-primary underline hover:no-underline">CPO Settlement Timing</a>, and how each record is matched in <a href="/blog/ev-charging-session-reconciliation" class="text-primary underline hover:no-underline">EV Charging Session Reconciliation</a>.</p>
+
+<p>The significance of this is easy to understate. It means the entire credit question happens above the operator and never reaches them. They are not asked to accept a new risk in exchange for a better driver experience, which is what every previous attempt at this has implicitly asked of them. They are not asked to trust anyone. They simply see a completed session and money arriving on the normal cycle.</p>
+
+<p>It also explains why the guarantee has to be contractual rather than a statement of intent. A promise to pay that sits outside the agreement is worth very little to an operator deciding whether to participate. Inside the SLA, it is an obligation. Our wider view on what makes a service level agreement fair is in <a href="/blog/ev-charging-service-level-agreements" class="text-primary underline hover:no-underline">EV Charging Service Level Agreements</a>.</p>
+
+
+<h2>What makes extending trust viable</h2>
+
+<p>Trust without consequence is a subsidy rather than a credit arrangement, so the mechanism has teeth.</p>
+
+<p>If a driver’s payment fails after a session, that driver is blocked from further charging across the network until it is resolved. Not at one operator, not at one brand’s stations. Everywhere the network reaches.</p>
+
+<p>This matters more than it appears. A single operator blocking a non-paying driver achieves very little, because the driver charges elsewhere tomorrow. A network-wide block removes that option, which makes the consequence real and makes extending trust defensible in the first place. It is a control no individual operator can replicate on its own, and it exists only because the block applies across every participating operator at once.</p>
+
+<p>The result is a system that is generous to drivers who pay and closed to drivers who do not, rather than one that treats every driver as a potential risk and charges them all a deposit in advance.</p>
+
+
+<h2>Why this combination is hard to assemble</h2>
+
+<p>Step back and look at what has to be in place simultaneously for post-paid EV charging to work across an open network of independent operators.</p>
+
+<p>A relationship with the driver, or a partner who has one, good enough to support a credit decision. A settlement obligation to the operator strong enough to be guaranteed contractually. Reach across every operator in the network, so the trust is portable rather than confined to one estate. Enforcement that applies network-wide, so non-payment has real consequence. Settlement fast enough that the gap between delivery and payment stays short. And fraud controls at the session layer accurate enough to keep the underlying losses small, since no credit arrangement survives sustained abuse.</p>
+
+<p>Each of those is achievable alone. The difficulty is that they only work together, and they require occupying a position with the driver on one side and the operator on the other, across the whole network rather than one part of it. That is the position NetworkCore was built to hold, which is why the model is available here and remains, elsewhere, largely a feature of closed single-brand ecosystems.</p>
+
+
+<h2>What each party gets</h2>
+
+<p><strong>The driver.</strong> No hold, no reserved funds, no waiting on a bank. They charge and pay for what they used, at any charger on the network. Combined with never having to identify themselves at the charger, the whole transaction becomes plugging in and pressing start, covered in <a href="/blog/one-tap-ev-charging" class="text-primary underline hover:no-underline">One Tap EV Charging</a>.</p>
+
+<p><strong>The Distribution Partner.</strong> Charging stops being the friction point in the product. Where the partner chooses to underwrite its own drivers it is extending trust it already extends elsewhere, to people it already knows, on terms it sets. Where it would rather not, the arrangement can sit elsewhere. Charging inside the partner’s product is what <a href="/products/just-charge" class="text-primary underline hover:no-underline">Just Charge</a> delivers.</p>
+
+<p><strong>The Charging Partner.</strong> A better experience for drivers arriving at their sites, with no new risk whatsoever. The session completes, the CDR is produced, the money arrives. Contractually. That is how <a href="/products/network-access" class="text-primary underline hover:no-underline">Network Access</a> works for operators.</p>
+
+
+<h2>The position</h2>
+
+<p>The hold on a driver’s card is a visible symptom of a system where nobody at the point of charging knows who the driver is, and where somebody is obliged to pay the operator either way. Tesla avoided it by knowing its drivers inside a closed network. Evie rebuilt its payments around the same insight once fraud forced the issue.</p>
+
+<p>Reproducing it on an open network of independent operators needs both conditions met at once: real trust placed in the driver by parties with the information to place it, and an operator guarantee that makes the credit question invisible to the people running the chargers. Put those together, add enforcement that works across the whole network, and the hold simply becomes unnecessary.</p>
+
+<p>Plug in, charge, pay for what you used. Everywhere, not just at one brand’s chargers.</p>
+
+<p>Reach the team at <a href="/#contact" class="text-primary underline hover:no-underline">networkcore.org</a> to discuss post-paid charging for your drivers.</p>
+
+    `,
+    featuredImage: "/images/blog/post-paid-ev-charging.jpg",
+    category: "Payments",
+    author: "NetworkCore Team",
+    publishedAt: "2026-11-04",
+    published: true,
+    metaTitle: "Post-Paid EV Charging: No Hold, Operator Paid Regardless",
+    metaDescription: "Post-paid EV charging removes the card hold. It works on an open network only when someone trusts the driver and the operator is guaranteed payment.",
+    tags: ["post-paid EV charging", "pre-authorisation", "EV charging payments", "Charging Partners", "Distribution Partners"],
+  },
+  {
     slug: "one-tap-ev-charging",
     title: "One Tap EV Charging: Plug In, Press Start, Done",
     excerpt: "The best charging experience asks the driver for nothing. No app, no account, no card, no QR code. It works because the driver was identified long before they reached the charger.",
