@@ -7340,7 +7340,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>NetworkCore offers two integration paths. Insurers building a deep, custom in-app charging experience inside their existing customer portal or motor app can integrate the API directly, building the charging UI to match the rest of their product and embedding the experience natively. Insurers that want to ship faster — most do — can use NetworkCore's iframe component, a complete brand-customisable charging interface that drops into the insurer's existing app and handles the entire user experience out of the box. Either path produces the same operational outcome. Our <a href="/blog/how-to-offer-ev-charging-in-an-app" class="text-primary underline hover:no-underline">How to Offer EV Charging in an App</a> guide walks through both options in detail.</p>
 
-      <p>The financial flow can stay inside the insurer's existing PSP and banking ecosystem, integrating through the layers the insurer already has in place, or run fully autonomously on NetworkCore's infrastructure with the insurer receiving consolidated reporting and revenue share without managing any of the financial operations directly. Either configuration is supported. The insurer's finance and compliance teams pick the model that fits their existing operating environment.</p>
+      <p>The financial flow can stay inside the insurer's existing PSP and banking ecosystem, integrating through the layers the insurer already has in place, or run fully autonomously on NetworkCore's infrastructure with the insurer receiving consolidated reporting without managing any of the financial operations directly. Either configuration is supported. The insurer's finance and compliance teams pick the model that fits their existing operating environment.</p>
 
       <p>The compliance layer is absorbed by the platform across every jurisdiction the insurer operates in. Multi-country VAT calculation per session per fee type, jurisdiction-specific invoicing, audit-ready transaction records, AML and KYC handling — none of this lands on the insurer. <strong class="text-primary">EV charging for insurance companies</strong> is, in this respect, an unusually clean product extension because the regulatory weight that would normally accompany a payments-adjacent product is held entirely by the platform infrastructure beneath the integration.</p>
 
@@ -7572,7 +7572,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>NetworkCore's <strong class="text-primary">EV charging platform API</strong> is built to the specification above for both sides of the transaction.</p>
 
-      <p>For Distribution Partners, the API exposes everything needed to integrate charging as a native feature of an app, fleet platform, vehicle, wallet, or financial product. Network discovery, station data, real-time pricing, availability, session lifecycle management, payment capture, and the full reporting layer — all available through clean, well-documented endpoints. Teams that want to build their own front-end have the full surface area to do so. Teams that want to ship faster can use NetworkCore's drop-in iframe — a complete, brand-customisable charging interface that handles the user experience out of the box. Either path produces the same operational outcome: charging works inside the Distribution Partner's product, sessions earn per-session revenue, compliance is handled, settlement runs cleanly. The choice between full custom front-end and ready-made iframe is the Distribution Partner's, not the platform's.</p>
+      <p>For Distribution Partners, the API exposes everything needed to integrate charging as a native feature of an app, fleet platform, vehicle, wallet, or financial product. Network discovery, station data, real-time pricing, availability, session lifecycle management, payment capture, and the full reporting layer — all available through clean, well-documented endpoints. Teams that want to build their own front-end have the full surface area to do so. Teams that want to ship faster can use NetworkCore's drop-in iframe — a complete, brand-customisable charging interface that handles the user experience out of the box. Either path produces the same operational outcome: charging works inside the Distribution Partner's product, free at public price or priced on wholesale, compliance is handled, settlement runs cleanly. The choice between full custom front-end and ready-made iframe is the Distribution Partner's, not the platform's.</p>
 
       <p>For CPOs, the API integrates alongside whatever CSMS the operator is using, adding NetworkCore as a distribution channel without disturbing the operational layer. Sessions routed through the platform settle within days at the CPO's public tariff. Negotiated arrangements with specific Distribution Partners are configurable through the same API. The CPO gains demand from the network of platforms connecting in, without bilateral roaming negotiations, without subscription fees, with revenue arriving per session.</p>
 
@@ -7589,7 +7589,7 @@ export const blogPosts: BlogPost[] = [
     updatedAt: "2026-11-03",
     published: true,
     metaTitle: "EV Charging Platform API: What to Integrate, What Not to Build | NetworkCore",
-    metaDescription: "EV charging platform API done right: skip the CSMS build, plug into the commercial layer — public tariffs, per-session revenue, settlement and compliance handled.",
+    metaDescription: "EV charging platform API done right: skip the CSMS build, plug into the commercial layer: public tariffs, wholesale rates, settlement and compliance handled.",
     tags: ["api", "distribution partners", "cpo", "csms", "transaction platform"],
   },
   {
@@ -8489,7 +8489,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>The right roaming partner handles both layers: the technical session and the money. Every session that your user initiates through your platform is routed to the correct charger, priced at the CPO's official public tariff, payment-captured in real time, and settled automatically. On wholesale, your margin settles with it, in days, not weeks. No bilateral CPO negotiations. No bespoke settlement process. No reconciliation team. No compliance overhead in jurisdictions you did not plan to manage.</p>
 
-      <p>This is the distinction between offering EV charging without owning chargers as a feature and offering it as a service. A feature is a map and a session initiation. A service is a complete financial transaction — from the driver's plug-in to the platform's revenue share landing in its account — handled end to end by the infrastructure layer beneath the integration.</p>
+      <p>This is the distinction between offering EV charging without owning chargers as a feature and offering it as a service. A feature is a map and a session initiation. A service is a complete financial transaction, from the driver's plug-in to the money reaching every party correctly, handled end to end by the infrastructure layer beneath the integration.</p>
 
       <h2>How Your Users Stay Inside Your App</h2>
 
@@ -9486,7 +9486,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>The Affiliate Revenue Layer: Recurring Income from Adjacent Services</h2>
 
-      <p>The most underexploited layer in most <strong class="text-primary">marketplace revenue models</strong> is the affiliate or embedded-service layer — the ability to offer users access to a third-party service that is directly relevant to what they are already doing on the platform, and to earn a share of the revenue that service generates every time a user engages with it.</p>
+      <p>The most underexploited layer in most <strong class="text-primary">marketplace revenue models</strong> is the affiliate or embedded-service layer — the ability to offer users access to a third-party service that is directly relevant to what they are already doing on the platform, and to resell that service at a price the platform sets itself.</p>
 
       <p>Affiliate revenue is structurally different from commission revenue in one important way: it is not contingent on the platform's core transaction. A commission model earns nothing when users are not transacting. An affiliate or embedded-service model can generate revenue on the same user base from an entirely separate activity — one that the platform enables but does not need to build itself.</p>
 
@@ -10127,7 +10127,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>The user completes a transaction.</p>
 
-      <p>The platform earns a percentage.</p>
+      <p>The platform sets the price it resells at.</p>
 
       <p>EV charging, when structured correctly, follows a similar logic without ever touching the price the driver sees.</p>
 
@@ -11487,7 +11487,7 @@ export const blogPosts: BlogPost[] = [
     published: true,
     metaTitle: "Charging-as-a-Service: Turn EV Charging Into Scalable Revenue | NetworkCore",
     metaDescription: "Charging-as-a-service is the infrastructure model that allows Distribution Partners to monetise EV charging without owning chargers or absorbing operational complexity.",
-    tags: ["charging-as-a-service", "ev charging", "distribution partners", "transaction infrastructure", "revenue sharing"],
+    tags: ["charging-as-a-service", "ev charging", "distribution partners", "transaction infrastructure", "wholesale"],
   },
   {
     slug: "ev-charging-margins",
@@ -12387,7 +12387,7 @@ export const blogPosts: BlogPost[] = [
     published: true,
     metaTitle: "EV Charging Monetisation: Strategic Opportunity for Demand Platforms | NetworkCore",
     metaDescription: "EV charging monetisation allows distribution platforms to embed charging free on public price, and to set their own margin on wholesale, without owning infrastructure.",
-    tags: ["EV charging monetisation", "distribution platforms", "revenue sharing", "business model", "mobility platforms", "transaction infrastructure"],
+    tags: ["EV charging monetisation", "distribution platforms", "wholesale", "business model", "mobility platforms", "transaction infrastructure"],
   },
   {
     slug: "charging-as-a-service-business-model",
@@ -12550,7 +12550,7 @@ export const blogPosts: BlogPost[] = [
     published: true,
     metaTitle: "Charging as a Service Business Model | NetworkCore",
     metaDescription: "How the charging as a service business model allows platforms to offer EV charging without owning infrastructure, free on public price or at a wholesale margin.",
-    tags: ["charging as a service", "business model", "EV charging", "distribution platforms", "revenue sharing", "mobility platforms"],
+    tags: ["charging as a service", "business model", "EV charging", "distribution platforms", "wholesale", "mobility platforms"],
   },
   {
     slug: "ev-charging-fx",
@@ -15156,7 +15156,7 @@ export const blogPosts: BlogPost[] = [
       <p>If OEMs embed charging through the right model, they can:</p>
 
       <ul>
-        <li>Earn a percentage of charging sessions</li>
+        <li>Buy at wholesale and set their own driver price</li>
         <li>Offer charging at public prices to preserve trust</li>
         <li>Provide unified billing inside the OEM account</li>
         <li>Deliver transparent cost tracking</li>
@@ -15276,6 +15276,7 @@ export const blogPosts: BlogPost[] = [
     category: "Automotive",
     author: "NetworkCore",
     publishedAt: "2026-02-11",
+    updatedAt: "2026-11-04",
     published: true,
     metaTitle: "EV Charging for Connected Cars: Why OEMs Should Own Demand | NetworkCore",
     metaDescription: "Discover why OEMs should focus on a demand-side strategy, not infrastructure ownership, when it comes to EV charging for connected cars.",
@@ -15613,7 +15614,7 @@ export const blogPosts: BlogPost[] = [
         <li>One integration</li>
         <li>Access to public charging networks</li>
         <li>Charging at public prices (no hidden markups)</li>
-        <li>Automated payment, revenue sharing, and settlement</li>
+        <li>Automated payment, allocation and settlement</li>
         <li>Wholesale monetisation on your own terms</li>
       </ul>
 
@@ -16362,7 +16363,7 @@ export const blogPosts: BlogPost[] = [
       <ul>
         <li>High frequency</li>
         <li>Physical relevance</li>
-        <li>Passive income</li>
+        <li>Free to offer, or priced on wholesale</li>
         <li>Trust alignment</li>
         <li>Ecosystem fit</li>
       </ul>
@@ -16561,8 +16562,8 @@ export const blogPosts: BlogPost[] = [
       <ul>
         <li>Users pay the public charging price</li>
         <li>NetworkCore handles settlement</li>
-        <li>The fintech earns a percentage of each charging session</li>
-        <li>Revenue scales with usage</li>
+        <li>Access is free to the fintech on public price</li>
+        <li>On wholesale the fintech sets its own price and keeps the margin</li>
       </ul>
 
       <p>There are no subscriptions, no upfront costs, and no need to push volume artificially. This is passive, usage-based income aligned with how fintechs already think about monetisation.</p>
@@ -16649,6 +16650,7 @@ export const blogPosts: BlogPost[] = [
     category: "Fintech",
     author: "NetworkCore Marketing Team",
     publishedAt: "2026-02-10",
+    updatedAt: "2026-11-04",
     published: true,
     metaTitle: "Embedded Services for Fintechs: Why EV Charging Is the Next High-Value Layer | NetworkCore",
     metaDescription: "Discover why EV charging is the next high-value embedded service for fintechs. Learn how to add EV charging to your platform without infrastructure ownership.",
