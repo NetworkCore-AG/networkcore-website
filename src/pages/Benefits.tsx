@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import DistributionPartnerPricing from "@/components/DistributionPartnerPricing";
+import ChargingPartnerPricing from "@/components/ChargingPartnerPricing";
 import { ArrowRight } from "lucide-react";
 
 const Benefits = () => {
@@ -145,6 +147,9 @@ const Benefits = () => {
               <p className="text-foreground text-lg font-light">Trust & transparency</p>
             </div>
           </div>
+          <div className="mt-16">
+            <DistributionPartnerPricing />
+          </div>
         </div>
       </section>
 
@@ -175,6 +180,9 @@ const Benefits = () => {
             <div className="bg-muted/30 rounded-2xl p-6 md:p-8 text-center">
               <p className="text-foreground text-lg font-light">MoR → omnichannel</p>
             </div>
+          </div>
+          <div className="mt-16">
+            <ChargingPartnerPricing />
           </div>
         </div>
       </section>

@@ -95,6 +95,28 @@ const TRANSLATIONS = {
         { hub: "Your tariff is marked up before the driver sees it", nc: "Your public price reaches the driver intact, no exclusivity, cancel any time" },
       ],
     },
+    pricing: {
+      title: "Two Ways to Price, Choose per Partner",
+      sub: "You decide how each Distribution Partner reaches your chargers. Run both at once if it suits you.",
+      cards: [
+        {
+          label: "Public tariff",
+          title: "The driver pays your price",
+          parties: ["You", "Driver"],
+          points: ["Your price, passed through unchanged", "You stay merchant of record", "Invoicing, tax and disputes handled for you"],
+          paidLabel: "How we are paid",
+          paid: "One agreed commission on the sessions we bring you.",
+        },
+        {
+          label: "Wholesale tariff",
+          title: "You receive your price in full",
+          parties: ["You", "Partner", "Driver"],
+          points: ["All of the wholesale rate you set", "The partner prices the driver and carries the invoice", "Opens partners who only buy wholesale"],
+          paidLabel: "How we are paid",
+          paid: "You pay nothing. We are paid by the Distribution Partner.",
+        },
+      ],
+    },
     form: {
       title: "Reserve Your Spot",
       sub: "Join the First Wave for Your Country",
@@ -181,6 +203,28 @@ const TRANSLATIONS = {
         { hub: "Tu tarifa se marca antes de que el conductor la vea", nc: "Tu precio público llega íntegro al conductor, sin exclusividad, cancela cuando quieras" },
       ],
     },
+    pricing: {
+      title: "Dos Formas de Fijar Precio, Elige por Socio",
+      sub: "Tú decides cómo llega cada Socio de Distribución a tus cargadores. Usa ambas a la vez si te conviene.",
+      cards: [
+        {
+          label: "Tarifa pública",
+          title: "El conductor paga tu precio",
+          parties: ["Tú", "Conductor"],
+          points: ["Tu precio, trasladado sin cambios", "Sigues siendo el comercio registrado", "Facturación, impuestos y disputas gestionados por nosotros"],
+          paidLabel: "Cómo cobramos",
+          paid: "Una comisión acordada sobre las sesiones que te traemos.",
+        },
+        {
+          label: "Tarifa mayorista",
+          title: "Recibes tu precio íntegro",
+          parties: ["Tú", "Socio", "Conductor"],
+          points: ["Todo el precio mayorista que tú fijas", "El socio fija el precio al conductor y emite la factura", "Abre socios que solo compran al por mayor"],
+          paidLabel: "Cómo cobramos",
+          paid: "No pagas nada. Nos paga el Socio de Distribución.",
+        },
+      ],
+    },
     form: {
       title: "Reserva Tu Lugar",
       sub: "Únete a la Primera Ola para Tu País",
@@ -265,6 +309,28 @@ const TRANSLATIONS = {
         { hub: "Liquidação roda pelos seus ciclos bancários existentes", nc: "Liquidação rápida, cada sessão, cada moeda" },
         { hub: "Conformidade e impostos continuam sendo seu problema", nc: "NF-e, CFDI, FX, chargebacks tratados na camada de liquidação" },
         { hub: "Sua tarifa é remarcada antes de o motorista vê-la", nc: "Seu preço público chega íntegro ao motorista, sem exclusividade, cancele quando quiser" },
+      ],
+    },
+    pricing: {
+      title: "Duas Formas de Precificar, Escolha por Parceiro",
+      sub: "Você decide como cada Parceiro de Distribuição chega aos seus carregadores. Use as duas ao mesmo tempo se fizer sentido.",
+      cards: [
+        {
+          label: "Tarifa pública",
+          title: "O motorista paga o seu preço",
+          parties: ["Você", "Motorista"],
+          points: ["Seu preço, repassado sem alterações", "Você continua sendo o comerciante registrado", "Faturamento, impostos e disputas tratados por nós"],
+          paidLabel: "Como somos pagos",
+          paid: "Uma comissão acordada sobre as sessões que levamos até você.",
+        },
+        {
+          label: "Tarifa de atacado",
+          title: "Você recebe seu preço integralmente",
+          parties: ["Você", "Parceiro", "Motorista"],
+          points: ["Todo o preço de atacado que você define", "O parceiro define o preço ao motorista e emite a fatura", "Abre parceiros que só compram no atacado"],
+          paidLabel: "Como somos pagos",
+          paid: "Você não paga nada. Quem nos paga é o Parceiro de Distribuição.",
+        },
       ],
     },
     form: {
@@ -485,8 +551,53 @@ const LatamFirstWave = () => {
         </div>
       </section>
 
-      {/* The First-Wave Program */}
+      {/* Two ways to price */}
       <section className="py-20 bg-muted/30">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 tracking-tight">
+              {t.pricing.title}
+            </h2>
+            <p className="text-lg text-muted-foreground font-light max-w-3xl mx-auto">
+              {t.pricing.sub}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {t.pricing.cards.map((card, idx) => (
+              <article
+                key={card.label}
+                className={`flex min-w-0 flex-col rounded-2xl border p-6 sm:p-7 text-left ${idx === 0 ? "border-foreground/30 bg-card" : "border-border/50 bg-card/30"}`}
+              >
+                <p className="mb-3 text-sm font-medium uppercase text-foreground/60">{card.label}</p>
+                <h3 className="mb-5 text-2xl font-light leading-tight text-foreground md:min-h-14">{card.title}</h3>
+                <div className="mb-5 flex min-w-0 items-center gap-2" aria-label={card.parties.join(" → ")}>
+                  {card.parties.map((party, partyIndex) => (
+                    <div key={party} className={`flex items-center gap-2 ${partyIndex === 0 ? "flex-1" : ""}`}>
+                      <span className={`shrink-0 rounded-full px-3 py-1 text-sm font-medium ${partyIndex === 0 ? "bg-foreground/10 text-foreground" : "bg-foreground text-background"}`}>{party}</span>
+                      {partyIndex < card.parties.length - 1 && <span className="h-0.5 min-w-3 flex-1 bg-foreground" aria-hidden="true" />}
+                    </div>
+                  ))}
+                </div>
+                <ul className="mb-6 space-y-3 text-base font-light leading-relaxed text-foreground">
+                  {card.points.map((p) => (
+                    <li key={p} className="flex items-start gap-2">
+                      <Check className="mt-1 h-4 w-4 shrink-0 text-foreground/60" aria-hidden="true" />
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto border-t border-border/50 pt-4">
+                  <p className="mb-2 text-sm font-medium uppercase text-muted-foreground">{card.paidLabel}</p>
+                  <p className="text-base font-light leading-relaxed text-foreground">{card.paid}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The First-Wave Program */}
+      <section className="py-20 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 tracking-tight">
@@ -520,7 +631,7 @@ const LatamFirstWave = () => {
       </section>
 
       {/* Markets */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted/30">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 tracking-tight">

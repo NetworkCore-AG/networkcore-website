@@ -63,7 +63,16 @@ const AboutUs = () => {
                 NetworkCore is the neutral pricing, routing, clearing, and settlement layer for public EV charging. One integration replaces a tangle of bilateral agreements, PSP setups, and manual reconciliation.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                On the supply side, CPOs and Private Hosts settle fast at the public price, with no subscription fees, no exclusivity, and no loss of pricing control. In time, individual hosts will join the network on the same terms, turning any space with a connection into a settled supply point.
+                There are two ways to buy and price on the network, and every partner chooses which one suits them, operator by operator.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                At public price, the driver pays the operator's exact tariff. Nothing is added on the way through. The operator stays merchant of record and we handle the invoicing, VAT and disputes behind it. For the Distribution Partner the whole network is free to reach, and we are paid an agreed commission from the charging side.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                At wholesale, the operator sets a rate per kWh and receives all of it. The Distribution Partner buys at that rate, sets its own price to the driver and keeps the difference, becoming merchant of record for those sessions. It is the route for partners who want to bundle charging, cap it, or sell it as part of something else, and we are paid an agreed commission on what they sell.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                On the supply side, CPOs and Private Hosts settle fast, with no subscription fees, no exclusivity, and no loss of pricing control. In time, individual hosts will join the network on the same terms, turning any space with a connection into a settled supply point.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 On the demand side, Distribution Partners (OEM apps, fleet platforms, wallets, neobanks, insurers, mobility super-apps) get simple access to public charging, with no roaming contracts to negotiate and no operational overhead to absorb.
