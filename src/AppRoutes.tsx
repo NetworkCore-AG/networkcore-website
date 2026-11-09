@@ -24,7 +24,6 @@ import EvChargingForInsuranceAndDriverServices from "./pages/EvChargingForInsura
 import EvChargingForPublicSectorMobility from "./pages/EvChargingForPublicSectorMobility";
 import EvChargingForEmployeeBenefits from "./pages/EvChargingForEmployeeBenefits";
 import EvChargingForTravelAndHospitality from "./pages/EvChargingForTravelAndHospitality";
-import ApiHub from "./pages/ApiHub";
 import SecurityCompliance from "./pages/SecurityCompliance";
 import WorkWithUs from "./pages/WorkWithUs";
 import Faqs from "./pages/Faqs";
@@ -96,8 +95,6 @@ export default function AppRoutes() {
         <Route path="/:lang/about" element={<Navigate to="/about-us" replace />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/:lang/about-us" element={<AboutUs />} />
-        <Route path="/api" element={<ApiHub />} />
-        <Route path="/:lang/api" element={<ApiHub />} />
         <Route path="/work-with-us" element={<WorkWithUs />} />
         <Route path="/:lang/work-with-us" element={<WorkWithUs />} />
         <Route path="/security-compliance" element={<SecurityCompliance />} />

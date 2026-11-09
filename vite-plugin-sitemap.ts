@@ -61,7 +61,6 @@ const ROUTE_TO_FILE: Record<string, string> = {
   "/charge-point-operators/latam-first-wave": "src/pages/LatamFirstWave.tsx",
   "/es/charge-point-operators/latam-first-wave": "src/pages/LatamFirstWave.tsx",
   "/pt/charge-point-operators/latam-first-wave": "src/pages/LatamFirstWave.tsx",
-  "/api": "src/pages/ApiHub.tsx",
   "/pricing": "src/pages/Pricing.tsx",
   "/blog": "src/pages/Blog.tsx",
   "/ev-roaming-hub-integration": "src/pages/EvRoamingHubIntegration.tsx",

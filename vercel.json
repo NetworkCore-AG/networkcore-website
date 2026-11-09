@@ -5,6 +5,10 @@
   "outputDirectory": "dist",
   "framework": null,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/api", "destination": "/products/just-charge", "permanent": true },
+    { "source": "/:lang/api", "destination": "/products/just-charge", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ],

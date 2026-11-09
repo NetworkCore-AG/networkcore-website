@@ -4,11 +4,16 @@ interface DistributionPartnerPricingProps {
   publicOnly?: boolean;
   title?: string;
   hideNote?: boolean;
+  /** Use 3 when the block sits inside a section that already has its own
+   *  heading, so the page keeps one heading per section. */
+  headingLevel?: 2 | 3;
 }
 
-const DistributionPartnerPricing = ({ publicOnly = false, title = "Two Ways to Buy & Price", hideNote = false }: DistributionPartnerPricingProps) => (
+const DistributionPartnerPricing = ({ publicOnly = false, title = "Two Ways to Buy & Price", hideNote = false, headingLevel = 2 }: DistributionPartnerPricingProps) => {
+  const Heading = headingLevel === 3 ? "h3" : "h2";
+  return (
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-center text-3xl font-light text-foreground tracking-tight md:text-4xl">{title}</h2>
+          <Heading className={`mb-8 text-center font-light text-foreground tracking-tight ${headingLevel === 3 ? "text-2xl md:text-3xl" : "text-3xl md:text-4xl"}`}>{title}</Heading>
           <div className={`grid gap-5 ${publicOnly ? "mx-auto max-w-xl" : "md:grid-cols-2"}`} aria-label={publicOnly ? "Public price" : "Public price and wholesale buying options"}>
             <article className="flex min-w-0 flex-col rounded-lg border border-border/60 bg-electric-green/5 p-6 text-left sm:p-7">
               <p className="mb-3 text-sm font-medium uppercase text-electric-green">Public price</p>
@@ -51,6 +56,7 @@ const DistributionPartnerPricing = ({ publicOnly = false, title = "Two Ways to B
           </div>
           {!publicOnly && !hideNote && <p className="mt-10 text-center text-lg font-light leading-relaxed text-foreground max-w-3xl mx-auto">Choose per operator, and run both at once if it suits you.</p>}
         </div>
-);
+  );
+};
 
 export default DistributionPartnerPricing;

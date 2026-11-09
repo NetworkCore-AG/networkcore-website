@@ -17,12 +17,21 @@ const tariffs = [
   },
 ];
 
-const ChargingPartnerPricing = () => (
+interface ChargingPartnerPricingProps {
+  title?: string;
+  /** Use 3 when the block sits inside a section that already has its own
+   *  heading, so the page keeps one heading per section. */
+  headingLevel?: 2 | 3;
+}
+
+const ChargingPartnerPricing = ({ title = "Two Ways to Price, Choose per Partner", headingLevel = 2 }: ChargingPartnerPricingProps) => {
+  const Heading = headingLevel === 3 ? "h3" : "h2";
+  return (
   <div className="partner-pricing mx-auto w-full max-w-4xl">
     <div className="mb-8 text-center">
-      <h2 className="text-3xl font-light leading-tight text-foreground md:text-4xl">
-        Two Ways to Price, Choose per Partner
-      </h2>
+      <Heading className={`font-light leading-tight text-foreground ${headingLevel === 3 ? "text-2xl md:text-3xl" : "text-3xl md:text-4xl"}`}>
+        {title}
+      </Heading>
     </div>
     <div className="grid gap-5 md:grid-cols-2" aria-label="Public and wholesale tariff comparison">
       {tariffs.map((tariff, index) => (
@@ -48,6 +57,7 @@ const ChargingPartnerPricing = () => (
       ))}
     </div>
   </div>
-);
+  );
+};
 
 export default ChargingPartnerPricing;

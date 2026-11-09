@@ -147,9 +147,11 @@ const Benefits = () => {
               <p className="text-foreground text-lg font-light">Trust & transparency</p>
             </div>
           </div>
-          <div className="mt-16">
-            <DistributionPartnerPricing />
-          </div>
+        </div>
+        {/* Outside the padded container: the component supplies its own
+            max-width and gutters, as it does on every other page. */}
+        <div className="mt-16">
+          <DistributionPartnerPricing title="Two ways to buy and price" headingLevel={3} />
         </div>
       </section>
 
@@ -182,7 +184,7 @@ const Benefits = () => {
             </div>
           </div>
           <div className="mt-16">
-            <ChargingPartnerPricing />
+            <ChargingPartnerPricing title="Two ways to price, choose per partner" headingLevel={3} />
           </div>
         </div>
       </section>

@@ -33,7 +33,6 @@ export const CORE_ROUTES: Array<{ path: string; changefreq: string; priority: st
   { path: "/the-network", changefreq: "monthly", priority: "0.8" },
   { path: "/about-us", changefreq: "monthly", priority: "0.7" },
   { path: "/work-with-us", changefreq: "monthly", priority: "0.6" },
-  { path: "/api", changefreq: "monthly", priority: "0.7" },
   { path: "/security-compliance", changefreq: "monthly", priority: "0.6" },
   { path: "/esg-policy", changefreq: "monthly", priority: "0.6" },
   { path: "/pricing", changefreq: "monthly", priority: "0.8" },
