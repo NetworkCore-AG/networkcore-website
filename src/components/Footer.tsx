@@ -21,7 +21,7 @@ const Footer = () => {
     { href: '/the-network', label: t('navigation.theNetwork', 'The Network') },
     { href: 'https://docs.networkcore.org/', label: 'API Documentation', external: true },
     { href: '/blog', label: t('navigation.blog', 'Blog') },
-    { href: 'https://hub.networkcore.org/partner/login', label: 'Sign In', external: true },
+    { href: 'https://partners.networkcore.org/login', label: 'Sign In', external: true },
     { href: '/#contact', label: t('navigation.contactUs', 'Contact Us') },
   ];
 
@@ -201,14 +201,12 @@ const Footer = () => {
                 <p className="mt-1 text-sm text-foreground/70">Create your partner account in minutes.</p>
               </div>
               <div className="sm:flex sm:justify-end">
-                <a
-                  href="https://hub.networkcore.org/partner/ui/#signup"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/#contact"
                   className="inline-flex h-11 items-center justify-center rounded-md bg-foreground px-8 text-sm font-semibold text-background transition-colors hover:bg-foreground/90 whitespace-nowrap"
                 >
                   Sign me up
-                </a>
+                </Link>
               </div>
             </div>
           </div>

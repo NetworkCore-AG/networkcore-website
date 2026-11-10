@@ -1,5 +1,6 @@
 import { useEffect, useRef, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import mapboxgl from "mapbox-gl";
@@ -149,14 +150,12 @@ const Platform = () => {
 
         {/* Centered Join the Network CTA overlay */}
         <div className="pointer-events-none absolute inset-x-0 bottom-6 md:bottom-10 z-10 flex justify-center">
-          <a
-            href="https://hub.networkcore.org/partner/ui/#signup"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/#contact"
             className="pointer-events-auto inline-flex items-center justify-center h-12 rounded-md px-10 bg-foreground text-background hover:bg-foreground/90 transition-colors text-base font-semibold shadow-lg"
           >
             Join the Network
-          </a>
+          </Link>
         </div>
       </section>
 

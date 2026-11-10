@@ -332,18 +332,6 @@ const Navigation = ({ lightHero = false }: { transparent?: boolean; lightHero?: 
                     : 'border-background text-background hover:bg-background hover:text-foreground'
               }`}
             >
-              <a href="https://hub.networkcore.org/partner/ui/#signup" target="_blank" rel="noopener noreferrer">Get Started</a>
-            </Button>
-            <Button
-              asChild
-              variant="ghost"
-              size="sm"
-              className={`font-medium transition-colors ${
-                darkText
-                    ? 'text-foreground hover:text-foreground/80 hover:bg-accent'
-                    : 'text-background hover:text-background/80 hover:bg-background/10'
-              }`}
-            >
               <Link to="/#contact">Contact Us</Link>
             </Button>
             {isLatamPage && (
@@ -447,14 +435,6 @@ const Navigation = ({ lightHero = false }: { transparent?: boolean; lightHero?: 
                   variant="ghost"
                   size="sm"
                   className="w-full justify-start border border-foreground text-lg font-medium text-foreground hover:bg-foreground hover:text-background"
-                >
-                  <a href="https://hub.networkcore.org/partner/ui/#signup" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Get Started</a>
-                </Button>
-                <Button
-                  asChild
-                  variant="ghost"
-                  size="sm"
-                  className="w-full justify-start text-lg font-medium text-foreground hover:bg-accent"
                 >
                   <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
                 </Button>
