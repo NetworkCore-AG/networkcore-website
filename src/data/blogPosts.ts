@@ -63,6 +63,185 @@ export const calculateReadingTime = (content: string): number => {
 // Add your blog posts here - newest first
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ev-charging-session-duration-trends",
+    title: "EV Charging Session Duration Trends: What Falling Charge Times Do to Site Economics",
+    excerpt: "The same energy takes 54 minutes at 50kW and 8 minutes at 350kW, and China is deploying 1,500kW. When sessions shorten, almost every assumption behind a charging site changes.",
+    content: `
+<p>The conclusion first: <strong class="text-primary">EV charging session duration trends</strong> point one way, and the consequences for site economics are larger than most operators have priced in. Delivering the same energy takes 54 minutes at 50kW and 8 minutes at 350kW, and China is now deploying chargers rated at 1,500kW. When sessions shorten, almost every assumption behind a charging site changes: how many bays you need, what your real constraint is, whether your retail attach rate survives, and what you are actually buying when you acquire a site. The regional picture is wildly uneven, which matters because the right answer in Shenzhen is the wrong answer in Nairobi. For operators planning new projects or evaluating acquisitions, the central question is no longer how many chargers to install. It is how long a session at this site will take in 2032, and what that implies about which parts of the asset appreciate and which depreciate.</p>
+
+
+<h2>The number that frames everything</h2>
+
+<p>Before the regional picture, the arithmetic that drives it. US data from 2026, covering a panel of 186,420 sessions, shows how long a typical charge takes at each power level:</p>
+
+<div class="overflow-x-auto my-8">
+  <table class="w-full border-collapse text-left text-sm md:text-base">
+    <thead>
+      <tr class="border-b border-border">
+        <th class="py-3 pr-4 font-semibold text-foreground">Charger power</th>
+        <th class="py-3 pr-4 font-semibold text-foreground">Typical session</th>
+        <th class="py-3 pr-4 font-semibold text-foreground">Range added</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">50 kW</td><td class="py-3 pr-4 text-foreground/80">54 minutes</td><td class="py-3 pr-4 text-foreground/80">24.7 miles</td></tr>
+      <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">100 kW</td><td class="py-3 pr-4 text-foreground/80">27 minutes</td><td class="py-3 pr-4 text-foreground/80">44.3 miles</td></tr>
+      <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">150 kW</td><td class="py-3 pr-4 text-foreground/80">18 minutes</td><td class="py-3 pr-4 text-foreground/80">61.2 miles</td></tr>
+      <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">250 kW</td><td class="py-3 pr-4 text-foreground/80">11 minutes</td><td class="py-3 pr-4 text-foreground/80">75.4 miles</td></tr>
+      <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">350 kW</td><td class="py-3 pr-4 text-foreground/80">8 minutes</td><td class="py-3 pr-4 text-foreground/80">88.0 miles</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>The mean US DC fast session currently runs 27 minutes and delivers 33.4 kWh, at an average of 48 cents per kWh.</p>
+
+<p>Read the table as a throughput statement rather than a convenience one. A 50kW bay running flat out serves a little over one vehicle an hour. A 350kW bay running flat out serves seven. The bay is the same piece of concrete. The business is seven times larger.</p>
+
+<p>Academic work supports the stability of the current baseline. Survival analysis across roughly 16 million US charging sessions found DC sessions clustering uniformly at 30 to 45 minutes regardless of time of day or venue, while Level 2 sessions varied enormously by location. DC duration has been a function of power and battery, not behaviour. Which means that when power rises, duration falls, predictably.</p>
+
+
+<h2>China: already in the megawatt era</h2>
+
+<p>China is not on the same curve as everyone else. It is on a different one.</p>
+
+<p>The scale is hard to overstate. China reached 21.01 million charging points by February 2026, roughly 67% of the world’s public charging infrastructure, up 47.8% year on year.</p>
+
+<p>On speed, BYD launched its second-generation Flash Charging system in March 2026, rated at 1,500kW and 1,500A per gun, claiming 10% to 70% in five minutes and 10% to 97% in nine. The first generation, at 1,000kW, arrived a year earlier. BYD counted 4,239 Flash Charging stations by March 2026 and targets 20,000 across China by the end of the year, with 6,000 more outside China beginning in Europe. The network is open to any vehicle with a 1,000V architecture, not only BYD’s own.</p>
+
+<p>Others are pushing just as hard. Zeekr has disclosed a 1.2MW charger. Huawei has announced a 1.5MW system for trucks delivering 2,400A and up to 20 kWh per minute. CATL claims a battery going from 10% to 80% in three minutes and 44 seconds.</p>
+
+<p>The architectural detail matters more than the headline wattage. Each BYD Flash Charging station pairs the charger with stationary battery storage, which charges slowly from the grid and discharges fast into vehicles. BYD claims this lifts grid utilisation at a site from roughly 5% to 95%. That decoupling of peak delivery from grid connection is the single most important engineering idea in the whole global picture, and it recurs below in a completely different context.</p>
+
+<p>On throughput, BYD’s own figures assume a station serving 200 to 300 vehicles a day, with a single gun averaging around 50. Compare that with a 50kW bay managing perhaps a dozen.</p>
+
+
+<h2>Europe: fast, uneven, and slower in practice than the headlines</h2>
+
+<p>Europe is the most regulated market and the second fastest, but with a wide gap between its showcase corridors and its everyday charging.</p>
+
+<p>The <a href="https://www.iea.org/reports/global-ev-outlook-2025/electric-vehicle-charging" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">IEA reported Europe</a> ending 2024 with more than 77,000 ultra-fast chargers, up 60% on 2023, with around 20% of those delivering 350kW and above. Ultra-fast capacity has more than doubled since 2022, with Denmark’s stock more than doubling in a single year and France, Finland and Germany adding between 70% and 95%.</p>
+
+<p>At the top end, power keeps climbing. IONITY is deploying Alpitronic HYC1000 systems capable of up to 600kW and has moved into urban sites as well as motorways, having doubled its UK network three years running to operate around a third of all UK 350kW-plus chargers. The Spark Alliance, pooling IONITY, Fastned, Atlante and Electra, covers more than 1,700 stations and 11,000 stalls.</p>
+
+<p>But the everyday picture is slower. Most urban charging in Europe still runs on 50 to 150kW DC or 11 to 22kW AC, and utilisation at 350kW sites remains low outside highway corridors. Europe’s own travel patterns explain why: average daily driving distance is under 50 kilometres, so most charging does not need to be fast.</p>
+
+<p>That split is the crucial European insight. The continent is simultaneously building eight-minute corridor charging and depending on multi-hour destination charging, and the two have completely different economics.</p>
+
+
+<h2>North America: scale without speed</h2>
+
+<p>The United States has volume and a slower average profile.</p>
+
+<p>As of June 2026 there were 312,486 public charging ports, of which 84,458, or 27%, were DC fast. The mean DC session runs 27 minutes for 33.4 kWh. Average DC pricing sits at 48 cents per kWh against 11.8 cents for home charging on an EV rate plan, a spread that keeps most routine charging at home and pushes public DC toward longer journeys.</p>
+
+<p>Session behaviour is strongly seasonal in a way operators underweight. The same dataset records mean waiting time at DC sites rising from around eight minutes typically to 28 minutes on Independence Day weekend and 41 minutes on the Sunday after Thanksgiving. Capacity planning built on annual averages will fail on exactly the days that define a site’s reputation, and what a bad day costs is set out in <a href="/blog/ev-charger-downtime-cost" class="text-primary underline hover:no-underline">EV Charger Downtime Cost</a>.</p>
+
+
+<h2>Russia: fast share high, power ceiling low</h2>
+
+<p>Russia is an instructive outlier, because its charging mix skews toward DC for reasons that have nothing to do with technology leadership.</p>
+
+<p>By the end of the first quarter of 2026, Russia had 9,889 public charging points, having added 305 in the quarter, with DC stations outnumbering AC by 51% to 49% and fast chargers reaching 5,004 units. Station numbers grew around 20% in the year to July 2026. Electric and plug-in hybrid vehicles accounted for 4.3% of car sales, with the combined fleet forecast to reach about 175,000 units in 2026, up from 117,500 at the start of 2025.</p>
+
+<p>The DC skew reflects geography. Vast distances and a harsh climate make destination AC charging less useful and corridor DC charging essential, and cold weather itself lengthens sessions by reducing acceptable charge rates.</p>
+
+<p>The power ceiling, however, is modest. From March 2026, new filling stations must provide DC fast charging of at least 44kW, a threshold far below European norms. Flagship corridor projects on the M-11 combine 150 to 210kW fast units with 22kW units for longer stops, with backup capacity for outages. The state target is 72,000 charging stations by 2030, including 28,000 fast chargers.</p>
+
+<p>So Russia is adding DC quickly at power levels that imply 30 to 50 minute sessions, not eight minute ones.</p>
+
+
+<h2>Latin America: early, scarce, and concentrated</h2>
+
+<p>Latin America sits at an earlier stage, where the binding constraint is the existence of public charging at all rather than its speed. The regional picture is covered in <a href="/blog/roaming-hub-latam" class="text-primary underline hover:no-underline">Roaming Hub LATAM</a>.</p>
+
+<p>Colombia illustrates the pattern. Despite registering 39,784 new electric vehicles through September 2026, growth of over 217%, the country has roughly 520 public charging points, around one for every 337 electric vehicles, with the large majority concentrated in Bogotá (more in <a href="/blog/roaming-hub-colombia" class="text-primary underline hover:no-underline">Roaming Hub Colombia</a>). Mexico shows similar asymmetry, with public points numbering only a few thousand and the overwhelming majority of charging infrastructure private (see <a href="/blog/roaming-hub-mexico" class="text-primary underline hover:no-underline">Roaming Hub Mexico</a>).</p>
+
+<p>For the region the session duration question is largely academic today. When a driver’s realistic choice is one charger or none, the speed of that charger is a secondary concern. But the sequencing matters: the infrastructure being specified now will still be operating when the regional vehicle fleet has 800V architectures, which makes the power specification decision consequential well before the demand arrives.</p>
+
+
+<h2>Africa: the grid is the constraint, not the vehicle</h2>
+
+<p>Africa’s picture is the clearest demonstration that session duration is not primarily a vehicle question.</p>
+
+<p>The market is small but inflecting. The IEA records around 25,000 new electric cars sold across Africa in 2025, against roughly 4,000 in 2023. South Africa leads with somewhere between 316 and 450 public charging points depending on the count, with GridCars operating over 350 AC and DC points and more than 70% of publicly operated infrastructure. Typical deployments run at modest power: Eskom’s pilot with GridCars used 60kW DC and 22kW AC units. Morocco operates roughly 1,000 stations concentrated in Casablanca, Rabat and Tangier, and saw its first 360kW ultra-fast station only in January 2026. Ghana had around seven public charging stations against an estimated 17,000 electric vehicles. Kenya’s National E-Mobility Policy, launched in February 2026, requires at least 5% of parking spaces in new commercial developments to be allocated to charging, paired with an off-peak electricity tariff.</p>
+
+<p>Investment is arriving. Audi announced 70 fast 150kW stations across 33 South African locations in January 2026, and BYD has signalled 200 to 300 public chargers in the country.</p>
+
+<p>The defining constraint is the grid. South Africa’s load shedding has pushed operators toward off-grid solutions, with CHARGE launching a solar and battery powered station on the Johannesburg to Durban N3 corridor in May 2026, and Zero Carbon Charge building out off-grid sites.</p>
+
+<p>Note what that means. Africa and China have arrived at the same architecture from opposite directions. China buffers with batteries to deliver megawatt peaks a grid connection could never supply. Africa buffers with batteries and solar to deliver any reliable power at all. In both cases the storage, not the grid connection, becomes the thing that determines how fast a session can be.</p>
+
+
+<h2>What is actually changing</h2>
+
+<p>Five structural shifts follow from falling session durations.</p>
+
+<p><strong>1. Throughput replaces utilisation as the metric.</strong> Time-based utilisation becomes actively misleading as power rises. A 50kW bay occupied 80% of the time and a 350kW bay occupied 80% of the time are not comparable businesses. The right measure is vehicles served and energy delivered per bay per day, which is why BYD talks about 50 vehicles per gun rather than hours of occupancy. Operators still reporting utilisation as a percentage of time are measuring the wrong thing.</p>
+
+<p><strong>2. Capital shifts from bays to power.</strong> If each bay serves several times more vehicles, you need fewer bays for the same volume, but each one needs far more power behind it. The cost centre migrates from connectors and concrete toward transformers, switchgear, cabling and storage. A site plan optimised for bay count rather than delivered kilowatts is solving the previous decade’s problem.</p>
+
+<p><strong>3. Storage becomes standard rather than exotic.</strong> Battery buffering is now the mainstream answer to the mismatch between what a grid connection supplies and what a vehicle can accept, deployed at the top of the market in China and at the bottom of the market in Africa for different reasons. Any site specification that assumes grid connection capacity equals charging capacity is likely to be wrong.</p>
+
+<p><strong>4. Dwell-time business models come under pressure.</strong> A great deal of charging site economics, from <a href="/blog/ev-charging-for-retailers" class="text-primary underline hover:no-underline">convenience retail</a> to dedicated amenity operators, was built on drivers being stationary for 20 to 45 minutes. At eight minutes there is no time to buy a coffee, let alone a meal. Retail attach rates fall as session times fall, and the amenity-funded site model needs rethinking in high-power locations even as it remains sound in <a href="/private-hosts" class="text-primary underline hover:no-underline">destination and overnight ones</a>. Conversely, idle and congestion fees become far more important, because when a session takes eight minutes, a car left plugged in for forty destroys the throughput the whole site was designed around.</p>
+
+<p><strong>5. Slow DC assets face obsolescence, not just lower returns.</strong> A 50kW DC charger has a decade of physical life ahead of it and will spend that decade next to competitors doing the same job in a sixth of the time. Drivers will choose the fast one. The risk is not that the slow asset earns less. It is that it stops being chosen at all.</p>
+
+
+<h2>The questions to ask when developing a new site</h2>
+
+<p>EV charging session duration trends should reshape the development brief. The questions worth forcing into every project:</p>
+
+<ul>
+<li><strong>What power per bay, and what is the upgrade path?</strong> Not just what we install now, but what the cabling, switchgear and civil works allow us to install in year six without re-trenching.</li>
+<li><strong>How many bays do we actually need?</strong> Sized on throughput at the planned power level, not on bay counts carried over from slower assumptions.</li>
+<li><strong>What is our real power constraint, and should we buffer rather than upgrade?</strong> A grid connection upgrade and a battery system solve the same problem at very different costs and timelines.</li>
+<li><strong>What vehicles will use this site in year five?</strong> The share of 800V and 1,000V architectures in the local fleet determines whether high-power investment is earning or idling.</li>
+<li><strong>Is this site’s value in the charging or the dwell?</strong> If the commercial case depends on retail or amenity spend, faster charging actively works against it, and the site may be better specified at moderate power with a longer dwell proposition.</li>
+<li><strong>What does our idle and congestion policy need to be?</strong> At high throughput this stops being a nicety and becomes central to site economics.</li>
+<li><strong>Are we specifying for this market or importing a specification?</strong> A 350kW brief is right for a German corridor and wrong for a Kenyan one where neither the grid nor the fleet can use it.</li>
+</ul>
+
+
+<h2>The questions to ask when acquiring</h2>
+
+<p>Acquisitions are where falling session durations do the most damage to valuations, in both directions. A first pass on returns can be run with the <a href="/blog/ev-charging-roi-calculator" class="text-primary underline hover:no-underline">EV Charging ROI Calculator</a>.</p>
+
+<ul>
+<li><strong>What is the power profile of the installed base, and what would upgrading cost?</strong> A portfolio of 50kW units is not a portfolio of DC fast chargers in any forward-looking sense.</li>
+<li><strong>Is the revenue priced on today’s session duration or tomorrow’s?</strong> A site valued on 45-minute sessions may be mispriced either way: too high if its hardware will be outclassed, too low if its connection can support six times the throughput.</li>
+<li><strong>What is the grid connection capacity, and is that the actual asset?</strong> This is the most commonly mispriced item in charging acquisitions. Hardware depreciates and will be replaced. Land and grid connection capacity do not, and in constrained markets a large existing connection is extremely difficult to replicate. In a world of falling session durations, the connection and the land appreciate while the hardware depreciates. Price them separately.</li>
+<li><strong>How dwell-dependent is the revenue?</strong> If retail or amenity income is material, faster charging is a threat to it, not an enhancement.</li>
+<li><strong>What is the remaining economic life of the hardware, as distinct from its physical life?</strong> These are now very different numbers.</li>
+<li><strong>What is the throughput per bay per day, and how does it vary seasonally?</strong> Annual averages conceal the peak days that determine both reputation and capacity adequacy.</li>
+</ul>
+
+
+<h2>One thing that does not change</h2>
+
+<p>Throughput capacity is not throughput. A bay capable of serving 50 vehicles a day earns nothing from the 40 slots nobody fills, and higher-power sites are more exposed to this, not less, because they carry more fixed cost per bay. As session durations fall, the gap between a site’s theoretical capacity and its actual delivered volume widens, and demand becomes the binding constraint rather than time.</p>
+
+<p>Which is to say that the faster the industry gets, the more the old question matters. Being discoverable and reachable by every driver on every platform determines whether expensive high-power capacity earns or idles, which is what <a href="/products/network-access" class="text-primary underline hover:no-underline">Network Access</a> gives <a href="/charging-partners" class="text-primary underline hover:no-underline">Charging Partners</a>: one connection to the <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partners</a> who already own the drivers. That is covered in <a href="/blog/ev-charger-utilisation-rate" class="text-primary underline hover:no-underline">EV Charger Utilisation Rate</a>, and the pricing levers for managing turnover in <a href="/blog/time-of-use-pricing-ev-charging" class="text-primary underline hover:no-underline">Time of Use Pricing EV Charging</a>.</p>
+
+
+<h2>The position</h2>
+
+<p>EV charging session duration trends are not a single global trend. They are at least four, running at different speeds. China is in the megawatt era with battery-buffered sites serving hundreds of vehicles a day. Europe is building eight-minute corridors on top of a largely slower everyday network. North America has scale at moderate power with sharp seasonal peaks. Russia is adding DC at modest power across enormous distances. Latin America is still establishing whether public charging exists. Africa is solving for grid reliability before speed, and inventing architectures the rest of the world will borrow.</p>
+
+<p>What unites them is the direction. Power per bay is rising everywhere, and where power rises, duration falls, and when duration falls the economics of a site invert. Throughput replaces utilisation. Power replaces bays. Storage replaces grid upgrades. Dwell-based revenue weakens. And the grid connection quietly becomes the most valuable thing on the site.</p>
+
+<p>Operators specifying projects or pricing acquisitions on the session durations of the last five years are making a bet they may not realise they have placed.</p>
+
+    `,
+    featuredImage: "/images/blog/ev-charging-session-duration-trends.jpg",
+    category: "Charge Point Operators",
+    author: "NetworkCore Team",
+    publishedAt: "2026-11-10",
+    published: true,
+    metaTitle: "EV Charging Session Duration Trends and Site Economics",
+    metaDescription: "Falling charge times change bay counts, power, storage, retail dwell and acquisition value. A region-by-region look at EV charging session duration trends.",
+    tags: ["EV charging session duration trends", "ultra-fast charging", "site economics", "charge point operators", "battery storage"],
+  },
+  {
     slug: "post-paid-ev-charging",
     title: "Post-Paid EV Charging: Someone Has to Trust the Driver, and the Operator Has to Be Paid Regardless",
     excerpt: "Plug in, charge, pay afterwards for what you used. No hold, no reserved funds. It works on an open network only when someone trusts the driver and the operator is paid regardless.",
