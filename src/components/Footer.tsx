@@ -191,14 +191,13 @@ const Footer = () => {
 
         {/* Join + Social row */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-5 mb-6 border-b border-border">
-          <div className="relative isolate min-h-[96px] border-border py-4 sm:min-h-[104px] sm:px-2 lg:min-h-[112px] lg:col-span-3 lg:border-r lg:py-2 lg:pr-10">
-            <div className="footer-globe-fade pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">
+          <div className="relative isolate min-h-[64px] border-border py-3 sm:min-h-[68px] sm:px-2 lg:min-h-[72px] lg:col-span-3 lg:border-r lg:py-1 lg:pr-10">
+            <div className="footer-globe-fade pointer-events-none absolute left-1/2 top-[48px] -z-10 -translate-x-1/2 -translate-y-1/2 sm:top-[52px] lg:top-[56px]" aria-hidden="true">
               <FooterGlobe className="w-[380px] sm:w-[520px] lg:w-[680px]" />
             </div>
             <div className="relative grid h-full items-center gap-4 sm:grid-cols-2">
               <div>
                 <p className="text-lg font-semibold text-foreground md:text-xl">Ready to join the network?</p>
-                <p className="mt-1 text-sm text-foreground/70">Create your partner account in minutes.</p>
               </div>
               <div className="sm:flex sm:justify-end">
                 <Link
