@@ -63,6 +63,168 @@ export const calculateReadingTime = (content: string): number => {
 // Add your blog posts here - newest first
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ev-charging-payment-methods",
+    title: "EV Charging Payment Methods: Why Every One Is an Answer to the Same Question",
+    excerpt: "There are eight EV charging payment methods in use, usually presented as a menu of technologies. They are really a ladder: every one is an answer to how much the system knows about the driver at the moment they plug in.",
+    content: `
+      <p>The conclusion first: there are now eight distinct <strong class="text-primary">EV charging payment methods</strong> in use, from contactless at the terminal to funded allowances where the driver pays nothing at all. They are usually presented as a menu of technologies, which obscures what is actually going on. Every one of them is an answer to a single question: how much does the system know about this driver at the moment they plug in? When the answer is nothing, the system compensates by demanding friction and collateral, which is why anonymous methods come with card entry, holds on funds and higher decline rates. When the answer is a great deal, the friction disappears and the driver simply charges. Ranked that way, the eight methods form a ladder rather than a list, and knowing where you sit on it tells you more about your driver experience than any feature comparison.</p>
+
+      <h2>The question behind every method</h2>
+
+      <p>Start with the thing that makes charging payments unlike almost any other retail transaction.</p>
+
+      <p>A charging session is card-not-present, unattended, open-ended and irreversible. Nobody checks the driver. Nobody knows in advance how much energy they will take. And once electricity is in the battery, it cannot be recovered. Someone has to be exposed to the gap between delivering the energy and being paid for it. The full architecture beneath that is set out in <a href="/blog/ev-charging-payments-explained" class="text-primary underline hover:no-underline">EV Charging Payments Explained</a>.</p>
+
+      <p>Every payment method is a different way of closing that gap. The two levers available are identity and collateral, and they trade against each other. A system that knows who the driver is can afford to deliver first and collect afterwards. A system that knows nothing has to collect first, verify first, or hold funds first, which is friction the driver experiences directly.</p>
+
+      <p>That is why <strong class="text-primary">EV charging payment methods</strong> sort so cleanly. Arrange them by how much the system knows, and the friction falls away in the same order.</p>
+
+      <h2>The eight methods, from least known to most</h2>
+
+      <h3>1. Contactless card at the terminal</h3>
+
+      <p>The driver taps a bank card on a reader at the charger.</p>
+
+      <p><strong class="text-primary">What the system knows:</strong> almost nothing. A card number and nothing else.</p>
+
+      <p><strong class="text-primary">Where it works:</strong> regulatory mandates have made this increasingly common on new fast chargers, particularly in Europe, and it is genuinely valuable as a universal fallback. Any driver, any vehicle, no prerequisites.</p>
+
+      <p><strong class="text-primary">The cost:</strong> a pre-authorisation hold, often large, because the system is exposed to a complete stranger. Published hold amounts across major networks run from roughly $30 to $60, and some markets have seen operators attempt considerably more. The driver's money is reserved before any energy flows, and released by their bank days later. It is also the method most exposed to card-not-present fraud, because there is no identity signal beyond the card itself, which is the problem <a href="/blog/ev-charging-fraud-detection" class="text-primary underline hover:no-underline">EV Charging Fraud Detection</a> deals with.</p>
+
+      <h3>2. QR code or link, card entered at the point of use</h3>
+
+      <p>The driver scans a code or opens a link, enters card details and charges. No app, no account.</p>
+
+      <p><strong class="text-primary">What the system knows:</strong> nothing about the person, but something useful about the context: which exact connector, at which site, at what moment.</p>
+
+      <p><strong class="text-primary">Where it works:</strong> this is the fastest possible route to market for any platform that wants to offer charging without building anything. NetworkCore's <a href="/products/charging-links" class="text-primary underline hover:no-underline">Charging Links</a> work this way, with a permanent link per connector that can be dropped into an app, an email, a booking confirmation or a support reply, live the same day with no integration.</p>
+
+      <p><strong class="text-primary">The cost:</strong> the same exposure as the terminal, since there is no account history to draw on. The honest trade is speed of deployment against identity signal, and for a pilot or a first entry into charging, that is usually the right trade to make.</p>
+
+      <h3>3. RFID card or fob</h3>
+
+      <p>The driver presents a physical token issued by a network or mobility provider.</p>
+
+      <p><strong class="text-primary">What the system knows:</strong> which account the token belongs to, which is a genuine improvement.</p>
+
+      <p><strong class="text-primary">Where it works:</strong> the original model for public charging, still widespread, particularly in Europe where drivers accumulate them. <a href="https://www.shell.com/what-we-do/mobility/mobility-news/shell-recharge-driver-survey-2026.html" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">Shell's European driver survey</a> has repeatedly found a substantial share of drivers carrying four or more charge cards.</p>
+
+      <p><strong class="text-primary">The cost:</strong> the token has to be issued, posted and carried, it only works where that network is accepted, and losing it means losing access. It solves identity at the price of logistics.</p>
+
+      <h3>4. App with a stored payment method</h3>
+
+      <p>The driver opens a charging app, selects a charger and starts a session against a card on file.</p>
+
+      <p><strong class="text-primary">What the system knows:</strong> the account, the payment method, and some history.</p>
+
+      <p><strong class="text-primary">Where it works:</strong> the dominant model today, and a reasonable one.</p>
+
+      <p><strong class="text-primary">The cost:</strong> the app. Drivers accumulate them and resent them. Surveys of EV drivers consistently find a large majority have been forced to download a new app at the charge point in order to pay, with only a small minority using a single payment method consistently. Pre-authorisation holds usually still apply, because the app operator carries the exposure.</p>
+
+      <h3>5. One tap, pre-authenticated</h3>
+
+      <p>The driver opens a product they already use, their car's own system, their bank, their fleet platform, and presses Start. Identity and payment travel with them.</p>
+
+      <p><strong class="text-primary">What the system knows:</strong> everything that matters. Who the driver is, how they pay, their history, often the vehicle.</p>
+
+      <p><strong class="text-primary">Where it works:</strong> this is what Tesla has effectively done for years inside its own network, and what any <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partner</a> can now offer across an open network. Because the driver was identified long before they arrived at the charger, there is nothing to establish at the charger. It suits <a href="/distribution-partners/ev-charging-for-oems" class="text-primary underline hover:no-underline">automakers</a>, <a href="/distribution-partners/ev-charging-for-financial-platforms" class="text-primary underline hover:no-underline">banks and wallets</a> and <a href="/distribution-partners/public-ev-charging-for-fleets" class="text-primary underline hover:no-underline">fleet platforms</a> alike.</p>
+
+      <p><strong class="text-primary">The cost:</strong> essentially none to the driver. The requirement sits upstream: a platform that already owns the customer relationship. The full argument is in <a href="/blog/one-tap-ev-charging" class="text-primary underline hover:no-underline">One Tap EV Charging</a>.</p>
+
+      <h3>6. Post-paid</h3>
+
+      <p>The driver charges and pays afterwards for exactly what they used. No hold at all.</p>
+
+      <p><strong class="text-primary">What the system knows:</strong> enough to extend credit, because somebody in the chain is willing to stand behind this driver.</p>
+
+      <p><strong class="text-primary">Where it works:</strong> where the trust can be placed deliberately rather than assumed. That trust can sit with the Distribution Partner, which often has verified identity and payment history, with NetworkCore, or with a prepaid balance that removes the credit question altogether.</p>
+
+      <p><strong class="text-primary">The cost:</strong> the credit exposure has to be held by someone, and non-payment needs a real consequence, which in practice means a block across the whole network rather than at one operator. Crucially, the <a href="/charging-partners" class="text-primary underline hover:no-underline">Charging Partner</a> is insulated from all of it: a completed session with a successful Charge Detail Record is paid regardless. The detail is in <a href="/blog/post-paid-ev-charging" class="text-primary underline hover:no-underline">Post-Paid EV Charging</a>.</p>
+
+      <h3>7. Prepaid wallet</h3>
+
+      <p>The driver holds a balance that charging draws down.</p>
+
+      <p><strong class="text-primary">What the system knows:</strong> it does not need to know much, because the money is already there.</p>
+
+      <p><strong class="text-primary">Where it works:</strong> markets with lower card penetration, drivers who prefer to cap spending, and any context where extending credit is awkward. It achieves the no-hold experience by a completely different route from post-paid.</p>
+
+      <p><strong class="text-primary">The cost:</strong> funds sit idle, and the driver has to top up. It trades the credit question for a funding question.</p>
+
+      <h3>8. Funded allowance</h3>
+
+      <p>The driver pays nothing. Charging is funded by a platform, by a charging operator, or by both.</p>
+
+      <p><strong class="text-primary">What the system knows:</strong> who the allowance belongs to and what it may be spent on.</p>
+
+      <p><strong class="text-primary">Where it works:</strong> the hardest moment in a driver's charging life is the first public session, and this removes the payment question from it entirely. NetworkCore's <a href="/products/charge-pack" class="text-primary underline hover:no-underline">Charge Pack</a> can be scoped by value, cohort, operator, region, site type and hours, with nothing held in advance and funding only on redemption.</p>
+
+      <p><strong class="text-primary">The cost:</strong> not a card-fraud problem but a redemption-abuse one, and it is a marketing spend rather than a payment rail. It is a way of buying a habit, not a permanent method.</p>
+
+      <p><strong class="text-primary">A note on Plug and Charge.</strong> ISO 15118 Plug and Charge is often listed alongside these, but it is not really a payment method. It is an authentication method, where the vehicle identifies itself by certificate. Payment still has to be settled behind it by one of the methods above. It sits near the top of the knowledge ladder because the vehicle is known, which is why the experience feels similar to one tap.</p>
+
+      <h2>The ladder, at a glance</h2>
+
+      <table class="w-full border-collapse text-left text-sm md:text-base">
+        <thead>
+          <tr class="border-b border-border">
+            <th class="py-3 pr-4 font-semibold text-foreground">Method</th>
+            <th class="py-3 pr-4 font-semibold text-foreground">What the system knows</th>
+            <th class="py-3 pr-4 font-semibold text-foreground">Hold required</th>
+            <th class="py-3 pr-4 font-semibold text-foreground">Driver friction</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">Contactless at terminal</td><td class="py-3 pr-4 text-foreground/80">Card only</td><td class="py-3 pr-4 text-foreground/80">Yes, typically large</td><td class="py-3 pr-4 text-foreground/80">Low to start, money held</td></tr>
+          <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">QR or link</td><td class="py-3 pr-4 text-foreground/80">Card plus context</td><td class="py-3 pr-4 text-foreground/80">Yes</td><td class="py-3 pr-4 text-foreground/80">Very low to start, money held</td></tr>
+          <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">RFID token</td><td class="py-3 pr-4 text-foreground/80">Account</td><td class="py-3 pr-4 text-foreground/80">Sometimes</td><td class="py-3 pr-4 text-foreground/80">Must carry the token</td></tr>
+          <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">App with stored card</td><td class="py-3 pr-4 text-foreground/80">Account, card, history</td><td class="py-3 pr-4 text-foreground/80">Usually</td><td class="py-3 pr-4 text-foreground/80">Must download and register</td></tr>
+          <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">One tap</td><td class="py-3 pr-4 text-foreground/80">Identity, payment, history</td><td class="py-3 pr-4 text-foreground/80">Reduced or none</td><td class="py-3 pr-4 text-foreground/80">None at the charger</td></tr>
+          <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">Post-paid</td><td class="py-3 pr-4 text-foreground/80">Enough to extend credit</td><td class="py-3 pr-4 text-foreground/80">None</td><td class="py-3 pr-4 text-foreground/80">None</td></tr>
+          <tr class="border-b border-border/50"><td class="py-3 pr-4 font-medium text-foreground">Prepaid wallet</td><td class="py-3 pr-4 text-foreground/80">Funded balance</td><td class="py-3 pr-4 text-foreground/80">None</td><td class="py-3 pr-4 text-foreground/80">Must top up</td></tr>
+          <tr><td class="py-3 pr-4 font-medium text-foreground">Funded allowance</td><td class="py-3 pr-4 text-foreground/80">Entitlement</td><td class="py-3 pr-4 text-foreground/80">None</td><td class="py-3 pr-4 text-foreground/80">None</td></tr>
+        </tbody>
+      </table>
+
+      <p>The pattern is consistent. Friction and collateral are the price the system charges for not knowing who the driver is.</p>
+
+      <h2>What this means if you are choosing</h2>
+
+      <p>If you are a <a href="/charge-point-operators" class="text-primary underline hover:no-underline">Charging Partner</a>, you cannot escape the bottom of the ladder and should not try. Contactless at the terminal is a regulatory requirement in many markets and a genuine universal fallback. What you can do is make sure it is not the only route to your chargers. Every driver who arrives already identified through a platform is a driver you did not have to collateralise, who is less likely to dispute, and whose session is less exposed to fraud. The dispute side of that is covered in <a href="/blog/ev-charging-chargeback-management" class="text-primary underline hover:no-underline">EV Charging Chargeback Management</a>. Accepting demand from platforms that know their drivers is a payments improvement as well as a utilisation one.</p>
+
+      <p>If you are a <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partner</a>, the choice is genuinely yours and there is no single right answer. Speed to market argues for links. Depth of experience argues for one tap and post-paid. A cold driver base with no charging habit argues for a funded allowance to get the first session done. Many partners end up running several at once, which is sensible: a link in the welcome email, one tap inside the app, a funded allowance for new customers.</p>
+
+      <p>What matters is understanding the trade you are making. Choosing an anonymous method is choosing to collateralise your drivers. Choosing an identified method is choosing to use the relationship you already have. Both are legitimate. Only one of them is free.</p>
+
+      <h2>Where NetworkCore sits</h2>
+
+      <p><a href="/" class="text-primary underline hover:no-underline">NetworkCore</a> supports the full ladder rather than one rung of it, because partners sit at different points and move between them.</p>
+
+      <p><a href="/products/charging-links" class="text-primary underline hover:no-underline">Charging Links</a> for the partners who need charging live this week. One tap and full embedding through <a href="/products/just-charge" class="text-primary underline hover:no-underline">Just Charge</a> for partners building charging into their product properly. Post-paid for qualified partners who want to remove the hold entirely. Prepaid where credit is not the right instrument. <a href="/products/charge-pack" class="text-primary underline hover:no-underline">Charge Pack</a> for the first session. And on the operator side, <a href="/products/network-access" class="text-primary underline hover:no-underline">Network Access</a> means drivers arrive pre-authenticated and pre-authorised, with payment capture, chargebacks and disputes on public-price sessions handled beneath the connection while the operator keeps its tariff and its merchant-of-record position.</p>
+
+      <p>Underneath all of them the settlement is the same: the operator's <a href="/blog/ev-charging-pricing-transparency" class="text-primary underline hover:no-underline">transparent public price</a> transmitted intact, fast settlement, correct invoicing and tax by jurisdiction, and the operator paid on a successful session. How that settlement timing changes an operator's economics is in <a href="/blog/cpo-settlement-timing" class="text-primary underline hover:no-underline">CPO Settlement Timing</a>, and the commercial terms are on the <a href="/pricing" class="text-primary underline hover:no-underline">pricing page</a>. The method changes what the driver experiences. It does not change what the operator receives.</p>
+
+      <h2>The position</h2>
+
+      <p><strong class="text-primary">EV charging payment methods</strong> are not a feature comparison. They are a ladder of knowledge, and where you sit on it determines how much friction your drivers absorb and how much risk the system has to price.</p>
+
+      <p>At the bottom, a stranger taps a card and the system holds their money because it has no other way to protect itself. At the top, a known driver presses Start and pays afterwards for what they used, because the trust was established long before they arrived.</p>
+
+      <p>Most of the industry still operates near the bottom, not because the top is unavailable, but because reaching it requires a relationship with the driver that the party at the charger usually does not have. The platforms that do have that relationship, the automakers, banks, fleets and mobility apps, are the ones that can skip most of the ladder entirely. <a href="/how-it-works" class="text-primary underline hover:no-underline">How it works</a> sets out the mechanics.</p>
+
+      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/the-network" class="text-primary underline hover:no-underline">Explore the network →</a></p>
+    `,
+    featuredImage: "/images/blog/ev-charging-payment-methods.jpg",
+    category: "Payments",
+    author: "NetworkCore Team",
+    publishedAt: "2026-11-17",
+    published: true,
+    metaTitle: "EV Charging Payment Methods: The Eight, Ranked | NetworkCore",
+    metaDescription: "The eight EV charging payment methods ranked by how much the system knows about the driver, from contactless holds to post-paid and funded allowances.",
+    tags: ["EV Charging Payment Methods", "Payments", "One Tap", "Post-Paid", "Distribution Partners", "Charging Partners"]
+  },
+
+  {
     slug: "ev-charging-session-duration-trends",
     title: "EV Charging Session Duration Trends: What Falling Charge Times Do to Site Economics",
     excerpt: "The same energy takes 54 minutes at 50kW and 8 minutes at 350kW, and China is deploying 1,500kW. When sessions shorten, almost every assumption behind a charging site changes.",
@@ -6098,6 +6260,8 @@ export const blogPosts: BlogPost[] = [
       <p>In the middle, app-based charging with a stored card remains the common model, and remains the reason drivers accumulate apps they resent.</p>
 
       <p>At the identified end, two things change the experience materially. <a href="/blog/one-tap-ev-charging" class="text-primary underline hover:no-underline">One tap</a> means the driver is already known by the product they are using, so there is nothing to prove at the charger: plug in, press Start. <a href="/blog/post-paid-ev-charging" class="text-primary underline hover:no-underline">Post-paid</a> removes the hold entirely, with the driver paying afterwards for exactly what they used, backed by trust placed deliberately by the Distribution Partner, by NetworkCore, or by a prepaid balance, and enforced by a block that applies across the whole network rather than one operator.</p>
+
+      <p>The full comparison is in <a href="/blog/ev-charging-payment-methods" class="text-primary underline hover:no-underline">EV Charging Payment Methods</a>.</p>
 
       <p>Crucially, none of this shifts risk onto the operator. A completed session that produces a successful Charge Detail Record is paid, regardless of how the driver was identified or what happened to their payment afterwards.</p>
 
