@@ -6002,90 +6002,132 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ev-charging-payments-explained",
     title: "EV Charging Payments Explained: The Financial Architecture Beneath Every Public Charging Session",
-    excerpt: "EV charging payments explained as the multi-party financial transaction it actually is — PSP fees, currency conversion, settlement timelines, jurisdiction-aware tax — and what a settlement engine has to do to make the unit economics work.",
+    excerpt: "A charging session looks like buying electricity. Financially it is a multi-party, cross-border, tax-variable transaction with an unknown amount at authorisation and an irreversible delivery. This is the complete architecture: who is involved, how the money splits, when it settles, and what breaks.",
     content: `
-      <p>The conclusion first: <strong class="text-primary">EV charging payments explained</strong> is, in its essential form, the recognition that what looks like an energy transaction at the physical layer is, beneath that layer, one of the most operationally complex multi-party financial transactions in modern commerce. Currency captured at one point. Money allocated across multiple counterparties. PSP fees absorbing margin from the entire chain. Tax applied per jurisdiction per fee type. Settlement timelines that determine whether participants have working capital. Compliance that varies per country. The industry has spent a decade solving the physical and protocol layers of charging. The payments layer beneath them is the next thing to solve properly — and the participants who solve it well are the ones whose unit economics actually work. <a href="/" class="text-primary underline hover:no-underline">NetworkCore</a>'s settlement engine is built specifically for this layer, settling every party in the chain quickly, transparently, and across markets, without the structural margin leakage that has characterised the alternatives.</p>
+      <p>The conclusion first: <strong class="text-primary">EV charging payments</strong> look simple from the driver's seat and are anything but underneath. A single session is a multi-party transaction, frequently cross-border, with an amount nobody knows at the moment of authorisation, delivering a good that cannot be returned, generating tax treatment that varies by jurisdiction and by fee type, and ending in money that has to reach several parties who have no contract with each other. Almost every problem the industry complains about, from pre-authorisation holds to ninety-day settlement to disputes nobody can evidence, traces back to this architecture rather than to the technology. This is the complete picture of how <strong class="text-primary">EV charging payments</strong> actually work, updated for where the market now stands.</p>
 
-      <h2>Why charging is a payments problem disguised as energy</h2>
+      <h2>Why a charging session is not a normal purchase</h2>
 
-      <p>The instinctive way to think about a public charging session is energy delivery. A vehicle plugs in. Electricity flows. The driver pays for the kWh consumed. This frame is correct at the physical layer and almost completely useless for understanding the commercial reality of how the industry actually operates.</p>
+      <p>Four properties separate charging from ordinary retail, and each one creates a downstream consequence.</p>
 
-      <p>A charging session is a regulated, multi-party financial transaction that happens to involve energy delivery as one of its inputs. Money is captured from the driver — through a card, a wallet, an in-app payment method, a fleet account, or an OEM-managed billing relationship. That money has to flow correctly: to the CPO that delivered the energy, to the <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partner</a> where it has bought the session at wholesale, to the payment service provider that processed the card transaction, the platform sitting between them, and the tax authority of the jurisdiction where the session occurred. Each leg of that flow has its own commercial terms, its own currency considerations, its own settlement timeline, and its own regulatory obligations.</p>
+      <p><strong class="text-primary">The amount is unknown at authorisation.</strong> When a driver plugs in, nobody knows how long they will stay or how much energy they will take. The payment system must authorise against an estimate and capture an actual. That gap is the direct cause of pre-authorisation holds, and of the confusion when a driver sees one number reserved and another charged.</p>
 
-      <p><strong class="text-primary">EV charging payments explained</strong> properly means understanding that the energy is the smallest part of what is actually happening. The energy flows in seconds. The payments mechanics take hours, days, or weeks to fully resolve — and the structural design of how that resolution happens determines who is profitable and who is not.</p>
+      <p><strong class="text-primary">Delivery is immediate and irreversible.</strong> Energy in a battery cannot be recovered. Unlike a disputed parcel, there is nothing to reclaim. Whoever is exposed when a payment fails absorbs a real loss.</p>
 
-      <p>This is not a peripheral detail of the industry. It is the architecture beneath every commercial decision a CPO, a Distribution Partner, or any participant in the value chain makes. Operators who treat charging settlement as an energy back-office task absorb costs and friction that operators who treat it as financial infrastructure have engineered out of their operation.</p>
+      <p><strong class="text-primary">The site is unattended and the transaction is card-not-present.</strong> No staff, no cardholder verification in person. The transaction behaves like e-commerce, which places it in the category where fraud concentrates.</p>
 
-      <h2>The PSP fee problem most operators are too casual about</h2>
+      <p><strong class="text-primary">The parties are plural.</strong> In almost any public session there is an operator supplying the energy, frequently a platform that brought the driver, a payment processor, and a layer clearing between them. Each is owed something from a single payment made by one person.</p>
 
-      <p>The most consistent place where margin leakage hides in <strong class="text-primary">EV charging payments explained</strong> at the operator level is in PSP fees. This is the area where every operator should be pushing hard on commercial terms and where most are not pushing hard enough.</p>
+      <p>That last property is the one that shapes everything else.</p>
 
-      <p>The structure of standard card processing is, in commercial terms, painfully misaligned with the unit economics of public charging. Visa and Mastercard interchange and scheme fees typically run 1.5% to 3% of transaction value depending on card type, region, and merchant category. Acquirer markup adds another 0.3% to 1.5%. Fixed per-transaction fees commonly add €0.10 to €0.30 per transaction. On a typical €10 to €25 charging session, the combined PSP fee load can easily reach 4–6% of the session value — and at the lower end of the session-size range, the fixed per-transaction component alone can consume 2–3%.</p>
+      <h2>Who is actually in a session</h2>
 
-      <p>For a CPO operating on healthy public-charging gross margins, this fee load is significant. For a CPO operating on tight margins — which is the majority of operators in markets where competition and energy costs have compressed pricing — PSP fees of this magnitude can be the difference between profitable utilisation and stranded capital. The energy economics may work. The payments economics may not.</p>
+      <p>A driver pays once. That payment has to reach several places.</p>
 
-      <p>This is the dimension most operators under-negotiate. Standard PSP arrangements are designed for general retail, where transaction sizes are larger or transaction volumes produce a different fee profile. EV charging sits awkwardly in that model — high-volume, lower-value transactions, with sessions clustered around specific time-of-day patterns and specific locations. Operators who accept default PSP terms are accepting a fee structure that was not designed for them.</p>
+      <ul>
+        <li>The <a href="/charging-partners" class="text-primary underline hover:no-underline">Charging Partner</a>, the operator, host or depot that supplied the energy and set the price. They have costs already incurred: hardware, grid connection, demand charges, maintenance.</li>
+        <li>The <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partner</a>, where one is involved: the automaker, bank, fleet platform, wallet or app whose product the driver used to find and start the session. They brought the demand.</li>
+        <li>The payment processor and card schemes, taking their part for moving the money and carrying scheme obligations.</li>
+        <li>The clearing and settlement layer, which determines what each party is owed and moves the funds.</li>
+        <li>The tax authority in the jurisdiction where the session occurred, which has a claim on part of it and rules about how it must be invoiced.</li>
+      </ul>
 
-      <p>There is now a category of EV-charging-specific payment specialists — companies like Paythru in the UK and similar players in other markets — that have built payment infrastructure specifically for charging, with fee structures and operational features designed for the unit economics of the category. These specialists negotiate interchange directly, handle the specific authentication and authorisation patterns charging sessions require, and price their services against the reality of how charging actually transacts. For operators who have not engaged with this category yet, the move from a generic PSP to a charging-specific one can recover meaningful margin without changing anything else in the operation.</p>
+      <p>The driver sees one price. Behind it, one payment is divided across all of these, per session, in whatever currency applies, under whichever country's rules govern that charger.</p>
 
-      <p>The broader strategic point is that <strong class="text-primary">EV charging payments explained</strong> at the operator level starts with treating payments as a primary cost centre rather than a back-office expense. Push hard on PSP fees. Evaluate charging-specific payment infrastructure. Understand exactly what every basis point of fee load is doing to your unit economics. The operators who get this right are operating with materially better margins than the ones who do not. The deeper analysis of how the broader payment platform layer works is set out in <a href="/blog/ev-charging-payment-platform" class="text-primary underline hover:no-underline">EV Charging Payment Platform</a>, and the underlying reasons settlement has been broken industry-wide are covered in <a href="/blog/why-ev-charging-settlement-is-broken" class="text-primary underline hover:no-underline">Why EV Charging Settlement Is Broken</a>.</p>
+      <h2>The anatomy of a session, step by step</h2>
 
-      <h2>What a real EV charging settlement engine has to do</h2>
+      <ol>
+        <li><strong>Discovery and price.</strong> The driver finds a charger and sees a price. Whether that displayed price is the operator's real tariff or an intermediary's marked-up version determines a great deal about what follows, including the likelihood of a dispute.</li>
+        <li><strong>Identification and authorisation.</strong> The driver is identified, by card, token, app, link or by already being known to the platform they are using, and payment is authorised. Where the driver is a stranger, this is where a hold is placed.</li>
+        <li><strong>Session start.</strong> The charger is instructed to begin, and energy flows.</li>
+        <li><strong>Metering.</strong> The session is measured in kilowatt-hours. In many markets this measurement is regulated under weights-and-measures law, requiring certified meters and driver-verifiable records.</li>
+        <li><strong>Session end and the CDR.</strong> A Charge Detail Record is produced: energy delivered, duration, tariff applied, location, identifiers. This is the authoritative record of what happened.</li>
+        <li><strong>Capture.</strong> The actual amount is taken, and any hold released, which is controlled by the driver's bank rather than by anyone in the charging chain.</li>
+        <li><strong>Clearing.</strong> The proceeds are allocated between the parties with a claim.</li>
+        <li><strong>Tax treatment.</strong> The correct rate is applied, per jurisdiction and per fee type, since energy and service components can be treated differently within the same invoice.</li>
+        <li><strong>Settlement.</strong> Funds actually move to each party.</li>
+        <li><strong>Invoicing and reconciliation.</strong> Compliant documents are issued and every unit of currency tied back to the session that produced it.</li>
+        <li><strong>Exceptions.</strong> Failed sessions refunded, disputes evidenced, chargebacks defended.</li>
+      </ol>
 
-      <p>The payments dimension of charging extends well beyond just the PSP fee question. <strong class="text-primary">EV charging payments explained</strong> in its full architectural sense requires a settlement engine that handles a specific list of functions correctly, on every session, across every market the network operates in.</p>
+      <p>Eleven steps, of which the driver experiences two.</p>
 
-      <p><strong>Payment capture in the right currency.</strong> The driver pays in their currency. The CPO needs to receive in its currency. The Distribution Partner needs to receive in its currency. The platform needs to handle currency conversion at session level, at rates that are transparent and auditable, without exposing any party to opaque <a href="https://longquy.com/foreign-exchange-margins-how-banks-make-money" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">FX margin extraction</a>.</p>
+      <h2>The kilowatt-hour is universal, the money is not</h2>
 
-      <p><strong>Multi-party allocation per session.</strong> Every session has to be allocated correctly between the parties to it: the operator, the Distribution Partner where it has bought at wholesale, and the platform. The settlement engine has to apply the correct split per session, with full audit evidence per allocation, transparent in mechanics, and consistent across the entire transaction volume of the network.</p>
+      <p>One thing in this chain is globally agreed. A kilowatt-hour is identical everywhere, measured the same way, meaning the same thing. It is the only genuinely universal element in charging.</p>
 
-      <p><strong>Short settlement cycles to every party.</strong> Traditional roaming settlement runs on 30 to 60-day cycles. A modern settlement engine should run on a short cycle — within days for every party in the chain. The working capital implications of this difference, across a serious operation, are substantial. CPOs particularly benefit from short settlement: chargers are capital-intensive assets and the speed at which session revenue converts to cash directly affects the operator's ability to fund expansion.</p>
+      <p>Everything that happens to that number afterwards fragments immediately. Whether you may even bill in kilowatt-hours varies: it is effectively mandated in parts of Europe under calibration law and was historically blocked in many US states where reselling electricity made you a utility, a position now being unwound state by state. What tax attaches varies. What currency applies varies. What invoice format is required varies. The measurement agrees everywhere. The money agrees nowhere, which is covered in <a href="/blog/ev-charging-billing-per-kwh" class="text-primary underline hover:no-underline">EV Charging Billing per kWh</a>.</p>
 
-      <p><strong>Jurisdiction-aware tax application.</strong> VAT or consumption tax has to be applied correctly per session per fee type per country. Energy attracts one rate. Service fees attract another. Idle fees attract another. Some markets require real-time invoicing certification. The settlement engine has to handle all of this automatically, on every session, in every market — not as a back-office reconciliation task but as part of the session settlement itself.</p>
+      <h2>Where the money actually goes wrong</h2>
 
-      <p><strong>Legally valid invoicing per jurisdiction.</strong> Every party in the chain needs the invoicing documentation their jurisdiction requires, in the format their tax authority accepts, with the audit retention each market enforces. The settlement engine produces this documentation as a structural output of the session settlement, not as a separate manual process layered on top.</p>
+      <p>Four failure points account for most of the pain in <strong class="text-primary">EV charging payments</strong>.</p>
 
-      <p><strong>Compliance and audit infrastructure.</strong> AML and KYC obligations for the financial flow, transaction monitoring, suspicious-activity detection, sanctions screening — all absorbed by the settlement engine's regulated infrastructure rather than distributed across every participant in the chain.</p>
+      <p><strong class="text-primary">The hold.</strong> Because the final amount is unknown and the driver is often unknown, the system reserves funds in advance. Holds across major networks commonly run from around $30 to $60, released by the driver's bank days later. For drivers managing tight balances this is the difference between a card working and a card declining. It exists because the party running the payment must pay the operator whether or not the driver's money arrives, and protects itself by collecting from everyone in advance.</p>
 
-      <p>When all of these functions are integrated into a single settlement engine that operates coherently across markets, <strong class="text-primary">EV charging payments explained</strong> becomes the description of working financial infrastructure. When any of these functions is missing or partially implemented, the operational picture for every participant degrades — slow settlement, manual reconciliation, jurisdiction-specific compliance exposure, opaque margin leakage.</p>
+      <p><strong class="text-primary">The price mismatch.</strong> Under traditional roaming the price a driver pays is set by an intermediary and marked up from the operator's rate, so the number on the station screen and the number on the bill disagree. The driver assumes they are being exploited. Usually they are not, but trust is lost anyway, which is examined in <a href="/blog/ev-charging-pricing-transparency" class="text-primary underline hover:no-underline">EV Charging Pricing Transparency</a>.</p>
 
-      <h2>NetworkCore's settlement engine: what "at its best" actually means</h2>
+      <p><strong class="text-primary">Settlement delay.</strong> Traditional roaming settles on cycles of thirty, sixty or ninety days, bundled and netted. The operator funded the asset, delivered the energy and then waits a quarter to be paid for it, with the money arriving in a form that cannot easily be matched to individual sessions. See <a href="/blog/cpo-settlement-timing" class="text-primary underline hover:no-underline">CPO Settlement Timing</a>.</p>
 
-      <p>NetworkCore is the platform built specifically to operate <strong class="text-primary">EV charging payments explained</strong> at the architectural level above. The settlement engine sits at the centre of the platform and is designed to handle the entire commercial lifecycle of every session that flows through the network.</p>
+      <p><strong class="text-primary">Disputes without evidence.</strong> When a session is queried months later, the context has evaporated. Reconstructing what happened from fragments is expensive enough that operators frequently absorb the loss rather than contest it. That is quiet, permanent revenue leakage, covered in <a href="/blog/ev-charging-chargeback-management" class="text-primary underline hover:no-underline">EV Charging Chargeback Management</a>.</p>
 
-      <p>For every session, the engine performs a sequence of functions that the participants do not need to see and do not need to manage: payment capture from the driver at the CPO's transparent public tariff, currency conversion where the session crosses borders, multi-party revenue allocation across the CPO, the Distribution Partner, and the platform, settlement to each party in their local currency within days, VAT or consumption tax application per fee type per jurisdiction, generation of legally valid invoicing in the correct format for each tax authority, audit-ready evidence retention for the period each market requires, and AML and KYC compliance for the financial flow. All of this happens as a single integrated workflow per session, not as separate processes that have to be reconciled afterwards.</p>
+      <h2>What a settlement engine has to do</h2>
 
-      <p>The architectural point worth being explicit about is that the settlement engine is the platform. The user-facing integrations — the API for Distribution Partners, the iframe for platforms that want to ship faster, the OCPI connection for CPOs — are interfaces into the engine. Everything that makes the platform commercially valuable to any participant happens inside the engine itself. The same engine that settles a domestic session between a Mexican Distribution Partner and a Mexican CPO settles a cross-border session between an OEM in Germany routing a driver to a charger in Portugal, with the same architectural principles applied: short settlement, transparent allocation, jurisdiction-aware tax, full audit evidence, no manual reconciliation by any party.</p>
+      <p>Working backwards from those failures, the financial layer beneath charging has to handle all of the following, on every session, automatically:</p>
 
-      <p>For <a href="/charge-point-operators" class="text-primary underline hover:no-underline">CPOs</a>, the engine means session proceeds arrive within days in local currency at the CPO's transparent public tariff, with no intermediary margin extracted between the CPO's price and the financial flow, and no subscription fee paid for being on the network — the platform earns only a small per-session commission when sessions actually flow. For Distribution Partners on public price, the engine means free access, no Merchant of Record exposure, the entire compliance and invoicing layer absorbed, and no operational footprint after deployment. On wholesale, the partner is merchant of record and keeps the margin it sets. The full picture of how the invoicing dimension of this works is in <a href="/blog/ev-charging-invoicing" class="text-primary underline hover:no-underline">EV Charging Invoicing</a>.</p>
+      <ul>
+        <li>Capture payment from the driver at the correct amount</li>
+        <li>Split the proceeds across every party with a claim</li>
+        <li>Settle each of them quickly, in the currency they actually need</li>
+        <li>Handle conversion where a session crosses a border</li>
+        <li>Apply the right tax, per jurisdiction and per fee type</li>
+        <li>Produce compliant invoices in the format each market requires</li>
+        <li>Reverse failed sessions cleanly</li>
+        <li>Assemble dispute evidence at the time the session happens, not afterwards</li>
+        <li>Detect fraud using signals the payment layer alone cannot see</li>
+        <li>Reconcile every unit of currency back to its session</li>
+      </ul>
 
-      <p>This is what describing NetworkCore at its best actually means. Not as a charging app. Not as a roaming hub. Not as a CSMS. As the financial infrastructure beneath every charging session — engineered specifically for the payments architecture the industry actually needs.</p>
+      <p>None of this is defined by an open standard. OCPI standardises the record of what happened and says nothing about the money that should follow it. There is no protocol for settlement, no certification, and no non-profit maintaining it on the industry's behalf. The components exist in fragments, and assembling them into one coherent system is what <a href="/blog/ev-charging-financial-backbone" class="text-primary underline hover:no-underline">EV Charging Financial Backbone</a> describes.</p>
 
-      <h2>Why this matters now</h2>
+      <h2>How the driver experience has changed</h2>
 
-      <p>The volume of public charging sessions flowing through the global EV charging market is increasing every quarter, and the participants in the value chain whose financial infrastructure is built for the actual problem are operationally well ahead of the ones still running domestic-grade payments architecture across what has become an inherently cross-border, multi-party, multi-currency transaction layer.</p>
+      <p>The visible half of <strong class="text-primary">EV charging payments</strong> has moved considerably in the past year, and the direction is consistent: the better the system knows the driver, the less friction it imposes.</p>
 
-      <p>For CPOs, the operational difference between accepting default PSP terms and the standard slow-roaming settlement model versus integrating with infrastructure built for <strong class="text-primary">EV charging payments explained</strong> properly is measured in basis points of margin per session and in weeks of working capital availability. Both compound at scale.</p>
+      <p>At the anonymous end, contactless terminals and link-based payment let anyone charge with no account at all, at the price of a hold and higher fraud exposure. NetworkCore's <a href="/products/charging-links" class="text-primary underline hover:no-underline">Charging Links</a> are the fastest version of this, giving a platform a permanent link per connector that works the same day with no integration.</p>
 
-      <p>For Distribution Partners — fleets, OEMs, fintechs, wallets, super-apps, insurers — the operational difference is between absorbing multi-jurisdiction compliance, reconciliation, and invoicing as a back-office function versus running charging as a clean transactional revenue layer where the financial flow is genuinely passive after deployment.</p>
+      <p>In the middle, app-based charging with a stored card remains the common model, and remains the reason drivers accumulate apps they resent.</p>
 
-      <p>For the broader market, <strong class="text-primary">EV charging payments explained</strong> through proper financial infrastructure is what allows charging to scale internationally without breaking. The technical layer — OCPI, ISO-15118, Plug and Charge — is already mature. The payments layer is the one that determines whether the technical interoperability the industry built actually produces commercially functional cross-border operations.</p>
+      <p>At the identified end, two things change the experience materially. <a href="/blog/one-tap-ev-charging" class="text-primary underline hover:no-underline">One tap</a> means the driver is already known by the product they are using, so there is nothing to prove at the charger: plug in, press Start. <a href="/blog/post-paid-ev-charging" class="text-primary underline hover:no-underline">Post-paid</a> removes the hold entirely, with the driver paying afterwards for exactly what they used, backed by trust placed deliberately by the Distribution Partner, by NetworkCore, or by a prepaid balance, and enforced by a block that applies across the whole network rather than one operator.</p>
 
-      <h2>The position to take</h2>
+      <p>Crucially, none of this shifts risk onto the operator. A completed session that produces a successful Charge Detail Record is paid, regardless of how the driver was identified or what happened to their payment afterwards.</p>
 
-      <p>If you are operating in EV charging — as a Charge Point Operator, a Distribution Partner, a payment specialist, or an infrastructure investor evaluating the space — the <strong class="text-primary">EV charging payments explained</strong> conversation is the one where the next decade of structural advantage will be determined. The participants whose payments architecture matches the actual nature of the transaction are the ones whose unit economics work, whose working capital cycles are healthy, and whose international expansion is operationally clean. The ones whose payments architecture does not match the transaction are the ones still wondering why margin is thinner than the energy economics suggested it should be.</p>
+      <h2>How NetworkCore handles it</h2>
 
-      <p>NetworkCore is the platform built for the right side of that line. The settlement engine handles every party. The PSP fee discipline is structural rather than an ongoing negotiation. The compliance and invoicing layers are absorbed. Settlement runs fast. The integration is single-API or iframe for Distribution Partners and OCPI for CPOs. The commercial alignment is clean — the platform earns when participants earn, and not before.</p>
+      <p><a href="/" class="text-primary underline hover:no-underline">NetworkCore</a> operates this layer, and the design follows from the architecture above.</p>
 
-      <p>Reach the team at networkcore.org to discuss what <strong class="text-primary">EV charging payments explained</strong> through NetworkCore's settlement engine would look like for your specific position in the market.</p>
+      <p>The operator's transparent public price is transmitted to the driver intact, so the screen and the bill agree. The payment is captured and allocated across the parties with a claim. Settlement runs fast rather than quarterly. Currency, tax per jurisdiction and per fee type, and compliant invoicing are handled beneath the integration. Fraud is assessed using session-level signals the payment layer never sees, since physical charging behaviour is far harder to fake than card data. Dispute evidence is assembled at the time the session occurs. And every unit of currency ties back to the session that produced it.</p>
+
+      <p>For <a href="/charging-partners" class="text-primary underline hover:no-underline">Charging Partners</a> this means <a href="/products/network-access" class="text-primary underline hover:no-underline">Network Access</a>: drivers arrive pre-authenticated and pre-authorised, payment capture and disputes on public-price sessions are handled beneath the connection, and the operator keeps its tariff, its commercial model and its merchant-of-record position. For <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partners</a> it means <a href="/products/just-charge" class="text-primary underline hover:no-underline">Just Charge</a>, with the choice of which pieces to run themselves and which to hand over.</p>
+
+      <p>We do not publish the mechanics, for the same reason nobody publishes fraud thresholds. What matters commercially is the outcome: one connection, and the eleven-step chain above happens without either party building a payments business.</p>
+
+      <h2>The position</h2>
+
+      <p><strong class="text-primary">EV charging payments</strong> are not an energy problem with a card reader attached. They are a multi-party financial transaction with an unknown amount, an irreversible delivery, a jurisdiction-dependent tax treatment and several parties owed money from a single payment, dressed up as buying electricity.</p>
+
+      <p>Understanding that explains the industry's persistent complaints. Holds exist because the amount is unknown and the driver often is too. Price mismatches exist because intermediaries mark up a price they did not set. Slow settlement exists because the clearing layer was bolted on rather than designed. Disputes fail because evidence was never assembled when it was cheap to assemble.</p>
+
+      <p>All four are architectural, which means all four are fixable by building the layer properly rather than by patching the symptoms.</p>
+
+      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/the-network" class="text-primary underline hover:no-underline">Explore the network →</a></p>
     `,
     featuredImage: "/blog/ev-charging-payments-explained.jpg",
     category: "Payments",
     author: "NetworkCore Team",
-    publishedAt: "2026-06-02",
-    updatedAt: "2026-11-03",
+    publishedAt: "2026-11-16",
     published: true,
     metaTitle: "EV Charging Payments Explained: The Financial Architecture | NetworkCore",
-    metaDescription: "EV charging payments explained — PSP fees, currency conversion, multi-party settlement, jurisdiction-aware tax, and what a real settlement engine has to do.",
+    metaDescription: "How EV charging payments actually work: who is in a session, where the money goes, why holds and slow settlement exist, and what a settlement engine must do.",
     tags: ["EV Charging Payments Explained", "Settlement", "PSP Fees", "CPO", "Distribution Partner"],
   },
   {
