@@ -33,7 +33,7 @@ const offers = [
   {
     icon: <Wallet className="w-5 h-5" />,
     title: "Fast Settlement",
-    text: "Money for the sessions you deliver arrives in days/weeks, in the currency you want it in.",
+    text: "Money for the sessions you deliver arrives in days, not weeks, in the currency you want it in.",
   },
   {
     icon: <ShieldCheck className="w-5 h-5" />,
@@ -99,13 +99,13 @@ const ChargingPartners = () => {
         <title>Charging Partners | EV Charging Demand, Settlement and Roaming | NetworkCore</title>
         <meta name="description" content="For charge point operators, private hosts and fleet depots. Bring paying drivers to chargers you have already built, keep your own pricing, and get paid fast. One OCPI connection, no capex, no exclusivity." />
         <meta property="og:title" content="Charging Partners | EV Charging Demand, Settlement and Roaming | NetworkCore" />
-        <meta property="og:description" content="Bring paying drivers to chargers you have already built. Keep your prices, get paid fast, no subscriptions and no exclusivity." />
+        <meta property="og:description" content="You run the chargers. We run the rest. NetworkCore is the demand and settlement layer that brings drivers to chargers you have already built, at the prices you set." />
         <meta property="og:image" content="https://networkcore.org/images/og-image.jpg" />
         <meta property="og:url" content="https://networkcore.org/charging-partners" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Charging Partners | EV Charging Demand and Settlement | NetworkCore" />
-        <meta name="twitter:description" content="Bring paying drivers to chargers you have already built. Keep your prices, get paid fast." />
+        <meta name="twitter:description" content="You run the chargers. We run the rest. The demand and settlement layer for chargers you have already built." />
         <meta name="twitter:image" content="https://networkcore.org/images/og-image.jpg" />
         <link rel="canonical" href="https://networkcore.org/charging-partners" />
         <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://networkcore.org/"},{"@type":"ListItem","position":2,"name":"Charging Partners","item":"https://networkcore.org/charging-partners"}]})}</script>
@@ -147,7 +147,7 @@ const ChargingPartners = () => {
       <section className="py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight mb-8 text-balance">
-            You Run the Chargers; We Add Revenue
+            You Run the Chargers. We Run the Rest.
           </h2>
           <p className="text-lg text-muted-foreground font-light leading-relaxed mb-6">
             A Charging Partner is anyone with chargers in the ground: a public charging network, a hotel or retail site, a workplace, a depot. Whatever the setting, the problem is the same. The asset is built and paid for, and the thing that decides whether it earns is how many drivers can actually reach it and how quickly the money comes back.
