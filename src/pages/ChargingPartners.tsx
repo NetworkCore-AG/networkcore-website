@@ -6,55 +6,49 @@ import ProcessDiagram from "@/components/how-it-works/ProcessDiagram";
 import PageFaqSection from "@/components/PageFaqSection";
 import {
   Building2,
-  Home,
   Truck,
   Zap,
+  Mail,
   ArrowRight,
   Users,
   Wallet,
-  FileText,
   ShieldCheck,
   SlidersHorizontal,
   Globe2,
 } from "lucide-react";
 
-const partnerTypes = [
-  { icon: <Zap className="w-5 h-5" />, title: "CPOs", description: "Public charging networks", href: "/charge-point-operators" },
-  { icon: <Building2 className="w-5 h-5" />, title: "Private Hosts", description: "Guests, customers, tenants", href: "/private-hosts" },
-  { icon: <Truck className="w-5 h-5" />, title: "Fleet Hosts", description: "Depot chargers", href: "/fleet-hosts" },
-  { icon: <Home className="w-5 h-5" />, title: "Peer-to-Peer", description: "Coming soon", href: null },
+const heroLinks = [
+  { icon: Zap, title: "CPOs", href: "/charge-point-operators" },
+  { icon: Building2, title: "Private Hosts", href: "/private-hosts" },
+  { icon: Truck, title: "Fleet Hosts", href: "/fleet-hosts" },
+  { icon: Mail, title: "Contact Us", href: "/#contact" },
 ];
 
 const offers = [
   {
     icon: <Users className="w-5 h-5" />,
-    title: "Demand you did not market for",
-    text: "Drivers arrive through the apps, cars, wallets and fleet platforms they already use. One connection reaches all of them, and it grows as the network grows.",
+    title: "New Demand",
+    text: "Drivers arrive through the apps, cars, wallets and fleet platforms they already use. Our connection reaches all of them, and it grows as the network grows.",
   },
   {
     icon: <Wallet className="w-5 h-5" />,
-    title: "Fast settlement",
-    text: "Money for the sessions you deliver arrives in days, not weeks, in the currency you want it in. Cash recycles into the next site instead of sitting in someone else's receivable.",
-  },
-  {
-    icon: <FileText className="w-5 h-5" />,
-    title: "Invoicing and tax handled",
-    text: "End-customer invoices in your name with the correct local tax, per jurisdiction and per fee type. No tax registrations in markets you do not otherwise trade in.",
+    title: "Fast Settlement",
+    text: "Money for the sessions you deliver arrives in days/weeks, in the currency you want it in.",
   },
   {
     icon: <ShieldCheck className="w-5 h-5" />,
-    title: "Disputes and fraud absorbed",
-    text: "Chargebacks and disputes on public-price sessions are handled beneath the connection, with evidence assembled at the time the session happens rather than months later.",
+    title: "Chargebacks and Fraud Absorbed",
+    text: "Chargebacks and fraud are handled beneath the connection, with evidence assembled at the time the session happens rather than months later.",
   },
   {
     icon: <SlidersHorizontal className="w-5 h-5" />,
-    title: "Your pricing, your control",
-    text: "You set the tariff and it reaches the driver intact. You decide which stations are published to the network and which stay direct-only, and you can change it at any time.",
+    title: "Your Pricing, Your Control",
+    text: "You set the tariff. You decide which stations are published to the network and which stay direct-only, and you can change it at any time.",
   },
   {
     icon: <Globe2 className="w-5 h-5" />,
-    title: "One integration, every market",
-    text: "Standard OCPI into the CSMS or CPMS you already run. No new hardware, no bilateral roaming contracts to negotiate operator by operator.",
+    title: "One Integration, Every Market",
+    text: "Standard OCPI into the CSMS/CPMS you already run. Work on standard terms or negotiate individually with eMSPs.",
   },
 ];
 
@@ -121,65 +115,30 @@ const ChargingPartners = () => {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-section-dark">
+        <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
           <source src="/videos/cpo-hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/65 to-black/45" />
-        <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-28 text-center">
-          <div className="animate-in fade-in slide-in-from-bottom-8 duration-700">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-light mb-6 leading-tight text-white tracking-tight">
-              <span className="block">Fill your chargers.</span>
-              <span className="block">Keep your prices.</span>
-              <span className="block">Get paid fast.</span>
-            </h1>
-            <p className="text-base md:text-lg text-white/70 font-light leading-relaxed max-w-2xl mx-auto mb-10">
-              If you own chargers, you have already done the hard part. NetworkCore is the demand and settlement layer that brings drivers to them and the money back to you.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000">
-            {partnerTypes.map((p) =>
-              p.href ? (
-                <Link
-                  key={p.title}
-                  to={p.href}
-                  className="flex items-center gap-4 p-5 rounded-xl border border-white/25 bg-white/5 backdrop-blur-sm text-left hover:border-white/60 hover:bg-white/10 transition-colors"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white/80">
-                    {p.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h2 className="text-base font-light text-white tracking-tight">{p.title}</h2>
-                    <p className="text-sm text-white/60 font-light">{p.description}</p>
-                  </div>
-                  <ArrowRight className="w-4 h-4 text-white/50" />
-                </Link>
-              ) : (
-                <div
-                  key={p.title}
-                  className="flex items-center gap-4 p-5 rounded-xl border border-dashed border-white/20 bg-white/5 backdrop-blur-sm text-left opacity-60 cursor-not-allowed"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/50">
-                    {p.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h2 className="text-base font-light text-white/70 tracking-tight">{p.title}</h2>
-                    <p className="text-sm text-white/50 font-light">{p.description}</p>
-                  </div>
-                </div>
-              )
-            )}
-          </div>
-
-          <div className="mt-10 animate-in fade-in duration-1000">
-            <Link
-              to="/#contact"
-              className="inline-flex items-center gap-2 bg-white text-black font-medium px-8 py-3 rounded-full hover:bg-white/90 transition-colors"
-            >
-              Contact Us
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+        <div className="absolute inset-0 bg-foreground/70" />
+        <div className="relative z-10 mx-auto w-full max-w-5xl px-4 py-28 text-center sm:px-6 lg:px-8">
+          <h1 className="mb-6 text-3xl font-light leading-tight text-background md:text-4xl lg:text-5xl">Fill Your Chargers</h1>
+          <p className="mx-auto mb-10 max-w-3xl text-lg font-light leading-relaxed text-background/70 md:text-xl">
+            If you own chargers, you have already done the hard part. NetworkCore is the demand and settlement layer that brings drivers to them and money to you.
+          </p>
+          <div className="mx-auto grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-2">
+            {heroLinks.map(({ icon: Icon, title, href }) => (
+              <Link
+                key={href}
+                to={href}
+                className="flex min-w-0 items-center gap-4 rounded-lg border border-background/25 bg-background/5 p-4 text-left text-background backdrop-blur-sm transition-colors hover:border-background/60 hover:bg-background/10"
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-background/30 text-background/80">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <span className="min-w-0 flex-1 text-base font-light">{title}</span>
+                <ArrowRight className="h-4 w-4 shrink-0 text-background/50" />
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -187,15 +146,14 @@ const ChargingPartners = () => {
       {/* The proposition */}
       <section className="py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground mb-5">What a Charging Partner is</p>
           <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight mb-8 text-balance">
-            You run the chargers. We run everything between the driver and your bank account.
+            You Run the Chargers; We Add Revenue
           </h2>
           <p className="text-lg text-muted-foreground font-light leading-relaxed mb-6">
             A Charging Partner is anyone with chargers in the ground: a public charging network, a hotel or retail site, a workplace, a depot. Whatever the setting, the problem is the same. The asset is built and paid for, and the thing that decides whether it earns is how many drivers can actually reach it and how quickly the money comes back.
           </p>
           <p className="text-lg text-muted-foreground font-light leading-relaxed">
-            NetworkCore connects your chargers to the platforms that already own the drivers, then handles the payment, the settlement, the invoicing and the disputes underneath. You keep your tariff, your customers and your merchant-of-record position. Nothing about your operation changes except how busy it is.
+            NetworkCore connects your chargers to the platforms that already own the drivers, then handles the payment, the settlement, the invoicing and the disputes underneath.
           </p>
         </div>
       </section>
@@ -203,12 +161,7 @@ const ChargingPartners = () => {
       {/* How we connect */}
       <section className="py-20 md:py-28 bg-muted/30">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight mb-5">How we connect</h2>
-            <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto">
-              One standard OCPI connection into the CSMS or CPMS you already run. No new hardware, no back office to replace, and no bilateral contract to negotiate with every platform that wants to send you drivers.
-            </p>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight text-center mb-12">How We Connect</h2>
           <ProcessDiagram kind="charging-partner" />
           <p className="mt-10 text-center text-base text-muted-foreground font-light">
             The full mechanics are on <Link to="/how-it-works" className="text-primary underline hover:no-underline">How It Works</Link>, and the live coverage is on <Link to="/the-network" className="text-primary underline hover:no-underline">The Network</Link>.
@@ -219,10 +172,10 @@ const ChargingPartners = () => {
       {/* What you get */}
       <section className="py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight text-center mb-14">What you get</h2>
-          <div className="grid md:grid-cols-6 gap-5">
+          <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight text-center mb-14">What You Get</h2>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {offers.map((o) => (
-              <div key={o.title} className="md:col-span-2 rounded-2xl border border-border/60 bg-card/60 p-7">
+              <div key={o.title} className="rounded-2xl border border-border/60 bg-card/60 p-7">
                 <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5">{o.icon}</div>
                 <h3 className="text-lg font-medium text-foreground mb-3">{o.title}</h3>
                 <p className="text-muted-foreground font-light leading-relaxed">{o.text}</p>
@@ -236,7 +189,7 @@ const ChargingPartners = () => {
       <section className="py-20 md:py-28 bg-muted/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight mb-5">Find your side of the network</h2>
+            <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight mb-5">Find Your Side of the Network</h2>
             <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto">
               The commercial model is the same for everyone. What changes is what the chargers are for and who was already using them.
             </p>
@@ -261,9 +214,6 @@ const ChargingPartners = () => {
               <span className="inline-flex items-center gap-2 text-sm text-primary font-medium">For depots <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" /></span>
             </Link>
           </div>
-          <p className="mt-8 text-center text-base text-muted-foreground font-light">
-            Peer-to-peer hosting, where a home or building charger earns while its owner is not using it, is coming to the same terms.
-          </p>
         </div>
       </section>
 
@@ -271,7 +221,7 @@ const ChargingPartners = () => {
       <section className="py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight mb-5">The products behind it</h2>
+            <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight mb-5">The Products Behind It</h2>
             <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto">
               Same rails underneath, different ways in.
             </p>
@@ -300,13 +250,13 @@ const ChargingPartners = () => {
       <section className="py-20 md:py-28 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight mb-8 text-balance">
-            A sales channel, not a fixed cost
+            A Sales Channel, Not a Fixed Cost
           </h2>
           <p className="text-lg text-muted-foreground font-light leading-relaxed mb-6">
-            There are no subscriptions, no access fees and no minimums. Connecting costs nothing to set up and nothing to hold. We are paid an agreed commission only on the sessions we actually deliver, which means the connection only ever costs anything while it is earning.
+            There are no subscriptions, no access fees and no minimums. Connecting costs nothing to set up and nothing to hold.
           </p>
           <p className="text-lg text-muted-foreground font-light leading-relaxed mb-10">
-            You choose how each partner reaches your chargers: at your own public tariff, passed to the driver untouched, or at a wholesale rate you set and receive in full while the partner prices its own drivers. Run both at once if it suits you.
+            You choose how each partner reaches your chargers: at your own public tariff, passed to the driver untouched, or at a wholesale rate you set and receive in full while the partner prices its own drivers.
           </p>
           <Link
             to="/pricing"
