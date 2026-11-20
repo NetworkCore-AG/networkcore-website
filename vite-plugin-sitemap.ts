@@ -52,7 +52,6 @@ const ROUTE_TO_FILE: Record<string, string> = {
   "/private-hosts": "src/pages/PrivateHosts.tsx",
   "/fleet-hosts": "src/pages/FleetHosts.tsx",
   "/benefits": "src/pages/Benefits.tsx",
-  "/the-network": "src/pages/Platform.tsx",
   "/about-us": "src/pages/AboutUs.tsx",
   "/faqs": "src/pages/Faqs.tsx",
   "/security-compliance": "src/pages/SecurityCompliance.tsx",

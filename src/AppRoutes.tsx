@@ -13,7 +13,6 @@ import LatamFirstWave from "./pages/LatamFirstWave";
 import PrivateHosts from "./pages/PrivateHosts";
 import FleetHosts from "./pages/FleetHosts";
 import Benefits from "./pages/Benefits";
-import Platform from "./pages/Platform";
 import AboutUs from "./pages/AboutUs";
 import EvChargingForOems from "./pages/EvChargingForOems";
 import EvChargingForParkingAndRoadPlatforms from "./pages/EvChargingForParkingAndRoadPlatforms";
@@ -48,10 +47,10 @@ export default function AppRoutes() {
         <Route path="/:lang/how-it-works" element={<HowItWorks />} />
         <Route path="/benefits" element={<Benefits />} />
         <Route path="/:lang/benefits" element={<Benefits />} />
-        <Route path="/the-network" element={<Platform />} />
-        <Route path="/:lang/the-network" element={<Platform />} />
-        <Route path="/platform" element={<Navigate to="/the-network" replace />} />
-        <Route path="/:lang/platform" element={<Navigate to="/the-network" replace />} />
+        <Route path="/the-network" element={<Navigate to="/" replace />} />
+        <Route path="/:lang/the-network" element={<Navigate to="/" replace />} />
+        <Route path="/platform" element={<Navigate to="/" replace />} />
+        <Route path="/:lang/platform" element={<Navigate to="/" replace />} />
         <Route path="/distribution-partners/ev-charging-for-oems" element={<EvChargingForOems />} />
         <Route path="/:lang/distribution-partners/ev-charging-for-oems" element={<EvChargingForOems />} />
         <Route path="/distribution-partners/ev-charging-for-parking-and-road-platforms" element={<EvChargingForParkingAndRoadPlatforms />} />

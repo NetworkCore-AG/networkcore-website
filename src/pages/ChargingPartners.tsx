@@ -164,7 +164,7 @@ const ChargingPartners = () => {
           <h2 className="text-3xl md:text-4xl font-light text-foreground tracking-tight text-center mb-12">How We Connect</h2>
           <ProcessDiagram kind="charging-partner" />
           <p className="mt-10 text-center text-base text-muted-foreground font-light">
-            The full mechanics are on <Link to="/how-it-works" className="text-primary underline hover:no-underline">How It Works</Link>, and the live coverage is on <Link to="/the-network" className="text-primary underline hover:no-underline">The Network</Link>.
+            The full mechanics are on <Link to="/how-it-works" className="text-primary underline hover:no-underline">How It Works</Link>.
           </p>
         </div>
       </section>

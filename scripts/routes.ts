@@ -30,7 +30,6 @@ export const CORE_ROUTES: Array<{ path: string; changefreq: string; priority: st
   { path: "/private-hosts", changefreq: "monthly", priority: "0.8" },
   { path: "/fleet-hosts", changefreq: "monthly", priority: "0.8" },
   { path: "/benefits", changefreq: "monthly", priority: "0.8" },
-  { path: "/the-network", changefreq: "monthly", priority: "0.8" },
   { path: "/about-us", changefreq: "monthly", priority: "0.7" },
   { path: "/work-with-us", changefreq: "monthly", priority: "0.6" },
   { path: "/security-compliance", changefreq: "monthly", priority: "0.6" },

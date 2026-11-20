@@ -212,7 +212,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Most of the industry still operates near the bottom, not because the top is unavailable, but because reaching it requires a relationship with the driver that the party at the charger usually does not have. The platforms that do have that relationship, the automakers, banks, fleets and mobility apps, are the ones that can skip most of the ladder entirely. <a href="/how-it-works" class="text-primary underline hover:no-underline">How it works</a> sets out the mechanics.</p>
 
-      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/the-network" class="text-primary underline hover:no-underline">Explore the network →</a></p>
+      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/how-it-works" class="text-primary underline hover:no-underline">See how it works →</a></p>
     `,
     featuredImage: "/images/blog/ev-charging-payment-methods.jpg",
     category: "Payments",
@@ -802,7 +802,7 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p>Colombia is having the year every electric mobility market hopes for. Drivers have decided. The vehicles are selling faster than almost anywhere in the region. What has not kept pace is the charging infrastructure underneath that demand, and <a href="/how-it-works" class="text-primary underline hover:no-underline">the commercial layer</a> that connects the two is still being written.</p>
 
-      <p>That is the opportunity. A <strong class="text-primary">roaming hub Colombia</strong> can build on is not a nice-to-have for some future stage of market maturity. It is the most efficient response available right now to a market with surging demand, scarce supply and a short window in which to get the foundations right. <a href="/" class="text-primary underline hover:no-underline">NetworkCore</a> is building <a href="/the-network" class="text-primary underline hover:no-underline">that hub</a> for Colombia, and this post sets out why the timing matters.</p>
+      <p>That is the opportunity. A <strong class="text-primary">roaming hub Colombia</strong> can build on is not a nice-to-have for some future stage of market maturity. It is the most efficient response available right now to a market with surging demand, scarce supply and a short window in which to get the foundations right. <a href="/" class="text-primary underline hover:no-underline">NetworkCore</a> is building <a href="/how-it-works" class="text-primary underline hover:no-underline">that hub</a> for Colombia, and this post sets out why the timing matters.</p>
 
       <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a></p>
 
@@ -896,7 +896,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>A <strong class="text-primary">roaming hub Colombia</strong> can rely on should make every existing charger count, bring operators demand they did not have to market for, and settle fast enough to fund the next site. That is what NetworkCore is building, and it is open to Colombian <a href="/charging-partners" class="text-primary underline hover:no-underline">Charging Partners</a> and <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partners</a> now.</p>
 
-      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/the-network" class="text-primary underline hover:no-underline">Explore the network →</a></p>
+      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/how-it-works" class="text-primary underline hover:no-underline">See how it works →</a></p>
     `,
     featuredImage: "/images/blog/roaming-hub-colombia.jpg",
     category: "Charging Partners",
@@ -1620,7 +1620,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Three things about how Just Charge integrates matter directly to the experience you can deliver.</p>
 
-<p><strong>One API to every charger, with live prices and availability.</strong> This is what makes stage 1 honest. A single connection gives your product real-time status and real tariffs across <a href="/the-network" class="text-primary underline hover:no-underline">the network</a>, so what you show drivers is what they will find. Shallow integrations produce optimistic availability and stale pricing, which is the root of most wasted journeys.</p>
+<p><strong>One API to every charger, with live prices and availability.</strong> This is what makes stage 1 honest. A single connection gives your product real-time status and real tariffs across <a href="/how-it-works" class="text-primary underline hover:no-underline">the network</a>, so what you show drivers is what they will find. Shallow integrations produce optimistic availability and stale pricing, which is the root of most wasted journeys.</p>
 
 <p><strong>Whatever you already run, we fit around it.</strong> The integration maps to your stack rather than forcing your product to conform to ours. Your gateway or ours, your support or ours, your interface or our front-end module. For CX this matters because it means you are not trading away your existing quality in exchange for charging capability. The parts of the journey you already do well, you keep doing.</p>
 
@@ -1681,7 +1681,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Refuelling a petrol car is quick and, at many stations, assisted. Charging is neither. A driver is typically at the charger for considerably longer, handling equipment themselves, with no attendant present. The physical demands are also greater and quite specific: DC fast charging cables are heavy and stiff, connectors require force and dexterity to insert and remove, and payment or authentication frequently requires interacting with a screen at a fixed height while standing. None of these demands existed in the same form at a fuel pump.</p>
 
-      <p>The dependency argument matters too. Disabled people are often disproportionately reliant on private vehicles because public transport is less usable, and many disabled drivers are less likely to have access to off-street parking where home charging is possible, which makes them more <a href="/the-network" class="text-primary underline hover:no-underline">dependent on public charging</a> rather than less. As vehicle fleets electrify, inaccessible public charging infrastructure risks removing driving independence from exactly the group least able to absorb that loss. This is the policy logic that has driven EV charging accessibility standards from afterthought to active regulation across multiple markets, and it is why operators should expect the requirements to tighten.</p>
+      <p>The dependency argument matters too. Disabled people are often disproportionately reliant on private vehicles because public transport is less usable, and many disabled drivers are less likely to have access to off-street parking where home charging is possible, which makes them more dependent on public charging rather than less. As vehicle fleets electrify, inaccessible public charging infrastructure risks removing driving independence from exactly the group least able to absorb that loss. This is the policy logic that has driven EV charging accessibility standards from afterthought to active regulation across multiple markets, and it is why operators should expect the requirements to tighten.</p>
 
       <h2>The United States: building code leads, federal rules follow</h2>
 
@@ -2490,7 +2490,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>That is the opportunity. Mexico is building its public charging market now, on fintech foundations that fit, with a chance no mature market still has: to make roaming an absolute success from the outset rather than a problem to be fixed later. NetworkCore is building the <strong class="text-primary">roaming hub Mexico</strong> to make that happen, and it is open to every operator and every platform that wants to build it with us.</p>
 
-      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/the-network" class="text-primary underline hover:no-underline">Explore the network →</a></p>
+      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/how-it-works" class="text-primary underline hover:no-underline">See how it works →</a></p>
 
       <h2>Frequently asked questions</h2>
 
@@ -2513,7 +2513,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>A <strong class="text-primary">roaming hub Mexico</strong> is a rare opportunity: a fast-growing public charging market, fintech foundations built to support it, and no legacy roaming to unwind. It is the chance for every operator and every platform in the country to prove that roaming can be done right. NetworkCore is building it, through NetworkCore Access and Just Charge, and it is open to you now.</p>
 
-      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/the-network" class="text-primary underline hover:no-underline">Explore the network →</a></p>
+      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/how-it-works" class="text-primary underline hover:no-underline">See how it works →</a></p>
     `,
     featuredImage: "/images/blog/roaming-hub-mexico.jpg",
     category: "Charging Partners",
@@ -2772,7 +2772,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>The older charging markets built their roaming on a model that made sense at the time but has aged badly: technical connectivity wrapped in wholesale pricing, membership fees, and slow settlement. Those markets are now trying to move past that model, and it is hard, because the arrangements are entrenched. Latin America has no such burden. It is building now, which means it can adopt the better model directly, a sales-channel hub that brings demand, settles fast, and prices transparently, without ever having to unwind the legacy version first.</p>
 
-      <p>A region that builds its <strong class="text-primary">roaming hub LATAM</strong> on the right model from the outset gains a real advantage: a charging market that is <a href="https://www.oracle.com/interoperability/" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">interoperable</a>, fairly priced, fast-settling, and demand-rich from the beginning, rather than one that has to be repaired later. For Charging Partners across Brazil, Mexico, Chile, Colombia, and the rest of the region, this is the chance to plug into roaming that works for them as a sales channel, not against them as a cost, at the moment when the region's commercial models are still being decided. NetworkCore is building that hub, and it is building it in Latin America first for exactly this reason. The wider vision of the financial and distribution layer beneath charging is in our <a href="/blog/ev-charging-demand-platform" class="text-primary underline hover:no-underline">EV charging demand platform guide</a>, and the model's roots are set out in <a href="/the-network" class="text-primary underline hover:no-underline">the network</a>.</p>
+      <p>A region that builds its <strong class="text-primary">roaming hub LATAM</strong> on the right model from the outset gains a real advantage: a charging market that is <a href="https://www.oracle.com/interoperability/" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">interoperable</a>, fairly priced, fast-settling, and demand-rich from the beginning, rather than one that has to be repaired later. For Charging Partners across Brazil, Mexico, Chile, Colombia, and the rest of the region, this is the chance to plug into roaming that works for them as a sales channel, not against them as a cost, at the moment when the region's commercial models are still being decided. NetworkCore is building that hub, and it is building it in Latin America first for exactly this reason. The wider vision of the financial and distribution layer beneath charging is in our <a href="/blog/ev-charging-demand-platform" class="text-primary underline hover:no-underline">EV charging demand platform guide</a>, and the model's roots are set out in <a href="/how-it-works" class="text-primary underline hover:no-underline">the network</a>.</p>
 
       <h2>How it works</h2>
 
@@ -2812,7 +2812,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>A <strong class="text-primary">roaming hub LATAM</strong> operators can build on should bring them demand, pay them fast, price transparently, and cost nothing to hold. That is what NetworkCore is building for Latin America, as a sales channel rather than a fixed cost, at the moment the region can still choose to do roaming right.</p>
 
-      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/the-network" class="text-primary underline hover:no-underline">Explore the network →</a></p>
+      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/how-it-works" class="text-primary underline hover:no-underline">See how it works →</a></p>
     `,
     featuredImage: "/images/blog/roaming-hub-latam.jpg",
     category: "Charging Partners",
@@ -6283,7 +6283,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>All four are architectural, which means all four are fixable by building the layer properly rather than by patching the symptoms.</p>
 
-      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/the-network" class="text-primary underline hover:no-underline">Explore the network →</a></p>
+      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/how-it-works" class="text-primary underline hover:no-underline">See how it works →</a></p>
     `,
     featuredImage: "/blog/ev-charging-payments-explained.jpg",
     category: "Payments",

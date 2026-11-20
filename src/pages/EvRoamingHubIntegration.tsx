@@ -406,10 +406,10 @@ const EvRoamingHubIntegration = () => {
                   </Link>
                 </MagneticButton>
                 <Link
-                  to="/the-network"
+                  to="/how-it-works"
                   className="inline-flex items-center gap-2 text-foreground font-light underline underline-offset-4 hover:text-foreground/70 transition-colors"
                 >
-                  Explore the network <ArrowRight className="h-4 w-4" />
+                  See how it works <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </Reveal>

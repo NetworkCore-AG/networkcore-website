@@ -39,11 +39,7 @@ const HowItWorks = () => {
       diagram: "distribution-partner" as const,
       content: (
         <>
-          Your users get every charger on the{" "}
-          <Link to="/the-network" className="underline underline-offset-4 decoration-foreground/30 hover:decoration-foreground transition-colors">
-            network
-          </Link>{" "}
-          through a single integration, under your brand. Pass the operator's public price straight through, or buy at their wholesale rate and set your own. No infrastructure to build, no operators to negotiate with, no payments operation to run.
+          Your users get every charger on the network through a single integration, under your brand. Pass the operator's public price straight through, or buy at their wholesale rate and set your own. No infrastructure to build, no operators to negotiate with, no payments operation to run.
         </>
       ),
       extra: null

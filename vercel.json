@@ -7,7 +7,11 @@
   "trailingSlash": false,
   "redirects": [
     { "source": "/api", "destination": "/products/just-charge", "permanent": true },
-    { "source": "/:lang/api", "destination": "/products/just-charge", "permanent": true }
+    { "source": "/:lang/api", "destination": "/products/just-charge", "permanent": true },
+    { "source": "/the-network", "destination": "/", "permanent": true },
+    { "source": "/:lang/the-network", "destination": "/", "permanent": true },
+    { "source": "/platform", "destination": "/", "permanent": true },
+    { "source": "/:lang/platform", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
