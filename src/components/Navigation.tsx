@@ -334,6 +334,18 @@ const Navigation = ({ lightHero = false }: { transparent?: boolean; lightHero?: 
             >
               <Link to="/#contact">Contact Us</Link>
             </Button>
+            <Button
+              asChild
+              variant="ghost"
+              size="compact"
+              className={`font-medium transition-colors ${
+                darkText
+                    ? 'text-foreground hover:bg-foreground/10'
+                    : 'text-background hover:bg-background/10'
+              }`}
+            >
+              <a href="https://partners.networkcore.org/login" target="_blank" rel="noopener noreferrer">Sign In</a>
+            </Button>
             {isLatamPage && (
               <LangSwitcher transparent={!darkText} isScrolled={darkText} />
             )}
@@ -437,6 +449,21 @@ const Navigation = ({ lightHero = false }: { transparent?: boolean; lightHero?: 
                   className="w-full justify-start border border-foreground text-lg font-medium text-foreground hover:bg-foreground hover:text-background"
                 >
                   <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="ghost"
+                  size="sm"
+                  className="w-full justify-start text-lg font-medium text-foreground hover:bg-foreground/10"
+                >
+                  <a
+                    href="https://partners.networkcore.org/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Sign In
+                  </a>
                 </Button>
               </div>
               {isLatamPage && (

@@ -18,8 +18,8 @@ const Footer = () => {
   const navItems: { href: string; label: string; external?: boolean; highlight?: boolean; theme?: 'cp' | 'dp' }[] = [
     { href: '/charging-partners', label: 'Charging Partners', highlight: true, theme: 'cp' },
     { href: '/distribution-partners', label: t('navigation.distributionPartners', 'Distribution Partners'), highlight: true, theme: 'dp' },
-    { href: '/the-network', label: t('navigation.theNetwork', 'The Network') },
-    { href: 'https://docs.networkcore.org/', label: 'API Documentation', external: true },
+    { href: 'https://developers.networkcore.org/cpo/onboarding.html', label: 'OCPI Documentation', external: true },
+    { href: 'https://developers.networkcore.org/dp-api/reference.html', label: 'API Documentation', external: true },
     { href: '/blog', label: t('navigation.blog', 'Blog') },
     { href: 'https://partners.networkcore.org/login', label: 'Sign In', external: true },
     { href: '/#contact', label: t('navigation.contactUs', 'Contact Us') },
