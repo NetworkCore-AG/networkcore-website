@@ -5,6 +5,8 @@ import ChargingPartnerPricing from "@/components/ChargingPartnerPricing";
 import { Check, TrendingUp, DollarSign, Zap } from "lucide-react";
 import PartnerSignupForm from "@/components/forms/PartnerSignupForm";
 import PageFaqSection from "@/components/PageFaqSection";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const cpoFaqs = [
   { question: "Is NetworkCore a replacement for my roaming hubs or apps?", answer: "No. NetworkCore is additive. Your existing roaming connections, white-label apps, and direct customers stay exactly as they are. We sit alongside your current stack and bring demand from platforms that are not in your distribution mix today." },
@@ -59,77 +61,17 @@ const ChargePointOperators = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90svh] flex items-center overflow-hidden">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
           <source src="/videos/cpo-hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/65 to-black/45" />
-        <div className="hero-lead-grid">
-          <div className="hero-lead-copy">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light mb-8 leading-tight text-white tracking-tight">
-            Increase Utilisation.
-            <br /> Get Paid Fast.
-            <br /> Keep Full Pricing Control.
-          </h1>
-          <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto font-light mb-6">
-            A distribution channel that sits alongside everything you already run. More sessions on the chargers you have built, at the prices you set, settled in days, not weeks.
-          </p>
-          </div>
-          <div id="signup-form" className="hero-lead-form scroll-mt-24">
-            <h2 className="hero-lead-form-title">Ready to Increase Revenue per Charger?</h2>
-            <PartnerSignupForm
-              heroMode
-            formLabel="CPO Signup"
-            submitLabel="Get connected"
-            requiredFields={[
-              { name: "company", label: "Company name", type: "text", required: true, placeholder: "Your company" },
-              { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
-              { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
-              {
-                name: "country",
-                label: "Country of operations",
-                type: "select",
-                required: true,
-                placeholder: "Select country",
-                options: ["Mexico", "Brazil", "Colombia", "Chile", "USA", "Spain", "France", "Germany", "UK", "Netherlands", "Italy", "Portugal", "Other"],
-              },
-              {
-                name: "stations",
-                label: "Number of charging stations",
-                type: "select",
-                required: true,
-                placeholder: "Select range",
-                options: ["1–10", "10–50", "50–250", "250–1,000", "1,000+"],
-              },
-            ]}
-            optionalFields={[
-              {
-                name: "csms",
-                label: "CSMS in use",
-                type: "select",
-                placeholder: "Select CSMS",
-                options: ["Ampeco", "Driivz", "ChargePoint", "Monta", "EVgo OS", "Greenflux", "Etrel", "Not sure", "Other"],
-              },
-              {
-                name: "acdc",
-                label: "Mix of AC / DC",
-                type: "select",
-                placeholder: "Select mix",
-                options: ["Mostly AC", "Mostly DC", "Roughly balanced", "Not sure"],
-              },
-              {
-                name: "notes",
-                label: "Anything else we should know?",
-                type: "textarea",
-                placeholder: "Optional — share anything that would help us prepare.",
-              },
-            ]}
-          />
-          </div>
+        <div className="absolute inset-0 bg-foreground/75" />
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 pb-28">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light mb-8 leading-tight text-background"><span className="block">Increase Utilisation.</span><span className="block">Get Paid Fast.</span><span className="block">Keep Full Pricing Control.</span></h1>
+          <p className="text-lg md:text-xl text-background/80 leading-relaxed max-w-3xl font-light mb-8">A distribution channel that sits alongside everything you already run. More sessions on the chargers you have built, at the prices you set, settled in days, not weeks.</p>
+          <div className="flex flex-wrap gap-4"><Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90"><Link to="/charging-partners/calculator">What are my bays worth?</Link></Button><Button asChild size="lg" variant="outline" className="border-background/50 text-background bg-transparent hover:bg-background/10 hover:text-background"><a href="#signup-form">Talk to us</a></Button></div>
         </div>
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-pulse">
-          <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-white/40 to-white/60" />
-        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 h-10 w-px bg-background/50 motion-safe:animate-pulse" aria-hidden />
       </section>
 
       {/* The Only Lever That Moves */}
@@ -229,6 +171,59 @@ const ChargePointOperators = () => {
       </section>
 
       <PageFaqSection items={cpoFaqs} background="background" />
+
+      <section id="signup-form" className="scroll-mt-24 py-20 md:py-28">
+        <div className="mx-auto max-w-xl px-4 sm:px-6">
+          <h2 className="text-3xl md:text-4xl font-light text-foreground text-center mb-10">Ready to Increase Revenue per Charger?</h2>
+          <PartnerSignupForm
+            formLabel="CPO Signup"
+            submitLabel="Get connected"
+            requiredFields={[
+              { name: "company", label: "Company name", type: "text", required: true, placeholder: "Your company" },
+              { name: "fullName", label: "Full name", type: "text", required: true, placeholder: "First and last name" },
+              { name: "email", label: "Business email", type: "email", required: true, placeholder: "you@company.com" },
+              {
+                name: "country",
+                label: "Country of operations",
+                type: "select",
+                required: true,
+                placeholder: "Select country",
+                options: ["Mexico", "Brazil", "Colombia", "Chile", "USA", "Spain", "France", "Germany", "UK", "Netherlands", "Italy", "Portugal", "Other"],
+              },
+              {
+                name: "stations",
+                label: "Number of charging stations",
+                type: "select",
+                required: true,
+                placeholder: "Select range",
+                options: ["1–10", "10–50", "50–250", "250–1,000", "1,000+"],
+              },
+            ]}
+            optionalFields={[
+              {
+                name: "csms",
+                label: "CSMS in use",
+                type: "select",
+                placeholder: "Select CSMS",
+                options: ["Ampeco", "Driivz", "ChargePoint", "Monta", "EVgo OS", "Greenflux", "Etrel", "Not sure", "Other"],
+              },
+              {
+                name: "acdc",
+                label: "Mix of AC / DC",
+                type: "select",
+                placeholder: "Select mix",
+                options: ["Mostly AC", "Mostly DC", "Roughly balanced", "Not sure"],
+              },
+              {
+                name: "notes",
+                label: "Anything else we should know?",
+                type: "textarea",
+                placeholder: "Optional — share anything that would help us prepare.",
+              },
+            ]}
+          />
+        </div>
+      </section>
 
       <Footer />
     </div>
