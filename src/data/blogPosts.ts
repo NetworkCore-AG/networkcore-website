@@ -63,6 +63,170 @@ export const calculateReadingTime = (content: string): number => {
 // Add your blog posts here - newest first
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ev-charging-app-design",
+    title: "EV Charging App Design: The Patterns That Work, and the Data That Decides Whether They Can",
+    excerpt: "The patterns that work in EV charging app design are not hard to describe. What is hard is earning the right to build them: no map can show availability it is not fed, and no price can hold if the connection beneath it marks it up.",
+    content: `
+      <p>The conclusion first: <strong class="text-primary">EV charging app design</strong> is one of the harder product problems in mobility, and it is usually diagnosed wrongly. Teams assume their charging feature underperforms because the screens need work. Far more often the screens are fine and the inputs are not. No map can show accurate availability if the feed is stale. No price display can be trusted if the amount billed turns out to be different. No start button can work reliably if the connection beneath it cannot reliably start a charger. The patterns that work in <strong class="text-primary">EV charging app design</strong> are not difficult to describe, and most of them are not difficult to build. What is difficult is earning the right to build them, which is a decision about who you connect to rather than how you lay out a screen.</p>
+
+      <h2>Design for the worst conditions, because those are the normal ones</h2>
+
+      <p>Most app design assumes a user who is seated, unhurried, on good signal, with both hands free. Charging assumes none of that.</p>
+
+      <p>Your user is standing outside. It may be raining, or dark, or cold. They are holding a cable in one hand and a phone in the other. Mobile signal at a basement car park or a motorway services is frequently poor. They may have range pressure, which is a specific kind of stress that degrades patience and attention. And they are often at an unfamiliar site, trying to work out which of eight identical units is the one on their screen.</p>
+
+      <p>This is not an edge case to accommodate. It is the median session. <strong class="text-primary">EV charging app design</strong> that tests beautifully in an office tests badly in a car park, and the gap between those two environments explains a great deal of what goes wrong.</p>
+
+      <p>The consequence is a design brief with unusual priorities: large touch targets, high contrast, minimal typing, tolerance of poor connectivity, and the shortest possible path from opening the app to energy flowing.</p>
+
+      <h2>The patterns that work, screen by screen</h2>
+
+      <h3>Discovery and map</h3>
+
+      <ul>
+        <li>Show the real price before the driver travels. Not a range, not "from", the actual tariff. A price shown here and contradicted later is the single most damaging thing a charging product can do.</li>
+        <li>Show availability you actually believe. If your feed is uncertain, say so rather than showing green. An optimistic map costs the driver a journey.</li>
+        <li>Filter on what drivers decide with: speed, availability, price, connector. Not on operator brand, which they do not care about.</li>
+        <li>Default to nearest-and-working, not nearest.</li>
+        <li>Show power in kW, and what it means. "150 kW, roughly 20 minutes for 200 km" beats a bare number for anyone who is not an enthusiast.</li>
+      </ul>
+
+      <h3>Charger detail</h3>
+
+      <ul>
+        <li>Make the unit identifiable in the real world. A physical reference, a number on the unit, a photo of the site. The gap between the pin on the map and the correct bay in front of them is where a lot of frustration lives.</li>
+        <li>State connector type plainly, with the driver's vehicle already known where you have it.</li>
+        <li>Show last-seen or last-successful-session, which is a more honest reliability signal than a status flag.</li>
+        <li>Surface idle and congestion fee rules before the session, not after.</li>
+      </ul>
+
+      <h3>Starting</h3>
+
+      <p>This is the highest-stakes screen in <strong class="text-primary">EV charging app design</strong>, and the one that fails most often.</p>
+
+      <ul>
+        <li>One action to start. No account creation, no card entry, nothing at the charger.</li>
+        <li>Payment established in advance, in a calm moment, not standing at the unit.</li>
+        <li>Unambiguous confirmation that charging has begun. A spinner that resolves to nothing is worse than an error.</li>
+        <li>Honest, specific failures. "This charger is not responding. The nearest working one is 400 m away, tap to navigate" is infinitely better than "Something went wrong."</li>
+        <li>Offer a fallback immediately rather than leaving the driver to work one out.</li>
+      </ul>
+
+      <p>Roughly one in five first charging attempts still fails across the industry. Most of that is not interface design, but the interface is where the driver experiences it, and a good failure state is the difference between a retry and an abandonment.</p>
+
+      <h3>During the session</h3>
+
+      <ul>
+        <li>Live state: power, energy delivered so far, running cost. The running cost is the one most often omitted and most often wanted.</li>
+        <li>A realistic time estimate, and update it as the curve tapers.</li>
+        <li>Notify when charging completes, so the driver can move before an idle fee applies.</li>
+        <li>Remote stop, which matters more than it sounds for anyone who has walked away.</li>
+        <li>Design for the app being closed. Most drivers will not sit watching the screen.</li>
+      </ul>
+
+      <h3>Ending and payment</h3>
+
+      <ul>
+        <li>The amount charged matches the price shown. This is the one rule in <a href="/blog/ev-charging-payments-explained" class="text-primary underline hover:no-underline">charging payments</a> that cannot be broken.</li>
+        <li>An immediate, itemised receipt, with energy, fees and total separated.</li>
+        <li>A statement descriptor the driver will recognise two weeks later on their bank statement.</li>
+        <li>No surprise between the hold and the final amount. If you are placing a pre-authorisation, say so, say how much, and say when it releases.</li>
+      </ul>
+
+      <h3>History and support</h3>
+
+      <ul>
+        <li>Searchable session history with location, energy, cost and duration.</li>
+        <li>A refund path that works, visibly, from inside the history.</li>
+        <li>Support that can see the session, so the driver is not asked to explain what your system already knows. The dispute side of this is in <a href="/blog/ev-charging-chargeback-management" class="text-primary underline hover:no-underline">EV Charging Chargeback Management</a>.</li>
+      </ul>
+
+      <p>The back half of the journey gets a fraction of the design attention of the map screen and carries at least as much weight in whether the driver trusts you. The full six-stage view is in <a href="/blog/ev-charging-customer-experience" class="text-primary underline hover:no-underline">EV Charging Customer Experience</a>.</p>
+
+      <h2>The anti-patterns</h2>
+
+      <p>Five things that reliably damage a charging product:</p>
+
+      <ol>
+        <li><strong>Requiring a download or registration at the charger.</strong> The worst possible moment. Around 87% of EV drivers report having been forced to download a new app at a charge point just to pay, and almost nobody enjoys it.</li>
+        <li><strong>Optimistic availability.</strong> Showing a charger as free when it is occupied or broken is worse than showing nothing.</li>
+        <li><strong>Price displayed one way and billed another.</strong> Even a small gap destroys trust permanently, and the driver always assumes the worst explanation.</li>
+        <li><strong>Generic error states.</strong> "Unable to start session" tells a cold, stressed driver nothing and leaves them stranded.</li>
+        <li><strong>Designing charging as a destination in your app</strong> rather than as something that appears where the driver already is. Charging is a task, not a section.</li>
+      </ol>
+
+      <h2>The constraint nobody designs around</h2>
+
+      <p>Here is the part that separates charging from ordinary product work.</p>
+
+      <p>In most apps, the quality ceiling is set by the design and engineering team. In charging, it is set by the data feed underneath. You cannot design your way to accurate availability. You cannot design your way to a price that will hold. You cannot design a reliable start button on top of an unreliable connection.</p>
+
+      <p>This is worth being blunt about because it is where product teams waste quarters. A team ships a charging feature, drivers hit failures and wasted journeys, and the team redesigns the screens. The screens were not the problem. The feed was stale, the tariff was an estimate, and the start command was unreliable, and no amount of interface work fixes any of those.</p>
+
+      <p>The point is visible in how the industry talks about it. One major network's own driver support material states plainly that drivers will be billed based on the price shown in its app even if that differs from the price shown on the station. That is a direct admission that the app price and the real price can diverge, and it is an upstream commercial arrangement, not a design choice. Why the gap exists and what closes it is in <a href="/blog/ev-charging-pricing-transparency" class="text-primary underline hover:no-underline">EV Charging Pricing Transparency</a>.</p>
+
+      <p>Your app can only be as honest as what feeds it. That makes your connection a design decision, and arguably the most important one you will make.</p>
+
+      <h2>Charge point operators are stepping back from the app war</h2>
+
+      <p>Something is changing on the supply side that matters a great deal for anyone designing a charging product.</p>
+
+      <p>A growing number of operators have concluded that winning app downloads is not their business. <a href="https://www.powerdot.eu/" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">Powerdot</a> is a clear example. It is a European destination operator, installing funded, turnkey charging at supermarkets, shopping centres, restaurants and hotels on a revenue-share basis with the property owner, much like the <a href="/private-hosts" class="text-primary underline hover:no-underline">private hosts</a> model. It has an app, but the strategy does not rest on it. Its CEO, Luis Santiago Pinto, has put the position plainly: the technology and the complexity should happen in the background, and a driver should be able to arrive at a charging location, plug in and carry on with their day.</p>
+
+      <p>The behaviour matches the statement. Powerdot has enabled Plug and Charge across more than 7,000 charge points in France, Spain, Belgium and Poland, over half of its stations, and the integration does not require its own app. It is reachable through a wide range of roaming apps instead.</p>
+
+      <p>The logic is sound for an operator. A destination charger at a supermarket is used by whoever happens to be shopping. Persuading each of those people to download an app is an expensive, low-conversion battle against a driver population that already resents having four apps. Being reachable through every channel the driver already uses is cheaper and converts far better, which is the <a href="/blog/ev-charger-utilisation-rate" class="text-primary underline hover:no-underline">utilisation</a> argument as much as a brand one.</p>
+
+      <p>And that hands the app layer to <a href="/distribution-partners" class="text-primary underline hover:no-underline">Distribution Partners</a>. If operators are not trying to own the driver's screen, the screen belongs to whoever already has the driver: the <a href="/distribution-partners/ev-charging-for-oems" class="text-primary underline hover:no-underline">automaker</a>, the <a href="/distribution-partners/ev-charging-for-financial-platforms" class="text-primary underline hover:no-underline">bank</a>, the <a href="/distribution-partners/public-ev-charging-for-fleets" class="text-primary underline hover:no-underline">fleet platform</a>, the mobility app. The design question stops being "how do we compete with charging apps" and becomes "how do we make charging feel native in the product our users already open". The distinction between those two layers is in <a href="/blog/charging-app-vs-roaming-hub" class="text-primary underline hover:no-underline">Charging App vs Roaming Hub</a>.</p>
+
+      <h2>Which makes your roaming partner a design decision</h2>
+
+      <p>If operators reach drivers through roaming, and your app reaches operators through roaming, then whatever sits in the middle determines what you are able to design.</p>
+
+      <p>It decides whether your map shows live availability or a cached guess. It decides whether the price you display is the operator's real tariff or an intermediary's marked-up version that will contradict your own receipt. It decides whether your start button reliably starts a charger. It decides whether your driver has to identify themselves at the unit or arrives already known. It decides whether a failed session refunds quickly or drags on for months, and whether your support team can see what happened.</p>
+
+      <p>Every one of those is a user interface outcome produced by a commercial and technical arrangement made long before anyone opened a design tool.</p>
+
+      <p>So the honest sequence in <strong class="text-primary">EV charging app design</strong> is to settle the connection first and design second. A team that designs first and connects afterwards will spend its second quarter discovering which of its screens it is not actually allowed to build.</p>
+
+      <h2>What NetworkCore gives a design team</h2>
+
+      <p>Specifically, in terms of what <a href="/" class="text-primary underline hover:no-underline">NetworkCore</a> makes possible on screen:</p>
+
+      <ul>
+        <li>Live availability and real tariffs across the network, through one connection, so the map can tell the truth.</li>
+        <li>The operator's transparent public price transmitted intact, so the price on your screen is the price on the receipt. No intermediary markup to explain away.</li>
+        <li>Reliable session control, so Start means start and Stop means stop.</li>
+        <li>Drivers arriving pre-authenticated, so the driver who already exists in your product does not have to prove themselves again at the charger. That is the one-tap pattern, covered in <a href="/blog/one-tap-ev-charging" class="text-primary underline hover:no-underline">One Tap EV Charging</a>.</li>
+        <li>Clean session records and fast settlement, so history, receipts, refunds and support all have something accurate to show. The operator economics behind that are in <a href="/blog/cpo-settlement-timing" class="text-primary underline hover:no-underline">CPO Settlement Timing</a>.</li>
+        <li>Payment flexibility, from a card at a <a href="/products/charging-links" class="text-primary underline hover:no-underline">Charging Link</a> through to <a href="/blog/post-paid-ev-charging" class="text-primary underline hover:no-underline">post-paid</a>, so you can match the method to your driver base rather than designing around a fixed constraint. The whole ladder is in <a href="/blog/ev-charging-payment-methods" class="text-primary underline hover:no-underline">EV Charging Payment Methods</a>.</li>
+      </ul>
+
+      <p>And beneath it, the parts you would otherwise have to design around: tax per jurisdiction, compliant invoicing, dispute handling. Charging embeds into your product through <a href="/products/just-charge" class="text-primary underline hover:no-underline">Just Charge</a>, and the integration options are in <a href="/blog/how-to-offer-ev-charging-in-an-app" class="text-primary underline hover:no-underline">How to Offer EV Charging in an App</a>. On the supply side, the same rails reach operators through <a href="/products/network-access" class="text-primary underline hover:no-underline">Network Access</a>.</p>
+
+      <h2>The position</h2>
+
+      <p><strong class="text-primary">EV charging app design</strong> is mostly a solved problem at the level of patterns. Show the real price. Show availability you believe. One tap to start. Live state during the session. The billed amount matching the displayed one. An itemised receipt. Honest errors with a next step. None of that is a mystery.</p>
+
+      <p>What is not solved, for most teams, is the right to build it. Those patterns all depend on data and control that come from upstream, and a product team that has not secured them will design screens it cannot honour.</p>
+
+      <p>Meanwhile the supply side is quietly making this easier. As operators like Powerdot conclude that drivers should not have to think about which app to open, the driver-facing layer falls to the platforms that already have the driver. That is an opportunity, provided what sits behind the screen can support what is on it.</p>
+
+      <p>Design the screens second. Secure the inputs first. <a href="/how-it-works" class="text-primary underline hover:no-underline">How it works</a> sets out what sits underneath.</p>
+
+      <p><a href="/#contact" class="text-primary underline hover:no-underline">Talk to our team →</a> · <a href="/how-it-works" class="text-primary underline hover:no-underline">See how it works →</a></p>
+    `,
+    featuredImage: "/images/blog/ev-charging-app-design.png",
+    category: "EV Charging",
+    author: "NetworkCore Team",
+    publishedAt: "2026-11-27",
+    published: true,
+    metaTitle: "EV Charging App Design: Patterns That Work | NetworkCore",
+    metaDescription: "The EV charging app design patterns that work, screen by screen, and why the data feed underneath decides which of them you can actually build.",
+    tags: ["EV Charging App Design", "Product", "Distribution Partners", "Roaming", "Driver Experience"]
+  },
+
+  {
     slug: "ev-charging-payment-methods",
     title: "EV Charging Payment Methods: Why Every One Is an Answer to the Same Question",
     excerpt: "There are eight EV charging payment methods in use, usually presented as a menu of technologies. They are really a ladder: every one is an answer to how much the system knows about the driver at the moment they plug in.",
